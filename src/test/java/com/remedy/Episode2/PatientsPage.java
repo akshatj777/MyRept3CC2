@@ -509,6 +509,7 @@ public class PatientsPage extends BaseClass {
 	}
 
 	public void iSelecteOptionFromDropdownListPresentOnTheAddPatientPage(String detailFileds, String patientDetails) {
+		longDelay();
 		clickElement(driver.findElement(By.cssSelector("#Patient_Details_" + detailFileds + "")));
 		selectDropdownVisibleElement("#Patient_Details_" + detailFileds + "", patientDetails);
 		delay();
@@ -519,6 +520,7 @@ public class PatientsPage extends BaseClass {
 	}
 
 	public void iSelectFromTheListOfAdmittingFacilityPresentOnTheAddPatientPage(String facility) {
+		delay();
 		iFillInText(driver.findElement(By.cssSelector("div.select2-search>input.select2-input")), facility);
 		longDelay();
 		clickElement(driver.findElement(By.cssSelector("ul.select2-results>li>div#select2-result-label-3")));
@@ -767,6 +769,7 @@ public class PatientsPage extends BaseClass {
 	}
 
 	public void iEnterUnderFirstNameFilter(String patient) {
+		delay();
 		iFillInText(driver.findElement(By.cssSelector("div.filter-sections-hide-scrollbar.ng-scope > div > div  > div > div > div > div > input")),patient);
 	}
 
@@ -958,6 +961,7 @@ public class PatientsPage extends BaseClass {
         longDelay();
 		iWillWaitToSee(By.xpath("//button[contains(text(),'Cancel')]"));
 		clickElement(driver.findElement(By.xpath("//button[contains(text(),'Cancel')]")));
+		longDelay();
 	}
 
 	public void iShouldSeeFacilityAppearingUnderTransitionsPage() {

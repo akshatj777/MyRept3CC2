@@ -456,7 +456,8 @@ public class PatientClinicalDocuments extends BaseClass {
 	}
 
 	public void IclickontheCreateTransitionButtontoaddanewtransition() {
-         iWillWaitToSee(By.cssSelector("#submitButton"));
+        delay();
+		iWillWaitToSee(By.cssSelector("#submitButton"));
          Actions actions = new Actions(driver);
          actions.moveToElement(driver.findElement(By.cssSelector("#submitButton"))).click().perform();
 		 }
@@ -627,6 +628,7 @@ public class PatientClinicalDocuments extends BaseClass {
 	}
 
 	public void Ifilldateinwithlogicwithndays(String logic,int days) throws InterruptedException {
+		longDelay();
 		if(logic.equals("Admit"))
 		{
 			WebElement element = driver.findElement(By.cssSelector("#bp_personbundle_bpadmissiontype_admitDate"));

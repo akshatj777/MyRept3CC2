@@ -89,6 +89,7 @@ public class Ec1DashboardPage extends BaseClass{
     }
     
     public void iShouldSeeInTheLeftNavigatorPresentOnTheEpisodeDashboardPage(String text){
+    	iWillWaitToSee(By.xpath("//span[@class='title'and text()='Dashboard']"));
     	isElementVisible(driver.findElement(By.xpath("//span[@class='title'and text()='Dashboard']")));
     }
     
