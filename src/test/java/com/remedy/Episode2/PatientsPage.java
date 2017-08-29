@@ -523,7 +523,7 @@ public class PatientsPage extends BaseClass {
 		delay();
 		iFillInText(driver.findElement(By.cssSelector("div.select2-search>input.select2-input")), facility);
 		longDelay();
-		clickElement(driver.findElement(By.cssSelector("ul.select2-results>li>div#select2-result-label-3")));
+		clickElement(driver.findElement(By.cssSelector("li.select2-highlighted")));
 	}
 
 	public void iSelectFromTheAdmittingFacilityPresentOnTheAddPatientPage(String facility) {
@@ -959,6 +959,7 @@ public class PatientsPage extends BaseClass {
 
 	public void IclickontheCancelButtonontheNewTransitiononAddPatientpage() {
         longDelay();
+        delay();
 		iWillWaitToSee(By.xpath("//button[contains(text(),'Cancel')]"));
 		clickElement(driver.findElement(By.xpath("//button[contains(text(),'Cancel')]")));
 		longDelay();

@@ -114,6 +114,7 @@ Feature: Patient status on Exceed SNF LOS Work List
     Then I wait to the see the visibility of loader to disappear
     Then I click on the delete button on the transition to delete all the transitions
     Then I click on add a new transition to add a new episode
+    Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I fill in "Admit" with logic "minus" with "8" days
     Then I wait to the see the visibility of loader to disappear
@@ -147,6 +148,18 @@ Feature: Patient status on Exceed SNF LOS Work List
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the "<Patient Last Name>" patient not present on the Patient Card Page
+    Then I click on "All" tab in the filter bar on patients page
+    Then I wait to the see the visibility of loader to disappear
+    When I click on Filter button present on Patient Page
+    Then I enter <Patient Last Name> under first name filter
+    Then I click on Done button present on the Filter Page
+    Then I wait to the see the visibility of loader to disappear
+    Then I verify the "<Patient Last Name>" patient present on the Patient Card Page
+    Then I click on the "<Patient Last Name>" searched patient on the Patient Card Page
+    Then I verify LOS is "below" the ELOS on the patient card page
+    Then I wait to the see the visibility of loader to disappear
+    Then I will wait to see and click on "Transitions" followed by "span" tag
+    Then I wait to the see the visibility of loader to disappear
     Then I click on the edit button on the "2" transition to edit the Active transition
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag
@@ -156,6 +169,11 @@ Feature: Patient status on Exceed SNF LOS Work List
     Then I click on update transition to add a new episode
     Then I wait to the see the visibility of loader to disappear
     When I switch to default window from iframe
+    Then I close the patient summary Page
+    Then I scroll the page to bottom by "-100"
+    Then I click on the "<Patient Last Name>" searched patient on the Patient Card Page
+    Then I wait to the see the visibility of loader to disappear
+    Then I verify LOS is "below" the ELOS on the patient card page
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
     Then I will wait to see and click on "Post Acute" followed by "span" tag

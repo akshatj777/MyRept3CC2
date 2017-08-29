@@ -37,7 +37,9 @@ public class CompleteCarlform extends BaseClass {
 	}
 
 	public void IclosethepatientsummaryPage() {
+		iWillWaitToSee(By.cssSelector("a.valentino-icon-x.pull-right"));
 		clickElement(driver.findElement(By.cssSelector("a.valentino-icon-x.pull-right")));
+		delay();
 	}
 
 	public void IverifyCARLbuttonisappearingonthepatientcardornot(String link) {
