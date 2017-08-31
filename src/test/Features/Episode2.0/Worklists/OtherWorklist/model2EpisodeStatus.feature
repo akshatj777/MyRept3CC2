@@ -271,6 +271,7 @@ Feature: Patient status on Other/Alternative Work List
     When I switch to default window from iframe
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
+    Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Post Acute" followed by "span" tag
     Then I will wait to see and click on "Other" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
@@ -296,9 +297,9 @@ Feature: Patient status on Other/Alternative Work List
       | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   | OTHER - Other        | Psychiatric Hospital/Unit                  | Brothers Medical Center Inc |
       | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   | OTHER - Other        | Shelter                                    | Brothers Medical Center Inc |
       | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   | OTHER - Other        | Still a Patient                            | Brothers Medical Center Inc |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   | REH - Rehabilitation | Outpatient                                 | Allied Rehab Hospital       |
+      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   | REH - Rehabilitation | Select                                     | Allied Rehab Hospital       |
 
-  Scenario Outline: Verify patient present in Other Worklist when patient is discharged to HPC.
+  Scenario Outline: Verify patient present in Other Worklist when patient is discharged to UNK Unknown.
     Given I am on the login page
     When I enter email field <email> for login
     And I enter password field <password> for Login
@@ -338,7 +339,6 @@ Feature: Patient status on Other/Alternative Work List
     Then I click on the Diagnosis and DRG tab on add a new transition to select the DRG
     Then I select the "Working" DRG type on the Diagnosis and DRG tab on add a new transition
     Then I select the "63" DRG value on the Diagnosis and DRG tab on add a new transition
-    Then I click on the Create Transition Button to add a new transition
     Then I wait to the see the visibility of loader to disappear
     Then I click on the Create Transition Button to add a new transition
     Then I wait to the see the visibility of loader to disappear
@@ -358,12 +358,11 @@ Feature: Patient status on Other/Alternative Work List
       | email                | password  | Patient First Name | Patient Last Name |
       | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   |
 
-  Scenario Outline: Verify patient present in Other Worklist when patient is discharged to UNK Unknown.
+  Scenario Outline: Verify patient present in Other Worklist when patient is discharged to HPC .
     Given I am on the login page
     When I enter email field <email> for login
     And I enter password field <password> for Login
     Then I click Access button
-    And I wait for 2000 milli seconds
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
     Then I verify current page "Remedy Partners" title
@@ -375,8 +374,10 @@ Feature: Patient status on Other/Alternative Work List
     When I click on last name Filter present on Filter Page
     Then I enter <Patient Last Name> under first name filter
     Then I click on Done button present on the Filter Page
+    Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I click on the "<Patient Last Name>" searched patient on the Patient Card Page
+    Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
@@ -397,9 +398,7 @@ Feature: Patient status on Other/Alternative Work List
     Then I select the "Discharge" facility "Encompass Hospice Of Central Texas - HPC" by "#s2id_bp_personbundle_bpadmissiontype_dischargeFacility" on add a new transition
     Then I click on the Diagnosis and DRG tab on add a new transition to select the DRG
     Then I select the "Working" DRG type on the Diagnosis and DRG tab on add a new transition
-    Then I select the "65" DRG value on the Diagnosis and DRG tab on add a new transition
-    Then I click on the Create Transition Button to add a new transition
-    Then I wait to the see the visibility of loader to disappear
+    Then I select the "63" DRG value on the Diagnosis and DRG tab on add a new transition
     Then I click on the Create Transition Button to add a new transition
     Then I wait to the see the visibility of loader to disappear
     When I switch to default window from iframe

@@ -44,6 +44,7 @@ public class AnticipatedCarlForm extends BaseClass {
 	}
 
 	public void IVerifyPatientsRestorationPotentialSectionOnSelectingPhysicalTherapy() {
+		delay();
 		Assert.assertTrue(isElementVisible(driver.findElement(By.cssSelector(".restoration-potential.ng-scope"))));
 	}
 

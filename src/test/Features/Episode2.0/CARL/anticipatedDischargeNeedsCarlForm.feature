@@ -5,7 +5,6 @@ Feature: To verify the options and functionality of Anticipated Discharge Needs 
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
-    And I wait for 2000 milli seconds
     Then I should see Tile text Episodes
     And I click on the "Episodes" tile
     And I switch to new window
@@ -17,17 +16,11 @@ Feature: To verify the options and functionality of Anticipated Discharge Needs 
     Then I verify "Patient Information" text is present on the add patient page
     Then I enter random Patient First Name in the first name text box field present on the Add Patient page
     Then I enter random Patient Last Name in the last name text box field present on the Add Patient page
-    And I wait for 4000 milli seconds
     And I enter date of birth "01/05/1995" present on the Add Patient Page
-    And I wait for 4000 milli seconds
     And I selected "Male" from the gender drop down list present on the Add Patient page
-    And I wait for 4000 milli seconds
     And I enter random social security number in the SSN text box field present on the Add Patient page
-    And I wait for 4000 milli seconds
     When I click on Admitting Facility present on the Add Patient page
-    And I wait for 2000 milli seconds
     And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page
-    And I wait for 4000 milli seconds
     And I enter "WA784654785" in the Medicare ID present on the Add Patient page
     Then I click on the next button present on the Add Patient page
     Then I click on the next button present on the Add Patient page
@@ -42,10 +35,8 @@ Feature: To verify the options and functionality of Anticipated Discharge Needs 
     When I enter email field qa.emblemrn@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
-    And I wait for 2000 milli seconds
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
-    And I wait for 4000 milli seconds
     Then I verify current page "Remedy Partners" title
     Then I create a post request
     Then I click on "All" tab in the filter bar on patients page
@@ -67,7 +58,6 @@ Feature: To verify the options and functionality of Anticipated Discharge Needs 
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
     Then I click on "Anticipated Discharge Needs" section on left navigator
-    And I wait for 2000 milli seconds
     And I verify the "Anticipated Discharge Needs" section of the carl form upon clicking on it
     Then I verify that "Anticipated Discharge Needs" section on carl form should be highlighted in left navigator upon clicking
     Then I verify "Therapies Needed" should appear on Anticipated Discharge Needs section
@@ -97,7 +87,6 @@ Feature: To verify the options and functionality of Anticipated Discharge Needs 
     When I enter email field qa.emblemrn@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
-    And I wait for 2000 milli seconds
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
     Then I verify current page "Remedy Partners" title
@@ -110,7 +99,6 @@ Feature: To verify the options and functionality of Anticipated Discharge Needs 
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
     Then I click on "Anticipated Discharge Needs" section on left navigator
-    And I wait for 4000 milli seconds
     Then I click "Physical therapy" checkbox under Therapies Needed on Anticipated Discharge Needs section
     Then I verify "Physical therapy" checkbox is clickable
     Then I verify "Speech and language" checkbox is clickable
@@ -128,7 +116,6 @@ Feature: To verify the options and functionality of Anticipated Discharge Needs 
     When I enter email field qa.emblemrn@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
-    And I wait for 2000 milli seconds
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
     Then I verify current page "Remedy Partners" title
@@ -143,10 +130,8 @@ Feature: To verify the options and functionality of Anticipated Discharge Needs 
     Then I click on "Anticipated Discharge Needs" section on left navigator
     And I wait for 4000 milli seconds
     Then I click "Physical therapy" checkbox under Therapies Needed on Anticipated Discharge Needs section
-    And I wait for 1000 milli seconds
     Then I verify Patients Restoration Potential section on selecting PhysicalTherapy
     Then I click on Physical Therapy dropdown on Patients Restoration Potential
-    And I wait for 3000 milli seconds
     Then I verify "Select" text in place holder of Physical Therapy dropdown on Patients Restoration Potential
     Then I verify "Good restoration potential" option in Physical Therapy dropdown on Anticipated Discharge Needs
     Then I verify "Questionable restoration potential" option in Physical Therapy dropdown on Anticipated Discharge Needs
@@ -159,7 +144,6 @@ Feature: To verify the options and functionality of Anticipated Discharge Needs 
     When I enter email field qa.emblemrn@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
-    And I wait for 2000 milli seconds
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
     Then I verify current page "Remedy Partners" title
@@ -207,7 +191,6 @@ Feature: To verify the options and functionality of Anticipated Discharge Needs 
     When I enter email field qa.emblemrn@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
-    And I wait for 2000 milli seconds
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
     Then I verify current page "Remedy Partners" title
@@ -220,28 +203,20 @@ Feature: To verify the options and functionality of Anticipated Discharge Needs 
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
     Then I click on "Anticipated Discharge Needs" section on left navigator
-    And I wait for 2000 milli seconds
     Then I select "<Check>" checkbox for Transition of Care Needs on Anticipated Discharge Needs
-    And I wait for 1000 milli seconds
     Then I verify upon select "<Check>" checkbox sub field section appears for Transition of Care Needs
     Then I verify on selecting "<Check>" requierd field "<Label1>" appears for Transition of Care Needs
     Then I verify "<Radio11>" radio option appears under "<Check>" for Transition Care Needs
-    And I wait for 1000 milli seconds
     Then I verify "<Radio12>" radio option appears under "<Check>" for Transition Care Needs
-    And I wait for 1000 milli seconds
     Then I click "<Radio11>" radio option under "<Check>" for Transition Care Needs
-    And I wait for 1000 milli seconds
     Then I verify "<Radio11>" radio option is checked under "<Check>" for Transition Care Needs
     Then I click "<Radio12>" radio option under "<Check>" for Transition Care Needs
-    And I wait for 1000 milli seconds
     Then I verify "<Radio12>" radio option is checked under "<Check>" for Transition Care Needs
     Then I verify "<Radio11>" radio option is not checked under "<Check>" for Transition Care Needs
     Then I verify on selecting "<Check>" requierd field "<Label2>" appears for Transition of Care Needs
     Then I click "<Radio21>" radio option under "<Check>" for Transition Care Needs
-    And I wait for 2000 milli seconds
     Then I verify "<Radio21>" radio option is checked under "<Check>" for Transition Care Needs
     Then I click "<Radio22>" radio option under "<Check>" for Transition Care Needs
-    And I wait for 2000 milli seconds
     Then I verify "<Radio22>" radio option is checked under "<Check>" for Transition Care Needs
     Then I verify "<Radio21>" radio option is not checked under "<Check>" for Transition Care Needs
     Then I uncheck "<Check>" checkbox for Transition of Care Needs on Anticipated Discharge Needs

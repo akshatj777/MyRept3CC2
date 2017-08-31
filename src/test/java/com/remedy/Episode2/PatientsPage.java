@@ -501,6 +501,7 @@ public class PatientsPage extends BaseClass {
 	}
 
 	public void iEnterDetailsInTextFieldPresentOnAddPatientModal(String detailFileds, String patientDetails) {
+		longDelay();
 		iFillInText(driver.findElement(By.cssSelector("#Patient_Details_" + detailFileds + "")), patientDetails);
 	}
 
@@ -516,11 +517,12 @@ public class PatientsPage extends BaseClass {
 	}
 
 	public void iClickOnAdmittingFacilityPresentOnTheAddPatientPage() {
+		longDelay();
 		clickElement(driver.findElement(By.cssSelector("div.select2-container.admin_facilities_user.form-control")));
 	}
 
 	public void iSelectFromTheListOfAdmittingFacilityPresentOnTheAddPatientPage(String facility) {
-		delay();
+		longDelay();
 		iFillInText(driver.findElement(By.cssSelector("div.select2-search>input.select2-input")), facility);
 		longDelay();
 		clickElement(driver.findElement(By.cssSelector("li.select2-highlighted")));

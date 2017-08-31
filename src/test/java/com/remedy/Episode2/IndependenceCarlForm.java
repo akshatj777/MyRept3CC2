@@ -22,11 +22,11 @@ public class IndependenceCarlForm extends BaseClass {
 		{
 		Actions actions=new Actions(driver);
 		actions.moveToElement(driver.findElement(By.xpath("//a/div/h5/div/span[text()='" + text + "']"))).click().perform();
-		}
+		}longDelay();
 		}
 
 	public void IVerifySelectedSectionOnTheCarlFormUponClickingOnIt(String text) {
-
+        delay();
 		String text1 = driver.findElement(By.cssSelector("h2.ng-binding")).getText();
 		String subtext = text1.substring(3);
 		Assert.assertEquals(text, subtext);

@@ -504,6 +504,8 @@ public class DischargeCarlForm extends BaseClass {
 	}}
 
 	public void IenterrandomsocialsecuritynumberintheSSNtextboxfieldpresentontheAddPatientpage() {
+    longDelay();
+    delay();
     Random r = new Random( System.currentTimeMillis() );
 	String ssn_start="7842";
 	int ssn_end=((1 + r.nextInt(2)) * 10000 + r.nextInt(10000));
@@ -512,7 +514,8 @@ public class DischargeCarlForm extends BaseClass {
 	}
 
 	public void Ienterfiltervalueunderfiltertoseeemblempatient() {
-	iWillWaitToSee(By.xpath("//div[@class='ng-scope']/input"));
+	delay();
+    iWillWaitToSee(By.xpath("//div[@class='ng-scope']/input"));
 	iFillInText(driver.findElement(By.xpath("//div[@class='ng-scope']/input")),final_ssn);
 	}
 

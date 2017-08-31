@@ -684,10 +684,10 @@ public class PatientClinicalDocuments extends BaseClass {
 		
 		}else if(logic.equals("Discharge"))
 		{
-	    iWillWaitToSee(By.cssSelector("th.next"));
-		iWillWaitToSee(By.cssSelector("th.prev"));
-		WebElement nextLink = driver.findElement(By.cssSelector("th.next"));
-		WebElement previousLink = driver.findElement(By.cssSelector("th.prev"));
+	    iWillWaitToSee(By.cssSelector("body > div:nth-child(18) > div.datetimepicker-months > table > thead > tr > th.next"));
+		iWillWaitToSee(By.cssSelector("body > div:nth-child(18) > div.datetimepicker-months > table > thead > tr > th.prev"));
+		WebElement nextLink = driver.findElement(By.cssSelector("body > div:nth-child(18) > div.datetimepicker-months > table > thead > tr > th.next"));
+		WebElement previousLink = driver.findElement(By.cssSelector("body > div:nth-child(18) > div.datetimepicker-months > table > thead > tr > th.prev"));
 		 if(yearDiff!=0){
              if(yearDiff>0){
                    for(int i=0;i< yearDiff;i++){
@@ -731,6 +731,7 @@ public class PatientClinicalDocuments extends BaseClass {
      		}
 
 		public void Ienterfiltervalueunderfilter() {
+			delay();
 			iWillWaitToSee(By.xpath("//div[@class='ng-scope']/input"));
 			iFillInText(driver.findElement(By.xpath("//div[@class='ng-scope']/input")),attribute_value);
 			
