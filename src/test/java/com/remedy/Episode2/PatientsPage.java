@@ -23,6 +23,8 @@ public class PatientsPage extends BaseClass {
 	}
 
 	public void iClickTabInFilterBarOnPatientsPage(String elementTextXpath) {
+		delay();
+		iWillWaitToSee(By.xpath("//button//span[contains(text(),'" + elementTextXpath + "')]"));
 		clickElement(driver.findElement(By.xpath("//button//span[contains(text(),'" + elementTextXpath + "')]")));
 	}
 

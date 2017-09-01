@@ -40,7 +40,8 @@ public class LandingPage extends BaseClass{
     }
 
     public void iSelectFromTopUserAccountDropDown(String link){
-        selectElementByDesc(".btn.btn-flyout-nav", link);
+        delay();
+    	selectElementByDesc(".btn.btn-flyout-nav", link);
     }
 
     public void iVerifyTextForJiraLogInPage(String text){
