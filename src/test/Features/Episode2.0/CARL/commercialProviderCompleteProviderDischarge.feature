@@ -65,10 +65,11 @@ Feature: As a user, I should be able to complete and submit a CARL form for an E
     Then I click on add a new transition to add a new episode
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I fill in "Admit" with logic "minus" with "<Admit>" days
-    Then I select the care setting value "HHH - Hospital" on add a new transition
     Then I wait to the see the visibility of loader to disappear
-    Then I select the care type value "Inpatient" on add a new transition
-    Then I select the facility value "Stamford Hospital" on add a new transition
+    Then I select the "Admit" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
+    Then I wait to the see the visibility of loader to disappear
+    Then I select the "Admit" "caretype" "Inpatient" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
+    Then I select the "Admit" facility "Stamford Hospital" by "#s2id_bp_personbundle_bpadmissiontype_admitFacility" on add a new transition
     Then I select the "<LOS>" LOS days on Discharge date on Add Transition
     Then I select the "Discharge" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_dischargeFacilityCategory" on add a new transition
     Then I wait to the see the visibility of loader to disappear
@@ -124,7 +125,7 @@ Feature: As a user, I should be able to complete and submit a CARL form for an E
       |     3 |   2 | Scheduled          | appearing   |
       |     9 |   3 | Inpatient          | appearing   |
 
-  Scenario Outline: Discharge from anchor 7 days to HHH-Inpatient with discharge yesterday
+  Scenario: Discharge from anchor 7 days to HHH-Inpatient with discharge yesterday
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
@@ -186,23 +187,39 @@ Feature: As a user, I should be able to complete and submit a CARL form for an E
     Then I click on the delete button on the transition to delete all the transitions
     Then I wait to the see the visibility of loader to disappear
     Then I click on add a new transition to add a new episode
+    Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I fill in "Admit" with logic "minus" with "9" days
-    Then I select the care setting value "HHH - Hospital" on add a new transition
     Then I wait to the see the visibility of loader to disappear
-    Then I select the care type value "Inpatient" on add a new transition
-    Then I select the facility value "Stamford Hospital" on add a new transition
+    Then I select the "Admit" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
+    Then I wait to the see the visibility of loader to disappear
+    Then I select the "Admit" "caretype" "Inpatient" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
+    Then I wait to the see the visibility of loader to disappear
+    Then I select the "Admit" facility "Stamford Hospital" by "#s2id_bp_personbundle_bpadmissiontype_admitFacility" on add a new transition
     Then I select the "3" LOS days on Discharge date on Add Transition
     Then I select the "Discharge" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_dischargeFacilityCategory" on add a new transition
     Then I wait to the see the visibility of loader to disappear
     Then I select the "Discharge" "caretype" "Inpatient" by "#bp_personbundle_bpadmissiontype_dischargeCareType" on add a new transition
+    Then I select the "Discharge" facility "Stamford Hospital" by "#s2id_bp_personbundle_bpadmissiontype_dischargeFacility" on add a new transition
     Then I click on the Diagnosis and DRG tab on add a new transition to select the DRG
     Then I select the "Working" DRG type on the Diagnosis and DRG tab on add a new transition
     Then I select the "61" DRG value on the Diagnosis and DRG tab on add a new transition
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the Create Transition Button to add a new transition
+    Then I click on the Cancel button on Episode present on the Add Patient page
     Then I wait to the see the visibility of loader to disappear
-    Then I select the "1" LOS days on Discharge date on Add Transition
+    Then I click on add a new transition to add a new episode
+    Then I wait to the see the visibility of loader to disappear
+    Then I will wait to see "Transition Info" followed by "a" tag
+    Then I wait to the see the visibility of loader to disappear
+    Then I fill in "Admit" with logic "minus" with "7" days
+    Then I fill in "Admit" with logic "minus" with "9" days
+    Then I wait to the see the visibility of loader to disappear
+    Then I select the "Admit" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
+    Then I wait to the see the visibility of loader to disappear
+    Then I select the "Admit" "caretype" "Inpatient" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
+    Then I wait to the see the visibility of loader to disappear
+    Then I select the "Admit" facility "Stamford Hospital" by "#s2id_bp_personbundle_bpadmissiontype_admitFacility" on add a new transition
+    Then I select the "6" LOS days on Discharge date on Add Transition
     Then I click on the Create Transition Button to add a new transition
     Then I wait to the see the visibility of loader to disappear
     When I switch to default window from iframe
@@ -238,7 +255,7 @@ Feature: As a user, I should be able to complete and submit a CARL form for an E
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I verify CARL button is "appearing" on the patient card
+    Then I verify CARL button is "not appearing" on the patient card
 
   Scenario: Discharge from anchor 8 days ago to HHH-Inpatient admitted 7 days ago no discharge
     Given I am on the login page
@@ -305,11 +322,13 @@ Feature: As a user, I should be able to complete and submit a CARL form for an E
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I fill in "Admit" with logic "minus" with "9" days
-    Then I select the care setting value "HHH - Hospital" on add a new transition
     Then I wait to the see the visibility of loader to disappear
-    Then I select the care type value "Inpatient" on add a new transition
-    Then I select the facility value "Stamford Hospital" on add a new transition
-    Then I select the "2" LOS days on Discharge date on Add Transition
+    Then I select the "Admit" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
+    Then I wait to the see the visibility of loader to disappear
+    Then I select the "Admit" "caretype" "Inpatient" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
+    Then I wait to the see the visibility of loader to disappear
+    Then I select the "Admit" facility "Stamford Hospital" by "#s2id_bp_personbundle_bpadmissiontype_admitFacility" on add a new transition
+    Then I select the "1" LOS days on Discharge date on Add Transition
     Then I select the "Discharge" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_dischargeFacilityCategory" on add a new transition
     Then I wait to the see the visibility of loader to disappear
     Then I select the "Discharge" "caretype" "Inpatient" by "#bp_personbundle_bpadmissiontype_dischargeCareType" on add a new transition
@@ -342,10 +361,12 @@ Feature: As a user, I should be able to complete and submit a CARL form for an E
     Then I click on add a new transition to add a new episode
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag
-    Then I fill in "Admit" with logic "minus" with "6" days
+    Then I fill in "Admit" with logic "minus" with "7" days
     Then I wait to the see the visibility of loader to disappear
-    Then I select the care type value "Inpatient" on add a new transition
-    Then I select the facility value "Stamford Hospital" on add a new transition
+    Then I select the "Admit" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
+    Then I wait to the see the visibility of loader to disappear
+    Then I select the "Admit" "caretype" "Inpatient" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
+    Then I select the "Admit" facility "Stamford Hospital" by "#s2id_bp_personbundle_bpadmissiontype_admitFacility" on add a new transition
     Then I wait to the see the visibility of loader to disappear
     Then I click on the Create Transition Button to add a new transition
     Then I wait to the see the visibility of loader to disappear
@@ -382,7 +403,7 @@ Feature: As a user, I should be able to complete and submit a CARL form for an E
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I verify CARL button is "appearing" on the patient card
+    Then I verify CARL button is "not appearing" on the patient card
 
   Scenario Outline: Discharge from anchor 8 days ago to HHH-Inpatient admitted 7 days ago no discharge
     Given I am on the login page
@@ -450,10 +471,11 @@ Feature: As a user, I should be able to complete and submit a CARL form for an E
     Then I click on add a new transition to add a new episode
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I fill in "Admit" with logic "minus" with "30" days
-    Then I select the care setting value "HHH - Hospital" on add a new transition
     Then I wait to the see the visibility of loader to disappear
-    Then I select the care type value "Inpatient" on add a new transition
-    Then I select the facility value "Stamford Hospital" on add a new transition
+    Then I select the "Admit" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
+    Then I wait to the see the visibility of loader to disappear
+    Then I select the "Admit" "caretype" "Inpatient" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
+    Then I wait to the see the visibility of loader to disappear
     Then I select the "2" LOS days on Discharge date on Add Transition
     Then I select the "Discharge" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_dischargeFacilityCategory" on add a new transition
     Then I wait to the see the visibility of loader to disappear
@@ -504,7 +526,7 @@ Feature: As a user, I should be able to complete and submit a CARL form for an E
     Then I wait to the see the visibility of loader to disappear
     Then I verify CARL button is "appearing" on the patient card
 
-  Scenario Outline: discharge two weeks ago to HHH-inpatient WITHOUT creating the new readmission
+  Scenario: discharge two weeks ago to HHH-inpatient WITHOUT creating the new readmission
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
@@ -529,10 +551,8 @@ Feature: As a user, I should be able to complete and submit a CARL form for an E
     Then I click on the next button present on the Add Patient page
     Then I click on the next button present on the Add Patient page
     Then I click on the Cancel Button on the New Transition on Add Patient page
-    And I wait for 8000 milli seconds
     Then I switch back to old window
     And I click on the top user account link
-    And I wait for 1000 milli seconds
     Then I select Log Out option from the dropdown
     Given I am on the login page
     When I enter email field qa.emblemrn@yopmail.com for login
@@ -570,10 +590,12 @@ Feature: As a user, I should be able to complete and submit a CARL form for an E
     Then I click on add a new transition to add a new episode
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I fill in "Admit" with logic "minus" with "30" days
-    Then I select the care setting value "HHH - Hospital" on add a new transition
     Then I wait to the see the visibility of loader to disappear
-    Then I select the care type value "Inpatient" on add a new transition
-    Then I select the facility value "Stamford Hospital" on add a new transition
+    Then I select the "Admit" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
+    Then I wait to the see the visibility of loader to disappear
+    Then I select the "Admit" "caretype" "Inpatient" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
+    Then I wait to the see the visibility of loader to disappear
+    Then I select the "Admit" facility "Stamford Hospital" by "#s2id_bp_personbundle_bpadmissiontype_admitFacility" on add a new transition
     Then I click on the Diagnosis and DRG tab on add a new transition to select the DRG
     Then I select the "Working" DRG type on the Diagnosis and DRG tab on add a new transition
     Then I select the "61" DRG value on the Diagnosis and DRG tab on add a new transition
@@ -582,6 +604,8 @@ Feature: As a user, I should be able to complete and submit a CARL form for an E
     Then I wait to the see the visibility of loader to disappear
     When I switch to default window from iframe
     Then I close the patient summary Page
+    Then I click on "Inpatient" tab in the filter bar on patients page
+    Then I wait to the see the visibility of loader to disappear
     Then I scroll the page to bottom by "-100"
     Then I verify current page "Remedy Partners" title
     When I click on Filter button present on Patient Page
@@ -602,7 +626,8 @@ Feature: As a user, I should be able to complete and submit a CARL form for an E
     Then I select the "14" LOS days on Discharge date on Add Transition
     Then I select the "Discharge" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_dischargeFacilityCategory" on add a new transition
     Then I wait to the see the visibility of loader to disappear
-    Then I select the "Discharge" facility "Inpatient" by "#s2id_bp_personbundle_bpadmissiontype_dischargeFacility" on add a new transition
+    Then I select the "Discharge" "caretype" "Inpatient" by "#bp_personbundle_bpadmissiontype_dischargeCareType" on add a new transition
+    Then I select the "Discharge" facility "Stamford Hospital" by "#s2id_bp_personbundle_bpadmissiontype_dischargeFacility" on add a new transition
     Then I click on update transition to add a new episode
     Then I wait to the see the visibility of loader to disappear
     Then I click on the Cancel button on Episode present on the Add Patient page
@@ -643,10 +668,8 @@ Feature: As a user, I should be able to complete and submit a CARL form for an E
     Then I click on the next button present on the Add Patient page
     Then I click on the next button present on the Add Patient page
     Then I click on the Cancel Button on the New Transition on Add Patient page
-    And I wait for 8000 milli seconds
     Then I switch back to old window
     And I click on the top user account link
-    And I wait for 1000 milli seconds
     Then I select Log Out option from the dropdown
     Given I am on the login page
     When I enter email field qa.emblemrn@yopmail.com for login
@@ -684,10 +707,11 @@ Feature: As a user, I should be able to complete and submit a CARL form for an E
     Then I click on add a new transition to add a new episode
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I fill in "Admit" with logic "minus" with "30" days
-    Then I select the care setting value "HHH - Hospital" on add a new transition
     Then I wait to the see the visibility of loader to disappear
-    Then I select the care type value "Inpatient" on add a new transition
-    Then I select the facility value "Stamford Hospital" on add a new transition
+    Then I select the "Admit" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
+    Then I wait to the see the visibility of loader to disappear
+    Then I select the "Admit" "caretype" "Inpatient" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
+    Then I wait to the see the visibility of loader to disappear
     Then I click on the Diagnosis and DRG tab on add a new transition to select the DRG
     Then I select the "Working" DRG type on the Diagnosis and DRG tab on add a new transition
     Then I select the "61" DRG value on the Diagnosis and DRG tab on add a new transition
@@ -816,10 +840,8 @@ Feature: As a user, I should be able to complete and submit a CARL form for an E
     Then I click on the next button present on the Add Patient page
     Then I click on the next button present on the Add Patient page
     Then I click on the Cancel Button on the New Transition on Add Patient page
-    And I wait for 8000 milli seconds
     Then I switch back to old window
     And I click on the top user account link
-    And I wait for 1000 milli seconds
     Then I select Log Out option from the dropdown
     Given I am on the login page
     When I enter email field qa.emblemrn@yopmail.com for login
@@ -857,10 +879,11 @@ Feature: As a user, I should be able to complete and submit a CARL form for an E
     Then I click on add a new transition to add a new episode
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I fill in "Admit" with logic "minus" with "30" days
-    Then I select the care setting value "HHH - Hospital" on add a new transition
     Then I wait to the see the visibility of loader to disappear
-    Then I select the care type value "Inpatient" on add a new transition
-    Then I select the facility value "Stamford Hospital" on add a new transition
+    Then I select the "Admit" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
+    Then I wait to the see the visibility of loader to disappear
+    Then I select the "Admit" "caretype" "Inpatient" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
+    Then I wait to the see the visibility of loader to disappear
     Then I click on the Diagnosis and DRG tab on add a new transition to select the DRG
     Then I select the "Working" DRG type on the Diagnosis and DRG tab on add a new transition
     Then I select the "61" DRG value on the Diagnosis and DRG tab on add a new transition
@@ -918,10 +941,11 @@ Feature: As a user, I should be able to complete and submit a CARL form for an E
     Then I click on add a new transition to add a new episode
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I fill in "Admit" with logic "minus" with "10" days
-    Then I select the care setting value "HHH - Hospital" on add a new transition
     Then I wait to the see the visibility of loader to disappear
-    Then I select the care type value "Inpatient" on add a new transition
-    Then I select the facility value "Stamford Hospital" on add a new transition
+    Then I select the "Admit" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
+    Then I wait to the see the visibility of loader to disappear
+    Then I select the "Admit" "caretype" "Inpatient" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
+    Then I wait to the see the visibility of loader to disappear
     Then I wait to the see the visibility of loader to disappear
     Then I click on the Create Transition Button to add a new transition
     Then I wait to the see the visibility of loader to disappear
@@ -1091,10 +1115,11 @@ Feature: As a user, I should be able to complete and submit a CARL form for an E
     Then I click on add a new transition to add a new episode
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I fill in "Admit" with logic "minus" with "4" days
-    Then I select the care setting value "HHH - Hospital" on add a new transition
     Then I wait to the see the visibility of loader to disappear
-    Then I select the care type value "Inpatient" on add a new transition
-    Then I select the facility value "Stamford Hospital" on add a new transition
+    Then I select the "Admit" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
+    Then I wait to the see the visibility of loader to disappear
+    Then I select the "Admit" "caretype" "Inpatient" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
+    Then I wait to the see the visibility of loader to disappear
     Then I select the "1" LOS days on Discharge date on Add Transition
     Then I click on the Diagnosis and DRG tab on add a new transition to select the DRG
     Then I select the "Working" DRG type on the Diagnosis and DRG tab on add a new transition
@@ -1239,10 +1264,11 @@ Feature: As a user, I should be able to complete and submit a CARL form for an E
     Then I click on add a new transition to add a new episode
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I fill in "Admit" with logic "minus" with "6" days
-    Then I select the care setting value "HHH - Hospital" on add a new transition
     Then I wait to the see the visibility of loader to disappear
-    Then I select the care type value "Inpatient" on add a new transition
-    Then I select the facility value "Stamford Hospital" on add a new transition
+    Then I select the "Admit" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
+    Then I wait to the see the visibility of loader to disappear
+    Then I select the "Admit" "caretype" "Inpatient" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
+    Then I wait to the see the visibility of loader to disappear
     Then I click on the Diagnosis and DRG tab on add a new transition to select the DRG
     Then I select the "Working" DRG type on the Diagnosis and DRG tab on add a new transition
     Then I select the "472" DRG value on the Diagnosis and DRG tab on add a new transition

@@ -1,6 +1,6 @@
-Feature: Patient Status on readmission to an ACH M3 Facility with HHH-I
+Feature: Potential M3 Readmission To Ach Facility
 
-  Scenario Outline: Patient with M3 Active/Pending Cancellation status having readmission to an ACH facility with HHH-I
+  Scenario Outline: Patient with Active Episode and readmission to an ACH facility as HHH-I
     Given I am on the login page
     When I enter email field <email> for login
     And I enter password field <password> for Login
@@ -21,7 +21,7 @@ Feature: Patient Status on readmission to an ACH M3 Facility with HHH-I
     And I enter date of birth "01/05/1995" present on the Add Patient Page
     And I selected "Male" from the gender drop down list present on the Add Patient page
     When I click on Admitting Facility present on the Add Patient page
-    And I Select "coosa valley health care" from the list of admitting facility present on the Add Patient page
+    And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page
     And I enter "WA784654785" in the Medicare ID present on the Add Patient page
     Then I click on the next button present on the Add Patient page
     Then I click on the next button present on the Add Patient page
@@ -51,11 +51,12 @@ Feature: Patient Status on readmission to an ACH M3 Facility with HHH-I
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I fill in "Admit" with logic "minus" with "20" days
     Then I wait to the see the visibility of loader to disappear
-    Then I select the "Admit" "caresetting" "SNF - Skilled Nursing Facility" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
+    Then I select the "Admit" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
     Then I wait to the see the visibility of loader to disappear
-    Then I select the "Admit" "caretype" "Skilled Nursing" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
-    Then I select the "Admit" facility "Coosa valley health care" by "#s2id_bp_personbundle_bpadmissiontype_admitFacility" on add a new transition
+    Then I select the "Admit" "caretype" "Inpatient" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
+    Then I select the "Admit" facility "Emanuel County Hospital Authority" by "#s2id_bp_personbundle_bpadmissiontype_admitFacility" on add a new transition
     Then I select the "1" LOS days on Discharge date on Add Transition
+    Then I wait to the see the visibility of loader to disappear
     Then I click on the Diagnosis and DRG tab on add a new transition to select the DRG
     Then I select the "Working" DRG type on the Diagnosis and DRG tab on add a new transition
     Then I select the "177" DRG value on the Diagnosis and DRG tab on add a new transition

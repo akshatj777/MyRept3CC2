@@ -128,7 +128,6 @@ Feature: To verify the options and functionality of Anticipated Discharge Needs 
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
     Then I click on "Anticipated Discharge Needs" section on left navigator
-    And I wait for 4000 milli seconds
     Then I click "Physical therapy" checkbox under Therapies Needed on Anticipated Discharge Needs section
     Then I verify Patients Restoration Potential section on selecting PhysicalTherapy
     Then I click on Physical Therapy dropdown on Patients Restoration Potential

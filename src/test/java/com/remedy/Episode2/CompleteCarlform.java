@@ -110,6 +110,7 @@ public class CompleteCarlform extends BaseClass {
 
 	public void IClickOnCareNetworkMembersDropdownUnderChooseCaregiver() {
 		clickElement(driver.findElement(By.xpath("//span[text()='Select']")));
+		longDelay();
 	}
 
 	public void ISelectTheAssociatedCaregiverFromTheDropdown(String text) {
@@ -186,6 +187,8 @@ public class CompleteCarlform extends BaseClass {
 	public void IClickOnCareTeamOnNavBarOnPatientSummaryPage(String text) {
 		iWillWaitToSee(By.xpath("//span[contains(text(),'" + text + "')]"));
 		clickElement(driver.findElement(By.xpath("//span[contains(text(),'" + text + "')]")));
+		longDelay();
+		delay();
 	}
 
 	public void IClickOnSettingIconToRemovePatientUnderCareTeam() {
@@ -194,11 +197,13 @@ public class CompleteCarlform extends BaseClass {
 
 	public void IClickOnRemoveToDeleteThePatient() {
 		clickElement(driver.findElement(By.xpath("//a[contains(@id,'member-delete')]")));
+		longDelay();
 	}
 
 	public void IClickOnOkToDeleteThePatient() {
 		clickElement(driver.findElement(By.xpath("//button[text()='OK']")));
 		delay();
+		longDelay();
 	}
 
 	public void IVerifyFirstNameIsMandatoryFieldToCreateCaregiver() {
@@ -263,6 +268,7 @@ public class CompleteCarlform extends BaseClass {
 
 	public void IVerifyHomeShouldbeDefaultOptionForPrimaryPhoneOption() {
 		verifyTextForElementFromListByXpath("//span[text()='Home']", "Home");
+		longDelay();
 	}
 
 	public void IEnterPrimaryPhoneToCreateCaregiver(String phone) {
@@ -278,7 +284,9 @@ public class CompleteCarlform extends BaseClass {
 	}
 
 	public void IClickOnCloseButtonInDropdownUnderChooseCaregiver() {
+		longDelay();
 		clickElement(driver.findElement(By.cssSelector(".glyphicon.glyphicon-remove")));
+		longDelay();
 	}
 
 	public void IVerifythatCarlformshouldappearLeftnavigatordisplayingfoursections() {
