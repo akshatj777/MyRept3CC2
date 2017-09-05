@@ -553,6 +553,7 @@ public class ReportHomePage extends BaseClass {
     }
     
     public void iScrollPageToBottom(String text){
+    	delay();
     	JavascriptExecutor js = ((JavascriptExecutor)driver);
     	js.executeScript("scroll(0, "+text+")");
     }

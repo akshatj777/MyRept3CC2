@@ -1,6 +1,8 @@
 package stepDefination.Episode2;
 
 import java.awt.AWTException;
+import java.text.ParseException;
+
 import com.remedy.Episode2.NoteCreation;
 import com.remedy.resources.DriverScript;
 import cucumber.api.java.en.And;
@@ -184,6 +186,13 @@ public class PatientNotesPatientCardSteps extends DriverScript {
 		noteCreation.IverifythatusershouldbeabletoselectanduploadfilesfromthecomputerthroughAddfileslink(newDir + "\\" + FileName);
 	}
 
+	@Then ("^I verify upon uploading any corrupted file then validation should throw and file should not get added on creating note$")
+	public void I_verify_upon_uploading_any_corrupted_file_then_validation_should_throw_and_file_should_not_get_added_on_creating_note()
+	{
+		noteCreation.Iverifyuponuploadinganycorruptedfilethenvalidationshouldthrowandfileshouldnotgetaddedoncreatingnote();
+	}
+	
+	
 	@Then("^I verify the image is attached or not$")
 	public void I_verify_the_image_is_attached_or_not() throws Throwable {
 		noteCreation.Iverifytheimageisattachedornot();
@@ -234,10 +243,54 @@ public class PatientNotesPatientCardSteps extends DriverScript {
 		noteCreation.IentertheNoteTextinthetextareaonAddClinicalDocumentonPatientCard(Notetext);
 	}
 	
+	@And("^I enter the Note Text \"(.*)\" in the textarea on Add Clinical Document on Patient Summary$")
+	public void I_enter_the_Note_Text_in_the_textarea_on_Add_Clinical_Document_on_Patient_Summary(String Notetext)throws Throwable {
+		noteCreation.IentertheNoteTextinthetextareaonAddClinicalDocumentonPatientCard(Notetext);
+	}
+	
 	@Then ("^I wait to the see the visibility of loader to disappear$")
 	public void I_wait_to_the_see_the_visibility_of_loader_to_disappear() throws Throwable
 	{
 		noteCreation.Iwaittotheseethevisibilityofloadertodisappear();
 	}
+	@Then("^I click on Add Files link on Note Section on Patient Summary$")
+	public void I_verify_that_Add_Files_link_is_clickable_on_PatientSummary() throws Throwable {
+		noteCreation.IverifythatAdd_Fileslinkisclickable();
+	}
 	
+	@Then ("^I Verify that today date should be highlighted in calendar as default date$")
+	public void I_Verify_that_today_date_should_be_highlighted_in_calendar_as_default_date()
+	{
+		noteCreation.IVerifythattodaydateshouldbehighlightedincalendarasdefaultdate();
+	}
+	
+    @Then ("^I Verify that upon selecting date through calendar date should get populated the field in the format mmddyyyy$")
+    public void I_Verify_that_upon_selecting_date_through_calendar_date_should_get_populated_the_field_in_the_format_mmddyyyy() throws ParseException
+    {
+    	noteCreation.IVerifythatuponselectingdatethroughcalendardateshouldgetpopulatedthefieldintheformatmmddyyyy();
+    }
+    
+    @Then ("^I verify user should be able to pick any date and exact date should get selected and highlighted$")
+    public void I_verify_user_should_be_able_to_pick_any_date_and_exact_date_should_get_selected_and_highlighted()
+    {
+    	noteCreation.Iverifyusershouldbeabletopickanydateandexactdateshouldgetselectedandhighlighted();
+    }
+    
+    @Then ("^I verify user should be able to remove the default date by clicking on the cross icon$")
+    public void I_verify_user_should_be_able_to_remove_the_default_date_by_clicking_on_the_cross_icon()
+    {
+    	noteCreation.Iverifyusershouldbeabletoremovethedefaultdatebyclickingonthecrossicon();
+    }
+    
+    @Then ("^I verify on clicking on cross icon \"([^\"]*)\" text should show$")
+    public void I_verify_on_clicking_on_cross_icon_text_should_show()
+    {
+    	noteCreation.Iverifyonclickingoncrossicontextshouldshow();
+    }
+    
+    @Then ("^I verify Note should not be created without Activity date$")
+    public void I_verify_Note_should_not_be_created_without_Activity_date()
+    {
+    	noteCreation.IverifyNoteshouldnotbecreatedwithoutActivitydate();
+    }
 	}

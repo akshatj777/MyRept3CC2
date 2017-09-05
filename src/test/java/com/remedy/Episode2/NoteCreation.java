@@ -4,16 +4,21 @@ import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -83,7 +88,7 @@ public class NoteCreation extends BaseClass {
 	}
 
 	public void IclickonquickactionbuttonfornotecreationonPatientCardpage() {
-		 iWillWaitToSee(By.cssSelector("i.valentino-icon-plus"));
+		iWillWaitToSee(By.cssSelector("i.valentino-icon-plus"));
 		clickElement(driver.findElement(By.cssSelector("i.valentino-icon-plus")));
 	}
 
@@ -128,11 +133,13 @@ public class NoteCreation extends BaseClass {
 	}
 
 	public void IentertheNoteTextinthetextareaonAddClinicalDocumentonPatientCard(String NoteText) {
-		iFillInText(driver.findElement(By.cssSelector(".form-control.ng-pristine.ng-untouched.ng-empty.ng-invalid.ng-invalid-required")),NoteText);
+		iFillInText(driver.findElement(By.xpath("//textarea[@ng-model='$clinicalDocument.note.body']")),NoteText);
 	}
 
 	public void IclickonthecreateNoteButtononAddClinicalDocumentonPatientCard() {
+		delay();
 		clickElement(driver.findElement(By.xpath("//button[contains(@class, 'btn btn-primary') and contains(text(), 'Create Note')]")));
+		longDelay();
 	}
 
 	public void IclickthevaluefromthetopicdropdownonAddClinicalDocumentonPatientCard() {
@@ -191,6 +198,7 @@ public class NoteCreation extends BaseClass {
 	}
 
 	public void IverifythatusershouldbeabletoselectanduploadfilesfromthecomputerthroughAddfileslink(String file) throws InterruptedException, AWTException {
+		longDelay();
 		StringSelection s = new StringSelection(file);
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(s, null);
 		Robot robot = new Robot();
@@ -205,6 +213,7 @@ public class NoteCreation extends BaseClass {
 	}
 
 	public void Iverifytheimageisattachedornot() {
+		longDelay();
 		isElementVisible(driver.findElement(By.cssSelector(" div.files.ng-scope > div:nth-child(1) > span")));
 	}
 
@@ -236,6 +245,7 @@ public class NoteCreation extends BaseClass {
 	}
 
 	public void IclickontheCancelbuttonontheNoteSectiononPatientCard() {
+		longDelay();
 		clickElement(driver.findElement(By.xpath("//button[contains(@class, 'btn btn-tertiary') and text() = 'Cancel']")));
 	}
 
@@ -318,6 +328,7 @@ public class NoteCreation extends BaseClass {
 	}
 
 	public void IclickonthecreatednoteintheclinicalDocumentssectiononpatientsummary() {
+		iWillWaitToSee(By.cssSelector("table > tbody > tr:nth-child(1) > td:nth-child(1) > a > span "));
 		clickElement(driver.findElement(By.cssSelector("table > tbody > tr:nth-child(1) > td:nth-child(1) > a > span ")));
 	}
 
@@ -358,7 +369,8 @@ public class NoteCreation extends BaseClass {
 	}
 
 	public void IswitchtotheActivityframeonthePatientSummaryPage() {
-		swithToFrame("//*[@id='iFrameEC2PatientActivity']");
+		WebDriverWait wait=new WebDriverWait(driver,60);
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//*[@id='iFrameEC2PatientActivity']")));
 	}
 
 	public void IclickontheNotificationbuttonontheActivityframeonPatientSummaryPage() {
@@ -442,4 +454,49 @@ public class NoteCreation extends BaseClass {
 		}
 	}
 
+	public void Iverifyuponuploadinganycorruptedfilethenvalidationshouldthrowandfileshouldnotgetaddedoncreatingnote() {
+		iWillWaitToSee(By.cssSelector("div.ng-binding.error"));
+		verifyTextForElement(driver.findElement(By.cssSelector("div.ng-binding.error")),"File content is not valid: sample.docx");
+	}
+
+	public void IVerifythattodaydateshouldbehighlightedincalendarasdefaultdate() {
+		String datevalue = driver.findElement(By.xpath("//input[@ng-model='$selection']")).getAttribute("value");
+		System.out.println("$$$Date is"+datevalue);
+		DateFormat dateFormat = new SimpleDateFormat("mm/dd/yyyy");
+		Date date = new Date();
+		System.out.println(dateFormat.format(date));
+		Assert.assertEquals(dateFormat.format(date), datevalue);
+	}
+
+	public void IVerifythatuponselectingdatethroughcalendardateshouldgetpopulatedthefieldintheformatmmddyyyy() throws ParseException {
+		String datevalue = driver.findElement(By.xpath("//input[@ng-model='$selection']")).getAttribute("value");
+		System.out.println("$$$Date is"+datevalue);
+		validateDateFormat(datevalue);
+		
+	}
+	  
+	public void validateDateFormat(String dateToValdate) throws ParseException {
+			SimpleDateFormat formatter = new SimpleDateFormat("mm/dd/yyyy");
+		    formatter.setLenient(false);
+		    formatter.parse(dateToValdate);
+	}
+
+	public void Iverifyusershouldbeabletopickanydateandexactdateshouldgetselectedandhighlighted() {
+		Assert.assertEquals("07/12/2014",driver.findElement(By.xpath("//input[@ng-model='$selection']")).getAttribute("value"));
+	}
+
+	public void Iverifyusershouldbeabletoremovethedefaultdatebyclickingonthecrossicon() {
+		iWillWaitToSee(By.cssSelector("i.valentino-icon-x"));
+		clickElement(driver.findElement(By.cssSelector("i.valentino-icon-x")));
+		Assert.assertEquals("",driver.findElement(By.xpath("//input[@ng-model='$selection']")).getAttribute("value"));
+	}
+
+	public void Iverifyonclickingoncrossicontextshouldshow() {
+		isElementVisible(driver.findElement(By.cssSelector("input.form-control.ng-pristine.ng-valid.ng-valid-required.ng-touched.ng-empty")));
+		Assert.assertEquals(driver.findElement(By.cssSelector("input.form-control.ng-pristine.ng-valid.ng-valid-required.ng-touched.ng-empty")).getAttribute("placeholder"),"Activity Date");
+	}
+
+	public void IverifyNoteshouldnotbecreatedwithoutActivitydate() {
+		Assert.assertEquals("disabled",driver.findElement(By.xpath("//button[@ng-click='$clinicalDocument.submitNote()']")).getAttribute("disabled"));
+	}
     }

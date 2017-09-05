@@ -1573,9 +1573,9 @@ public class PatientsPageSteps extends DriverScript {
     	patientsPage.Iclickonthenotestabappearingundercareplanframeonpatientsummarypage();
     }
    
-    @Then ("^I verify the notes created in the episode1 should not appear in the notes section in care plan in episode2$")
-    public void I_verify_the_notes_created_in_the_episode1_should_not_appear_in_the_notes_section_in_care_plan_in_episode2() throws Throwable {
-    	patientsPage.Iverifythenotescreatedintheepisode1shouldnotappearinthenotessectionincareplaninepisode2();
+    @Then ("^I verify the notes created in the episode1 should appear in the notes section in care plan in episode2$")
+    public void I_verify_the_notes_created_in_the_episode1_should_appear_in_the_notes_section_in_care_plan_in_episode2() throws Throwable {
+    	patientsPage.Iverifythenotescreatedintheepisode1shouldappearinthenotessectionincareplaninepisode2();
     }
     
     }

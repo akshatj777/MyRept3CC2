@@ -5,7 +5,6 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
-    And I wait for 2000 milli seconds
     Then I should see Tile text Episodes
     And I click on the "Episodes" tile
     And I switch to new window
@@ -17,35 +16,24 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I verify "Patient Information" text is present on the add patient page
     Then I enter random Patient First Name in the first name text box field present on the Add Patient page
     Then I enter random Patient Last Name in the last name text box field present on the Add Patient page
-    And I wait for 4000 milli seconds
     And I enter date of birth "01/05/1995" present on the Add Patient Page
-    And I wait for 4000 milli seconds
     And I selected "Male" from the gender drop down list present on the Add Patient page
-    And I wait for 4000 milli seconds
     And I enter random social security number in the SSN text box field present on the Add Patient page
-    And I wait for 4000 milli seconds
     When I click on Admitting Facility present on the Add Patient page
-    And I wait for 2000 milli seconds
     And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page
-    And I wait for 4000 milli seconds
     And I enter "WA784654785" in the Medicare ID present on the Add Patient page
     Then I click on the next button present on the Add Patient page
     Then I click on the next button present on the Add Patient page
     Then I click on the Cancel Button on the New Transition on Add Patient page
-    And I wait for 8000 milli seconds
     Then I switch back to old window
-    And I wait for 2000 milli seconds
     And I click on the top user account link
-    And I wait for 1000 milli seconds
     Then I select Log Out option from the dropdown
     Given I am on the login page
     When I enter email field qa.emblemrn@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
-    And I wait for 2000 milli seconds
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
-    And I wait for 4000 milli seconds
     Then I verify current page "Remedy Partners" title
     Then I create a post request
     Then I click on "All" tab in the filter bar on patients page
@@ -55,7 +43,6 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    And I wait for 2000 milli seconds
     Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
@@ -96,65 +83,50 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I close the patient summary Page
     Then I verify current page "Remedy Partners" title
     When I click on Filter button present on Patient Page
-    And I wait for 2000 milli seconds
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I scroll the page to bottom by "-100"
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
-    And I wait for 4000 milli seconds
     Then I click on "Discharge" section on left navigator
-    And I wait for 2000 milli seconds
     And I verify the "Discharge" section of the carl form upon clicking on it
     Then I verify that "Discharge" section on carl form should be highlighted in left navigator upon clicking
     Then I verify "Next Site of Care" appears on Discharge section of carl form
     Then I verify "No CARL Recommendation. Please complete the following sections" field under Next Site of Care on Discharge section
     Then I verify "Actual Care Setting" subform field under Recommendation on Discharge section
     Then I click on "Actual Care Setting" subform dropdown under Recommendation on Discharge section
-    And I wait for 2000 milli seconds
     Then I select "(HHA) Home Health Agency" in subform dropdown for "Actual Care Setting" on Discharge section
     Then I verify "Care Type" subform field under Recommendation on Discharge section
     Then I verify "Discharge Location" subform field under Recommendation on Discharge section
     Then I verify "Discharge Date" subform field under Recommendation on Discharge section
     Then I verify Done button under subform is disabled on Discharge section
     Then I click on "Care Type" subform dropdown under Recommendation on Discharge section
-    And I wait for 2000 milli seconds
     Then I select "Skilled Services" in subform dropdown for "Care Type" on Discharge section
-    And I wait for 2000 milli seconds
     Then I verify Done button under subform is disabled on Discharge section
     Then I click on "Discharge Location" subform dropdown under Recommendation on Discharge section
     Then I enter "A Helping Hand Hha" and select location in the Discharge Location search box
     Then I verify Done button under subform is disabled on Discharge section
     Then I click on Calendar Icon On Discharge date under subform on Discharge section
-    And I wait for 2000 milli seconds
     Then I select todays Date on Calendar Discahrge Date under subform on Discharge section
-    And I wait for 2000 milli seconds
     Then I verify Done button under subform is enabled on Discharge section
     Then I verify first question "Have you discussed the proposal with the Interdisciplinary team?" under Discharge section
     And I verify "Yes" radio option for "Have you discussed the proposal with the Interdisciplinary team?" under Discharge section
     And I verify "No" radio option for "Have you discussed the proposal with the Interdisciplinary team?" under Discharge section
     Then I verify Additional Comments section under Discharge on Carl form
     Then I click on "Cancel" button under subform on Discharge section
-    And I wait for 2000 milli seconds
     Then I click on "Actual Care Setting" subform dropdown under Recommendation on Discharge section
-    And I wait for 2000 milli seconds
     Then I select "(HOM) Home" in subform dropdown for "Actual Care Setting" on Discharge section
     Then I verify "Discharge Location" subform field is not appearing under Recommendation on Discharge section
     Then I click on "Cancel" button under subform on Discharge section
-    And I wait for 2000 milli seconds
     Then I click on "Actual Care Setting" subform dropdown under Recommendation on Discharge section
-    And I wait for 2000 milli seconds
     Then I select "(EXPIRED) Expired" in subform dropdown for "Actual Care Setting" on Discharge section
     Then I verify "Discharge Location" subform field is not appearing under Recommendation on Discharge section
     Then I click on "Cancel" button under subform on Discharge section
-    And I wait for 2000 milli seconds
     Then I click on "Actual Care Setting" subform dropdown under Recommendation on Discharge section
-    And I wait for 2000 milli seconds
     Then I select "(UNK) Unknown" in subform dropdown for "Actual Care Setting" on Discharge section
     Then I verify "Discharge Location" subform field is not appearing under Recommendation on Discharge section
     Then I click on "Cancel" button under subform on Discharge section
-    And I wait for 2000 milli seconds
     Then I verify second question "Why didn't the patient transfer to the recommended Next Site of Care?" under Discharge section
     Then I verify "Who disagrees?" dropdown for "Why didn't the patient transfer to the recommended Next Site of Care?" under Discharge section
     Then I verify "Reason for Disagreement" dropdown for "Why didn't the patient transfer to the recommended Next Site of Care?" under Discharge section
@@ -167,7 +139,6 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     When I enter email field qa.emblemrn@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
-    And I wait for 2000 milli seconds
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
     Then I verify current page "Remedy Partners" title
@@ -208,14 +179,12 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    And I wait for 2000 milli seconds
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I verify CARL button is "not appearing" on the patient card
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
-    And I wait for 4000 milli seconds
     Then I click on "Discharge" section on left navigator
     Then I click on "Actual Care Setting" subform dropdown under Recommendation on Discharge section
     Then I select "(HHH) Hospital" in subform dropdown for "Actual Care Setting" on Discharge section
@@ -223,9 +192,7 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I select "Inpatient" in subform dropdown for "Care Type" on Discharge section
     Then I click on "Discharge Location" subform dropdown under Recommendation on Discharge section
     Then I enter "Allentown" and select location in the Discharge Location search box
-    And I wait for 1000 milli seconds
     Then I click on Calendar Icon On Discharge date under subform on Discharge section
-    And I wait for 2000 milli seconds
     Then I select "Discharge current" with logic "current" "1" days on Calendar Discharge Date under subform on Discharge section
     Then I verify Done button under subform is enabled on Discharge section
     Then I click on Done button under subform on Discharge sections
@@ -237,7 +204,6 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I click on "Actual Care Setting" subform dropdown under Recommendation on Discharge section
     Then I select "(UNK) Unknown" in subform dropdown for "Actual Care Setting" on Discharge section
     Then I click on Calendar Icon On Discharge date under subform on Discharge section
-    And I wait for 2000 milli seconds
     Then I select "Discharge current" with logic "current" "1" days on Calendar Discharge Date under subform on Discharge section
     Then I verify Done button under subform is enabled on Discharge section
     Then I click on Done button under subform on Discharge sections
@@ -248,7 +214,6 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I click on "Actual Care Setting" subform dropdown under Recommendation on Discharge section
     Then I select "(HOM) Home" in subform dropdown for "Actual Care Setting" on Discharge section
     Then I click on Calendar Icon On Discharge date under subform on Discharge section
-    And I wait for 2000 milli seconds
     Then I select "Discharge current" with logic "current" "1" days on Calendar Discharge Date under subform on Discharge section
     Then I verify Done button under subform is enabled on Discharge section
     Then I click on Done button under subform on Discharge sections
@@ -261,7 +226,6 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I click on "Care Type" subform dropdown under Recommendation on Discharge section
     Then I select "Expired as Inpatient" in subform dropdown for "Care Type" on Discharge section
     Then I click on Calendar Icon On Discharge date under subform on Discharge section
-    And I wait for 2000 milli seconds
     Then I select "Discharge current" with logic "current" "1" days on Calendar Discharge Date under subform on Discharge section
     Then I verify Done button under subform is enabled on Discharge section
     Then I click on Done button under subform on Discharge sections
@@ -275,9 +239,7 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I select "Skilled Services" in subform dropdown for "Care Type" on Discharge section
     Then I click on "Discharge Location" subform dropdown under Recommendation on Discharge section
     Then I enter "A Helping Hand Hha" and select location in the Discharge Location search box
-    And I wait for 1000 milli seconds
     Then I click on Calendar Icon On Discharge date under subform on Discharge section
-    And I wait for 2000 milli seconds
     Then I select "Discharge past" with logic "minus" "9" days on Calendar Discharge Date under subform on Discharge section
     Then I verify User should not get an error message on adding a past date in the discharge date section
     Then I click on "Actual Care Setting" subform dropdown under Recommendation on Discharge section
@@ -286,12 +248,9 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I select "Skilled Services" in subform dropdown for "Care Type" on Discharge section
     Then I click on "Discharge Location" subform dropdown under Recommendation on Discharge section
     Then I enter "A Helping Hand Hha" and select location in the Discharge Location search box
-    And I wait for 1000 milli seconds
     Then I click on Calendar Icon On Discharge date under subform on Discharge section
-    And I wait for 2000 milli seconds
     Then I verify User should not get an error message on adding a past date in the discharge date section
     Then I click on Calendar Icon On Discharge date under subform on Discharge section
-    And I wait for 2000 milli seconds
     Then I select "Discharge current" with logic "minus" "3" days on Calendar Discharge Date under subform on Discharge section
     Then I verify Done button under subform is enabled on Discharge section
     Then I click on Done button under subform on Discharge sections
@@ -303,7 +262,6 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I scroll the page to bottom by "-100"
     Then I verify current page "Remedy Partners" title
     When I click on Filter button present on Patient Page
-    And I wait for 2000 milli seconds
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I scroll the page to bottom by "-100"
@@ -319,7 +277,6 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     When I enter email field qa.emblemrn@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
-    And I wait for 2000 milli seconds
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
     Then I verify current page "Remedy Partners" title
@@ -360,14 +317,12 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    And I wait for 2000 milli seconds
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I scroll the page to bottom by "-100"
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
-    And I wait for 4000 milli seconds
     Then I click on "Discharge" section on left navigator
     Then I click on "Actual Care Setting" subform dropdown under Recommendation on Discharge section
     Then I select "(SNF) Skilled Nursing Facility" in subform dropdown for "Actual Care Setting" on Discharge section
@@ -384,7 +339,6 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     When I enter email field qa.emblemrn@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
-    And I wait for 2000 milli seconds
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
     Then I verify current page "Remedy Partners" title
@@ -424,14 +378,12 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    And I wait for 2000 milli seconds
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I scroll the page to bottom by "-100"
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
-    And I wait for 4000 milli seconds
     Then I click on "Discharge" section on left navigator
     Then I click on "Actual Care Setting" subform dropdown under Recommendation on Discharge section
     Then I select "(HHA) Home Health Agency" in subform dropdown for "Actual Care Setting" on Discharge section
@@ -444,7 +396,6 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I verify results should be configured with list of facilities after entering characters on the Discharge Location field
     Then I close the Discharge Location dropdown on Discharge Section
     Then I click on Calendar Icon On Discharge date under subform on Discharge section
-    And I wait for 2000 milli seconds
     Then I select "Discharge current" with logic "minus" "3" days on Calendar Discharge Date under subform on Discharge section
     Then I verify Done button under subform is disabled on Discharge section
     Then I click on "Actual Care Setting" subform dropdown under Recommendation on Discharge section
@@ -462,7 +413,6 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     When I enter email field qa.emblemrn@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
-    And I wait for 2000 milli seconds
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
     Then I verify current page "Remedy Partners" title
@@ -503,14 +453,12 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    And I wait for 2000 milli seconds
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I scroll the page to bottom by "-100"
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
-    And I wait for 4000 milli seconds
     Then I will wait to see the CARL section "Caregiver" header appears on the CARL form
     Then I click on Yes, 24 hours a day option under Does the patient have a capable caregiver
     And I click on Add Caregiver link under Choose Caregiver
@@ -519,18 +467,14 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I select "Adoptive Parent" option from "Relationship" dropdown to create Caregiver
     Then I enter "testuser@yopmail.com" in email field
     Then I enter "9874561230" in Primary Phone field
-    And I wait for 2000 milli seconds
     And I click on Create button to add Caregiver
-    And I wait for 2000 milli seconds
     Then I save and continue the complete CARL form
-    And I wait for 2000 milli seconds
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I get the patient last name who have no CARL button in it
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
-    And I wait for 4000 milli seconds
     Then I click on "Independence" section on left navigator
     Then I will wait to see the CARL section "Independence" header appears on the CARL form
     Then I click on "Cognitive Status" dropdown on Independece Section
@@ -540,12 +484,10 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I click on "Ambulatory Status" dropdown on Independece Section
     Then I select "Caregiver needed" option in dropdown for cognitive status
     Then I click on "Anticipated Discharge Needs" section on left navigator
-    And I wait for 2000 milli seconds
     Then I will wait to see the CARL section "Anticipated Discharge Needs" header appears on the CARL form
     Then I click "Physical therapy" checkbox under Therapies Needed on Anticipated Discharge Needs section
     Then I select "Injectable Meds" checkbox for Transition of Care Needs on Anticipated Discharge Needs
     Then I click "Once daily or less often" radio option under "Injectable Meds" for Transition Care Needs
-    And I wait for 2000 milli seconds
     Then I click on "Discharge" section on left navigator
     Then I will wait to see the CARL section "Discharge" header appears on the CARL form
     Then I click on "Actual Care Setting" subform dropdown under Recommendation on Discharge section
@@ -556,9 +498,7 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I select "Skilled Services" in subform dropdown for "Care Type" on Discharge section
     Then I click on "Discharge Location" subform dropdown under Recommendation on Discharge section
     Then I enter "A Helping Hand Hha" and select location in the Discharge Location search box
-    And I wait for 1000 milli seconds
     Then I click on Calendar Icon On Discharge date under subform on Discharge section
-    And I wait for 2000 milli seconds
     Then I select "Discharge current" with logic "minus" "3" days on Calendar Discharge Date under subform on Discharge section
     Then I click "Yes" radio option for "Have you discussed the proposal with the Interdisciplinary team?" under Discharge section
     Then I verify discharge form should provide "Who disagrees?" and the "Reason for Disagreement" if the Actual Care Setting does not match the CARL recommendation proposed facility
@@ -600,7 +540,6 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     When I enter email field qa.emblemrn@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
-    And I wait for 2000 milli seconds
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
     Then I verify current page "Remedy Partners" title
@@ -643,14 +582,12 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    And I wait for 2000 milli seconds
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I scroll the page to bottom by "-100"
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
-    And I wait for 2000 milli seconds
     Then I will wait to see the CARL section "Caregiver" header appears on the CARL form
     Then I verify Save and Go Back does not appear on the "Caregiver" section on CARL form
     Then I click on Yes, 24 hours a day option under Does the patient have a capable caregiver
@@ -676,7 +613,6 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     When I enter email field qa.emblemrn@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
-    And I wait for 2000 milli seconds
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
     Then I verify current page "Remedy Partners" title
@@ -717,14 +653,12 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    And I wait for 2000 milli seconds
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I scroll the page to bottom by "-100"
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
-    And I wait for 4000 milli seconds
     Then I will wait to see the CARL section "Caregiver" header appears on the CARL form
     Then I click on Yes, 24 hours a day option under Does the patient have a capable caregiver
     And I click on Add Caregiver link under Choose Caregiver
@@ -733,18 +667,14 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I select "Adoptive Parent" option from "Relationship" dropdown to create Caregiver
     Then I enter "testuser@yopmail.com" in email field
     Then I enter "9874561230" in Primary Phone field
-    And I wait for 2000 milli seconds
     And I click on Create button to add Caregiver
-    And I wait for 2000 milli seconds
     Then I save and continue the complete CARL form
-    And I wait for 2000 milli seconds
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I get the patient last name who have no CARL button in it
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
-    And I wait for 4000 milli seconds
     Then I click on "Independence" section on left navigator
     Then I will wait to see the CARL section "Independence" header appears on the CARL form
     Then I click on "Cognitive Status" dropdown on Independece Section
@@ -754,22 +684,17 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I click on "Ambulatory Status" dropdown on Independece Section
     Then I select "Caregiver needed" option in dropdown for cognitive status
     Then I click on "Anticipated Discharge Needs" section on left navigator
-    And I wait for 2000 milli seconds
     Then I will wait to see the CARL section "Anticipated Discharge Needs" header appears on the CARL form
     Then I click "Physical therapy" checkbox under Therapies Needed on Anticipated Discharge Needs section
     Then I select "Injectable Meds" checkbox for Transition of Care Needs on Anticipated Discharge Needs
     Then I click "Once daily or less often" radio option under "Injectable Meds" for Transition Care Needs
-    And I wait for 2000 milli seconds
     Then I click on "Discharge" section on left navigator
-    And I wait for 2000 milli seconds
     And I click on the top user account link
-    And I wait for 1000 milli seconds
     Then I select Log Out option from the dropdown
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
-    And I wait for 2000 milli seconds
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
     Then I verify current page "Remedy Partners" title
@@ -780,18 +705,15 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    And I wait for 2000 milli seconds
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I verify upon saving CARL form Patient should "show" in "Inpatient Care" work list
     And I click on the top user account link
-    And I wait for 1000 milli seconds
     Then I select Log Out option from the dropdown
     Given I am on the login page
     When I enter email field qa.emblemrn@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
-    And I wait for 2000 milli seconds
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
     Then I verify current page "Remedy Partners" title
@@ -812,7 +734,6 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I get the patient last name who have no CARL button in it
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
-    And I wait for 4000 milli seconds
     Then I click on "Discharge" section on left navigator
     Then I will wait to see the CARL section "Discharge" header appears on the CARL form
     Then I click on "Actual Care Setting" subform dropdown under Recommendation on Discharge section
@@ -823,9 +744,7 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I select "Skilled Services" in subform dropdown for "Care Type" on Discharge section
     Then I click on "Discharge Location" subform dropdown under Recommendation on Discharge section
     Then I enter "A Helping Hand Hha" and select location in the Discharge Location search box
-    And I wait for 1000 milli seconds
     Then I click on Calendar Icon On Discharge date under subform on Discharge section
-    And I wait for 2000 milli seconds
     Then I select "Discharge current" with logic "minus" "3" days on Calendar Discharge Date under subform on Discharge section
     Then I click "Yes" radio option for "Have you discussed the proposal with the Interdisciplinary team?" under Discharge section
     Then I verify discharge form should provide "Who disagrees?" and the "Reason for Disagreement" if the Actual Care Setting does not match the CARL recommendation proposed facility
@@ -862,15 +781,12 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I verify "Discharge" section should appear with "Reason for disagreement?" on label "Not enough caregiver support" on the review page
     Then I verify "Discharge" section should appear with "Additional Comments" on label "Additional" on the review page
     Then I verify user should be able to submit the CARL form upon clicking the Submit link on the CARL Review form
-    And I wait for 2000 milli seconds
     And I click on the top user account link
-    And I wait for 1000 milli seconds
     Then I select Log Out option from the dropdown
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
-    And I wait for 2000 milli seconds
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
     Then I verify current page "Remedy Partners" title
@@ -881,7 +797,6 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    And I wait for 2000 milli seconds
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I verify upon saving CARL form Patient should "not show" in "Inpatient Care" work list

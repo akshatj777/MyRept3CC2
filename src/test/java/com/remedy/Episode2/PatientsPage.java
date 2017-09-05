@@ -547,6 +547,7 @@ public class PatientsPage extends BaseClass {
 	}
 
 	public void iSelectTodaysDateAsTheAdmissionDate() {
+		delay();
 		JavascriptExecutor jsdate = ((JavascriptExecutor) driver);
 		WebElement elementdate = driver.findElement(By.cssSelector("td.day.active"));
 		jsdate.executeScript("arguments[0].click();", elementdate);
@@ -561,10 +562,13 @@ public class PatientsPage extends BaseClass {
 	}
 
 	public void iSelectInpatientFromAdmissionCareTypeDropdownPresentOnAddPatientPage(String careType) {
+		delay();
 		selectDropdownVisibleElement("#bp_personbundle_bpadmissiontype_admitCareType", careType);
 	}
 
 	public void iClickOnAddTransitionButtonPresentOnTheAddPatientPage() {
+		delay();
+		iWillWaitToSee(By.cssSelector("button#submitButton"));
 		clickElement(driver.findElement(By.cssSelector("button#submitButton")));
 	}
 
@@ -594,6 +598,7 @@ public class PatientsPage extends BaseClass {
 
 	public void iClickOnAttestationButtonPresentOnThePatientCard() {
 		try{
+		iWillWaitToSee(By.xpath("//*[@id='submitButtonAdd']"));
 		clickElement(driver.findElement(By.xpath("//*[@id='submitButtonAdd']")));
 		}catch(Exception e)
 		{
@@ -876,6 +881,7 @@ public class PatientsPage extends BaseClass {
 	}
 
 	public void iShouldSeeSearchBoxAppearingOnThePatientsPage() {
+		iWillWaitToSee(By.xpath("//div[@class='elastic-input-wrapper']"));
 		isElementVisible(driver.findElement(By.xpath("//div[@class='elastic-input-wrapper']")));
 	}
 
@@ -1206,11 +1212,13 @@ public class PatientsPage extends BaseClass {
 	}
 
 	public void Iclickonthenotestabappearingundercareplanframeonpatientsummarypage() {
+		longDelay();
+		iWillWaitToSee(By.cssSelector("#careFlowNotesTab > a"));
 		clickElement(driver.findElement(By.cssSelector("#careFlowNotesTab > a")));
 		
 	}
 
-	public void Iverifythenotescreatedintheepisode1shouldnotappearinthenotessectionincareplaninepisode2() {
+	public void Iverifythenotescreatedintheepisode1shouldappearinthenotessectionincareplaninepisode2() {
 			verifyTextForElement(driver.findElement(By.cssSelector("#notesTable > tbody > tr:nth-child(1) > td.sorting_1")),"Baseline");
 		}
 	}

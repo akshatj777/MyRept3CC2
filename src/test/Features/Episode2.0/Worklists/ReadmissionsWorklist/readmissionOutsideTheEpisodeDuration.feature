@@ -20,6 +20,7 @@ Feature: Patient with readmission outside the episode duration i want to use thi
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the "<Patient Last Name>" searched patient on the Patient Card Page
+    Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
@@ -72,6 +73,7 @@ Feature: Patient with readmission outside the episode duration i want to use thi
     Then I wait to the see the visibility of loader to disappear
     Then I verify the "<Patient Last Name>" patient present on the Patient Card Page
     Then I click on the "<Patient Last Name>" searched patient on the Patient Card Page
+    Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame

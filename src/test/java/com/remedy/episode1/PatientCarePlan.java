@@ -20,6 +20,8 @@ public class PatientCarePlan extends BaseClass {
 	}
 
 	public void iShouldSeeCarePlanpresentonthestudentdetailspage() throws Throwable {
+		longDelay();
+		iWillWaitToSee(By.cssSelector("#carePlanButton"));
 		WebElement element = driver.findElement(By.cssSelector("#carePlanButton"));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView(true);", element);
@@ -106,6 +108,7 @@ public class PatientCarePlan extends BaseClass {
 	}
 
 	public void iClickOnNotesTabUnderCarePlan() throws Throwable {
+		delay();
 		clickElement(driver.findElement(By.cssSelector("#careFlowNotesTab>a")));
 	}
 
@@ -117,10 +120,12 @@ public class PatientCarePlan extends BaseClass {
 	}
 
 	public void iShouldSeePresentOnTheNewNotePage(String text) throws Throwable {
+		longDelay();
 		isElementVisible(driver.findElement(By.cssSelector(".modal-title")));
 	}
 
 	public void iClickOnTopicDropdownUnderNewNote() throws Throwable {
+		delay();
 		clickElement(driver.findElement(By.cssSelector("#bp_personbundle_bpnotetype_topic")));
 	}
 
@@ -130,6 +135,7 @@ public class PatientCarePlan extends BaseClass {
 
 	public void iClickOnCreateNoteButton() throws Throwable {
 		clickElement(driver.findElement(By.id("submitButton")));
+		longDelay();
 	}
 
 	public void iClickOnActionsColumnInNotes() throws Throwable {

@@ -34,9 +34,9 @@ public class PatientNotesSteps extends DriverScript {
 		noteCreation.I_verify_whether_topic_drop_down_appears_on_the_Add_Clinical_Document_on_Note_Creation();
 	}
 
-	@Then("^I select the value from the topic drop down on Add Clinical Document on Patient Summary$")
-	public void I_select_the_value_from_the_topic_drop_down_on_Add_Clinical_Document_on_Patient_Summary() throws Throwable {
-		noteCreation.IselectthevaluefromthetopicdropdownonAddClinicalDocumentonPatientSummary("Baseline");
+	@Then("^I select the \"([^\"]*)\" value from the topic drop down on Add Clinical Document on Patient Summary$")
+	public void I_select_the_value_from_the_topic_drop_down_on_Add_Clinical_Document_on_Patient_Summary(String value) throws Throwable {
+		noteCreation.IselectthevaluefromthetopicdropdownonAddClinicalDocumentonPatientSummary(value);
 	}
 
 	@Then("^I verify Activity Date drop down calendar appears on the Add Clinical Document on Note Creation$")
@@ -68,4 +68,6 @@ public class PatientNotesSteps extends DriverScript {
 	public void I_attach_file_on_the_Add_Clinical_Document_on_Note_Creation() throws Throwable {
 		noteCreation.IattachfileontheAddClinicalDocumentonNoteCreation();
 	}
+	
+	
 }

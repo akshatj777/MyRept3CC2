@@ -2,26 +2,53 @@ Feature: Note - Add files
 
   Scenario Outline: To verify that user should be able to upload the file with different extensions or not
     Given I am on the login page
-    When I enter email field qa.emblemrn@yopmail.com for login
+    When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
-    And I wait for 2000 milli seconds
+    Then I should see Tile text Episodes
+    And I click on the "Episodes" tile
+    And I switch to new window
+    Then I should see Episode header text "Dashboard"
+    When I click on "Patients" in the left navigator present on the episode dashboard page
+    When I click on "Patient List" in the Patients dropdown menu
+    When I click on Add Patient button present on the ec1 patients page
+    Then I verify "Add Patient" text is present on the add patient page
+    Then I verify "Patient Information" text is present on the add patient page
+    Then I enter random Patient First Name in the first name text box field present on the Add Patient page
+    Then I enter random Patient Last Name in the last name text box field present on the Add Patient page
+    And I enter date of birth "01/05/1995" present on the Add Patient Page
+    And I selected "Male" from the gender drop down list present on the Add Patient page
+    And I enter random social security number in the SSN text box field present on the Add Patient page
+    When I click on Admitting Facility present on the Add Patient page
+    And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page
+    And I enter "WA784654785" in the Medicare ID present on the Add Patient page
+    Then I click on the next button present on the Add Patient page
+    Then I click on the next button present on the Add Patient page
+    Then I click on the Cancel Button on the New Transition on Add Patient page
+    Then I switch back to old window
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
-    And I wait for 4000 milli seconds
     Then I verify current page "Remedy Partners" title
-    Then I click on the Impatient tab on the patient Card Page
-    And I wait for 8000 milli seconds
-    Then I click on the agree button on the Patient Card page
-    Then I wait for 10000 milli seconds
+    And I should see "All" tab in the filter bar on patients page
+    Then I click on "All" tab in the filter bar on patients page
+    Then I wait to the see the visibility of loader to disappear
+    Then I verify current page "Remedy Partners" title
+    When I click on Filter button present on Patient Page
+    And I click on Filters button present on Filter Page
+    Then I verify SSN Filter is displayed under List of Filter Options
+    When I click on SSN Filter present on Filter Page
+    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I click on Done button present on the Filter Page
+    Then I wait to the see the visibility of loader to disappear
+    Then I scroll the page to bottom by "-100"
+    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to the see the visibility of loader to disappear
     Then I click on quick action button for note creation on Patient Card page
     Then I verify whether topic drop down appears on Add Clinical Document on Patient Card page
     And I select the "Baseline" from the topic drop down on Add Clinical Document on Patient Card
-    And I enter the Note Text in the textarea on Add Clinical Document on Patient Card
+    And I enter the Note Text "Remedy Notes" in the textarea on Add Clinical Document on Patient Card
     Then I click on Add Files link on Note Section on Patient Card
-    And I wait for 10000 milli seconds
     Then I verify that user should be able to select and upload file "<FileName>" through Add files link
-    And I wait for 10000 milli seconds
     Then I verify the image is attached or not
     Then I click on the create Note Button on Add Clinical Document on Patient Card
     Then I verify that create Note has been successfully created
@@ -30,67 +57,110 @@ Feature: Note - Add files
 
     Examples: 
       | FileName    |
-      | Sample.csv  |
-      | sample.doc  |
-      | Sample.gif  |
-      | Sample.txt  |
-      | Sample.xls  |
-      | Sample.xlsx |
+      | Remedy.csv  |
+      | Remedy.doc  |
+      | Remedy.gif  |
+      | Remedy.txt  |
+      | Remedy.xls  |
+      | Remedy.xlsx |
+      | Remedy.bmp  |
+      | Remedy.docx |
+      | Remedy.jpg  |
+      | Remedy.pdf  |
+      | Remedy.png  |
 
   Scenario: To verify that User should be able upload multiple files at once on Notes on Patient Card
     Given I am on the login page
-    When I enter email field qa.emblemrn@yopmail.com for login
+    When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
-    And I wait for 2000 milli seconds
+    Then I should see Tile text Episodes
+    And I click on the "Episodes" tile
+    And I switch to new window
+    Then I should see Episode header text "Dashboard"
+    When I click on "Patients" in the left navigator present on the episode dashboard page
+    When I click on "Patient List" in the Patients dropdown menu
+    When I click on Add Patient button present on the ec1 patients page
+    Then I verify "Add Patient" text is present on the add patient page
+    Then I verify "Patient Information" text is present on the add patient page
+    Then I enter random Patient First Name in the first name text box field present on the Add Patient page
+    Then I enter random Patient Last Name in the last name text box field present on the Add Patient page
+    And I enter date of birth "01/05/1995" present on the Add Patient Page
+    And I selected "Male" from the gender drop down list present on the Add Patient page
+    And I enter random social security number in the SSN text box field present on the Add Patient page
+    When I click on Admitting Facility present on the Add Patient page
+    And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page
+    And I enter "WA784654785" in the Medicare ID present on the Add Patient page
+    Then I click on the next button present on the Add Patient page
+    Then I click on the next button present on the Add Patient page
+    Then I click on the Cancel Button on the New Transition on Add Patient page
+    Then I switch back to old window
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
-    And I wait for 4000 milli seconds
     Then I verify current page "Remedy Partners" title
-    Then I click on the Impatient tab on the patient Card Page
-    And I wait for 8000 milli seconds
-    Then I click on the agree button on the Patient Card page
-    Then I wait for 10000 milli seconds
+    And I should see "All" tab in the filter bar on patients page
+    Then I click on "All" tab in the filter bar on patients page
+    Then I wait to the see the visibility of loader to disappear
+    Then I verify current page "Remedy Partners" title
+    When I click on Filter button present on Patient Page
+    And I click on Filters button present on Filter Page
+    Then I verify SSN Filter is displayed under List of Filter Options
+    When I click on SSN Filter present on Filter Page
+    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I click on Done button present on the Filter Page
+    Then I wait to the see the visibility of loader to disappear
+    Then I scroll the page to bottom by "-100"
+    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to the see the visibility of loader to disappear
     Then I click on quick action button for note creation on Patient Card page
     Then I verify whether topic drop down appears on Add Clinical Document on Patient Card page
     And I select the "Baseline" from the topic drop down on Add Clinical Document on Patient Card
-    And I enter the Note Text in the textarea on Add Clinical Document on Patient Card
+    Then I verify Activity Date drop down calendar appears on the Add Clinical Document on Patient Card
+    And I verify Activity Body text box appears on the Add Clinical Document on Patient Card
+    And I verify attach files link appears on the Add Clinical Document on Patient Card
+    And I verify Cancel button appears on the Add Clinical Document on Patient Card
+    And I verify Create note appears on the Add Clinical Document on Patient Card
+    And I enter the Note Text "Remedy Notes" in the textarea on Add Clinical Document on Patient Card
     Then I click on Add Files link on Note Section on Patient Card
-    And I wait for 5000 milli seconds
-    Then I verify that user should be able to select and upload file "Sample.csv" through Add files link
+    Then I verify that user should be able to select and upload file "Remedy.csv" through Add files link
     Then I verify the image is attached or not
     Then I click on Add Files link on Note Section on Patient Card
-    Then I verify that user should be able to select and upload file "sample.doc" through Add files link
-    And I wait for 8000 milli seconds
+    Then I verify that user should be able to select and upload file "Remedy.doc" through Add files link
     Then I verify the image is attached or not
     Then I click on Add Files link on Note Section on Patient Card
-    And I wait for 8000 milli seconds
-    Then I verify that user should be able to select and upload file "Sample.txt" through Add files link
-    And I wait for 8000 milli seconds
+    Then I verify that user should be able to select and upload file "Remedy.txt" through Add files link
     Then I verify the image is attached or not
     Then I verify that trash icon is available for each file after uploading all file
     Then I verify user should be able to remove the file by selecting the trash icon
-    Then I wait for 3000 milli seconds
     Then I click on the create Note Button on Add Clinical Document on Patient Card
-    Then I wait for 3000 milli seconds
     Then I verify that create Note has been successfully created
     Then I verify message should display in green color Your clinical document for Angela Pena has been added
     Then I verify on notification there should be link to View clinical document
 
-  Scenario Outline: To verify user should be able to cancel the Note creation
+  Scenario Outline: To verify user should be able to cancel the Note creation and user is able to select previous,current and future date.
     Given I am on the login page
-    When I enter email field qa.emblemrn@yopmail.com for login
+    When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
-    And I wait for 2000 milli seconds
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
-    And I wait for 4000 milli seconds
     Then I verify current page "Remedy Partners" title
-    Then I click on the Impatient tab on the patient Card Page
-    And I wait for 8000 milli seconds
-    Then I click on the agree button on the Patient Card page
-    Then I wait for 10000 milli seconds
+    And I should see "All" tab in the filter bar on patients page
+    Then I click on "All" tab in the filter bar on patients page
+    Then I wait to the see the visibility of loader to disappear
+    Then I verify current page "Remedy Partners" title
+    When I click on Filter button present on Patient Page
+    And I click on Filters button present on Filter Page
+    Then I verify SSN Filter is displayed under List of Filter Options
+    When I click on SSN Filter present on Filter Page
+    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I click on Done button present on the Filter Page
+    Then I wait to the see the visibility of loader to disappear
+    Then I scroll the page to bottom by "-100"
+    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to the see the visibility of loader to disappear
+    Then I click on quick action button for note creation on Patient Card page
+    Then I verify whether topic drop down appears on Add Clinical Document on Patient Card page
     Then I click on quick action button for note creation on Patient Card page
     Then I verify whether topic drop down appears on Add Clinical Document on Patient Card page
     And I select the "Baseline" from the topic drop down on Add Clinical Document on Patient Card
@@ -101,11 +171,8 @@ Feature: Note - Add files
     Then I select the "<date>" from the calendar from date picker
     And I enter the Note Text in the textarea on Add Clinical Document on Patient Card
     Then I click on Add Files link on Note Section on Patient Card
-    And I wait for 5000 milli seconds
-    Then I verify that user should be able to select and upload file "Sample.csv" through Add files link
-    Then I wait for 7000 milli seconds
+    Then I verify that user should be able to select and upload file "Remedy.csv" through Add files link
     Then I verify the image is attached or not
-    Then I wait for 3000 milli seconds
     Then I click on the Cancel button on the Note Section on Patient Card
     Then I verify create note successful message doesnot appear on Patient Card
     Then I verify on canceling Note creation Note window should get close
@@ -114,4 +181,4 @@ Feature: Note - Add files
       | date       |
       | 12/07/2014 |
       | 15/05/2017 |
-      | 26/10/2022 |
+      | 26/10/2026 |
