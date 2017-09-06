@@ -209,4 +209,15 @@ public class SummarySectionSteps extends DriverScript {
 		patientclinical.Iwillclickonlinkappearingindocumenttable(text,Document_head,column,row);
 	}
 	
+	@Then ("^I navigate back to previous page$")
+	public void I_navigate_back_to_previous_page()
+	{
+		patientclinical.Inavigatebacktopreviouspage();
+	}
+	
+	@Then ("^I verify user is able to navigate to the read only \"([^\"]*)\" page by selecting the title$")
+	public void I_verify_user_is_able_to_navigate_to_the_read_only_page_by_selecting_the_title(String title)
+	{
+		patientclinical.Iverifyuserisabletonavigatetothereadonlypagebyselectingthetitle(title);
+	}
 }

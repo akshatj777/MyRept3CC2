@@ -26,6 +26,7 @@ public class BaseClass {
 	protected static long Wait_Time = 1000L;
 	protected static long delay_Time = 2000L;
 	protected static long LongDelay_Time = 5000L;
+	public static String name="Patient";
 
 	public BaseClass(final WebDriver driver) {
 

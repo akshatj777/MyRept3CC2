@@ -156,12 +156,13 @@ public class PatientClinicalDocuments extends BaseClass {
 	}
 
 	public void IverifybodytextoftheNoteisappearinginthesummarysection() {
-        isElementVisible(driver.findElement(By.cssSelector("span.ellip")));
-
-	}
+		 verifyTextForElement(driver.findElement(By.cssSelector("span.ellip")),"In above case we have String dateString in format so to");
+		 verifyTextForElement(driver.findElement(By.cssSelector("span.ellip-line")),"convert the String to Date in given format we have Created Object formatter of Class SimpleDateFormat.");
+       }
 
 	public void Iverifyforclinicalnoteandbaselinesummaryshouldbedisplayedupto2lines() {
-        isElementVisible(driver.findElement(By.cssSelector("span.ellip-line")));
+		isElementVisible(driver.findElement(By.cssSelector("span.ellip")));
+		isElementVisible(driver.findElement(By.cssSelector("span.ellip-line")));
 		String value = driver.findElement(By.cssSelector("span.ellip-line")).getCssValue("line-height");
 		Assert.assertTrue(value.equals("20px"));
 	}
@@ -173,15 +174,8 @@ public class PatientClinicalDocuments extends BaseClass {
 	}
 
 	public void Iverifyifanoteishavingattachmentanddonothaveanysummarythenattachmentcountshouldappearinthesummarysection() {
-         List<WebElement> lists = getElementsList("table > tbody > tr:nth-child(1) > td > p");
-         for (WebElement list : lists) {
-			if (list.getAttribute("class").equals("jquery-ellipse ng-binding ng-scope")) {
-                 System.out.println("No Attachment found");
-           } else if (list.getAttribute("class").equals("ng-binding ng-scope")) {
-				System.out.println("Attached is there");
-			}
-		}
-
+		driver.findElement(By.xpath("//p[@ng-if='!doc.form.body && doc.form.attachments.length > 0']"));
+		verifyTextForElement(driver.findElement(By.xpath("//p[@ng-if='!doc.form.body && doc.form.attachments.length > 0']")),"(2 attachments)");
 	}
 
 	public void Iverifyformsshouldnotdisplayanymessageinthesummarysectionanditshouldbegreyedoutblank() {
@@ -277,10 +271,12 @@ public class PatientClinicalDocuments extends BaseClass {
 	public void Iverifythattitleofdocumentortopicofnoteshouldappearasalinkinthesection() throws InterruptedException {
         String URL = driver.findElement(By.cssSelector("table > tbody > tr > td:nth-child(1) > a > span")).getAttribute("href");
 		boolean Note = URL.contains("note");
+		System.out.println("$$Boolean Note is"+Note);
+//		Assert.assertTrue(Note);
 		boolean CARL = URL.contains("carl");
-		if (CARL) {
-			System.out.println("CARl form is present");
-		}
+		System.out.println("$$Boolean Note is"+CARL);
+//		Assert.assertTrue(CARL);
+		
 	}
 
 	public void Iverifythatusershouldbeabletoclickontitleofdocument() throws InterruptedException {
@@ -355,7 +351,7 @@ public class PatientClinicalDocuments extends BaseClass {
 
 	public void IverifyBodytextboxshouldbethereonNotesReadonlyform() {
         isElementVisible(driver.findElement(By.cssSelector("div.note-body.ng-binding.ng-scope"))); 
-		verifyTextForElement(driver.findElement(By.cssSelector("div.note-body.ng-binding.ng-scope")),"Probiotics are microorganisms");
+		verifyTextForElement(driver.findElement(By.cssSelector("div.note-body.ng-binding.ng-scope")),"Remedy Notes");
 	}
 
 	public void IVerifythatUserroleshouldbedisplayedundernotesreadonlyform() {
@@ -738,7 +734,6 @@ public class PatientClinicalDocuments extends BaseClass {
 		}
 
 		public void Iwillwaittoseelinkappearingindocumenttable(String text, String document_head, int column, int row) {
-		
 			if(column==1)
 			{
 		    iWillWaitToSee(By.xpath("//table/tbody/tr["+row+"]/td["+column+"]/a/span[contains(text(),'"+text+"')]"));
@@ -771,6 +766,26 @@ public class PatientClinicalDocuments extends BaseClass {
 				WebDriverWait wait=new WebDriverWait(driver,5);
 				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//h3[@class='ng-scope']/span[contains(text(),'" + L_name + "')]")));
 			}
+		}
+
+		public void Inavigatebacktopreviouspage() {
+			driver.navigate().back();
+			
+		}
+
+		public void Iverifyuserisabletonavigatetothereadonlypagebyselectingthetitle(String title) {
+			if(title.equals("CARL"))
+			{
+				iWillWaitToSee(By.xpath("//h1[text()='"+title+"']")); 
+				isElementVisible(driver.findElement(By.xpath("//h1[text()='"+title+"']")));	
+			}else {
+			iWillWaitToSee(By.cssSelector("h1.ng-binding")); 
+			verifyTextForElement(driver.findElement(By.cssSelector("h1.ng-binding")),title);
+				}
+		}
+
+		public void Iverifyformsshouldnotdisplayanymessageinthesummarysectionanditshouldbegreyedout() {
+			isElementVisible(driver.findElement(By.cssSelector("td.empty-cell")));	
 		}
 
 	

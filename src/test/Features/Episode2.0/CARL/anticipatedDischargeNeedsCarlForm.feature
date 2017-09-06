@@ -25,11 +25,8 @@ Feature: To verify the options and functionality of Anticipated Discharge Needs 
     Then I click on the next button present on the Add Patient page
     Then I click on the next button present on the Add Patient page
     Then I click on the Cancel Button on the New Transition on Add Patient page
-    And I wait for 8000 milli seconds
     Then I switch back to old window
-    And I wait for 2000 milli seconds
     And I click on the top user account link
-    And I wait for 1000 milli seconds
     Then I select Log Out option from the dropdown
     Given I am on the login page
     When I enter email field qa.emblemrn@yopmail.com for login
@@ -46,7 +43,6 @@ Feature: To verify the options and functionality of Anticipated Discharge Needs 
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    And I wait for 2000 milli seconds
     Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear

@@ -46,7 +46,7 @@ Feature: Notes Activity Date
     Then I click on quick action button for note creation on Patient Card page
     Then I verify whether topic drop down appears on Add Clinical Document on Patient Card page
     And I select the "Bedside Visit" from the topic drop down on Add Clinical Document on Patient Card
-    Then I Verify that today's date should be highlighted in calendar as default date
+    Then I Verify that today date should be highlighted in calendar as default date
     Then I verify user should be able to remove the default date by clicking on the cross icon
     Then I verify on clicking on cross icon "Activity Date" text should show
     Then I verify Note should not be created without Activity date

@@ -88,8 +88,8 @@ public class NoteCreation extends BaseClass {
 	}
 
 	public void IclickonquickactionbuttonfornotecreationonPatientCardpage() {
-		iWillWaitToSee(By.cssSelector("i.valentino-icon-plus"));
-		clickElement(driver.findElement(By.cssSelector("i.valentino-icon-plus")));
+		iWillWaitToSee(By.xpath("//button[@uib-tooltip='Add Clinical Document']"));
+		clickElement(driver.findElement(By.xpath("//button[@uib-tooltip='Add Clinical Document']")));
 	}
 
 	public void IclickonquickactionbuttonfornotecreationonPatientCardpageJavaScript() {
@@ -198,7 +198,7 @@ public class NoteCreation extends BaseClass {
 	}
 
 	public void IverifythatusershouldbeabletoselectanduploadfilesfromthecomputerthroughAddfileslink(String file) throws InterruptedException, AWTException {
-		longDelay();
+		Thread.sleep(6000);
 		StringSelection s = new StringSelection(file);
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(s, null);
 		Robot robot = new Robot();
@@ -207,7 +207,7 @@ public class NoteCreation extends BaseClass {
 		robot.keyPress(java.awt.event.KeyEvent.VK_CONTROL);
 		robot.keyPress(java.awt.event.KeyEvent.VK_V);
 		robot.keyRelease(java.awt.event.KeyEvent.VK_CONTROL);
-		Thread.sleep(3000);
+		longDelay();
 		robot.keyPress(java.awt.event.KeyEvent.VK_ENTER);
 
 	}
