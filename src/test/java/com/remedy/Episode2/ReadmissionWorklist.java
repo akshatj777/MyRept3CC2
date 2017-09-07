@@ -20,7 +20,7 @@ public class ReadmissionWorklist extends BaseClass {
 	public ReadmissionWorklist(WebDriver driver) {
 		super(driver);
 	}
-
+	
 	public void IclickontheTransitionssubtabonthePatientSummaryPage() {
 		clickElement(driver.findElement(By.xpath("//span[contains(text(),'Transitions')]")));
 	}
@@ -201,6 +201,10 @@ public class ReadmissionWorklist extends BaseClass {
 	public void Iclickonthedeletebuttononthetransitiontodeleteallthetransitions() throws InterruptedException {
 		iWillWaitToSee(By.cssSelector("#btnNewTransition"));
 		int count = getElementCount("td.settings-column.center.cursor-default > div");
+		if(count==0)
+		{
+			return;
+		}else{
 		for (int i = 1; i <= count; i++) {
 			iWillWaitToSee(By.cssSelector("td.settings-column.center.cursor-default > div"));
 			clickElement(driver.findElement(By.cssSelector("td.settings-column.center.cursor-default > div")));
@@ -210,8 +214,10 @@ public class ReadmissionWorklist extends BaseClass {
 			iWillWaitToSee(By.xpath("//button[contains(text(),'OK')]"));
 			delay();
 			clickElement(driver.findElement(By.xpath("//button[contains(text(),'OK')]")));
+			WebDriverWait wait=new WebDriverWait(driver,60);
+			wait.until(ExpectedConditions.attributeContains(driver.findElement(By.cssSelector("div.row.row-loader.ng-scope")),"class","ng-hide"));
 			Thread.sleep(5000);
-		}
+			}}
 	}
 
 	public void ienterandinthesearchboxontheadmissiontabonpatientspage(String search) {
@@ -257,6 +263,20 @@ public class ReadmissionWorklist extends BaseClass {
 
 	public void Iremovethedischargedateonthetransitionpage() {
 		clickElement(driver.findElement(By.cssSelector("div.field-dischargeDate.form-group.row > div > div > span:nth-child(3) > button > i")));
+	}
+
+	public void IverifythepatientpresentonworklistonthePatientCardPage(String flag) {
+		String last_name=PatientClinicalDocuments.L_name;
+		String newname = last_name.toUpperCase();
+		if(flag.equals("present"))
+		{
+		iWillWaitToSee(By.xpath("//h3[@class='ng-scope']/span[contains(text(),'" + newname + "')]"));
+		isElementVisible(driver.findElement(By.xpath("//h3[@class='ng-scope']/span[contains(text(),'" + newname + "')]")));
+		}else
+		{
+		WebDriverWait wait=new WebDriverWait(driver,5);
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//h3[@class='ng-scope']/span[contains(text(),'" + newname + "')]")));
+		}
 	}	
     }
 		

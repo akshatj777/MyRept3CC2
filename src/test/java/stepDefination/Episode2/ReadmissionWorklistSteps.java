@@ -107,6 +107,11 @@ public class ReadmissionWorklistSteps extends DriverScript {
 	public void I_verify_the_patient_present_on_the_Patient_Card_Page(String last_name) throws Throwable {
 		admission.IverifythepatientpresentonthePatientCardPage(last_name);
 	}
+	
+	@Then("^I verify the patient \"([^\"]*)\" on \"([^\"]*)\" worklist on the Patient Card Page$")
+	public void I_verify_the_patient_present_on_the_worklist_on_Patient_Card_Page(String flag,String worklist) throws Throwable {
+		admission.IverifythepatientpresentonworklistonthePatientCardPage(flag);
+	}
 
 	@Then("^I verify the \"([^\"]*)\" patient not present on the Patient Card Page$")
 	public void I_verify_the_patient_not_present_on_the_Patient_Card_Page(String last_name) throws Throwable {

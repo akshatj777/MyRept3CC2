@@ -220,4 +220,10 @@ public class SummarySectionSteps extends DriverScript {
 	{
 		patientclinical.Iverifyuserisabletonavigatetothereadonlypagebyselectingthetitle(title);
 	}
+	
+	@Then ("^I verify forms should not display any message in the summary section and it should be greyed out$")
+	public void I_verify_forms_should_not_display_any_message_in_the_summary_section_and_it_should_be_greyed_out()
+	{
+		patientclinical.Iverifyformsshouldnotdisplayanymessageinthesummarysectionanditshouldbegreyedout();
+	}
 }

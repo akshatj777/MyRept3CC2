@@ -6,6 +6,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
 import java.util.List;
 
 
@@ -537,9 +539,12 @@ public class PatientsPage extends BaseClass {
 	}
 
 	public void iClickOnTheNextButtonPresentOnTheAddPatientPage() {
-		longDelay();
 		iWillWaitToSee(By.cssSelector("button#submitButton"));
-		clickElement(driver.findElement(By.cssSelector("button#submitButton")));
+		Actions actions=new Actions(driver);
+		actions.moveToElement(driver.findElement(By.cssSelector("button#submitButton"))).click().perform();
+	//	clickElement(driver.findElement(By.cssSelector("")));
+		longDelay();
+		longDelay();
 	}
 
 	public void iClickOnCalenderButtonPresentOnTheAddPatientPage() {

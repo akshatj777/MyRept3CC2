@@ -2,24 +2,23 @@ Feature: Patient status on Readmission Discharges Work List
 
   Scenario Outline: Patient with Episode status as Active through M2 with a Readmission with discharge care setting HHH-Inpatient within last 7 days
     Given I am on the login page
-    When I enter email field <email> for login
-    And I enter password field <password> for Login
+    When I enter email field qa.admin@yopmail.com for login
+    And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes
     And I click on the "Episodes" tile
     And I switch to new window
     Then I should see Episode header text "Dashboard"
-    Then I should see "Patients" in the left navigator present on the episode dashboard page
-    Then I should see "Admin Center" in the left navigator present on the episode dashboard page
     When I click on "Patients" in the left navigator present on the episode dashboard page
     When I click on "Patient List" in the Patients dropdown menu
     When I click on Add Patient button present on the ec1 patients page
     Then I verify "Add Patient" text is present on the add patient page
     Then I verify "Patient Information" text is present on the add patient page
-    Then I enter "<Patient First Name>" in the first name text box present on the Add Patient page
-    And I enter  "<Patient Last Name>" in the last name text box present on the Add Patient page
+    Then I enter random Patient First Name in the first name text box field present on the Add Patient page
+    Then I enter random Patient Last Name in the last name text box field present on the Add Patient page
     And I enter date of birth "01/05/1995" present on the Add Patient Page
     And I selected "Male" from the gender drop down list present on the Add Patient page
+    And I enter random social security number in the SSN text box field present on the Add Patient page
     When I click on Admitting Facility present on the Add Patient page
     And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page
     And I enter "WA784654785" in the Medicare ID present on the Add Patient page
@@ -34,14 +33,21 @@ Feature: Patient status on Readmission Discharges Work List
     Then I should see search box appearing on the patients page
     When I click on Filter button present on Patient Page
     And I click on Filters button present on Filter Page
-    Then I verify Last Name Filter is displayed under List of Filter Options
-    When I click on last name Filter present on Filter Page
-    Then I enter <Patient Last Name> under first name filter
+    Then I verify SSN Filter is displayed under List of Filter Options
+    When I click on SSN Filter present on Filter Page
+    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
-    Then I click on the "<Patient Last Name>" searched patient on the Patient Card Page
     Then I wait to the see the visibility of loader to disappear
+    Then I click on the patient on the patient card page that has no CARL button in it
+    Then I wait to the see the visibility of loader to disappear
+    Then I get the patient last name who have no CARL button in it
+    Then I will wait to see and click on "Patient Details" followed by "span" tag
+    Then I wait to the see the visibility of loader to disappear
+    Then I switch to PatientTransitions frame
+    Then I will fetch the value attribute of "Social Security Number" on patient details
+    When I switch to default window from iframe
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
@@ -84,20 +90,19 @@ Feature: Patient status on Readmission Discharges Work List
     Then I scroll the page to bottom by "-100"
     Then I will wait to see and click on "Post Acute" followed by "span" tag
     Then I will wait to see and click on "Readmission Discharges" followed by "span" tag
-    Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
-    Then I enter <Patient Last Name> under first name filter
+    Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I verify the "<Patient Last Name>" patient not present on the Patient Card Page
+    Then I verify the patient "not present" on "Home Health" worklist on the Patient Card Page
     Then I click on "All" tab in the filter bar on patients page
+    Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
-    Then I enter <Patient Last Name> under first name filter
+    Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the "<Patient Last Name>" searched patient on the Patient Card Page
-    Then I wait to the see the visibility of loader to disappear
-    Then I will wait to see and click on "Transitions" followed by "span" tag
+    Then I verify the patient "present" on "Home Health" worklist on the Patient Card Page
+    Then I click on the patient on the patient card page that has no CARL button in it
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear
@@ -114,12 +119,12 @@ Feature: Patient status on Readmission Discharges Work List
     Then I scroll the page to bottom by "-100"
     Then I will wait to see and click on "Post Acute" followed by "span" tag
     Then I will wait to see and click on "Readmission Discharges" followed by "span" tag
-    Then I wait to the see the visibility of loader to disappear
+       Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
-    Then I enter <Patient Last Name> under first name filter
+    Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I verify the "<Patient Last Name>" patient not present on the Patient Card Page
+    Then I verify the patient "not present" on "Home Health" worklist on the Patient Card Page
 
     Examples: 
       | email                | password  | Patient First Name | Patient Last Name    |
@@ -137,14 +142,21 @@ Feature: Patient status on Readmission Discharges Work List
     Then I should see search box appearing on the patients page
     When I click on Filter button present on Patient Page
     And I click on Filters button present on Filter Page
-    Then I verify Last Name Filter is displayed under List of Filter Options
-    When I click on last name Filter present on Filter Page
-    Then I enter <Patient Last Name> under first name filter
+    Then I verify SSN Filter is displayed under List of Filter Options
+    When I click on SSN Filter present on Filter Page
+    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
-    Then I click on the "<Patient Last Name>" searched patient on the Patient Card Page
     Then I wait to the see the visibility of loader to disappear
+    Then I click on the patient on the patient card page that has no CARL button in it
+    Then I wait to the see the visibility of loader to disappear
+    Then I get the patient last name who have no CARL button in it
+    Then I will wait to see and click on "Patient Details" followed by "span" tag
+    Then I wait to the see the visibility of loader to disappear
+    Then I switch to PatientTransitions frame
+    Then I will fetch the value attribute of "Social Security Number" on patient details
+    When I switch to default window from iframe
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
@@ -189,12 +201,12 @@ Feature: Patient status on Readmission Discharges Work List
     Then I scroll the page to bottom by "-100"
     Then I will wait to see and click on "Post Acute" followed by "span" tag
     Then I will wait to see and click on "Readmission Discharges" followed by "span" tag
-    Then I wait to the see the visibility of loader to disappear
+       Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
-    Then I enter <Patient Last Name> under first name filter
+    Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I verify the "<Patient Last Name>" patient present on the Patient Card Page
+    Then I verify the patient "present" on "Home Health" worklist on the Patient Card Page
 
     Examples: 
       | email                | password  | Patient First Name | Patient Last Name    |
@@ -212,14 +224,21 @@ Feature: Patient status on Readmission Discharges Work List
     Then I should see search box appearing on the patients page
     When I click on Filter button present on Patient Page
     And I click on Filters button present on Filter Page
-    Then I verify Last Name Filter is displayed under List of Filter Options
-    When I click on last name Filter present on Filter Page
-    Then I enter <Patient Last Name> under first name filter
+    Then I verify SSN Filter is displayed under List of Filter Options
+    When I click on SSN Filter present on Filter Page
+    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
-    Then I click on the "<Patient Last Name>" searched patient on the Patient Card Page
     Then I wait to the see the visibility of loader to disappear
+    Then I click on the patient on the patient card page that has no CARL button in it
+    Then I wait to the see the visibility of loader to disappear
+    Then I get the patient last name who have no CARL button in it
+    Then I will wait to see and click on "Patient Details" followed by "span" tag
+    Then I wait to the see the visibility of loader to disappear
+    Then I switch to PatientTransitions frame
+    Then I will fetch the value attribute of "Social Security Number" on patient details
+    When I switch to default window from iframe
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
@@ -266,10 +285,10 @@ Feature: Patient status on Readmission Discharges Work List
     Then I will wait to see and click on "Readmission Discharges" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
-    Then I enter <Patient Last Name> under first name filter
+    Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I verify the "<Patient Last Name>" patient not present on the Patient Card Page
+    Then I verify the patient "not present" on "Home Health" worklist on the Patient Card Page
 
     Examples: 
       | email                | password  | Patient First Name | Patient Last Name    |
@@ -287,14 +306,21 @@ Feature: Patient status on Readmission Discharges Work List
     Then I should see search box appearing on the patients page
     When I click on Filter button present on Patient Page
     And I click on Filters button present on Filter Page
-    Then I verify Last Name Filter is displayed under List of Filter Options
-    When I click on last name Filter present on Filter Page
-    Then I enter <Patient Last Name> under first name filter
+    Then I verify SSN Filter is displayed under List of Filter Options
+    When I click on SSN Filter present on Filter Page
+    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
-    Then I click on the "<Patient Last Name>" searched patient on the Patient Card Page
     Then I wait to the see the visibility of loader to disappear
+    Then I click on the patient on the patient card page that has no CARL button in it
+    Then I wait to the see the visibility of loader to disappear
+    Then I get the patient last name who have no CARL button in it
+    Then I will wait to see and click on "Patient Details" followed by "span" tag
+    Then I wait to the see the visibility of loader to disappear
+    Then I switch to PatientTransitions frame
+    Then I will fetch the value attribute of "Social Security Number" on patient details
+    When I switch to default window from iframe
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
@@ -337,16 +363,16 @@ Feature: Patient status on Readmission Discharges Work List
     Then I will wait to see and click on "Readmission Discharges" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
-    Then I enter <Patient Last Name> under first name filter
+    Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I verify the "<Patient Last Name>" patient present on the Patient Card Page
-    Then I click on the "<Patient Last Name>" searched patient on the Patient Card Page
+    Then I verify the patient "present" on "Home Health" worklist on the Patient Card Page
+    Then I click on the patient on the patient card page that has no CARL button in it
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
-    Then I wait to the see the visibility of loader to disappear
+    Then I wait to the see the visibility of loader to disappeara
     Then I click on the edit button on the "2" transition to edit the Active transition
     Then I wait to the see the visibility of loader to disappear
     Then I click on the Diagnosis and DRG tab on add a new transition to select the DRG
@@ -362,10 +388,10 @@ Feature: Patient status on Readmission Discharges Work List
     Then I will wait to see and click on "Readmission Discharges" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
-    Then I enter <Patient Last Name> under first name filter
+    Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I verify the "<Patient Last Name>" patient present on the Patient Card Page
+    Then I verify the patient "present" on "Home Health" worklist on the Patient Card Page
 
     Examples: 
       | email                | password  | Patient First Name | Patient Last Name    |
@@ -383,14 +409,21 @@ Feature: Patient status on Readmission Discharges Work List
     Then I should see search box appearing on the patients page
     When I click on Filter button present on Patient Page
     And I click on Filters button present on Filter Page
-    Then I verify Last Name Filter is displayed under List of Filter Options
-    When I click on last name Filter present on Filter Page
-    Then I enter <Patient Last Name> under first name filter
+    Then I verify SSN Filter is displayed under List of Filter Options
+    When I click on SSN Filter present on Filter Page
+    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
-    Then I click on the "<Patient Last Name>" searched patient on the Patient Card Page
     Then I wait to the see the visibility of loader to disappear
+    Then I click on the patient on the patient card page that has no CARL button in it
+    Then I wait to the see the visibility of loader to disappear
+    Then I get the patient last name who have no CARL button in it
+    Then I will wait to see and click on "Patient Details" followed by "span" tag
+    Then I wait to the see the visibility of loader to disappear
+    Then I switch to PatientTransitions frame
+    Then I will fetch the value attribute of "Social Security Number" on patient details
+    When I switch to default window from iframe
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
@@ -434,10 +467,10 @@ Feature: Patient status on Readmission Discharges Work List
     Then I will wait to see and click on "Readmission Discharges" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
-    Then I enter <Patient Last Name> under first name filter
+    Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I verify the "<Patient Last Name>" patient not present on the Patient Card Page
+    Then I verify the patient "not present" on "Home Health" worklist on the Patient Card Page
 
     Examples: 
       | email                | password  | Patient First Name | Patient Last Name    |
