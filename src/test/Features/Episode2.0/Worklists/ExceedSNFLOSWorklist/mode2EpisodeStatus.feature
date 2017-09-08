@@ -311,7 +311,7 @@ Feature: Patient status on Exceed SNF LOS Work List (Model 2 state)
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Exceed SNF LOS" worklist on the Patient Card Page
-    Then I click on the "<Patient Last Name>" searched patient on the Patient Card Page
+    Then I click on the patient on the patient card page that has no CARL button in it
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear

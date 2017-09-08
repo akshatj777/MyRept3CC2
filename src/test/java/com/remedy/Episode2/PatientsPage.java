@@ -280,10 +280,13 @@ public class PatientsPage extends BaseClass {
 	}
 
 	public void iClickOnAdmitReasonFilterPresentOnFilterPage() {
+		delay();
+		iWillWaitToSee(By.cssSelector("div.filters-list>ul>li:nth-child(1)"));
 		clickElement(driver.findElement(By.cssSelector("div.filters-list>ul>li:nth-child(1)")));
 	}
 
 	public void i_type_in_the_search_field_on_patients_page(String admitReason) {
+		delay();
 		iFillInText(driver.findElement(By.cssSelector("[name='admit-reason']")), admitReason);
 	}
 
@@ -301,6 +304,7 @@ public class PatientsPage extends BaseClass {
 	}
 
 	public void iClickOnAnchorDischargeFacilityDropdownToSelectTheFaciltyOnTheFilterPage() {
+		longDelay();
 		clickElement(driver.findElement(By.cssSelector(".form-control.dropdown-look")));
 	}
 
@@ -309,6 +313,8 @@ public class PatientsPage extends BaseClass {
 	}
 
 	public void iSelectStamfordHospitalCheckboxPresentInTheFilterPage() {
+		delay();
+		iWillWaitToSee(By.cssSelector("li.checkbox-item:nth-child(1)>div:nth-child(2)>label[for*='anchor-discharge-facility']"));
 		clickElement(driver.findElement(By.cssSelector(
 				"li.checkbox-item:nth-child(1)>div:nth-child(2)>label[for*='anchor-discharge-facility']")));
 	}
@@ -326,6 +332,7 @@ public class PatientsPage extends BaseClass {
 	}
 
 	public void iSelectStamfordHospitalCheckboxAsAnchorFacilityPresentInTheFilterPage() {
+		longDelay();
 		clickElement(driver.findElement(By.cssSelector(
 				"ul[class='light-tags ng-scope']~ul[class='checkbox-list list-unstyled ng-scope']>li>div:nth-child(2)")));
 	}
@@ -1226,5 +1233,10 @@ public class PatientsPage extends BaseClass {
 	public void Iverifythenotescreatedintheepisode1shouldappearinthenotessectionincareplaninepisode2() {
 			verifyTextForElement(driver.findElement(By.cssSelector("#notesTable > tbody > tr:nth-child(1) > td.sorting_1")),"Baseline");
 		}
+
+	public void IverifyfilterisappearingunderselectedfiltersonpositiononsearchboxforAdmitReason(String text,int position) {
+		verifyTextForElement(driver.findElement(By.cssSelector("span:nth-child("+position+") > span.margin-left.ng-binding")),text);
+		
+	}
 	}
     

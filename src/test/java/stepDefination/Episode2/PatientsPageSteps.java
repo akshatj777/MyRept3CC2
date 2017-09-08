@@ -1258,6 +1258,12 @@ public class PatientsPageSteps extends DriverScript {
     	patientsPage.iVerifySelectedFilterText("Admit Reason: "+text);
     }
     
+    @Then ("^I verify \"([^\"]*)\" is appearing under selected filters on \"([^\"]*)\" position on search box for Admit Reason$")
+    public void I_verify_filter_is_appearing_under_selected_filters_on_position_on_search_box_for_Admit_Reason(String text,int position)
+    {
+    	patientsPage.IverifyfilterisappearingunderselectedfiltersonpositiononsearchboxforAdmitReason(text,position);
+    }
+    
     @Then("^I verify ([^\"]*) is appearing under selected filters for Anchor Discharge Facility$")
     public void i_verify_filter_is_appearing_under_selected_filters_for_selected_anchor_discharge_facility(String text) throws Throwable {
     	patientsPage.iVerifySelectedFilterText("Anchor Discharge Facility: "+text+" - Stamford (STAMFORD, CT) (HHH)");

@@ -214,8 +214,13 @@ public class ReadmissionWorklist extends BaseClass {
 			iWillWaitToSee(By.xpath("//button[contains(text(),'OK')]"));
 			delay();
 			clickElement(driver.findElement(By.xpath("//button[contains(text(),'OK')]")));
+			try{
 			WebDriverWait wait=new WebDriverWait(driver,60);
 			wait.until(ExpectedConditions.attributeContains(driver.findElement(By.cssSelector("div.row.row-loader.ng-scope")),"class","ng-hide"));
+		}catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 			Thread.sleep(5000);
 			}}
 	}
