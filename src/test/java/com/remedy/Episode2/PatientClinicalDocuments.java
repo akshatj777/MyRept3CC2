@@ -290,7 +290,8 @@ public class PatientClinicalDocuments extends BaseClass {
 	}
 
 	public void IVerifythatSelectingFilterslinkwhenthefiltersdrawerisopenshouldclosethedrawer() {
-        clickElement(driver.findElement(By.cssSelector("div > div.filter-bars.ng-scope>div > div.filter-bar-search > div.filter-bar-search-left > div > search-bar-controls > button-filters-toggle > button")));
+        delay();
+		clickElement(driver.findElement(By.cssSelector("div > div.filter-bars.ng-scope>div > div.filter-bar-search > div.filter-bar-search-left > div > search-bar-controls > button-filters-toggle > button")));
 		isElementNotPresentOnPage("ng-transclude > div > div > div > h5.ng-binding.ng-scope");
 	}
 
@@ -301,12 +302,20 @@ public class PatientClinicalDocuments extends BaseClass {
 				"Patient Call", "Patient Education", "Patient Visit", "Psychological Condition", "Transition Note",
 				"TUG/RAPT/CARE Score" };
        requiredcombolisttext.addAll(Arrays.asList(expectedvalues));
-	      for(int i=1;i<=requiredcombolisttext.size();i++)
+       WebDriverWait wait=new WebDriverWait(driver,30);
+       wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("ul > li > div.checkbox > label > span"),18));
+	   wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector("ul > li > div.checkbox > label > span")));  
+	   List<WebElement> getElementsList=driver.findElements(By.cssSelector("ul > li > div.checkbox > label > span"));
+	   if(getElementsList.size()!=18)
+       {
+		   for(int i=1;i<=getElementsList.size();i++)
 	      {
-	    	WebElement element=driver.findElement(By.xpath("//checkbox-list/div/div[1]/ul/li['"+i+"']/div[2]/label/span"));
-	    	verifyTextForElement(element,expectedvalues[i-1]);   	 
+	    	//WebElement element=driver.findElement(By.xpath("//checkbox-list/div/div[1]/ul/li['"+i+"']/div[2]/label/span"));
+	    	verifyTextForElement(getElementsList.get(i),expectedvalues[i-1]);   	 
 	      }
-	}
+       }
+	     }
+	
 
 	public void IVerifythatusershouldbeabletoselectmultiplefiltersbycheckbox() {
         clickElement(driver.findElement(By.cssSelector("checkbox-list > div > div:nth-child(1) > ul > li:nth-child(1) > div.checkbox")));
@@ -318,10 +327,9 @@ public class PatientClinicalDocuments extends BaseClass {
 
 	public void IVerifythatcheckingmultiplefilteroptionsshouldreturnrelevantpatientsinreturn() {
 		List<String> mytexts = getTextForElementfromList("table > tbody > tr > td:nth-child(1) > a > span");
-		if (mytexts.contains("CARL") && (mytexts.contains("Baseline")))
-		{
-			System.out.println("Only CARL & Baseline exits in the document list");
-		}
+		Assert.assertTrue(mytexts.get(1).equals("CARL"));
+		Assert.assertTrue(mytexts.get(2).equals("Baseline"));
+		
     }
 
 	public void IVerifythatclickingonDoneshouldclosethefilterdrawerandprocessthefilter() {
@@ -433,9 +441,13 @@ public class PatientClinicalDocuments extends BaseClass {
 
 	public void IverifythatuponSelectingShowHistoryshoulddisplaytheinformationofalluserswhohavesavedthatform() throws InterruptedException {
        	List<String> mylists = getTextForElementfromList("table > tbody > tr:nth-child(1) > td > div > span:nth-child(3)");
-		for(String list:mylists )
+		Assert.assertTrue(mylists.size()==3);
+       	if(mylists.size()==3)
+		{
+       	for(String list:mylists )
 		{
 			Assert.assertEquals("Emblemrn, Qa; RN",list);
+		}
 		}
 	}
 
@@ -596,11 +608,8 @@ public class PatientClinicalDocuments extends BaseClass {
 
 	public void IVerifythatselectingfilterbycheckboxshouldprocessapplythefilteruntiltheuserclickedondone() {
 		List<String> mytexts = getTextForElementfromList("table > tbody > tr > td:nth-child(1) > a > span");
-		if (mytexts.contains("CARL") && (mytexts.contains("Baseline")))
-		{
-			System.out.println("Only CARL & Baseline exits in the document list");
-		}
-		
+		Assert.assertTrue(mytexts.get(1).equals("CARL"));
+		Assert.assertTrue(mytexts.get(2).equals("Baseline"));
 	}
 
 	public void IVerifythatCreateddateshoulddisplayeddatewithformatMMDDYYYY() throws ParseException {
@@ -786,6 +795,35 @@ public class PatientClinicalDocuments extends BaseClass {
 
 		public void Iverifyformsshouldnotdisplayanymessageinthesummarysectionanditshouldbegreyedout() {
 			isElementVisible(driver.findElement(By.cssSelector("td.empty-cell")));	
+		}
+
+		public void IverifySelectingfiltershoulddisplayedinactivefilterbar(String text,int i) {
+			delay();
+			clickElement(driver.findElement(By.xpath("//label[@for='documentBPNSoC2P0']/i/following-sibling::span[contains(text(),'"+text+"')]")));
+			isElementVisible(driver.findElement(By.cssSelector("//div[@class='filter-bar-active-filters-directive']/div[1]/span["+i+"]/span[contains(text(),'"+text+"')]")));
+			}
+
+		public void Iverifyremovingfiltershouldnotbedisplayedatpositioninactivefilterbar(String text,int i) {
+			delay();
+			clickElement(driver.findElement(By.xpath("div > div.filter-bar-active-filters.filter-scroll > span:nth-child("+i+") > i.valentino-icon-x.margin-left")));
+			delay();
+			isElementVisible(driver.findElement(By.cssSelector("//div[@class='filter-bar-active-filters-directive']/div[1]/span["+(i-1)+"]/span[contains(text(),'"+text+"')]")));
+			WebDriverWait wait=new WebDriverWait(driver,5);
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//label[@for='documentBPNSoC2P0']/i/following-sibling::span[contains(text(),'"+text+"')]")));
+			}
+
+		public void IclickonDonetoclosethefilter() {
+			delay();
+			clickElement(driver.findElement(By.xpath("//button[contains(text(),'Done')]")));
+			
+		}
+
+		public void Iveriyremovinganyappliedfilterfromactivefilterbarshouldupdatethepatientsreturnedinresult() {
+			List<String> mytexts = getTextForElementfromList("table > tbody > tr > td:nth-child(1) > a > span");
+			int size=mytexts.size();
+			Assert.assertTrue(size==1);
+			Assert.assertTrue(mytexts.get(1).equals("CARL"));
+			
 		}
 
 	

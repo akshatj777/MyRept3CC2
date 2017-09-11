@@ -48,5 +48,30 @@ public class UpdatedFilteringSteps extends DriverScript {
 	public void Then_I_Verify_that_selecting_filter_by_check_box_should_process_apply_the_filter_until_the_user_clicked_on_done() throws Throwable {
 		patientclinical.IVerifythatselectingfilterbycheckboxshouldprocessapplythefilteruntiltheuserclickedondone();
 	}
+	
+	@Then ("^I verify Selecting \"([^\"]*)\" filter should displayed at \"([^\"]*)\" position in active filter bar$")
+	public void I_verify_Selecting_filter_should_displayed_in_active_filter_bar(String text,int i)
+	{
+		patientclinical.IverifySelectingfiltershoulddisplayedinactivefilterbar(text,i);
+	}
+	
+	@Then ("^I verify removing \"([^\"]*)\" filter should not be displayed at \"([^\"]*)\" position in active filter bar$")
+	public void I_verify_removing_filter_should_not_be_displayed_at_position_in_active_filter_bar(String text,int i)
+	{
+		patientclinical.Iverifyremovingfiltershouldnotbedisplayedatpositioninactivefilterbar(text,i);
+	}
+	
+    @Then ("^I click on Done to close the filter$")
+    public void I_click_on_Done_to_close_the_filter()
+    {
+    	patientclinical.IclickonDonetoclosethefilter();
+    }
 
-}
+    @Then ("^I veriy removing any applied filter from active filter bar should update the patients returned in result$")
+    public void I_veriy_removing_any_applied_filter_from_active_filter_bar_should_update_the_patients_returned_in_result()
+    {
+    	patientclinical.Iveriyremovinganyappliedfilterfromactivefilterbarshouldupdatethepatientsreturnedinresult();
+    }
+    }
+
+

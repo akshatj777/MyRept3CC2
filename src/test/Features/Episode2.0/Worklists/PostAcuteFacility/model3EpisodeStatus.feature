@@ -114,7 +114,7 @@ Feature: Patient status on Post Acute Facility Work List
       | email                | password  | Patient First Name | Patient Last Name  |
       | qa.admin@yopmail.com | Episode1! | PATIENT            | REMEDYAUTOMATEHOME |
 
-  Scenario Outline: Verify patient present in post acute facility worklist with Model3 Pend Can Episode Status and patient is discharged in REH
+  Scenario Outline: Patient's admit/discharged with Care Setting as HOME
     Given I am on the login page
     When I enter email field <email> for login
     And I enter password field <password> for Login

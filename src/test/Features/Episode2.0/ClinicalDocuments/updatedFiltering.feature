@@ -82,7 +82,6 @@ Feature: Updated Filtering
     Then I verify there should be filter link on clinical document section
     Then I click on filter link on clinical document section
     Then I Verify that clicking Clinical Documents Filters link should show the title document that has list of document forms in it
-    And I wait for 2000 milli seconds
     Then I Verify that Selecting Filters link when the filters drawer is open should close the drawer
     Then I click on filter link on clinical document section
     Then I Verify that Clinical Documents Filters link should display filters as below with the correct syntax and sequence
@@ -90,7 +89,13 @@ Feature: Updated Filtering
     Then I Verify that selecting filter by check box should process apply the filter until the user clicked on done
     Then I Verify that checking multiple filter options should return relevant patients in return
     Then I Verify that clicking on Done should close the filter drawer and process the filter
-
+    Then I click on filter link on clinical document section
+    Then I verify Selecting "CARL form" filter should displayed at "1" position in active filter bar
+    Then I verify Selecting "Baseline" filter should displayed at "2" position in active filter bar
+    Then I verify removing "Baseline" filter should not be displayed at "2" position in active filter bar
+    Then I click on Done to close the filter
+    Then I veriy removing any applied filter from active filter bar should update the patients returned in result
+  
     Examples: 
       | Medicare ID | date | Notetext                |
       | wa984986    |   12 | Remedy Document Section |
