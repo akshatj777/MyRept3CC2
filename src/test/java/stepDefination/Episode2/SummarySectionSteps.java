@@ -99,7 +99,7 @@ public class SummarySectionSteps extends DriverScript {
 		patientclinical.IswitchtoPatientTransitionsframe();
 	}
 
-	@Then("^I verify that title of document or topic of note should appear as a link in the section$")
+    @Then("^I verify that title of document or topic of note should appear as a link in the section$")
 	public void I_verify_that_title_of_document_or_topic_of_note_should_appear_as_a_link_in_the_section() throws Throwable {
 		patientclinical.Iverifythattitleofdocumentortopicofnoteshouldappearasalinkinthesection();
 	}
@@ -189,6 +189,11 @@ public class SummarySectionSteps extends DriverScript {
 		patientclinical.Iwillwaittoseeandclickontext(text,tag);
 	}
 	
+	@Then("^I will wait to see and click on \"([^\"]*)\" with attribute \"([^\"]*)\" \"([^\"]*)\" in \"([^\"]*)\" tag$")
+	public void I_will_wait_to_see_and_click_on_attribute_in_tag(String name,String variable,String value,String tag) throws Throwable {
+		patientclinical.Iwillwaittoseeandclickonattributeintag(variable,value,tag);
+	}
+	
 	@Then ("^I will fetch the value attribute of \"([^\"]*)\" on patient details$")
 	public void I_will_fetch_the_value_attribute_of_variable_on_patient_details(String value) throws Throwable  {
 		patientclinical.Iwillfetchthevalueattributeofvariableonpatientdetails();
@@ -226,4 +231,18 @@ public class SummarySectionSteps extends DriverScript {
 	{
 		patientclinical.Iverifyformsshouldnotdisplayanymessageinthesummarysectionanditshouldbegreyedout();
 	}
+	
+	@Then ("^I will \"([^\"]*)\" the \"([^\"]*)\" radio button at index \"([^\"]*)\"$")
+	public void I_will_check_in_the_radio_button(String action,String buttonname,String position)
+	{
+		patientclinical.Iwillcheckintheradiobutton(buttonname);
+		
+	}
+	
+	@Then ("^I select the \"([^\"]*)\" value from the dropdown$")
+	public void I_select_the_value_from_the_dropdown()
+	{
+		patientclinical.Iselectthevaluefromthedropdown();
+	}
+	
 }

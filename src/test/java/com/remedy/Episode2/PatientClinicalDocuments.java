@@ -440,15 +440,10 @@ public class PatientClinicalDocuments extends BaseClass {
 	}
 
 	public void IverifythatuponSelectingShowHistoryshoulddisplaytheinformationofalluserswhohavesavedthatform() throws InterruptedException {
-       	List<String> mylists = getTextForElementfromList("table > tbody > tr:nth-child(1) > td > div > span:nth-child(3)");
-		Assert.assertTrue(mylists.size()==3);
-       	if(mylists.size()==3)
-		{
-       	for(String list:mylists )
-		{
-			Assert.assertEquals("Emblemrn, Qa; RN",list);
-		}
-		}
+       	WebDriverWait wait=new WebDriverWait(driver,10);
+       	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("table > tbody > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1).doc-edit.ng-scope")));
+       	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("table > tbody > tr:nth-child(1) > td:nth-child(4) > div:nth-child(2).doc-edit.ng-scope.ng-hide")));
+       	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("table > tbody > tr:nth-child(1) > td:nth-child(4) > div:nth-child(3).doc-edit.ng-scope.ng-hide")));
 	}
 
 	public void Iverifydateandtimeinformationappearsinlastsavedsection() {
@@ -456,11 +451,8 @@ public class PatientClinicalDocuments extends BaseClass {
 	}
 
 	public void IverifythatShowHistorysectionshouldnotbeapplicablefornotesection() {
-		try {
-			driver.findElement(By.cssSelector("table > tbody > tr:nth-child(1) > td:nth-child(4) > span > a"));
-		} catch (Exception e) {
-			return;
-		}
+		WebDriverWait wait=new WebDriverWait(driver,10);
+       	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//a[contains(text(), 'Show History')]")));
 	}
 
 	public void IclickontheCreateTransitionButtontoaddanewtransition() {
@@ -482,12 +474,12 @@ public class PatientClinicalDocuments extends BaseClass {
 
 	public void IverifythatuponselectingHideHistoryusershouldonlyseetheinformationofthelastuserwhosavedtheform() {
          clickElement(driver.findElement(By.xpath("//a[contains(text(),'Hide History')]")));
-		try {
-			driver.findElement(By.cssSelector(" table > tbody > tr:nth-child(1) > td:nth-child(4) > div:nth-child(2).doc-edit.ng-scope"));
-		} catch (Exception e) {
-			return;
-		}
-
+         delay();
+         WebDriverWait wait=new WebDriverWait(driver,10);
+         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("table > tbody > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1).doc-edit.ng-scope")));
+         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("table > tbody > tr:nth-child(1) > td:nth-child(4) > div:nth-child(2).doc-edit.ng-scope.ng-hide")));
+         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("table > tbody > tr:nth-child(1) > td:nth-child(4) > div:nth-child(3).doc-edit.ng-scope.ng-hide")));
+         
 	}
 
 	public void IclickontheTransitionInfoonaddanewtransition() {
@@ -621,7 +613,6 @@ public class PatientClinicalDocuments extends BaseClass {
 
 	public void IclickontheShowHistoryButtontoseethelistofuserwhosavedtheform() {
 		clickElement(driver.findElement(By.xpath("//a[contains(text(), 'Show History')]")));
-		
 	}
 
 	public void IverifythatHideHistorylinkshouldappearwhenusercurrentlyonShowHistorysection() {
@@ -826,5 +817,18 @@ public class PatientClinicalDocuments extends BaseClass {
 			
 		}
 
-	
-}
+		public void Iwillwaittoseeandclickonattributeintag(String variable, String value, String tag) {
+			delay();
+			iWillWaitToSee(By.xpath("//"+tag+"[@"+variable+"='"+value+"']"));
+			clickElement(driver.findElement(By.xpath("//"+tag+"[@"+variable+"='"+value+"']")));
+		}
+
+		public void Iwillcheckintheradiobutton(String text) {
+			clickElement(driver.findElement(By.xpath("//h4[text()='"+text+"']/preceding-sibling::div/span/input")));
+			
+		}
+
+		public void Iselectthevaluefromthedropdown() {
+			clickElement(driver.findElement(By.cssSelector("a.set_eligibility_value.set_eligibility_eligible")));
+		}
+		}

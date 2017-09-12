@@ -2,37 +2,30 @@ Feature: Episode 2.0 Cooperation Metric Filters
 
   Scenario: verify Admit Reason filter is present under list of Filter options on Patient Page
     Given I am on the login page
-    When I enter email field qa.tcs@yopmail.com for login
+    When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
-    And I wait for 2000 milli seconds
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
-    And I wait for 4000 milli seconds
     Then I verify current page "Remedy Partners" title
+    And I should see "All" tab in the filter bar on patients page
+    Then I should see search box appearing on the patients page
     When I click on Filter button present on Patient Page
     And I click on Filters button present on Filter Page
     Then I verify Cooperation Metric Filter is displayed under List of Filter Options
     When I click on Cooperation Metric Filter present on Filter Page
-    And I wait for 4000 milli seconds
     And I Click on "Assigned" checkbox under Cooperation Metric present on the Filter Page
-    And I wait for 10000 milli seconds
+    Then I verify SSN Filter is displayed under List of Filter Options
+    When I click on SSN Filter present on Filter Page
+    Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
-    And I wait for 15000 milli seconds
+    Then I wait to the see the visibility of loader to disappear
     Then I scroll the page to bottom by "-100"
-    Then I verify the total number of patients present on the Patients Page
-    And I wait for 5000 milli seconds
-    Then I verify "Assigned" is appearing under selected filters for Cooperation Metrics
-    Then I click on "Agree" button appearing on the patient card after applying filter
-    And I wait for 5000 milli seconds
-    When I click on the Expand button on the patient card on the patient page
-    And I wait for 10000 milli seconds
-    When I click on Hide Summary button present on the patient summary page
-    Then I click on "Care Plan" tab appearing under patient summary page to verify care plan created
-    And I wait for 5000 milli seconds
-    And I switch to ec2 patient summary iframe
-    And I wait for 2000 milli seconds
+    Then I verify "Cooperation Metrics: Not assigned" is appearing under selected filters on "1" position on search box for Admit Reason
+    Then I click on the patient on the patient card page that has no CARL button in it
+    Then I wait to the see the visibility of loader to disappear
+    Then I will wait to see and click on "Care Plan" followed by "span" tag
+    Then I switch to PatientTransitions frame
+    Then I wait to the see the visibility of loader to disappear
     Then I click on forms tab under careplan on patient summary page
-    And I wait for 2000 milli seconds
     Then I verify "assigned" is appearing in forms under careplan on patient summary page
-    And I wait for 2000 milli seconds

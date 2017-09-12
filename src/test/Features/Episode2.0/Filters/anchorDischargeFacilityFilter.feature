@@ -1,6 +1,6 @@
 Feature: Episode 2.0 Anchor Discharge Facility Filters
 
-  Scenario Outline: verify Admit Reason filter is present under list of Filter options on Patient Page
+  Scenario Outline: verify anchor discharge Facility filter is present under list of Filter options on Patient Page
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
@@ -43,6 +43,10 @@ Feature: Episode 2.0 Anchor Discharge Facility Filters
     Then I select the "Working" DRG type on the Diagnosis and DRG tab on add a new transition
     Then I select the "63" DRG value on the Diagnosis and DRG tab on add a new transition
     Then I click on the Create Transition Button to add a new transition
+    Then I wait to the see the visibility of loader to disappear
+    When I switch to default window from iframe
+    Then I close the patient summary Page
+    Then I scroll the page to bottom by "-100"
     When I click on Filter button present on Patient Page
     Then I verify Anchor Discharge Facility Filter is displayed under List of Filter Options
     When I click on Anchor Discharge Facility Filter present on Filter Page

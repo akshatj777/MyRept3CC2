@@ -79,18 +79,18 @@ Feature: Patient status on Other Work List
     Then I scroll the page to bottom by "-100"
     Then I will wait to see and click on "Post Acute" followed by "span" tag
     Then I will wait to see and click on "Other" followed by "span" tag
-   Then I wait to the see the visibility of loader to disappear
+    Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I verify the patient "present" on "Home Health" worklist on the Patient Card Page
+    Then I verify the patient "present" on "Alternative" worklist on the Patient Card Page
 
     Examples: 
       | email                | password  | Patient First Name | Patient Last Name |
       | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   |
 
-  Scenario Outline: Verify Patient should not be included in Home Health worklist who has an episode status other than Active or Pending Cancellation (Completed Status)
+  Scenario Outline: Verify Patient should not be included in Alternative worklist who has an episode status other than Active or Pending Cancellation (Completed Status)
     Given I am on the login page
     When I enter email field <email> for login
     And I enter password field <password> for Login
@@ -153,7 +153,7 @@ Feature: Patient status on Other Work List
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I verify the patient "not present" on "Home Health" worklist on the Patient Card Page
+    Then I verify the patient "not present" on "Alternative" worklist on the Patient Card Page
 
     Examples: 
       | email                | password  | Patient First Name | Patient Last Name |

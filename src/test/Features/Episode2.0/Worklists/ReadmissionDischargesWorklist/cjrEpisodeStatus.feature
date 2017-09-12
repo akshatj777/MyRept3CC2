@@ -95,7 +95,7 @@ Feature: Patient status on Readmission Discharges Work List
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I verify the patient "present" on "Home Health" worklist on the Patient Card Page
+    Then I verify the patient "present" on "Readmission Discharges" worklist on the Patient Card Page
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
@@ -119,7 +119,7 @@ Feature: Patient status on Readmission Discharges Work List
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I verify the patient "present" on "Home Health" worklist on the Patient Card Page
+    Then I verify the patient "present" on "Readmission Discharges" worklist on the Patient Card Page
 
     Examples: 
       | email                | password  | Patient First Name | Patient Last Name    |
@@ -198,7 +198,7 @@ Feature: Patient status on Readmission Discharges Work List
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I verify the patient "present" on "Home Health" worklist on the Patient Card Page
+    Then I verify the patient "present" on "Readmission Discharges" worklist on the Patient Card Page
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
@@ -224,7 +224,7 @@ Feature: Patient status on Readmission Discharges Work List
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I verify the patient "present" on "Home Health" worklist on the Patient Card Page
+    Then I verify the patient "present" on "Readmission Discharges" worklist on the Patient Card Page
 
     Examples: 
       | email                | password  | Patient First Name | Patient Last Name    |

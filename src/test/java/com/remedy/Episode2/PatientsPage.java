@@ -325,6 +325,7 @@ public class PatientsPage extends BaseClass {
 
 	public void iClickOnAnchorFacilityDropdownToSelectTheFaciltyOnTheFilterPage() {
 		clickElement(driver.findElement(By.cssSelector(".form-control.dropdown-look")));
+	    delay();
 	}
 
 	public void iTypeInTheSearchFieldToSearchTheAnchorFacilty(String facility) {
@@ -333,8 +334,7 @@ public class PatientsPage extends BaseClass {
 
 	public void iSelectStamfordHospitalCheckboxAsAnchorFacilityPresentInTheFilterPage() {
 		longDelay();
-		clickElement(driver.findElement(By.cssSelector(
-				"ul[class='light-tags ng-scope']~ul[class='checkbox-list list-unstyled ng-scope']>li>div:nth-child(2)")));
+		clickElement(driver.findElement(By.cssSelector("div.multisearch-select-dropdown > checkbox-list > div > div:nth-child(1) > ul.checkbox-list.list-unstyled.ng-scope > li:nth-child(2)")));
 	}
 
 	public void iClickOnHideSummaryButtonPresentOnThePatientSummaryPage() {
@@ -475,6 +475,7 @@ public class PatientsPage extends BaseClass {
 	}
 
 	public void iClickOnAssignedCheckboxUnderCooperationMetricPresentOnTheFilterPage(String text) {
+		longDelay();
 		clickElement(driver.findElement(By.xpath("//label[span[text()='" + text + "']]")));
 	}
 
@@ -495,6 +496,7 @@ public class PatientsPage extends BaseClass {
 	}
 
 	public void iClickOnInpatientEpisodesRadioButtonPresentOnFilterPage() {
+		longDelay();
 		clickElement(driver.findElement(By.cssSelector("input[id='daily-report0']~label[for='daily-report0']")));
 	}
 
@@ -755,6 +757,7 @@ public class PatientsPage extends BaseClass {
 	}
 
 	public void iClickOnPossibleRadioButtonUnderDRGTypeFilter() {
+		delay();
 		clickElement(driver.findElement(By.xpath("//label[@for='drg-typeP']/i")));
 	}
 
@@ -763,6 +766,7 @@ public class PatientsPage extends BaseClass {
 	}
 
 	public void iClickOnEligibileCheckboxUnderEligibleFilterOption() {
+		delay();
 		clickElement(driver.findElement(By.xpath("//label[@for='eligibilityELIGIBLE']")));
 	}
 
@@ -1126,6 +1130,7 @@ public class PatientsPage extends BaseClass {
 
 	public void iClickOnFormsUnderCarePlan() {
 		clickElement(driver.findElement(By.cssSelector("a[href='#careFlowForms']")));
+		delay();
 	}
 
 	public void iVerifyassignedInFormsUnderCarePlan(String text) {
@@ -1235,7 +1240,21 @@ public class PatientsPage extends BaseClass {
 		}
 
 	public void IverifyfilterisappearingunderselectedfiltersonpositiononsearchboxforAdmitReason(String text,int position) {
-		verifyTextForElement(driver.findElement(By.cssSelector("span:nth-child("+position+") > span.margin-left.ng-binding")),text);
+		    isElementVisible(driver.findElement(By.cssSelector("//span["+position+"]/span[contains(text(),'"+text+"')]")));
+		}
+
+	public void iclickonradioText(String string) {
+		clickElement(driver.findElement(By.xpath("//span[contains(text(),'"+string+"') and @class='ng-binding']")));
+		
+	}
+
+	public void Iverifycurrentlocationisappearing(String value,String variable) {
+		isElementVisible(driver.findElement(By.xpath("//label[contains(text(),'"+variable+"')]/following::span[contains(text(),'"+value+"')]")));
+		
+	}
+
+	public void IclickonEligibilitydropdown() {
+		clickElement(driver.findElement(By.cssSelector("#eligibility_button")));
 		
 	}
 	}

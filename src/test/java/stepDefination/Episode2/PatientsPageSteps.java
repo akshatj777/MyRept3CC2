@@ -1279,6 +1279,11 @@ public class PatientsPageSteps extends DriverScript {
     	patientsPage.iVerifySelectedFilterText("Care Plan: "+text);
     }
     
+    @Then("^I click on \"([^\"]*)\" under selected filters for Care Plan$")
+    public void i_click_on_under_selected_filters_for_selected_filters_for_care_plan(String text) throws Throwable {
+    	patientsPage.iclickonradioText(text);
+    }
+    
     @Then("^I verify \"([^\"]*)\" is appearing under selected filters for care setting$")
     public void i_verify_filter_is_appearing_under_selected_filters_for_selected_filters_for_care_setting(String text) throws Throwable {
     	patientsPage.iVerifySelectedFilterText("Care Setting: (Hospital) "+text);
@@ -1479,6 +1484,12 @@ public class PatientsPageSteps extends DriverScript {
     	patientsPage.iVerifyTextEpisodeDrgOnPatientSummaryPage(text);
     }
     
+    @Then ("^I click on \"([^\"]*)\" dropdown$")
+    public void I_click_on_Eligibility_dropdown(String value)
+    {
+    	patientsPage.IclickonEligibilitydropdown();
+    }
+    
     @Then("^I search with ([^\"]*) in the episode drg searchbox$")
     public void i_search_with_in_the_episode_drg_searchbox(String drgid) throws Throwable {
     	patientsPage.iSearchWithDrgIdInEpisodeDrg(drgid);
@@ -1582,6 +1593,12 @@ public class PatientsPageSteps extends DriverScript {
     @Then ("^I verify the notes created in the episode1 should appear in the notes section in care plan in episode2$")
     public void I_verify_the_notes_created_in_the_episode1_should_appear_in_the_notes_section_in_care_plan_in_episode2() throws Throwable {
     	patientsPage.Iverifythenotescreatedintheepisode1shouldappearinthenotessectionincareplaninepisode2();
+    }
+    
+    @Then ("^I verify \"([^\"]*)\" is appearing under \"([^\"]*)\" in Patient Summary Page$")
+    public void I_verify_current_location_is_appearing(String value,String variable)
+    {
+    	patientsPage.Iverifycurrentlocationisappearing(value,variable);
     }
     
     }

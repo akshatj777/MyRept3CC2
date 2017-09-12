@@ -88,6 +88,7 @@ public class NoteCreation extends BaseClass {
 	}
 
 	public void IclickonquickactionbuttonfornotecreationonPatientCardpage() {
+		delay();
 		iWillWaitToSee(By.xpath("//button[@uib-tooltip='Add Clinical Document']"));
 		clickElement(driver.findElement(By.xpath("//button[@uib-tooltip='Add Clinical Document']")));
 	}

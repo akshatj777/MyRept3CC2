@@ -91,7 +91,7 @@ Feature: Patient status on Home Limited Service Worklist
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I verify the patient "not present" on "Home Health" worklist on the Patient Card Page
+    Then I verify the patient "not present" on "Home With Limited Services" worklist on the Patient Card Page
     Then I click on "All" tab in the filter bar on patients page
     Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
@@ -121,7 +121,7 @@ Feature: Patient status on Home Limited Service Worklist
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I verify the patient "not present" on "Home Health" worklist on the Patient Card Page
+    Then I verify the patient "not present" on "Home With Limited Services" worklist on the Patient Card Page
 
     Examples: 
       | email                | password  | Patient First Name | Patient Last Name       |
