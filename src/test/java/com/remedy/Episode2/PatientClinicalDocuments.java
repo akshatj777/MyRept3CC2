@@ -798,7 +798,7 @@ public class PatientClinicalDocuments extends BaseClass {
 			delay();
 			clickElement(driver.findElement(By.xpath("div > div.filter-bar-active-filters.filter-scroll > span:nth-child("+i+") > i.valentino-icon-x.margin-left")));
 			delay();
-			isElementVisible(driver.findElement(By.cssSelector("//div[@class='filter-bar-active-filters-directive']/div[1]/span["+(i-1)+"]/span[contains(text(),'"+text+"')]")));
+			isElementVisible(driver.findElement(By.xpath("//div[@class='filter-bar-active-filters-directive']/div[1]/span["+(i-1)+"]/span[contains(text(),'"+text+"')]")));
 			WebDriverWait wait=new WebDriverWait(driver,5);
 			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//label[@for='documentBPNSoC2P0']/i/following-sibling::span[contains(text(),'"+text+"')]")));
 			}
@@ -824,11 +824,25 @@ public class PatientClinicalDocuments extends BaseClass {
 		}
 
 		public void Iwillcheckintheradiobutton(String text) {
+			longDelay();
+			try{
+			WebDriverWait wait=new WebDriverWait(driver,60);
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div.loading-message.loading-message-boxed")));
+			}catch(Exception e)
+			{
+				e.printStackTrace();
+				//iWillWaitToSee(By.xpath("//h4[text()='"+text+"']/preceding-sibling::div/span/input"));
+			}
 			clickElement(driver.findElement(By.xpath("//h4[text()='"+text+"']/preceding-sibling::div/span/input")));
 			
 		}
 
-		public void Iselectthevaluefromthedropdown() {
+		public void Iselectthevaluefromtheeligibilitydropdown() {
 			clickElement(driver.findElement(By.cssSelector("a.set_eligibility_value.set_eligibility_eligible")));
+		}
+
+		public void IverifyepisodebecomesActive() {
+			isElementVisible(driver.findElement(By.cssSelector("span.text-large.margin-right.ng-binding.ng-scope")));
+			
 		}
 		}

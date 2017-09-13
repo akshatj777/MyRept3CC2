@@ -76,7 +76,7 @@ Feature: Episode 2.0 Eligibility Filter
     Then I wait to the see the visibility of loader to disappear
     When I switch to iframe of patient eligibility on patient summary page
     Then I click on "Eligibility" dropdown
-    Then I select the "Eligible" value from the dropdown
+    Then I select the "Eligible" value from the eligibility dropdown
     Then I wait to the see the visibility of loader to disappear
     When I switch to default window from iframe
     Then I close the patient summary Page

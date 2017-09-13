@@ -239,10 +239,16 @@ public class SummarySectionSteps extends DriverScript {
 		
 	}
 	
-	@Then ("^I select the \"([^\"]*)\" value from the dropdown$")
-	public void I_select_the_value_from_the_dropdown()
+	@Then ("^I select the \"([^\"]*)\" value from the eligibility dropdown$")
+	public void I_select_the_value_from_the_eligibility_dropdown(String value)
 	{
-		patientclinical.Iselectthevaluefromthedropdown();
+		patientclinical.Iselectthevaluefromtheeligibilitydropdown();
+	}
+	
+	@Then ("^I verify episode becomes Active$")
+	public void I_verify_episode_becomes_Active()
+	{
+		patientclinical.IverifyepisodebecomesActive();
 	}
 	
 }

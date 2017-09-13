@@ -786,6 +786,7 @@ public class PatientsPage extends BaseClass {
 	}
 
 	public void iClickOnEpisodeStatusCheckboxUnderFilterOption() {
+		delay();
 		clickElement(driver.findElement(By.xpath("//label[@for='episode-statusActive']")));
 	}
 
@@ -1240,7 +1241,7 @@ public class PatientsPage extends BaseClass {
 		}
 
 	public void IverifyfilterisappearingunderselectedfiltersonpositiononsearchboxforAdmitReason(String text,int position) {
-		    isElementVisible(driver.findElement(By.cssSelector("//span["+position+"]/span[contains(text(),'"+text+"')]")));
+		    isElementVisible(driver.findElement(By.xpath("//span["+position+"]/span[contains(text(),'"+text+"')]")));
 		}
 
 	public void iclickonradioText(String string) {

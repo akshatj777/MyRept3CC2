@@ -49,8 +49,8 @@ Feature: To verify the options and functionality of Anticipated Discharge Needs 
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the patient on the patient card page that has no CARL button in it
-    Then I get the patient last name who have no CARL button in it
     Then I wait to the see the visibility of loader to disappear
+    Then I get the patient last name who have no CARL button in it
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
     Then I click on "Anticipated Discharge Needs" section on left navigator
