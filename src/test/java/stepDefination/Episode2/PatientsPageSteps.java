@@ -1601,4 +1601,10 @@ public class PatientsPageSteps extends DriverScript {
     	patientsPage.Iverifycurrentlocationisappearing(value,variable);
     }
     
+    @Then ("^I verify \"([^\"]*)\" \"([^\"]*)\" is appearing under drg column under transitions on patient summary page$")
+    public void I_verify_drg_is_appearing(String variable,String value)
+    {
+    	patientsPage.Iverifydrgisappearing(value);
+    }
+    
     }

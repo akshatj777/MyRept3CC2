@@ -1258,5 +1258,10 @@ public class PatientsPage extends BaseClass {
 		clickElement(driver.findElement(By.cssSelector("#eligibility_button")));
 		
 	}
+
+	public void Iverifydrgisappearing(String value) {
+		isElementVisible(driver.findElement(By.xpath("//*[@id='ui-transitions-table']/tbody/tr[1]/td[9]/div/table/tbody/tr[2]/td[2][contains(text(),'"+value+"')]")));
+		
+	}
 	}
     
