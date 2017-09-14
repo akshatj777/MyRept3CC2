@@ -171,6 +171,7 @@ Feature: Patient status on Post Acute Facility Work List
     Then I click on the Create Transition Button to add a new transition
     Then I wait to the see the visibility of loader to disappear
     When I switch to default window from iframe
+    Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
     Then I will wait to see and click on "Post Acute" followed by "span" tag
     Then I will wait to see and click on "Post-Acute Facility" followed by "span" tag
@@ -225,6 +226,7 @@ Feature: Patient status on Post Acute Facility Work List
     Then I click on update transition to add a new episode
     Then I wait to the see the visibility of loader to disappear
     When I switch to default window from iframe
+    Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
     Then I will wait to see and click on "Post Acute" followed by "span" tag
     Then I will wait to see and click on "Post-Acute Facility" followed by "span" tag
@@ -291,8 +293,8 @@ Feature: Patient status on Post Acute Facility Work List
     Then I wait to the see the visibility of loader to disappear
     Then I click on the Create Transition Button to add a new transition
     Then I wait to the see the visibility of loader to disappear
-    Then I close the patient summary Page
     When I switch to default window from iframe
+    Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
     Then I will wait to see and click on "Post Acute" followed by "span" tag
     Then I will wait to see and click on "Post-Acute Facility" followed by "span" tag
@@ -488,7 +490,7 @@ Feature: Patient status on Post Acute Facility Work List
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I verify the patient "present" on "Post-Acute Facility" worklist on the Patient Card Page
+    Then I verify the patient "not present" on "Post-Acute Facility" worklist on the Patient Card Page
 
     Examples: 
       | email                | password  | Patient First Name | Patient Last Name     |

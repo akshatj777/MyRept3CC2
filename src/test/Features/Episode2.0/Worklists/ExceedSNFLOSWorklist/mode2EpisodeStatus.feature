@@ -46,9 +46,14 @@ Feature: Patient status on Exceed SNF LOS Work List (Model 2 state)
     Then I will wait to see and click on "Patient Details" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
+    Then I will fetch the value attribute of "Social Security Number" on patient details
+    When I switch to default window from iframe
+    Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the delete button on the transition to delete all the transitions
+    Then I switch to PatientTransitions frame
+    Then I wait to the see the visibility of loader to disappear
     Then I click on add a new transition to add a new episode
+    Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I fill in "Admit" with logic "minus" with "30" days
     Then I wait to the see the visibility of loader to disappear
@@ -64,12 +69,13 @@ Feature: Patient status on Exceed SNF LOS Work List (Model 2 state)
     Then I click on the Create Transition Button to add a new transition
     Then I wait to the see the visibility of loader to disappear
     Then I click on add a new transition to add a new episode
+    Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I fill in "Admit" with logic "minus" with "28" days
     Then I wait to the see the visibility of loader to disappear
     Then I select the "Admit" "caresetting" "SNF - Skilled Nursing Facility" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
     Then I wait to the see the visibility of loader to disappear
-    Then I select the "Admit" "caretype" "TCU" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
+    Then I select the "Admit" "caretype" "<caretype>" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
     Then I select the "Admit" facility "Coosa valley health care" by "#s2id_bp_personbundle_bpadmissiontype_admitFacility" on add a new transition
     Then I wait to the see the visibility of loader to disappear
     Then I click on the Create Transition Button to add a new transition
@@ -90,6 +96,7 @@ Feature: Patient status on Exceed SNF LOS Work List (Model 2 state)
       | email                | password  | Patient First Name | Patient Last Name | caretype         |
       | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTEXCEEDSNF     |  TCU             |
       | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTEXCEEDSNF     |  Skilled Nursing |
+ 
   Scenario Outline: Verify patient should be present in EXCEED SNF LOS Worklist when Episode is M2 Pend Canc and patient is Admit with readmission admit care setting-SNF 
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
@@ -114,6 +121,11 @@ Feature: Patient status on Exceed SNF LOS Work List (Model 2 state)
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
+    Then I wait to the see the visibility of loader to disappear
+    Then I switch to PatientTransitions frame
+    Then I will fetch the value attribute of "Social Security Number" on patient details
+    When I switch to default window from iframe
+    Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
     Then I click on the edit button on the "2" transition to edit the Active transition
@@ -163,6 +175,11 @@ Feature: Patient status on Exceed SNF LOS Work List (Model 2 state)
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
+    Then I wait to the see the visibility of loader to disappear
+    Then I switch to PatientTransitions frame
+    Then I will fetch the value attribute of "Social Security Number" on patient details
+    When I switch to default window from iframe
+    Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear
@@ -230,6 +247,11 @@ Feature: Patient status on Exceed SNF LOS Work List (Model 2 state)
     Then I will wait to see and click on "Patient Details" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
+    Then I will fetch the value attribute of "Social Security Number" on patient details
+    When I switch to default window from iframe
+    Then I will wait to see and click on "Transitions" followed by "span" tag
+    Then I wait to the see the visibility of loader to disappear
+    Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear
     Then I click on the edit button on the "2" transition to edit the Active transition
     Then I wait to the see the visibility of loader to disappear
@@ -276,6 +298,11 @@ Feature: Patient status on Exceed SNF LOS Work List (Model 2 state)
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
+    Then I wait to the see the visibility of loader to disappear
+    Then I switch to PatientTransitions frame
+    Then I will fetch the value attribute of "Social Security Number" on patient details
+    When I switch to default window from iframe
+    Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear
@@ -338,7 +365,7 @@ Feature: Patient status on Exceed SNF LOS Work List (Model 2 state)
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I verify the patient "present" on "Exceed SNF LOS" worklist on the Patient Card Page
+    Then I verify the patient "not present" on "Exceed SNF LOS" worklist on the Patient Card Page
 
     Examples: 
       | email                | password  | Patient First Name | Patient Last Name |
@@ -367,6 +394,11 @@ Feature: Patient status on Exceed SNF LOS Work List (Model 2 state)
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
+    Then I wait to the see the visibility of loader to disappear
+    Then I switch to PatientTransitions frame
+    Then I will fetch the value attribute of "Social Security Number" on patient details
+    When I switch to default window from iframe
+    Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear
@@ -435,6 +467,11 @@ Feature: Patient status on Exceed SNF LOS Work List (Model 2 state)
     Then I will wait to see and click on "Patient Details" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
+    Then I will fetch the value attribute of "Social Security Number" on patient details
+    When I switch to default window from iframe
+    Then I will wait to see and click on "Transitions" followed by "span" tag
+    Then I wait to the see the visibility of loader to disappear
+    Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear
     Then I click on the delete button on the transition to delete all the transitions
     Then I click on add a new transition to add a new episode
@@ -468,7 +505,7 @@ Feature: Patient status on Exceed SNF LOS Work List (Model 2 state)
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I verify the patient "present" on "Exceed SNF LOS" worklist on the Patient Card Page
+    Then I verify the patient "not present" on "Exceed SNF LOS" worklist on the Patient Card Page
 
     Examples: 
       | email                | password  | Patient First Name | Patient Last Name |

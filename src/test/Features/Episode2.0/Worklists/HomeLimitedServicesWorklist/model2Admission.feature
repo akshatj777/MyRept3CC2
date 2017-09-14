@@ -77,7 +77,6 @@ Feature: Patient status on Home Limited Service Worklist
     Then I wait to the see the visibility of loader to disappear
     Then I select the "Admit" "caretype" "Outpatient" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
     Then I select the "Admit" facility "Allied Rehab Hospital" by "#s2id_bp_personbundle_bpadmissiontype_admitFacility" on add a new transition
-    Then I select the "1" LOS days on Discharge date on Add Transition
     Then I wait to the see the visibility of loader to disappear
     Then I click on the Create Transition Button to add a new transition
     Then I wait to the see the visibility of loader to disappear

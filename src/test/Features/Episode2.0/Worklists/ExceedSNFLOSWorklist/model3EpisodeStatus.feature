@@ -57,7 +57,7 @@ Feature: Patient status on Exceed SNF LOS Work List (Model 3 state)
     Then I click on add a new transition to add a new episode
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag
-    Then I fill in "Admit" with logic "minus" with "10" days
+    Then I fill in "Admit" with logic "minus" with "18" days
     Then I wait to the see the visibility of loader to disappear
     Then I select the "Admit" "caresetting" "SNF - Skilled Nursing Facility" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
     Then I wait to the see the visibility of loader to disappear

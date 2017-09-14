@@ -61,7 +61,7 @@ Feature: Patient status in Post Acute Onboarding Worklist
     Then I select the "Admit" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
     Then I wait to the see the visibility of loader to disappear
     Then I select the "Admit" "caretype" "Inpatient" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
-    Then I select the "Admit" facility "Emanuel County Hospital Authorityl" by "#s2id_bp_personbundle_bpadmissiontype_admitFacility" on add a new transition
+    Then I select the "Admit" facility "Emanuel County Hospital Authority" by "#s2id_bp_personbundle_bpadmissiontype_admitFacility" on add a new transition
     Then I select the "1" LOS days on Discharge date on Add Transition
     Then I click on the Create Transition Button to add a new transition
     Then I wait to the see the visibility of loader to disappear
@@ -81,7 +81,7 @@ Feature: Patient status in Post Acute Onboarding Worklist
       | email                | password  | Patient First Name | Patient Last Name  |
       | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTPOSTONBOARDING |
 
-  Scenario Outline: Patient status in post onboarding worklist when Patient's episode is activated with Model M3 Episode , patient will now show in the worklist.
+  Scenario Outline: Patient status in post onboarding worklist when Patient's episode is activated with Potential Model M3 Episode , patient will now show in the worklist.
     Given I am on the login page
     When I enter email field <email> for login
     And I enter password field <password> for Login

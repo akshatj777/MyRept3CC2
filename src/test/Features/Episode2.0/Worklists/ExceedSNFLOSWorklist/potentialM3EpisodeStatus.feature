@@ -46,6 +46,11 @@ Feature: Patient status on Exceed SNF LOS Work List
     Then I will wait to see and click on "Patient Details" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
+    Then I will fetch the value attribute of "Social Security Number" on patient details
+    When I switch to default window from iframe
+    Then I will wait to see and click on "Transitions" followed by "span" tag
+    Then I wait to the see the visibility of loader to disappear
+    Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear
     Then I click on the delete button on the transition to delete all the transitions
     Then I click on add a new transition to add a new episode
@@ -114,6 +119,11 @@ Feature: Patient status on Exceed SNF LOS Work List
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
+    Then I wait to the see the visibility of loader to disappear
+    Then I switch to PatientTransitions frame
+    Then I will fetch the value attribute of "Social Security Number" on patient details
+    When I switch to default window from iframe
+    Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear

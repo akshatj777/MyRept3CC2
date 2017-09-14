@@ -79,7 +79,7 @@ Feature: Patient status in Inpatient Care Worklist
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I verify the patient "present" on "Inpatient Care" worklist on the Patient Card Page
+    Then I verify the patient "not present" on "Inpatient Care" worklist on the Patient Card Page
 
     Examples: 
       | email                | password  | Patient First Name | Patient Last Name   |
@@ -135,7 +135,7 @@ Feature: Patient status in Inpatient Care Worklist
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I verify the patient "present" on "Inpatient Care" worklist on the Patient Card Page
+    Then I verify the patient "not present" on "Inpatient Care" worklist on the Patient Card Page
 
     Examples: 
       | email                | password  | Patient First Name | Patient Last Name   | DRG type | Care Type |
@@ -176,12 +176,6 @@ Feature: Patient status in Inpatient Care Worklist
     Then I click on the edit button on the "1" transition to edit the Active transition
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag
-    Then I select the "Admit" "caretype" "Inpatient" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
-    Then I click on update transition to add a new episode
-    Then I wait to the see the visibility of loader to disappear
-    Then I click on the edit button on the "1" transition to edit the Active transition
-    Then I wait to the see the visibility of loader to disappear
-    Then I will wait to see "Transition Info" followed by "a" tag
     Then I click on the Diagnosis and DRG tab on add a new transition to select the DRG
     Then I select the "Working" DRG type on the Diagnosis and DRG tab on add a new transition
     Then I select the "3" DRG value on the Diagnosis and DRG tab on add a new transition
@@ -198,7 +192,7 @@ Feature: Patient status in Inpatient Care Worklist
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I verify the patient "present" on "Inpatient Care" worklist on the Patient Card Page
+    Then I verify the patient "not present" on "Inpatient Care" worklist on the Patient Card Page
 
     Examples: 
       | email                | password  | Patient First Name | Patient Last Name   |

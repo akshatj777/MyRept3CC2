@@ -104,6 +104,13 @@ Feature: Patient status on Readmission Discharges Work List
     Then I verify the patient "present" on "Readmission Discharges" worklist on the Patient Card Page
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I wait to the see the visibility of loader to disappear
+    Then I will wait to see and click on "Patient Details" followed by "span" tag
+    Then I wait to the see the visibility of loader to disappear
+    Then I switch to PatientTransitions frame
+    Then I will fetch the value attribute of "Social Security Number" on patient details
+    When I switch to default window from iframe
+    Then I will wait to see and click on "Transitions" followed by "span" tag
+    Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear
     Then I click on the edit button on the "2" transition to edit the Active transition
@@ -119,7 +126,7 @@ Feature: Patient status on Readmission Discharges Work List
     Then I scroll the page to bottom by "-100"
     Then I will wait to see and click on "Post Acute" followed by "span" tag
     Then I will wait to see and click on "Readmission Discharges" followed by "span" tag
-       Then I wait to the see the visibility of loader to disappear
+    Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
@@ -201,7 +208,7 @@ Feature: Patient status on Readmission Discharges Work List
     Then I scroll the page to bottom by "-100"
     Then I will wait to see and click on "Post Acute" followed by "span" tag
     Then I will wait to see and click on "Readmission Discharges" followed by "span" tag
-       Then I wait to the see the visibility of loader to disappear
+    Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
@@ -235,6 +242,11 @@ Feature: Patient status on Readmission Discharges Work List
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
+    Then I wait to the see the visibility of loader to disappear
+    Then I switch to PatientTransitions frame
+    Then I will fetch the value attribute of "Social Security Number" on patient details
+    When I switch to default window from iframe
+    Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
     Then I will fetch the value attribute of "Social Security Number" on patient details
@@ -372,7 +384,7 @@ Feature: Patient status on Readmission Discharges Work List
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
-    Then I wait to the see the visibility of loader to disappeara
+    Then I wait to the see the visibility of loader to disappear
     Then I click on the edit button on the "2" transition to edit the Active transition
     Then I wait to the see the visibility of loader to disappear
     Then I click on the Diagnosis and DRG tab on add a new transition to select the DRG

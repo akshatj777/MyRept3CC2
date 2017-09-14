@@ -77,7 +77,6 @@ Feature: Patient status on Other/Alternative Work List
     Then I wait to the see the visibility of loader to disappear
     Then I select the "Admit" "caretype" "Leave of Absence" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
     Then I select the "Admit" facility "Coosa valley health care" by "#s2id_bp_personbundle_bpadmissiontype_admitFacility" on add a new transition
-    Then I select the "1" LOS days on Discharge date on Add Transition
     Then I wait to the see the visibility of loader to disappear
     Then I click on the Create Transition Button to add a new transition
     Then I wait to the see the visibility of loader to disappear
@@ -346,7 +345,7 @@ Feature: Patient status on Other/Alternative Work List
       | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   | OTHER - Other        | Psychiatric Hospital/Unit                  | Brothers Medical Center Inc |
       | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   | OTHER - Other        | Shelter                                    | Brothers Medical Center Inc |
       | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   | OTHER - Other        | Still a Patient                            | Brothers Medical Center Inc |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   | REH - Rehabilitation | Select                                     | Allied Rehab Hospital       |
+      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   | REH - Rehabilitation | select                                     | Allied Rehab Hospital       |
 
   Scenario Outline: Verify patient present in Other Worklist when patient is discharged to UNK Unknown.
     Given I am on the login page

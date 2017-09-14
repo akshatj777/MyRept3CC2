@@ -98,6 +98,8 @@ Feature: Patient status on Readmission Discharges Work List
     Then I verify the patient "present" on "Readmission Discharges" worklist on the Patient Card Page
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I wait to the see the visibility of loader to disappear
+    Then I will wait to see and click on "Transitions" followed by "span" tag
+    Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear
     Then I click on the edit button on the "2" transition to edit the Active transition
@@ -201,7 +203,7 @@ Feature: Patient status on Readmission Discharges Work List
     Then I verify the patient "present" on "Readmission Discharges" worklist on the Patient Card Page
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I wait to the see the visibility of loader to disappear
-    Then I switch to PatientTransitions frame
+    Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear

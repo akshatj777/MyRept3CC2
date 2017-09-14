@@ -644,11 +644,11 @@ public class PatientClinicalDocuments extends BaseClass {
 				driver.findElement(By.cssSelector("#bp_personbundle_bpadmissiontype_dischargeDate")).click();
 		}try {
 			WebDriverWait wait = new WebDriverWait(driver, 60);
-			wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("body > div:nth-child(18) > div.datetimepicker-days > table > thead> tr > th:nth-child(2)")));
-			wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("body > div:nth-child(18) > div.datetimepicker-days > table > thead> tr > th:nth-child(2)"))).click();
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("body > div:nth-child(17) > div.datetimepicker-days > table > thead> tr > th:nth-child(2)")));
+			wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("body > div:nth-child(17) > div.datetimepicker-days > table > thead> tr > th:nth-child(2)"))).click();
 		}catch (WebDriverException wde) {
-			scrollToElement(driver.findElement(By.cssSelector("body > div:nth-child(18) > div.datetimepicker-days > table > thead> tr > th:nth-child(2)")));
-			driver.findElement(By.cssSelector("body > div:nth-child(18) > div.datetimepicker-days > table > thead> tr > th:nth-child(2)")).click();
+			scrollToElement(driver.findElement(By.cssSelector("body > div:nth-child(17) > div.datetimepicker-days > table > thead> tr > th:nth-child(2)")));
+			driver.findElement(By.cssSelector("body > div:nth-child(17) > div.datetimepicker-days > table > thead> tr > th:nth-child(2)")).click();
 		}
 		}
 		

@@ -199,6 +199,7 @@ public class ReadmissionWorklist extends BaseClass {
 	}
 
 	public void Iclickonthedeletebuttononthetransitiontodeleteallthetransitions() throws InterruptedException {
+		longDelay();
 		iWillWaitToSee(By.cssSelector("#btnNewTransition"));
 		int count = getElementCount("td.settings-column.center.cursor-default > div");
 		if(count==0)

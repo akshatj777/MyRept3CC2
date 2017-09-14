@@ -86,6 +86,8 @@ Feature: Patient status on Post Acute Facility Work List
     Then I verify the patient "present" on "Post-Acute Facility" worklist on the Patient Card Page
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I wait to the see the visibility of loader to disappear
+    Then I will wait to see and click on "Transitions" followed by "span" tag
+    Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear
     Then I click on the edit button on the "2" transition to edit the Active transition
@@ -169,10 +171,6 @@ Feature: Patient status on Post Acute Facility Work List
     Then I select the "Admit" "caresetting" "HOM - Home" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
     Then I wait to the see the visibility of loader to disappear
     Then I select the "Admit" facility "Canyon Creek Adult Family Home" by "#s2id_bp_personbundle_bpadmissiontype_admitFacility" on add a new transition
-    Then I select the "1" LOS days on Discharge date on Add Transition
-    Then I click on the Diagnosis and DRG tab on add a new transition to select the DRG
-    Then I select the "Working" DRG type on the Diagnosis and DRG tab on add a new transition
-    Then I select the "177" DRG value on the Diagnosis and DRG tab on add a new transition
     Then I click on the Create Transition Button to add a new transition
     Then I wait to the see the visibility of loader to disappear
     When I switch to default window from iframe

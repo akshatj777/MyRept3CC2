@@ -156,7 +156,8 @@ Feature: Patient status on Home Limited Service Worklist
     Then I wait to the see the visibility of loader to disappear
     Then I select the "Admit" "caresetting" "SNF - Skilled Nursing Facility" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
     Then I wait to the see the visibility of loader to disappear
-    Then I select the "Admit" "caretype" "Outpatient" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
+    Then I select the "Admit" "caretype" "Skilled Nursing" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
+    Then I select the "Admit" facility "Coosa valley health care" by "#s2id_bp_personbundle_bpadmissiontype_admitFacility" on add a new transition
     Then I click on update transition to add a new episode
     Then I wait to the see the visibility of loader to disappear
     When I switch to default window from iframe
