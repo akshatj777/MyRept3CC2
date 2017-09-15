@@ -50,7 +50,37 @@ Feature: To verify the options and functionality of Anticipated Discharge Needs 
     Then I wait to the see the visibility of loader to disappear
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I wait to the see the visibility of loader to disappear
-    Then I get the patient last name who have no CARL button in it
+    Then I will wait to see and click on "Patient Details" followed by "span" tag
+    Then I wait to the see the visibility of loader to disappear
+    Then I switch to PatientTransitions frame
+    Then I will fetch the value attribute of "Social Security Number" on patient details
+    When I switch to default window from iframe
+    Then I will wait to see and click on "Transitions" followed by "span" tag
+    Then I switch to PatientTransitions frame
+    Then I wait to the see the visibility of loader to disappear
+    Then I click on the delete button on the transition to delete all the transitions
+    Then I wait to the see the visibility of loader to disappear
+    Then I click on add a new transition to add a new episode
+    Then I will wait to see "Transition Info" followed by "a" tag
+    Then I fill in "Admit" with logic "minus" with "8" days
+    Then I select the care setting value "HHH - Hospital" on add a new transition
+    Then I wait to the see the visibility of loader to disappear
+    Then I select the care type value "Inpatient" on add a new transition
+    Then I select the facility value "Stamford Hospital" on add a new transition
+    Then I click on the Diagnosis and DRG tab on add a new transition to select the DRG
+    Then I select the "Working" DRG type on the Diagnosis and DRG tab on add a new transition
+    Then I select the "61" DRG value on the Diagnosis and DRG tab on add a new transition
+    Then I click on the Create Transition Button to add a new transition
+    Then I wait to the see the visibility of loader to disappear
+    When I switch to default window from iframe
+    Then I close the patient summary Page
+    Then I verify current page "Remedy Partners" title
+    Then I scroll the page to bottom by "-100" 
+    When I click on Filter button present on Patient Page
+    Then I enter "SSN" value under "ssn" filter
+    Then I click on Done button present on the Filter Page
+    Then I wait to the see the visibility of loader to disappear
+    Then I click on the patient on the patient card page that has no CARL button in it
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
     Then I click on "Anticipated Discharge Needs" section on left navigator

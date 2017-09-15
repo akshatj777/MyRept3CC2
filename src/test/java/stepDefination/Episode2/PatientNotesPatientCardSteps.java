@@ -283,7 +283,7 @@ public class PatientNotesPatientCardSteps extends DriverScript {
     }
     
     @Then ("^I verify on clicking on cross icon \"([^\"]*)\" text should show$")
-    public void I_verify_on_clicking_on_cross_icon_text_should_show()
+    public void I_verify_on_clicking_on_cross_icon_text_should_show(String text)
     {
     	noteCreation.Iverifyonclickingoncrossicontextshouldshow();
     }

@@ -88,7 +88,6 @@ Feature: Patient status on Home Health Worklist
     Then I will wait to see and click on "Home Health" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
-    When I click on Filter button present on Patient Page
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear

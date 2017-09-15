@@ -57,13 +57,12 @@ Feature: Patient status on Exceed SNF LOS Work List (Model 3 state)
     Then I click on add a new transition to add a new episode
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag
-    Then I fill in "Admit" with logic "minus" with "18" days
+    Then I fill in "Admit" with logic "minus" with "30" days
     Then I wait to the see the visibility of loader to disappear
     Then I select the "Admit" "caresetting" "SNF - Skilled Nursing Facility" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
     Then I wait to the see the visibility of loader to disappear
     Then I select the "Admit" "caretype" "Skilled Nursing" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
     Then I select the "Admit" facility "Coosa valley health care" by "#s2id_bp_personbundle_bpadmissiontype_admitFacility" on add a new transition
-    Then I select the "1" LOS days on Discharge date on Add Transition
     Then I click on the Diagnosis and DRG tab on add a new transition to select the DRG
     Then I select the "Working" DRG type on the Diagnosis and DRG tab on add a new transition
     Then I select the "177" DRG value on the Diagnosis and DRG tab on add a new transition

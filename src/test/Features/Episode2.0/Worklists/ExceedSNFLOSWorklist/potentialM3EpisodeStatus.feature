@@ -130,8 +130,6 @@ Feature: Patient status on Exceed SNF LOS Work List
     Then I click on the delete button on the transition to delete all the transitions
     Then I click on add a new transition to add a new episode
     Then I wait to the see the visibility of loader to disappear
-    Then I click on add a new transition to add a new episode
-    Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I fill in "Admit" with logic "minus" with "30" days
     Then I wait to the see the visibility of loader to disappear

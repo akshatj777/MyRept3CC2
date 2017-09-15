@@ -100,6 +100,7 @@ public class NoteCreation extends BaseClass {
 	}
 
 	public void IverifywhethertopicdropdownappearsonAddClinicalDocumentonPatientCardpage() {
+		delay();
 		isElementVisible(driver.findElement(By.cssSelector("section > form > div > div.ui-select-match.ng-scope > span")));
 	}
 
@@ -463,9 +464,8 @@ public class NoteCreation extends BaseClass {
 	public void IVerifythattodaydateshouldbehighlightedincalendarasdefaultdate() {
 		String datevalue = driver.findElement(By.xpath("//input[@ng-model='$selection']")).getAttribute("value");
 		System.out.println("$$$Date is"+datevalue);
-		DateFormat dateFormat = new SimpleDateFormat("mm/dd/yyyy");
+		DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
 		Date date = new Date();
-		System.out.println(dateFormat.format(date));
 		Assert.assertEquals(dateFormat.format(date), datevalue);
 	}
 
@@ -487,8 +487,9 @@ public class NoteCreation extends BaseClass {
 	}
 
 	public void Iverifyusershouldbeabletoremovethedefaultdatebyclickingonthecrossicon() {
-		iWillWaitToSee(By.cssSelector("i.valentino-icon-x"));
-		clickElement(driver.findElement(By.cssSelector("i.valentino-icon-x")));
+		delay();
+		iWillWaitToSee(By.xpath("//i[@ng-click='clear($event)']"));
+		clickElement(driver.findElement(By.xpath("//i[@ng-click='clear($event)']")));
 		Assert.assertEquals("",driver.findElement(By.xpath("//input[@ng-model='$selection']")).getAttribute("value"));
 	}
 
