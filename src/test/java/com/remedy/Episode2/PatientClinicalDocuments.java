@@ -306,12 +306,14 @@ public class PatientClinicalDocuments extends BaseClass {
        wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("ul > li > div.checkbox > label > span"),18));
 	   wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector("ul > li > div.checkbox > label > span")));  
 	   List<WebElement> getElementsList=driver.findElements(By.cssSelector("ul > li > div.checkbox > label > span"));
-	   if(getElementsList.size()!=18)
+	   System.out.println("$List of Element is"+getElementsList);
+	   if(getElementsList.size() == 18)
        {
 		   for(int i=1;i<=getElementsList.size();i++)
 	      {
 	    	//WebElement element=driver.findElement(By.xpath("//checkbox-list/div/div[1]/ul/li['"+i+"']/div[2]/label/span"));
-	    	verifyTextForElement(getElementsList.get(i),expectedvalues[i-1]);   	 
+	    	System.out.println("$$$Text for element is"+getElementsList.get(i).getText());
+			verifyTextForElement(getElementsList.get(i),expectedvalues[i-1]);   	 
 	      }
        }
 	     }
@@ -843,6 +845,11 @@ public class PatientClinicalDocuments extends BaseClass {
 
 		public void IverifyepisodebecomesActive() {
 			isElementVisible(driver.findElement(By.cssSelector("span.text-large.margin-right.ng-binding.ng-scope")));
+			
+		}
+
+		public void I_will_wait_to_see_section_appears_on_section_by_selector(String selector,String selector_value) {
+			isElementVisible(driver.findElement(By.cssSelector(selector_value)));
 			
 		}
 		}

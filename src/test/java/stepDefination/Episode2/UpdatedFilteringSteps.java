@@ -72,6 +72,12 @@ public class UpdatedFilteringSteps extends DriverScript {
     {
     	patientclinical.Iveriyremovinganyappliedfilterfromactivefilterbarshouldupdatethepatientsreturnedinresult();
     }
+    
+    @Then ("^I will wait to see \"([^\"]*)\" appears on the \"([^\"]*)\" followed by \"([^\"]*)\" \"([^\"]*)\"$")
+    public void I_will_wait_to_see_section_appears_on_section_by_selector(String button,String section,String selector,String selector_value)
+    {
+    	patientclinical.I_will_wait_to_see_section_appears_on_section_by_selector(selector,selector_value);
+    }
     }
 
 
