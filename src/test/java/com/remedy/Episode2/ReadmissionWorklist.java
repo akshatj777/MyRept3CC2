@@ -243,6 +243,7 @@ public class ReadmissionWorklist extends BaseClass {
 
 	public void IwaittoseeandenabletheattestationonthepatientforonthePatientCardpage(int patientno) {
 		try {
+			longDelay();
 			clickElement(driver.findElement(By.cssSelector("div:nth-child("+ patientno +") > div > div > div > div > div > a > span.attestation-label.ng-binding")));
 			longDelay();
 			}catch(Exception e){

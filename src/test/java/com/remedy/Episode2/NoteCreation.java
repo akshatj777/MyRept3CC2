@@ -101,11 +101,11 @@ public class NoteCreation extends BaseClass {
 
 	public void IverifywhethertopicdropdownappearsonAddClinicalDocumentonPatientCardpage() {
 		delay();
-		isElementVisible(driver.findElement(By.cssSelector("section > form > div > div.ui-select-match.ng-scope > span")));
+		isElementVisible(driver.findElement(By.xpath("//div[@ng-model='$clinicalDocument.note.notesTopic']")));
 	}
 
 	public void IselectthevaluefromthetopicdropdownonPatientCard(String Topic_dropdown_value) {
-		clickElement(driver.findElement(By.cssSelector("section > form > div > div.ui-select-match.ng-scope > span")));
+		clickElement(driver.findElement(By.xpath("//div[@ng-model='$clinicalDocument.note.notesTopic']")));
 		selectDropdownVisibleElementSpan("//div[contains(text(),'" + Topic_dropdown_value + "')]");
 	}
 
@@ -452,7 +452,7 @@ public class NoteCreation extends BaseClass {
 		wait.until(ExpectedConditions.attributeContains(driver.findElement(By.cssSelector("div.row.row-loader.ng-scope")),"class","ng-hide"));
 		}catch(Exception e)
 		{
-			e.printStackTrace();
+			return;
 		}
 	}
 
@@ -500,5 +500,11 @@ public class NoteCreation extends BaseClass {
 
 	public void IverifyNoteshouldnotbecreatedwithoutActivitydate() {
 		Assert.assertEquals("disabled",driver.findElement(By.xpath("//button[@ng-click='$clinicalDocument.submitNote()']")).getAttribute("disabled"));
+	}
+
+	public void Iverifytheimageissuccessfullyattached(String image,int index) {
+		longDelay();
+		isElementVisible(driver.findElement(By.xpath("//div[contains(@ng-repeat,'attachment in $clinicalDocument')]["+index+"]/div/span[contains(@class,'ng-binding')]")));
+		verifyTextForElement(driver.findElement(By.xpath("//div[contains(@ng-repeat,'attachment in $clinicalDocument')]["+index+"]/div/span[contains(@class,'ng-binding')]")),image);
 	}
     }

@@ -1263,5 +1263,11 @@ public class PatientsPage extends BaseClass {
 		isElementVisible(driver.findElement(By.xpath("//*[@id='ui-transitions-table']/tbody/tr[1]/td[9]/div/table/tbody/tr[2]/td[2][contains(text(),'"+value+"')]")));
 		
 	}
+
+	public void iEnterUnderSSN(String ssn) {
+		iWillWaitToSee(By.xpath("//div[@class='ng-scope']/input"));
+		iFillInText(driver.findElement(By.xpath("//div[@class='ng-scope']/input")), ssn);
+		
+	}
 	}
     

@@ -991,6 +991,10 @@ public class PatientsPageSteps extends DriverScript {
         patientsPage.iClickOnSSNFilter();
     }
 
+    @Then ("^I enter SSN \"([^\"]*)\"$")
+    public void i_enter_under_ssn(String ssn) throws Throwable {
+        patientsPage.iEnterUnderSSN(ssn);
+    }
     @Then("^I enter ([^\"]*) under ssn filter$")
     public void i_enter_under_ssn_filter(String ssn) throws Throwable {
         patientsPage.iEnterUnderSSNFilter(ssn);

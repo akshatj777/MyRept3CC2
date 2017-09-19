@@ -197,6 +197,11 @@ public class PatientNotesPatientCardSteps extends DriverScript {
 	public void I_verify_the_image_is_attached_or_not() throws Throwable {
 		noteCreation.Iverifytheimageisattachedornot();
 	}
+	
+	@Then("^I verify the \"([^\"]*)\" image is successfully attached at index \"([^\"]*)\"$")
+	public void I_verify_the_image_is_successfully_attached(String image,int index) throws Throwable {
+		noteCreation.Iverifytheimageissuccessfullyattached(image,index);
+	}
 
 	@Then("^I verify that trash icon is available for each file after uploading all file$")
 	public void I_verify_that_trash_icon_is_available_after_uploading_file() throws Throwable {

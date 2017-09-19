@@ -151,14 +151,15 @@ public class PatientClinicalDocuments extends BaseClass {
 	}
 	
 	public void IverifythepresenceofSummarysectionoftheClinicalDocumenttable() {
-        isElementVisible(driver.findElement(By.cssSelector("div > div.ng-scope > table > thead > tr > th:nth-child(3)")));
+        delay();
+		isElementVisible(driver.findElement(By.cssSelector("div > div.ng-scope > table > thead > tr > th:nth-child(3)")));
 
 	}
 
 	public void IverifybodytextoftheNoteisappearinginthesummarysection() {
-		 verifyTextForElement(driver.findElement(By.cssSelector("span.ellip")),"In above case we have String dateString in format so to");
-		 verifyTextForElement(driver.findElement(By.cssSelector("span.ellip-line")),"convert the String to Date in given format we have Created Object formatter of Class SimpleDateFormat.");
-       }
+		 verifyTextForElement(driver.findElement(By.cssSelector("span.ellip")),"In above case we have String dateString in format so to convert the String to Date in given format we have Created Object formatter of Class SimpleDateFormat.");
+		
+	}
 
 	public void Iverifyforclinicalnoteandbaselinesummaryshouldbedisplayedupto2lines() {
 		isElementVisible(driver.findElement(By.cssSelector("span.ellip")));
@@ -297,30 +298,32 @@ public class PatientClinicalDocuments extends BaseClass {
 
 	public void IVerifythatClinicalDocumentsFilterslinkshoulddisplayfiltersasbelowwiththecorrectsyntaxandsequence() {
 		List<String> requiredcombolisttext = new ArrayList<String>();
-     	String[] expectedvalues = {"CARL form","Baseline", "Bedside Visit", "Care Assessment Note", "Clinical Note", "Close Call",
-				"Daily Round", "Discharge Note", "Exercise Log", "Family Discussion", "General Update", "Goals of Care",
-				"Patient Call", "Patient Education", "Patient Visit", "Psychological Condition", "Transition Note",
-				"TUG/RAPT/CARE Score" };
+    	String[] expectedvalues = {"CARL form","BASELINE", "BEDSIDE_VISIT", "CARE_ASSESSMENT_NOTE", "CLINICAL_NOTE", "CLOSE_CALL",
+				"DAILY_ROUND", "DISCHARGE_NOTE", "EXERCISE_LOG", "FAMILY_DISCUSSION", "GENERAL_UPDATE", "GOALS_OF_CARE",
+				"PATIENT_CALL", "PATIENT_EDUCATION", "PATIENT_VISIT", "PSYCHOLOGICAL_CONDITION", "TRANSITION_NOTE",
+				"TUG_RAPT_CARE_SCORE" };
+       String text= driver.findElement(By.cssSelector("ul > li:nth-child(1) > div.checkbox > label > span")).getText();
+       System.out.println("$$$Text is"+text);
        requiredcombolisttext.addAll(Arrays.asList(expectedvalues));
-       WebDriverWait wait=new WebDriverWait(driver,30);
-       wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("ul > li > div.checkbox > label > span"),18));
-	   wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector("ul > li > div.checkbox > label > span")));  
-	   List<WebElement> getElementsList=driver.findElements(By.cssSelector("ul > li > div.checkbox > label > span"));
-	   System.out.println("$List of Element is"+getElementsList);
-	   if(getElementsList.size() == 18)
-       {
-		   for(int i=1;i<=getElementsList.size();i++)
-	      {
-	    	//WebElement element=driver.findElement(By.xpath("//checkbox-list/div/div[1]/ul/li['"+i+"']/div[2]/label/span"));
-	    	System.out.println("$$$Text for element is"+getElementsList.get(i).getText());
-			verifyTextForElement(getElementsList.get(i),expectedvalues[i-1]);   	 
-	      }
-       }
-	     }
-	
+       System.out.println("$$$Required list"+requiredcombolisttext);
+      
+       List<WebElement> getElementsList=driver.findElements(By.cssSelector("ul > li > div.checkbox > input"));
+       System.out.println("$$Element list is"+getElementsList);
+       System.out.println("First Ekenebt"+requiredcombolisttext.get(0));
+	   Assert.assertEquals(requiredcombolisttext.get(0),text);
+		 System.out.println("Matched");
+    	 for(int i=1;i<=17;i++)
+    	 {
+    		 System.out.println("Attributes in elements"+getElementsList.get(i).getAttribute("value")); 
+    		 System.out.println("Attributes in Required list"+requiredcombolisttext.get(i)); 
+    		 Assert.assertEquals(requiredcombolisttext.get(i),getElementsList.get(i).getAttribute("value"));
+    		 System.out.println(+i+"Matched");
+    	 }
+	}
 
 	public void IVerifythatusershouldbeabletoselectmultiplefiltersbycheckbox() {
-        clickElement(driver.findElement(By.cssSelector("checkbox-list > div > div:nth-child(1) > ul > li:nth-child(1) > div.checkbox")));
+        delay();
+		clickElement(driver.findElement(By.cssSelector("checkbox-list > div > div:nth-child(1) > ul > li:nth-child(1) > div.checkbox")));
 		verifyTextForElement(driver.findElement(By.cssSelector("span.margin-left.ng-binding")),"Document: CARL form");
 		clickElement(driver.findElement(By.cssSelector("checkbox-list > div > div:nth-child(1) > ul > li:nth-child(2) > div.checkbox")));
 		verifyTextForElement(driver.findElement(By.cssSelector(" div.filter-bar-active-filters.filter-scroll > span:nth-child(2) > span")),"Document: Baseline");
@@ -328,9 +331,12 @@ public class PatientClinicalDocuments extends BaseClass {
 	}
 
 	public void IVerifythatcheckingmultiplefilteroptionsshouldreturnrelevantpatientsinreturn() {
+		delay();
 		List<String> mytexts = getTextForElementfromList("table > tbody > tr > td:nth-child(1) > a > span");
-		Assert.assertTrue(mytexts.get(1).equals("CARL"));
-		Assert.assertTrue(mytexts.get(2).equals("Baseline"));
+		System.out.println("$Text1 is"+mytexts.get(0));
+		System.out.println("$Text1 is"+mytexts.get(1));
+		Assert.assertTrue(mytexts.get(0).equals("CARL"));
+		Assert.assertTrue(mytexts.get(1).equals("Baseline"));
 		
     }
 
@@ -602,6 +608,8 @@ public class PatientClinicalDocuments extends BaseClass {
 
 	public void IVerifythatselectingfilterbycheckboxshouldprocessapplythefilteruntiltheuserclickedondone() {
 		List<String> mytexts = getTextForElementfromList("table > tbody > tr > td:nth-child(1) > a > span");
+		System.out.println("$$$Text 1"+mytexts.get(1));
+		System.out.println("$$$Text 1"+mytexts.get(2));
 		Assert.assertTrue(mytexts.get(1).equals("CARL"));
 		Assert.assertTrue(mytexts.get(2).equals("Baseline"));
 	}

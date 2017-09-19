@@ -43,6 +43,7 @@ Feature: Verify the Clinical Documents section
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
+    Then I enter SSN "784222717"
     Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
@@ -55,17 +56,23 @@ Feature: Verify the Clinical Documents section
     Then I verify whether topic drop down appears on Add Clinical Document on Patient Card page
     And I select the "Baseline" from the topic drop down on Add Clinical Document on Patient Card
     And I enter the Note Text "<Notetext>" in the textarea on Add Clinical Document on Patient Card
+    Then I click on the create Note Button on Add Clinical Document on Patient Card
+    Then I verify that create Note has been successfully created
+    Then I click on quick action button for note creation on Patient Card page
+    And I verify to submit the Note Topic is the mandatory field to fill
+    Then I verify whether topic drop down appears on Add Clinical Document on Patient Card page
+    And I select the "Bedside Visit" from the topic drop down on Add Clinical Document on Patient Card
     Then I click on Add Files link on Note Section on Patient Card
     Then I verify that user should be able to select and upload file "Remedy.csv" through Add files link
-    Then I verify the image is attached or not
+    Then I verify the "Remedy.csv" image is successfully attached at index "1"
+    Then I click on Add Files link on Note Section on Patient Card
     Then I verify that user should be able to select and upload file "Remedy.txt" through Add files link
-    Then I verify the image is attached or not
+    Then I verify the "Remedy.txt" image is successfully attached at index "2"
     Then I click on the create Note Button on Add Clinical Document on Patient Card
     Then I verify that create Note has been successfully created
     Then I wait to the see the visibility of loader to disappear
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I wait to the see the visibility of loader to disappear
-    Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
@@ -78,19 +85,22 @@ Feature: Verify the Clinical Documents section
     Then I verify for clinical note and baseline summary should be displayed up to 2 lines
     Then I verify if summary is longer than the character limit then Ellipsis three dots should show
     Then I verify if a note is having attachment and do not have any summary then attachment count should appear in the summary section
+    Then I will wait to see "Bedside Visit" appearing in the "Document" "1" column in row "1" in Document table in Clinical Documents
+    Then I will wait to see "Baseline" appearing in the "Document" "1" column in row "2" in Document table in Clinical Documents
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear
     Then I click on the delete button on the transition to delete all the transitions
-    Then I wait to the see the visibility of loader to disappear
     Then I click on add a new transition to add a new episode
+    Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I fill in "Admit" with logic "minus" with "7" days
-    Then I select the care setting value "HHH - Hospital" on add a new transition
     Then I wait to the see the visibility of loader to disappear
-    Then I select the care type value "Inpatient" on add a new transition
+    Then I select the "Admit" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
     Then I wait to the see the visibility of loader to disappear
-    Then I select the facility value "Stamford Hospital" on add a new transition
+    Then I select the "Admit" "caretype" "Inpatient" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
+    Then I select the "Admit" facility "Stamford Hospital" by "#s2id_bp_personbundle_bpadmissiontype_admitFacility" on add a new transition
+    Then I select the "1" LOS days on Discharge date on Add Transition
     Then I click on the Diagnosis and DRG tab on add a new transition to select the DRG
     Then I select the "Working" DRG type on the Diagnosis and DRG tab on add a new transition
     Then I select the "61" DRG value on the Diagnosis and DRG tab on add a new transition
@@ -110,6 +120,36 @@ Feature: Verify the Clinical Documents section
     Then I wait to the see the visibility of loader to disappear
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I wait to the see the visibility of loader to disappear
+    Then I click on the complete CARL on the Patient Summary
+    Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
+    Then I will wait to see the CARL section "Caregiver" header appears on the CARL form
+    Then I click on Yes, 24 hours a day option under Does the patient have a capable caregiver
+    Then I save and continue the complete CARL form
+    Then I click on "Independence" section on left navigator
+    Then I will wait to see the CARL section "Independence" header appears on the CARL form
+    Then I click on "Cognitive Status" dropdown on Independece Section
+    Then I select "Forgetful" option in dropdown for cognitive status
+    Then I click on "Activities of Daily Living" dropdown on Independece Section
+    Then I select "Assistance needed for one or more ADLs" option in dropdown for cognitive status
+    Then I click on "Ambulatory Status" dropdown on Independece Section
+    Then I select "Assistive device needed" option in dropdown for cognitive status
+    Then I click on "Anticipated Discharge Needs" section on left navigator
+    Then I will wait to see the CARL section "Anticipated Discharge Needs" header appears on the CARL form
+    Then I click "Physical therapy" checkbox under Therapies Needed on Anticipated Discharge Needs section
+    Then I select "Injectable Meds" checkbox for Transition of Care Needs on Anticipated Discharge Needs
+    Then I click "Once daily or less often" radio option under "Injectable Meds" for Transition Care Needs
+    Then I select "Blood Testing" checkbox for Transition of Care Needs on Anticipated Discharge Needs
+    Then I click "Once daily or less often" radio option under "Blood Testing" for Transition Care Needs
+    Then I select "Finger Stick" checkbox for Transition of Care Needs on Anticipated Discharge Needs
+    Then I click "More than once daily" radio option under "Finger Stick" for Transition Care Needs
+    Then I select "Wound Care" checkbox for Transition of Care Needs on Anticipated Discharge Needs
+    Then I click "Once daily or less often" radio option under "Wound Care" for Transition Care Needs
+    Then I save and continue the complete CARL form
+    Then I close the patient summary Page
+    Then I scroll the page to bottom by "-100"
+    Then I verify current page "Remedy Partners" title
+    Then I click on the patient on the patient card page that has no CARL button in it
+    Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Clinical Documents" followed by "span" tag
     Then I will wait to see and click on "Clinical Documents" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
@@ -118,6 +158,7 @@ Feature: Verify the Clinical Documents section
     Then I Verify that clicking Clinical Documents Filters link should show the title document that has list of document forms in it
     Then I Verify that Clinical Documents Filters link should display filters as below with the correct syntax and sequence
     Then I Verify that Selecting Filters link when the filters drawer is open should close the drawer
+    Then I click on filter link on clinical document section
     Then I Verify that user should be able to select multiple filters by checkbox
     Then I Verify that selecting filter by check box should process apply the filter until the user clicked on done
     Then I Verify that checking multiple filter options should return relevant patients in return
@@ -153,30 +194,7 @@ Feature: Verify the Clinical Documents section
     Then I will wait to see "In Progress" appearing in the "Status" "2" column in row "1" in Document table in Clinical Documents
     Then I verify that Inprogress status should be in purple color with Color code AD77B3
     Then I will click on "In Progress" appearing in the "Status" "2" column in row "1" in Document table in Clinical Documents
-    Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
-    Then I will wait to see the CARL section "Caregiver" header appears on the CARL form
-    Then I click on Yes, 24 hours a day option under Does the patient have a capable caregiver
-    Then I save and continue the complete CARL form
-    Then I click on "Independence" section on left navigator
-    Then I will wait to see the CARL section "Independence" header appears on the CARL form
-    Then I click on "Cognitive Status" dropdown on Independece Section
-    Then I select "Forgetful" option in dropdown for cognitive status
-    Then I click on "Activities of Daily Living" dropdown on Independece Section
-    Then I select "Assistance needed for one or more ADLs" option in dropdown for cognitive status
-    Then I click on "Ambulatory Status" dropdown on Independece Section
-    Then I select "Assistive device needed" option in dropdown for cognitive status
-    Then I click on "Anticipated Discharge Needs" section on left navigator
-    Then I will wait to see the CARL section "Anticipated Discharge Needs" header appears on the CARL form
-    Then I click "Physical therapy" checkbox under Therapies Needed on Anticipated Discharge Needs section
-    Then I select "Injectable Meds" checkbox for Transition of Care Needs on Anticipated Discharge Needs
-    Then I click "Once daily or less often" radio option under "Injectable Meds" for Transition Care Needs
-    Then I select "Blood Testing" checkbox for Transition of Care Needs on Anticipated Discharge Needs
-    Then I click "Once daily or less often" radio option under "Blood Testing" for Transition Care Needs
-    Then I select "Finger Stick" checkbox for Transition of Care Needs on Anticipated Discharge Needs
-    Then I click "More than once daily" radio option under "Finger Stick" for Transition Care Needs
-    Then I select "Wound Care" checkbox for Transition of Care Needs on Anticipated Discharge Needs
-    Then I click "Once daily or less often" radio option under "Wound Care" for Transition Care Needs
-    Then I save and continue the complete CARL form
+    Then I wait to the see the visibility of loader to disappear
     Then I click on "Discharge" section on left navigator
     Then I will wait to see the CARL section "Discharge" header appears on the CARL form
     Then I click on "Actual Care Setting" subform dropdown under Recommendation on Discharge section
@@ -216,9 +234,6 @@ Feature: Verify the Clinical Documents section
     Then I will click on "CARL" appearing in the "Document" "1" column in row "1" in Document table in Clinical Documents
     Then I wait to the see the visibility of loader to disappear
     Then I verify user is able to navigate to the read only "CARL" page by selecting the title
-    Then I verify on submitted form user should not be able to edit or delete form
-    Then I verify each section in CARL form left navigator should appear as its own card in the Read only form
-    Then I verify each section in CARL form left navigator should appear as its own card in the Read only form
     Then I verify there should be a "View" link on each card and clicking the link should bring the user to that specified section of the CARL form
     Then I verify "Caregiver" section should appear with "Does the patient have a capable caregiver?" on label "Yes, 24 hours a day" on the review page
     Then I verify "Independence" section should appear with "Cognitive status" on label "Forgetful" on the review page
@@ -268,16 +283,6 @@ Feature: Verify the Clinical Documents section
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify CARL button is "appearing" on the patient card
-    Then I click on quick action button for note creation on Patient Card page
-    And I verify to submit the Note Topic is the mandatory field to fill
-    Then I verify whether topic drop down appears on Add Clinical Document on Patient Card page
-    And I select the "Baseline" from the topic drop down on Add Clinical Document on Patient Card
-    And I enter the Note Text "Remedy Notes" in the textarea on Add Clinical Document on Patient Card
-    Then I click on Add Files link on Note Section on Patient Card
-    Then I verify that user should be able to select and upload file "Remedy.csv" through Add files link
-    Then I verify the image is attached or not
-    Then I click on the create Note Button on Add Clinical Document on Patient Card
-    Then I verify that create Note has been successfully created
     Then I wait to the see the visibility of loader to disappear
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I wait to the see the visibility of loader to disappear
@@ -327,10 +332,46 @@ Feature: Verify the Clinical Documents section
     Then I will wait to see "Archived" appearing in the "Status" "2" column in row "1" in Document table in Clinical Documents
     Then I verify that Archived status should be in Grey color with Color code 959595
     Then I will wait to see "In Progress" appearing in the "Status" "2" column in row "2" in Document table in Clinical Documents
-    Then I will wait to see "Baseline" appearing in the "Document" "1" column in row "1" in Document table in Clinical Documents
-    Then I will wait to see "Baseline" appearing in the "Document" "1" column in row "4" in Document table in Clinical Documents
     
-
+     Examples: 
+      | Notetext                                                                                                                                                       |
+      | In above case we have String dateString in format so to convert the String to Date in given format we have Created Object formatter of Class SimpleDateFormat. |
+    
+    Scenario Outline: To verify the functionalities under Clinical Documents Section 
+    Given I am on the login page
+    When I enter email field qa.emblemrn@yopmail.com for login
+    And I enter password field Episode1! for Login
+    Then I click Access button
+    Then I should see Tile text Episodes 2.0
+    When I click on the "Episodes 2.0" tile
+    Then I verify current page "Remedy Partners" title
+    Then I create a post request
+    Then I click on "All" tab in the filter bar on patients page
+    Then I wait to the see the visibility of loader to disappear
+    Then I verify current page "Remedy Partners" title
+    When I click on Filter button present on Patient Page
+    And I click on Filters button present on Filter Page
+    Then I verify SSN Filter is displayed under List of Filter Options
+    When I click on SSN Filter present on Filter Page
+    Then I enter SSN "784226314"
+    Then I click on Done button present on the Filter Page
+    Then I wait to the see the visibility of loader to disappear
+    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to the see the visibility of loader to disappear
+    Then I scroll the page to bottom by "-100"
+    Then I wait to the see the visibility of loader to disappear
+    Then I click on the patient on the patient card page that has no CARL button in it
+    Then I will wait to see and click on "Clinical Documents" followed by "span" tag
+    Then I wait to the see the visibility of loader to disappear
+    Then I click on filter link on clinical document section
+    Then I Verify that clicking Clinical Documents Filters link should show the title document that has list of document forms in it
+    Then I Verify that Clinical Documents Filters link should display filters as below with the correct syntax and sequence
+    Then I Verify that Selecting Filters link when the filters drawer is open should close the drawer
+    Then I Verify that user should be able to select multiple filters by checkbox
+    Then I Verify that selecting filter by check box should process apply the filter until the user clicked on done
+    Then I Verify that checking multiple filter options should return relevant patients in return
+    Then I Verify that clicking on Done should close the filter drawer and process the filter
+   
 
     Examples: 
       | Notetext                                                                                                                                                       |
