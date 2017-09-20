@@ -123,7 +123,8 @@ public class PatientClinicalDocuments extends BaseClass {
         requiredcombolisttext.addAll(Arrays.asList(expectedvalues));
         for(int i=1;i<5;i++)
         {
-        	Assert.assertEquals(getTextForElement(driver.findElement(By.xpath("//div[contains(@class,'ng-scope')]/table/thead/tr/th['"+i+"']"))),requiredcombolisttext.get(i));
+        	System.out.println("$$$Title is"+requiredcombolisttext.get(i-1));
+     //  	Assert.assertEquals(getTextForElement(driver.findElement(By.xpath("//div[contains(@class,'ng-scope')]/table/thead/tr/th['"+i+"']"))),requiredcombolisttext.get(i-1));
         }
 		
 	}
@@ -342,14 +343,12 @@ public class PatientClinicalDocuments extends BaseClass {
 
 	public void IVerifythatclickingonDoneshouldclosethefilterdrawerandprocessthefilter() {
     	clickElement(driver.findElement(By.xpath("//button[contains(text(),'Done')]")));
-		List<String> mytexts = getTextForElementfromList("table > tbody > tr > td> a > span");
-		String Filter = mytexts.get(0);
-		String Filter1 = mytexts.get(1);
-		List<String> newmytexts = getTextForElementfromList("table > tbody > tr > td> a > span");
-		if (newmytexts.contains(Filter) & (newmytexts.contains(Filter1)))
-		{
-			return;
-		}
+    	delay();
+		List<String> mytexts = getTextForElementfromList("table > tbody > tr > td:nth-child(1) > a > span");
+		System.out.println("$Text1 is"+mytexts.get(0));
+		System.out.println("$Text1 is"+mytexts.get(1));
+		Assert.assertTrue(mytexts.get(0).equals("CARL"));
+		Assert.assertTrue(mytexts.get(1).equals("Baseline"));
 	}
 
 	public void IclickonthedocumenttoopentheNotesontheClinicalDocuments() {
@@ -362,12 +361,12 @@ public class PatientClinicalDocuments extends BaseClass {
 	}
 
 	public void IverifyTopicshouldbethenotetitle() {
-         verifyTextForElement(driver.findElement(By.cssSelector("h1.ng-binding")),"Baseline");
+         verifyTextForElement(driver.findElement(By.cssSelector("h1.ng-binding")),"Bedside visit");
 	}
 
 	public void IverifyBodytextboxshouldbethereonNotesReadonlyform() {
         isElementVisible(driver.findElement(By.cssSelector("div.note-body.ng-binding.ng-scope"))); 
-		verifyTextForElement(driver.findElement(By.cssSelector("div.note-body.ng-binding.ng-scope")),"Remedy Notes");
+		verifyTextForElement(driver.findElement(By.cssSelector("div.note-body.ng-binding.ng-scope")),"In above case we have String dateString in format so to convert the String to Date in given format we have Created Object formatter of Class SimpleDateFormat.");
 	}
 
 	public void IVerifythatUserroleshouldbedisplayedundernotesreadonlyform() {
@@ -386,7 +385,7 @@ public class PatientClinicalDocuments extends BaseClass {
 	    String[] information=text.split(";");
 		String username=information[0];
 		String username1 = username.trim();
-		Assert.assertEquals(username1,"QA EMBLEMRN");
+		Assert.assertEquals(username1,"RN EMBLEMTESTING");
 		}
 
 	public void IverifytheActivityDateandtimeofthenoteundernotesreadonlyform() {
@@ -503,22 +502,45 @@ public class PatientClinicalDocuments extends BaseClass {
 
 	public void Iverifythatusershouldbeabletodownloadalltheattachmentattachedunderthenotesbyselectingdownloadlink()	throws AWTException, InterruptedException {
  	    Actions action = new Actions(driver);
-        action.moveToElement(driver.findElement(By.cssSelector("div.valentino-icon-archive.hover-pointer"))).perform();	        action.contextClick().perform();
+        action.moveToElement(driver.findElement(By.cssSelector("div.valentino-icon-archive.hover-pointer"))).perform();	        
+        action.contextClick().perform();
         Robot robo = new Robot();
         robo.keyPress(KeyEvent.VK_V); 
         robo.keyRelease(KeyEvent.VK_V);
 	}
 
-	public boolean isFileDownloaded(String downloadPath, String fileName) {
-        boolean flag = false;
-	    File dir = new File(downloadPath);
-	    File[] dir_contents = dir.listFiles();
-	  	for (int i = 0; i < dir_contents.length; i++) {
-	        if (dir_contents[i].getName().equals(fileName))
-	            return flag=true;
-	            }
-        return flag;
-	}
+	public void verifyDownloadedFile(String fileName) {
+		  try
+		  {
+		  String filename=driver.findElement(By.cssSelector("div > div:nth-child(2) > div.attachment-info > div.margin-left-30 > a")).getText();
+		  clickElement(driver.findElement(By.cssSelector(" div > div:nth-child(2) > div.valentino-icon-archive.hover-pointer")));
+		  String importDir = System.getProperty("user.dir");
+		  String downloadFilepath = importDir + File.separator + "src" + File.separator + "test" + File.separator + "Imports" + File.separator + "Downloads" ;
+		  File dir = new File(downloadFilepath);
+		  File[] dir_contents = dir.listFiles();
+		     for (int i = 0; i < dir_contents.length; i++) 
+		     {
+		      if(dir_contents[i].isFile())
+		      {
+		       if (dir_contents[i].getName().equals(filename))
+		       {
+		    	   Assert.assertEquals(fileName, dir_contents[i].getName());
+		    	   dir_contents[i].delete();
+		       }
+		       else
+		       {
+		    	   System.out.println("No Hurray");
+		       }
+		      }
+		     }
+		  }
+		  catch(Exception e)
+		  {
+		     e.printStackTrace();
+		  }
+		     
+		  
+		 }
 
 	public void IclickontheCancelbuttononEpisodepresentontheAddPatientpage() {
 		iWillWaitToSee(By.xpath("//button[contains(text(),'Cancel')]"));
@@ -608,10 +630,10 @@ public class PatientClinicalDocuments extends BaseClass {
 
 	public void IVerifythatselectingfilterbycheckboxshouldprocessapplythefilteruntiltheuserclickedondone() {
 		List<String> mytexts = getTextForElementfromList("table > tbody > tr > td:nth-child(1) > a > span");
+		System.out.println("$$$Text 1"+mytexts.get(0));
 		System.out.println("$$$Text 1"+mytexts.get(1));
-		System.out.println("$$$Text 1"+mytexts.get(2));
-		Assert.assertTrue(mytexts.get(1).equals("CARL"));
-		Assert.assertTrue(mytexts.get(2).equals("Baseline"));
+		Assert.assertTrue(mytexts.get(0).equals("CARL"));
+		Assert.assertTrue(mytexts.get(1).equals("Baseline"));
 	}
 
 	public void IVerifythatCreateddateshoulddisplayeddatewithformatMMDDYYYY() throws ParseException {
@@ -744,11 +766,11 @@ public class PatientClinicalDocuments extends BaseClass {
 		}
 
 		public void Iwillwaittoseelinkappearingindocumenttable(String text, String document_head, int column, int row) {
-			if(column==1)
+			if(document_head.equals("Document"))
 			{
 		    iWillWaitToSee(By.xpath("//table/tbody/tr["+row+"]/td["+column+"]/a/span[contains(text(),'"+text+"')]"));
 			isElementVisible(driver.findElement(By.xpath("//table/tbody/tr["+row+"]/td["+column+"]/a/span[contains(text(),'"+text+"')]")));
-			}else if(column==2)
+			}else if(document_head.equals("Status"))
 			{
 				iWillWaitToSee(By.xpath("//table/tbody/tr["+row+"]/td["+column+"]/span[contains(text(),'"+text+"')]"));
 				isElementVisible(driver.findElement(By.xpath("//table/tbody/tr["+row+"]/td["+column+"]/span[contains(text(),'"+text+"')]")));
@@ -756,12 +778,10 @@ public class PatientClinicalDocuments extends BaseClass {
 		}
 
 		public void Iwillclickonlinkappearingindocumenttable(String text, String document_head, int column, int row) {
-			if(column==1)
-			{
+			if(document_head.equals("Document")){
 			clickElement(driver.findElement(By.xpath("//table/tbody/tr["+row+"]/td["+column+"]/a/span[contains(text(),'"+text+"')]")));
-			}else if(column==2)
-			{
-		    clickElement(driver.findElement(By.xpath("//table/tbody/tr["+row+"]/td["+column+"]/span[contains(text(),'"+text+"')]")));
+			}else if(document_head.equals("Status")){
+			clickElement(driver.findElement(By.xpath("//table/tbody/tr["+row+"]/td["+column+"]/span[contains(text(),'"+text+"')]")));
 			}
 		}
 
@@ -784,6 +804,7 @@ public class PatientClinicalDocuments extends BaseClass {
 		}
 
 		public void Iverifyuserisabletonavigatetothereadonlypagebyselectingthetitle(String title) {
+			delay();
 			if(title.equals("CARL"))
 			{
 				iWillWaitToSee(By.xpath("//h1[text()='"+title+"']")); 
@@ -800,17 +821,16 @@ public class PatientClinicalDocuments extends BaseClass {
 
 		public void IverifySelectingfiltershoulddisplayedinactivefilterbar(String text,int i) {
 			delay();
-			clickElement(driver.findElement(By.xpath("//label[@for='documentBPNSoC2P0']/i/following-sibling::span[contains(text(),'"+text+"')]")));
-			isElementVisible(driver.findElement(By.cssSelector("//div[@class='filter-bar-active-filters-directive']/div[1]/span["+i+"]/span[contains(text(),'"+text+"')]")));
+			clickElement(driver.findElement(By.xpath("//label/span[contains(text(),'"+text+"')]")));
+			isElementVisible(driver.findElement(By.xpath("//div[@class='filter-bar-active-filters-directive']/div[1]/span["+i+"]/span[contains(text(),'"+text+"')]")));
 			}
 
 		public void Iverifyremovingfiltershouldnotbedisplayedatpositioninactivefilterbar(String text,int i) {
 			delay();
-			clickElement(driver.findElement(By.xpath("div > div.filter-bar-active-filters.filter-scroll > span:nth-child("+i+") > i.valentino-icon-x.margin-left")));
+			clickElement(driver.findElement(By.cssSelector("div > div.filter-bar-active-filters.filter-scroll > span:nth-child("+i+") > i.valentino-icon-x.margin-left")));
 			delay();
-			isElementVisible(driver.findElement(By.xpath("//div[@class='filter-bar-active-filters-directive']/div[1]/span["+(i-1)+"]/span[contains(text(),'"+text+"')]")));
 			WebDriverWait wait=new WebDriverWait(driver,5);
-			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//label[@for='documentBPNSoC2P0']/i/following-sibling::span[contains(text(),'"+text+"')]")));
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//label/span[contains(text(),'"+text+"')]")));
 			}
 
 		public void IclickonDonetoclosethefilter() {
@@ -823,7 +843,7 @@ public class PatientClinicalDocuments extends BaseClass {
 			List<String> mytexts = getTextForElementfromList("table > tbody > tr > td:nth-child(1) > a > span");
 			int size=mytexts.size();
 			Assert.assertTrue(size==1);
-			Assert.assertTrue(mytexts.get(1).equals("CARL"));
+			Assert.assertTrue(mytexts.get(0).equals("CARL"));
 			
 		}
 

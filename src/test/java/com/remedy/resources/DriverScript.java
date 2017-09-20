@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
@@ -76,6 +77,11 @@ public class DriverScript {
 
 		switch (browser) {
 		case "chrome":
+			String importDir = System.getProperty("user.dir");
+			String downloadFilepath = importDir + File.separator + "src" + File.separator + "test" + File.separator + "Imports" + File.separator + "Downloads" ;
+			HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
+			chromePrefs.put("profile.default_content_settings.popups", 0);
+            chromePrefs.put("download.default_directory", downloadFilepath);
 			String chromDrvrPath;
 			chromDrvrPath = directory.getCanonicalPath() + File.separator + "lib" + File.separator;
 			os: switch (os) {
@@ -96,7 +102,10 @@ public class DriverScript {
 			ChromeOptions options = new ChromeOptions();
             options.addArguments("--start-maximized");
             options.addArguments("--disable-extensions");
-            driver = new ChromeDriver(options);
+            options.setExperimentalOption("prefs", chromePrefs);
+            DesiredCapabilities cap = DesiredCapabilities.chrome();
+            cap.setCapability(ChromeOptions.CAPABILITY, options);
+            driver = new ChromeDriver(cap);
 
 			break;			
 		case "ie":

@@ -1,6 +1,6 @@
 Feature: Verify the Clinical Documents section
 
-  Scenario Outline: To verify the functionalities under Clinical Documents Section 
+  Scenario Outline: To verify the functionalities under Clinical Documents Section
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
@@ -72,7 +72,6 @@ Feature: Verify the Clinical Documents section
     Then I verify that create Note has been successfully created
     Then I wait to the see the visibility of loader to disappear
     Then I click on the patient on the patient card page that has no CARL button in it
-    Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Patient Details" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
@@ -104,7 +103,6 @@ Feature: Verify the Clinical Documents section
     Then I click on the Diagnosis and DRG tab on add a new transition to select the DRG
     Then I select the "Working" DRG type on the Diagnosis and DRG tab on add a new transition
     Then I select the "61" DRG value on the Diagnosis and DRG tab on add a new transition
-    Then I wait to the see the visibility of loader to disappear
     Then I click on the Create Transition Button to add a new transition
     Then I wait to the see the visibility of loader to disappear
     When I switch to default window from iframe
@@ -116,8 +114,8 @@ Feature: Verify the Clinical Documents section
     When I click on Filter button present on Patient Page
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
-    Then I verify CARL button is "appearing" on the patient card
     Then I wait to the see the visibility of loader to disappear
+    Then I verify CARL button is "appearing" on the patient card
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I wait to the see the visibility of loader to disappear
     Then I click on the complete CARL on the Patient Summary
@@ -149,7 +147,6 @@ Feature: Verify the Clinical Documents section
     Then I scroll the page to bottom by "-100"
     Then I verify current page "Remedy Partners" title
     Then I click on the patient on the patient card page that has no CARL button in it
-    Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Clinical Documents" followed by "span" tag
     Then I will wait to see and click on "Clinical Documents" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
@@ -159,25 +156,22 @@ Feature: Verify the Clinical Documents section
     Then I Verify that Clinical Documents Filters link should display filters as below with the correct syntax and sequence
     Then I Verify that Selecting Filters link when the filters drawer is open should close the drawer
     Then I click on filter link on clinical document section
-    Then I Verify that user should be able to select multiple filters by checkbox
+    Then I verify Selecting "CARL form" filter should displayed at "1" position in active filter bar
+    Then I verify Selecting "Baseline" filter should displayed at "2" position in active filter bar
     Then I Verify that selecting filter by check box should process apply the filter until the user clicked on done
     Then I Verify that checking multiple filter options should return relevant patients in return
     Then I Verify that clicking on Done should close the filter drawer and process the filter
-    Then I click on filter link on clinical document section
-    Then I verify Selecting "CARL form" filter should displayed at "1" position in active filter bar
-    Then I verify Selecting "Baseline" filter should displayed at "2" position in active filter bar
     Then I verify removing "Baseline" filter should not be displayed at "2" position in active filter bar
-    Then I click on Done to close the filter
     Then I veriy removing any applied filter from active filter bar should update the patients returned in result
     Then I verify Clinical Document Table should contain the header sections
+    Then I verify removing "CARL form" filter should not be displayed at "1" position in active filter bar
     Then I verify that title of document or topic of note should appear as a link in the section
     Then I verify forms should not display any message in the summary section and it should be greyed out
-    Then I will wait to see "Baseline" appearing in the "Document" "1" column in row "2" in Document table in Clinical Documents
-    Then I will click on "Baseline" appearing in the "Document" "1" column in row "2" in Document table in Clinical Documents
+    Then I will wait to see "Bedside Visit" appearing in the "Document" "1" column in row "2" in Document table in Clinical Documents
+    Then I will click on "Bedside Visit" appearing in the "Document" "1" column in row "2" in Document table in Clinical Documents
     Then I wait to the see the visibility of loader to disappear
-    Then I verify user is able to navigate to the read only "Baseline" page by selecting the title
+    Then I verify user is able to navigate to the read only "Bedside visit" page by selecting the title
     Then I verify Topic should be the note title
-    Then I verify Body text box should be there on Notes - Read only form
     Then I Verify that Username should be displayed under notes read only form
     Then I Verify that User role should be displayed under notes read only form
     Then I Verify that User email should be displayed under notes read only form
@@ -185,22 +179,25 @@ Feature: Verify the Clinical Documents section
     Then I Verify that Activity date should displayed date with format MM/DD/YYYY
     Then I Verify that Created date should displayed date with format MM/DD/YYYY
     Then I verify that there is an Attachments section that should display all attachments
-    Then I verify that user should be able to download all the attachment attached under the notes by selecting download link
+    Then I verify that user should be able to download the attachment "Remedy.txt" attached under the notes by selecting download link
     Then I verify table should be sorted chronologically by activity date most recent first
-    Then I navigate back to previous page
+    Then I will wait to see and click on "Back to Clinical Documents" followed by "span" tag
+    Then I will wait to see and click on "Clinical Documents" followed by "span" tag
+    Then I will wait to see "Baseline" appearing in the "Document" "1" column in row "3" in Document table in Clinical Documents
+    Then I will click on "Baseline" appearing in the "Document" "1" column in row "3" in Document table in Clinical Documents
     Then I wait to the see the visibility of loader to disappear
+    Then I verify user is able to navigate to the read only "Baseline" page by selecting the title
+    Then I verify Body text box should be there on Notes - Read only form
+    Then I will wait to see and click on "Back to Clinical Documents" followed by "span" tag
     Then I will wait to see and click on "Clinical Documents" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "In Progress" appearing in the "Status" "2" column in row "1" in Document table in Clinical Documents
     Then I verify that Inprogress status should be in purple color with Color code AD77B3
-    Then I will click on "In Progress" appearing in the "Status" "2" column in row "1" in Document table in Clinical Documents
-    Then I wait to the see the visibility of loader to disappear
+    Then I will click on "CARL" appearing in the "Document" "1" column in row "1" in Document table in Clinical Documents
     Then I click on "Discharge" section on left navigator
     Then I will wait to see the CARL section "Discharge" header appears on the CARL form
     Then I click on "Actual Care Setting" subform dropdown under Recommendation on Discharge section
     Then I select "(HHA) Home Health Agency" in subform dropdown for "Actual Care Setting" on Discharge section
-    Then I click on "Care Type" subform dropdown under Recommendation on Discharge section
-    Then I verify that Care Type for the Actual Care Setting should include the following
     Then I click on "Care Type" subform dropdown under Recommendation on Discharge section
     Then I select "Skilled Services" in subform dropdown for "Care Type" on Discharge section
     Then I click on "Discharge Location" subform dropdown under Recommendation on Discharge section
@@ -252,7 +249,7 @@ Feature: Verify the Clinical Documents section
     Then I verify "Discharge" section should appear with "Have you discussed the proposal with the Interdisciplinary Team?" on label "No" on the review page
     Then I verify "Discharge" section should appear with "Additional Comments" on label "None" on the review page
     Then I verify "Discharge" section should appear with "Reason for disagreement?" on label "Not enough caregiver support" on the review page
-    Then I verify "Discharge" section should appear with "Additional Comments" on label "Additional" on the review page 
+    Then I verify "Discharge" section should appear with "Additional Comments" on label "Additional" on the review page
     Then I navigate back to previous page
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Transitions" followed by "span" tag
@@ -332,12 +329,12 @@ Feature: Verify the Clinical Documents section
     Then I will wait to see "Archived" appearing in the "Status" "2" column in row "1" in Document table in Clinical Documents
     Then I verify that Archived status should be in Grey color with Color code 959595
     Then I will wait to see "In Progress" appearing in the "Status" "2" column in row "2" in Document table in Clinical Documents
-    
-     Examples: 
+
+    Examples: 
       | Notetext                                                                                                                                                       |
       | In above case we have String dateString in format so to convert the String to Date in given format we have Created Object formatter of Class SimpleDateFormat. |
-    
-    Scenario Outline: To verify the functionalities under Clinical Documents Section 
+
+    Scenario Outline: To verify the functionalities under Clinical Documents Section
     Given I am on the login page
     When I enter email field qa.emblemrn@yopmail.com for login
     And I enter password field Episode1! for Login
@@ -367,16 +364,49 @@ Feature: Verify the Clinical Documents section
     Then I Verify that clicking Clinical Documents Filters link should show the title document that has list of document forms in it
     Then I Verify that Clinical Documents Filters link should display filters as below with the correct syntax and sequence
     Then I Verify that Selecting Filters link when the filters drawer is open should close the drawer
-    Then I Verify that user should be able to select multiple filters by checkbox
+    Then I click on filter link on clinical document section
+    Then I verify Selecting "CARL form" filter should displayed at "1" position in active filter bar
+    Then I verify Selecting "Baseline" filter should displayed at "2" position in active filter bar
     Then I Verify that selecting filter by check box should process apply the filter until the user clicked on done
     Then I Verify that checking multiple filter options should return relevant patients in return
     Then I Verify that clicking on Done should close the filter drawer and process the filter
-   
-
+    Then I verify removing "Baseline" filter should not be displayed at "2" position in active filter bar
+    Then I veriy removing any applied filter from active filter bar should update the patients returned in result
+    Then I verify Clinical Document Table should contain the header sections
+    Then I will wait to see and click on "Clinical Documents" followed by "span" tag
+    Then I will wait to see "Bedside Visit" appearing in the "Document" "1" column in row "2" in Document table in Clinical Documents
+    Then I will click on "Bedside Visit" appearing in the "Document" "1" column in row "2" in Document table in Clinical Documents
+    Then I wait to the see the visibility of loader to disappear
+    Then I verify user is able to navigate to the read only "Bedside visit" page by selecting the title
+    Then I verify Topic should be the note title
+    Then I Verify that Username should be displayed under notes read only form
+    Then I Verify that User role should be displayed under notes read only form
+    Then I Verify that User email should be displayed under notes read only form
+    Then I verify the Activity Date and time of the note under notes read only form
+    Then I Verify that Activity date should displayed date with format MM/DD/YYYY
+    Then I Verify that Created date should displayed date with format MM/DD/YYYY
+    Then I verify that there is an Attachments section that should display all attachments
+    Then I verify that user should be able to download the attachment "Remedy.csv" attached under the notes by selecting download link
+    Then I verify table should be sorted chronologically by activity date most recent first
+    Then I close the patient summary Page
+    Then I scroll the page to bottom by "-100"
+    Then I verify current page "Remedy Partners" title
+    Then I click on the patient on the patient card page that has no CARL button in it
+    Then I will wait to see "Baseline" appearing in the "Document" "1" column in row "3" in Document table in Clinical Documents
+    Then I will click on "Baseline" appearing in the "Document" "1" column in row "3" in Document table in Clinical Documents
+    Then I wait to the see the visibility of loader to disappear
+    Then I verify user is able to navigate to the read only "Baseline" page by selecting the title
+    Then I verify Body text box should be there on Notes - Read only form
+    Then I will wait to see and click on "Back to Clinical Documents" followed by "span" tag
+    Then I will wait to see and click on "Clinical Documents" followed by "span" tag
+    Then I wait to the see the visibility of loader to disappear
+    Then I will wait to see "In Progress" appearing in the "Status" "2" column in row "1" in Document table in Clinical Documents
+    Then I verify that Inprogress status should be in purple color with Color code AD77B3
+    Then I will click on "In Progress" appearing in the "Status" "2" column in row "1" in Document table in Clinical Documents
+    Then I wait to the see the visibility of loader to disappear
     Examples: 
       | Notetext                                                                                                                                                       |
       | In above case we have String dateString in format so to convert the String to Date in given format we have Created Object formatter of Class SimpleDateFormat. |
-
   Scenario Outline: The Last saved section on the clinical documents table should display the information of the last user who saved the individual form(To verify information Acivity column in Clinical Documents table).
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
