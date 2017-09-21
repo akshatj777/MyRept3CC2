@@ -525,13 +525,13 @@ public class PatientClinicalDocuments extends BaseClass {
 		       if (dir_contents[i].getName().equals(filename))
 		       {
 		    	   Assert.assertEquals(fileName, dir_contents[i].getName());
-		    	   dir_contents[i].delete();
 		       }
 		       else
 		       {
 		    	   System.out.println("No Hurray");
 		       }
 		      }
+     		      dir_contents[i].delete();
 		     }
 		  }
 		  catch(Exception e)

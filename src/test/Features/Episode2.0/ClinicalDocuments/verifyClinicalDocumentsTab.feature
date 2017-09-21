@@ -179,7 +179,7 @@ Feature: Verify the Clinical Documents section
     Then I Verify that Activity date should displayed date with format MM/DD/YYYY
     Then I Verify that Created date should displayed date with format MM/DD/YYYY
     Then I verify that there is an Attachments section that should display all attachments
-    Then I verify that user should be able to download the attachment "Remedy.txt" attached under the notes by selecting download link
+    Then I verify that user should be able to download the attachment "Remedy.csv" attached under the notes by selecting download link
     Then I verify table should be sorted chronologically by activity date most recent first
     Then I will wait to see and click on "Back to Clinical Documents" followed by "span" tag
     Then I will wait to see and click on "Clinical Documents" followed by "span" tag
@@ -204,13 +204,13 @@ Feature: Verify the Clinical Documents section
     Then I enter "A Helping Hand Hha" and select location in the Discharge Location search box
     Then I click on Calendar Icon On Discharge date under subform on Discharge section
     Then I select "Discharge current" with logic "minus" "3" days on Calendar Discharge Date under subform on Discharge section
+    Then I click on Done button under subform on Discharge sections
     Then I click "Yes" radio option for "Have you discussed the proposal with the Interdisciplinary team?" under Discharge section
     Then I verify discharge form should provide "Who disagrees?" and the "Reason for Disagreement" if the Actual Care Setting does not match the CARL recommendation proposed facility
     Then I verify question should state "Why didn't the patient transfer to the recommended Next Site of Care?" under Recommendation on Discharge section
-    Then I verify that User should be able to provide additional comments "Additional" in a free text box
     Then I select the "Family" from the "Who disagrees?" dropdown "2" for "Reason1" under Recommendation on Discharge section
     Then I select the "Not enough caregiver support" from the "Reason for Disagreement" dropdown "4" for "Reason1" under Recommendation on Discharge section
-    Then I click on Done button under subform on Discharge sections
+    Then I verify that User should be able to provide additional comments "Additional" in a free text box
     Then I save and continue the complete CARL form
     Then I click on the Submit button to submit the CARL form
     Then I click on the cross button to close the CARL document form
@@ -235,7 +235,7 @@ Feature: Verify the Clinical Documents section
     Then I verify "Caregiver" section should appear with "Does the patient have a capable caregiver?" on label "Yes, 24 hours a day" on the review page
     Then I verify "Independence" section should appear with "Cognitive status" on label "Forgetful" on the review page
     Then I verify "Independence" section should appear with "Activities of daily living" on label "Assistance needed for one or more ADLs" on the review page
-    Then I verify "Independence" section should appear with "Ambulatory status" on label "Caregiver needed" on the review page
+    Then I verify "Independence" section should appear with "Ambulatory status" on label "Assistive device needed" on the review page
     Then I verify "Independence" section should appear with "Does the patient have a history of falls" on label "No answer" on the review page
     Then I verify "Anticipated Discharge Needs" section should appear with "Physical Therapy" for label "Therapies" for descriptive title "Therapies Needed" on the review page
     Then I verify "Anticipated Discharge Needs" section should appear with "Once daily or less often" for label "Injectable Meds" for descriptive title "Transition of Care Needs" on the review page

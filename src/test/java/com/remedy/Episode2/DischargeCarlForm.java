@@ -321,7 +321,9 @@ public class DischargeCarlForm extends BaseClass {
     public void IselectdropdownvalueunderRecommendation(String value,String variable,int i,String reason) {
 	delay();
 	clickElement(driver.findElement(By.cssSelector("div:nth-child("+i+") > div.ui-select-match")));
-	clickElement(driver.findElement(By.xpath("//span[@class='ui-select-choices-row-inner']/div[text()='"+value+"']")));
+	Actions actions=new Actions(driver);
+	actions.moveToElement(driver.findElement(By.xpath("//span[@class='ui-select-choices-row-inner']/div[text()='"+value+"']"))).click().perform();
+//	clickElement(driver.findElement(By.xpath("//span[@class='ui-select-choices-row-inner']/div[text()='"+value+"']")));
 	if(reason.equals("3"))
 	 {
 	if(variable.equals("Who disagrees?")){

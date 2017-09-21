@@ -2,12 +2,15 @@ package com.remedy.Episode2;
 
 import com.remedy.baseClass.BaseClass;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
 import java.util.List;
 
 
@@ -16,9 +19,11 @@ import java.util.List;
  */
 public class PatientsPage extends BaseClass {
 
+	public static int Patient_count;
 	public PatientsPage(WebDriver driver) {
 		super(driver);
 	}
+	
 
 	public void iVerifyTabInFilterBarOnPatientsPage(String elementText) {
 		verifyTextForElement(driver.findElement(By.xpath("//button//span[contains(text(),'" + elementText + "')]")),elementText);
@@ -292,6 +297,13 @@ public class PatientsPage extends BaseClass {
 
 	public void iVerifyTheTotalNumberOfPatientsPresentOnThePatientsPage() {
 		iWillWaitToSee(By.cssSelector(".controls-bar.ng-scope>div>strong"));
+	}
+	
+	public void ifetchthecountofpatientsappearingonthePatientsPage() {
+		String count = getTextForElement(driver.findElement(By.cssSelector(".controls-bar.ng-scope>div>strong")));
+		String count_in=count.substring(0, count.length() - 9).replaceAll(",", "");
+		System.out.println("@@@Count is "+count_in);
+		Patient_count = Integer.parseInt(count_in);
 	}
 
 	public void iClickOnDoneButtonPresentOnTheFilterPage() {
@@ -1268,6 +1280,59 @@ public class PatientsPage extends BaseClass {
 		iWillWaitToSee(By.xpath("//div[@class='ng-scope']/input"));
 		iFillInText(driver.findElement(By.xpath("//div[@class='ng-scope']/input")), ssn);
 		
+	}
+
+    public void verifyDownloadedFile(String fileName) {
+		  try
+		  {
+		  String importDir = System.getProperty("user.dir");
+		  String downloadFilepath = importDir + File.separator + "src" + File.separator + "test" + File.separator + "Imports" + File.separator + "Downloads" ;
+		  File dir = new File(downloadFilepath);
+		  File[] dir_contents = dir.listFiles();
+		     for (int i = 0; i < dir_contents.length; i++) 
+		     {
+		      if(dir_contents[i].isFile())
+		      {
+		       if (dir_contents[i].getName().equals("export"))
+		       {
+		    	   Assert.assertEquals(fileName, dir_contents[i].getName());
+		       }
+		       else
+		       {
+		    	   System.out.println("No Hurray");
+		       }
+		      }
+   		      dir_contents[i].delete();
+		     }
+		  }
+		  catch(Exception e)
+		  {
+		     e.printStackTrace();
+		  }
+		     
+		  
+		 }
+
+
+	public void Iverifyexportfunctionalityonpatientcard() {
+		if(Patient_count>1000){
+		    clickElement(driver.findElement(By.xpath("//a[@ng-click='handleExportButton()']")));
+			isElementVisible(driver.findElement(By.xpath("//div[@state='exportDrawer.tooManyPatientsTooltip']")));
+			isElementVisible(driver.findElement(By.xpath("//div[contains(text(),' Lists with more than 1000 patients cannot be exported. Please refine your search.')]")));
+		}else if(Patient_count<=1000)
+		{
+			clickElement(driver.findElement(By.xpath("//a[@ng-click='handleExportButton()']")));
+			Actions action=new Actions(driver);
+			String myclass=driver.findElement(By.cssSelector("#current-facility")).getAttribute("class");
+			while(!myclass.contains("ng-not-empty")){
+				    action.moveToElement(driver.findElement(By.xpath("//label[@for='select-all']/i[@class='valentino-icon']"))).click().perform();		
+				    myclass=driver.findElement(By.cssSelector("#current-facility")).getAttribute("class");
+				    delay();
+				}
+			clickElement(driver.findElement(By.xpath("//button[@ng-click='exportToCsvFile()']")));
+			delay();
+			verifyDownloadedFile("export");
+		}
 	}
 	}
     
