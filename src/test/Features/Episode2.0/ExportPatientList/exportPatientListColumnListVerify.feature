@@ -13,6 +13,7 @@ Feature: Episode 2.0 Export Drawer Column List Verification
     When I click on export button present on the Patient Page
     Then I verify "Select All" is appearing under column list on export drawer box
     Then I verify "Current Facility" appearing under column list on export drawer box
+    Then I verify "Last Name" appearing under column list on export drawer box
     Then I verify "Readmitted (Yes/No)" appearing under column list on export drawer box
     Then I verify "Current Care Setting" appearing under column list on export drawer box
     Then I verify "Anchor Admission Date" appearing under column list on export drawer box
@@ -26,3 +27,8 @@ Feature: Episode 2.0 Export Drawer Column List Verification
     Then I verify "Last Discharge Date" appearing under column list on export drawer box
     Then I verify "Working DRG" appearing under column list on export drawer box
     Then I verify checkbox is present beside each of the column list in export drawer box
+    Then I verify "Cancel" button is appearing in the export drawer box
+    Then I click on "Cancel" button appearing on the export drawer box
+    Then I verify current page "Remedy Partners" title
+    When I click on Filter button present on Patient Page
+    Then I verify "Filters" is appearing on clicking filters on patient page

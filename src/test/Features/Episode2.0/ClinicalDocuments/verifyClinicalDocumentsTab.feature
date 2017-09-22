@@ -232,25 +232,30 @@ Feature: Verify the Clinical Documents section
     Then I wait to the see the visibility of loader to disappear
     Then I verify user is able to navigate to the read only "CARL" page by selecting the title
     Then I verify there should be a "View" link on each card and clicking the link should bring the user to that specified section of the CARL form
-    Then I verify "Caregiver" section should appear with "Does the patient have a capable caregiver?" on label "Yes, 24 hours a day" on the review page
-    Then I verify "Independence" section should appear with "Cognitive status" on label "Forgetful" on the review page
-    Then I verify "Independence" section should appear with "Activities of daily living" on label "Assistance needed for one or more ADLs" on the review page
-    Then I verify "Independence" section should appear with "Ambulatory status" on label "Assistive device needed" on the review page
-    Then I verify "Independence" section should appear with "Does the patient have a history of falls" on label "No answer" on the review page
-    Then I verify "Anticipated Discharge Needs" section should appear with "Physical Therapy" for label "Therapies" for descriptive title "Therapies Needed" on the review page
-    Then I verify "Anticipated Discharge Needs" section should appear with "Once daily or less often" for label "Injectable Meds" for descriptive title "Transition of Care Needs" on the review page
-    Then I verify "Anticipated Discharge Needs" section should appear with "Once daily or less often" for label "Blood Testing" for descriptive title "Transition of Care Needs" on the review page
-    Then I verify "Anticipated Discharge Needs" section should appear with "More than once daily" for label "Finger Stick" for descriptive title "Transition of Care Needs" on the review page
-    Then I verify "Anticipated Discharge Needs" section should appear with "Once daily or less often" for label "Wound Care" for descriptive title "Transition of Care Needs" on the review page
-    Then I verify "Anticipated Discharge Needs" section should appear with "None" for label "Teaching and Training" for descriptive title "Transition of Care Needs" on the review page
-    Then I verify "Anticipated Discharge Needs" section should appear with "None" for label "Clinical Oversight" for descriptive title "Transition of Care Needs" on the review page
-    Then I verify "Discharge" section should appear with "CARL recommendation" on label "Home with Limited Services (HOM)" on the review page
-    Then I verify "Discharge" section should appear with "Actual care setting" on label "HHA" on the review page
-    Then I verify "Discharge" section should appear with "Have you discussed the proposal with the Interdisciplinary Team?" on label "No" on the review page
-    Then I verify "Discharge" section should appear with "Additional Comments" on label "None" on the review page
-    Then I verify "Discharge" section should appear with "Reason for disagreement?" on label "Not enough caregiver support" on the review page
-    Then I verify "Discharge" section should appear with "Additional Comments" on label "Additional" on the review page
-    Then I navigate back to previous page
+    Then I verify "Caregiver" section should appear with "Yes, 24 hours a day" on label "Does the patient have a capable caregiver?" on the review page
+    Then I verify "Independence" section should appear with "Forgetful" on label "Cognitive status" on the review page
+    Then I verify "Independence" section should appear with "Assistance needed for one or more ADLs" on label "Activities of daily living" on the review page
+    Then I verify "Independence" section should appear with "Assistive device needed" on label "Ambulatory status" on the review page
+    Then I verify "Independence" section should appear with "No answer" on label "Does the patient have a history of falls" on the review page
+    #Then I verify "Anticipated Discharge Needs" section should appear with "Therapies Needed" for label "Therapies" for descriptive title "Physical Therapy" on the review page
+    #Then I verify "Anticipated Discharge Needs" section should appear with "Once daily or less often" for label "Injectable Meds" for descriptive title "Transition of Care Needs" on the review page
+    #Then I verify "Anticipated Discharge Needs" section should appear with "Once daily or less often" for label "Blood Testing" for descriptive title "Transition of Care Needs" on the review page
+    #Then I verify "Anticipated Discharge Needs" section should appear with "More than once daily" for label "Finger Stick" for descriptive title "Transition of Care Needs" on the review page
+    #Then I verify "Anticipated Discharge Needs" section should appear with "Once daily or less often" for label "Wound Care" for descriptive title "Transition of Care Needs" on the review page
+    #Then I verify "Anticipated Discharge Needs" section should appear with "None" for label "Teaching and Training" for descriptive title "Transition of Care Needs" on the review page
+    #Then I verify "Anticipated Discharge Needs" section should appear with "None" for label "Clinical Oversight" for descriptive title "Transition of Care Needs" on the review page
+    #Then I verify "Discharge" section should appear with "Home with Limited Services (HOM)" on label "CARL recommendation" on the review page
+    #Then I verify "Discharge" section should appear with "HHA" on label "Actual care setting" on the review page
+    #Then I verify "Discharge" section should appear with "A Helping Hand Hha" on label "Actual discharge location" on the review page
+    #Then I verify "Discharge" section should appear with "Have you discussed the proposal with the Interdisciplinary Team?" on label "No answer" on the review page
+    #Then I verify "Discharge" section should appear with "Why didn't the patient transfer to the recommended Next Site of Care?" on label "No answer" on the review page
+    #Then I verify "Discharge" section should appear with "None" on label "Additional Comments" on the review page
+    #Then I verify "Discharge" section should appear with "Not enough caregiver support" on label "Reason for disagreement?" on the review page
+    #Then I verify "Discharge" section should appear with "Additional" on label "Additional Comments" on the review page
+    Then I click on the cross button to close the CARL document form
+    Then I scroll the page to bottom by "-100"
+    Then I verify current page "Remedy Partners" title
+    Then I click on the patient on the patient card page that has no CARL button in it
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I switch to PatientTransitions frame
@@ -288,29 +293,6 @@ Feature: Verify the Clinical Documents section
     Then I will wait to see the CARL section "Caregiver" header appears on the CARL form
     Then I click on Yes, 24 hours a day option under Does the patient have a capable caregiver
     Then I save and continue the complete CARL form
-    Then I click on "Independence" section on left navigator
-    Then I will wait to see the CARL section "Independence" header appears on the CARL form
-    Then I click on "Cognitive Status" dropdown on Independece Section
-    Then I select "Forgetful" option in dropdown for cognitive status
-    Then I click on "Activities of Daily Living" dropdown on Independece Section
-    Then I select "Assistance needed for one or more ADLs" option in dropdown for cognitive status
-    Then I click on "Ambulatory Status" dropdown on Independece Section
-    Then I select "Assistive device needed" option in dropdown for cognitive status
-    Then I click on "Anticipated Discharge Needs" section on left navigator
-    Then I will wait to see the CARL section "Anticipated Discharge Needs" header appears on the CARL form
-    Then I click "Physical therapy" checkbox under Therapies Needed on Anticipated Discharge Needs section
-    Then I select "Injectable Meds" checkbox for Transition of Care Needs on Anticipated Discharge Needs
-    Then I click "Once daily or less often" radio option under "Injectable Meds" for Transition Care Needs
-    Then I select "Blood Testing" checkbox for Transition of Care Needs on Anticipated Discharge Needs
-    Then I click "Once daily or less often" radio option under "Blood Testing" for Transition Care Needs
-    Then I select "Finger Stick" checkbox for Transition of Care Needs on Anticipated Discharge Needs
-    Then I click "More than once daily" radio option under "Finger Stick" for Transition Care Needs
-    Then I select "Wound Care" checkbox for Transition of Care Needs on Anticipated Discharge Needs
-    Then I click "Once daily or less often" radio option under "Wound Care" for Transition Care Needs
-    Then I save and continue the complete CARL form
-    Then I will wait to see the CARL section "Discharge" header appears on the CARL form
-    Then I verify CARL Recommendation field should show "Home with Limited Services (HOM)" on discharge section when total score is "less than or equal to 16"
-    Then I save and continue the complete CARL form
     Then I wait to the see the visibility of loader to disappear
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
@@ -334,7 +316,7 @@ Feature: Verify the Clinical Documents section
       | Notetext                                                                                                                                                       |
       | In above case we have String dateString in format so to convert the String to Date in given format we have Created Object formatter of Class SimpleDateFormat. |
 
-    Scenario Outline: To verify the functionalities under Clinical Documents Section
+  Scenario Outline: To verify the functionalities under Clinical Documents Section
     Given I am on the login page
     When I enter email field qa.emblemrn@yopmail.com for login
     And I enter password field Episode1! for Login
@@ -342,7 +324,6 @@ Feature: Verify the Clinical Documents section
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
     Then I verify current page "Remedy Partners" title
-    Then I create a post request
     Then I click on "All" tab in the filter bar on patients page
     Then I wait to the see the visibility of loader to disappear
     Then I verify current page "Remedy Partners" title
@@ -350,7 +331,7 @@ Feature: Verify the Clinical Documents section
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter SSN "784226314"
+    Then I enter SSN "784225708"
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
@@ -360,53 +341,39 @@ Feature: Verify the Clinical Documents section
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I will wait to see and click on "Clinical Documents" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
-    Then I click on filter link on clinical document section
-    Then I Verify that clicking Clinical Documents Filters link should show the title document that has list of document forms in it
-    Then I Verify that Clinical Documents Filters link should display filters as below with the correct syntax and sequence
-    Then I Verify that Selecting Filters link when the filters drawer is open should close the drawer
-    Then I click on filter link on clinical document section
-    Then I verify Selecting "CARL form" filter should displayed at "1" position in active filter bar
-    Then I verify Selecting "Baseline" filter should displayed at "2" position in active filter bar
-    Then I Verify that selecting filter by check box should process apply the filter until the user clicked on done
-    Then I Verify that checking multiple filter options should return relevant patients in return
-    Then I Verify that clicking on Done should close the filter drawer and process the filter
-    Then I verify removing "Baseline" filter should not be displayed at "2" position in active filter bar
-    Then I veriy removing any applied filter from active filter bar should update the patients returned in result
-    Then I verify Clinical Document Table should contain the header sections
-    Then I will wait to see and click on "Clinical Documents" followed by "span" tag
-    Then I will wait to see "Bedside Visit" appearing in the "Document" "1" column in row "2" in Document table in Clinical Documents
-    Then I will click on "Bedside Visit" appearing in the "Document" "1" column in row "2" in Document table in Clinical Documents
     Then I wait to the see the visibility of loader to disappear
-    Then I verify user is able to navigate to the read only "Bedside visit" page by selecting the title
-    Then I verify Topic should be the note title
-    Then I Verify that Username should be displayed under notes read only form
-    Then I Verify that User role should be displayed under notes read only form
-    Then I Verify that User email should be displayed under notes read only form
-    Then I verify the Activity Date and time of the note under notes read only form
-    Then I Verify that Activity date should displayed date with format MM/DD/YYYY
-    Then I Verify that Created date should displayed date with format MM/DD/YYYY
-    Then I verify that there is an Attachments section that should display all attachments
-    Then I verify that user should be able to download the attachment "Remedy.csv" attached under the notes by selecting download link
-    Then I verify table should be sorted chronologically by activity date most recent first
-    Then I close the patient summary Page
-    Then I scroll the page to bottom by "-100"
-    Then I verify current page "Remedy Partners" title
-    Then I click on the patient on the patient card page that has no CARL button in it
-    Then I will wait to see "Baseline" appearing in the "Document" "1" column in row "3" in Document table in Clinical Documents
-    Then I will click on "Baseline" appearing in the "Document" "1" column in row "3" in Document table in Clinical Documents
+    Then I will wait to see "Active" appearing in the "Status" "2" column in row "1" in Document table in Clinical Documents
+    Then I verify that Active status should be in green color with Color code 4EB96F
+    Then I will click on "CARL" appearing in the "Document" "1" column in row "1" in Document table in Clinical Documents
     Then I wait to the see the visibility of loader to disappear
-    Then I verify user is able to navigate to the read only "Baseline" page by selecting the title
-    Then I verify Body text box should be there on Notes - Read only form
-    Then I will wait to see and click on "Back to Clinical Documents" followed by "span" tag
-    Then I will wait to see and click on "Clinical Documents" followed by "span" tag
-    Then I wait to the see the visibility of loader to disappear
-    Then I will wait to see "In Progress" appearing in the "Status" "2" column in row "1" in Document table in Clinical Documents
-    Then I verify that Inprogress status should be in purple color with Color code AD77B3
-    Then I will click on "In Progress" appearing in the "Status" "2" column in row "1" in Document table in Clinical Documents
-    Then I wait to the see the visibility of loader to disappear
+    Then I verify user is able to navigate to the read only "CARL" page by selecting the title
+    Then I verify there should be a "View" link on each card and clicking the link should bring the user to that specified section of the CARL form
+    Then I verify "Caregiver" section should appear with "Yes, 24 hours a day" on label "Does the patient have a capable caregiver?" on the review page
+    Then I verify "Independence" section should appear with "Forgetful" on label "Cognitive status" on the review page
+    Then I verify "Independence" section should appear with "Assistance needed for one or more ADLs" on label "Activities of daily living" on the review page
+    Then I verify "Independence" section should appear with "Assistive device needed" on label "Ambulatory status" on the review page
+    Then I verify "Independence" section should appear with "No answer" on label "Does the patient have a history of falls" on the review page
+    Then I verify "Anticipated Discharge Needs" section should appear with "Therapies Needed" for label "Therapies" for descriptive title "Physical Therapy" on the review page
+    Then I verify "Anticipated Discharge Needs" section should appear with "Once daily or less often" for label "Injectable Meds" for descriptive title "Transition of Care Needs" on the review page
+    Then I verify "Anticipated Discharge Needs" section should appear with "Once daily or less often" for label "Blood Testing" for descriptive title "Transition of Care Needs" on the review page
+    Then I verify "Anticipated Discharge Needs" section should appear with "More than once daily" for label "Finger Stick" for descriptive title "Transition of Care Needs" on the review page
+    Then I verify "Anticipated Discharge Needs" section should appear with "Once daily or less often" for label "Wound Care" for descriptive title "Transition of Care Needs" on the review page
+    Then I verify "Anticipated Discharge Needs" section should appear with "None" for label "Teaching and Training" for descriptive title "Transition of Care Needs" on the review page
+    Then I verify "Anticipated Discharge Needs" section should appear with "None" for label "Clinical Oversight" for descriptive title "Transition of Care Needs" on the review page
+    Then I verify "Discharge" section should appear with "Home with Limited Services (HOM)" on label "CARL recommendation" on the review page
+    Then I verify "Discharge" section should appear with "HHA" on label "Actual care setting" on the review page
+    Then I verify "Discharge" section should appear with "A Helping Hand Hha" on label "Actual discharge location" on the review page
+    Then I verify "Discharge" section should appear with "Have you discussed the proposal with the Interdisciplinary Team?" on label "No answer" on the review page
+    Then I verify "Discharge" section should appear with "Why didn't the patient transfer to the recommended Next Site of Care?" on label "" on the review page
+    Then I verify "Discharge" section should appear with "None" on label "Additional Comments" on the review page
+    Then I verify "Discharge" section should appear with "Not enough caregiver support" on label "Reason for disagreement?" on the review page
+    Then I verify "Discharge" section should appear with "Additional" on label "Additional Comments" on the review page
+    Then I click on the cross button to close the CARL document form
+
     Examples: 
       | Notetext                                                                                                                                                       |
       | In above case we have String dateString in format so to convert the String to Date in given format we have Created Object formatter of Class SimpleDateFormat. |
+
   Scenario Outline: The Last saved section on the clinical documents table should display the information of the last user who saved the individual form(To verify information Acivity column in Clinical Documents table).
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login

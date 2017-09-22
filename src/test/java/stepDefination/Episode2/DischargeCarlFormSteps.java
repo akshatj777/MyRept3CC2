@@ -283,8 +283,8 @@ public class DischargeCarlFormSteps extends DriverScript {
     }
     
     @Then ("^I verify \"([^\"]*)\" section should appear with \"([^\"]*)\" on label \"([^\"]*)\" on the review page$")
-    public void I_verify_section_should_appear_with_value_on_label_on_the_review_page(String section,String label,String value) throws Throwable  {
-    	dischargecarlform.Iverifysectionshouldappearwithvalueonlabelonthereviewpage(section,label,value);
+    public void I_verify_section_should_appear_with_value_on_label_on_the_review_page(String section,String value,String label) throws Throwable  {
+    	dischargecarlform.Iverifysectionshouldappearwithvalueonlabelonthereviewpage(section,value,label);
     }
    
     @Then ("^I verify \"([^\"]*)\" section should appear with \"([^\"]*)\" for label \"([^\"]*)\" for descriptive title \"([^\"]*)\" on the review page$")

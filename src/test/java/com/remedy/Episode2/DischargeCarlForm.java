@@ -408,9 +408,9 @@ public class DischargeCarlForm extends BaseClass {
 	}
 	}
 
-	public void Iverifysectionshouldappearwithvalueonlabelonthereviewpage(String section,String label,String value) {
+	public void Iverifysectionshouldappearwithvalueonlabelonthereviewpage(String section,String value,String label) {
 	if(section.equals("Caregiver"))
-	isElementVisible(driver.findElement(By.xpath("//section/div[1]/div[@class='review-body']/*[self::h4[contains(text(),'"+label+"')]  or self::div[contains(text(),'"+value+"')]]")));	
+	isElementVisible(driver.findElement(By.xpath("//div[1]/div[@class='review-body']/*[self::h4[contains(text(),'"+label+"')]  or self::div[contains(text(),'"+value+"')]]")));	
 	else if(section.equals("Anticipated Discharge Needs"))
 	{
 	isElementVisible(driver.findElement(By.xpath("//section/div[2]/div[@class='review-body']/*[self::h4[contains(text(),'"+label+"')]  or self::div[contains(text(),'"+value+"')]]")));		

@@ -548,9 +548,9 @@ public class PatientsPageSteps extends DriverScript {
         patientsPage.ifetchthecountofpatientsappearingonthePatientsPage();
     }
     
-   @Then("^I verify the export functionality with patient count greater and less than 1000$") 
-    public void I_verify_export_functionality_on_patient_card() throws Throwable {
-    	patientsPage.Iverifyexportfunctionalityonpatientcard();
+   @Then("^I verify the export functionality with patient count \"([^\"]*)\"$") 
+    public void I_verify_export_functionality_on_patient_card(String str) throws Throwable {
+    	patientsPage.Iverifyexportfunctionalityonpatientcard(str);
     }
     @Then("^I verify the \"([^\"]*)\" patient appears on the Patients Page$")
     public void I_verify_the_patient_appears_on_the_Patients_Page(int count) throws Throwable {

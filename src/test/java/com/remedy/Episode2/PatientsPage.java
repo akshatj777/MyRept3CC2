@@ -13,6 +13,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.File;
 import java.util.List;
 
+import javax.swing.plaf.synth.SynthSeparatorUI;
+
 
 /**
  * Created by ashish.ranjan on 24-11-2016.
@@ -1302,7 +1304,7 @@ public class PatientsPage extends BaseClass {
 		    	   System.out.println("No Hurray");
 		       }
 		      }
-   		      dir_contents[i].delete();
+//   		     
 		     }
 		  }
 		  catch(Exception e)
@@ -1314,25 +1316,47 @@ public class PatientsPage extends BaseClass {
 		 }
 
 
-	public void Iverifyexportfunctionalityonpatientcard() {
-		if(Patient_count>1000){
-		    clickElement(driver.findElement(By.xpath("//a[@ng-click='handleExportButton()']")));
+	public void Iverifyexportfunctionalityonpatientcard(String str) {
+		if(str.contains("greater")){
+	        clickElement(driver.findElement(By.xpath("//a[@ng-click='handleExportButton()']")));
 			isElementVisible(driver.findElement(By.xpath("//div[@state='exportDrawer.tooManyPatientsTooltip']")));
 			isElementVisible(driver.findElement(By.xpath("//div[contains(text(),' Lists with more than 1000 patients cannot be exported. Please refine your search.')]")));
-		}else if(Patient_count<=1000)
-		{
-			clickElement(driver.findElement(By.xpath("//a[@ng-click='handleExportButton()']")));
+		}else if(str.contains("less")){ 
+			if(Patient_count<=1000){
+				Assert.assertTrue(Patient_count<=1000);}
+			else{
+				while(!(Patient_count<=1000)){
+					clickElement(driver.findElement(By.cssSelector(".filter-bar-search-left .btn-quaternary span")));
+					delay();
+					clickElement(driver.findElement(By.cssSelector("div.row-controls>a")));
+					clickElement(driver.findElement(By.cssSelector("div.filters-list>ul>li:nth-child(15)")));
+					delay();
+					clickElement(driver.findElement(By.xpath("//label[@for='genderM']/i")));
+					clickElement(driver.findElement(By.cssSelector("button[class='btn btn-primary'][ng-click='closeFilters()']")));
+					delay();
+					JavascriptExecutor js = ((JavascriptExecutor)driver);
+			    	js.executeScript("scroll(0,-100)");
+					String count = getTextForElement(driver.findElement(By.cssSelector(".controls-bar.ng-scope>div>strong")));
+					String count_in=count.substring(0, count.length() - 9).replaceAll(",", "");
+					Patient_count = Integer.parseInt(count_in);
+				}}
+		   System.out.println("$Patient Count is"+Patient_count);
+		   longDelay();
+		   clickElement(driver.findElement(By.xpath("//a[@ng-click='handleExportButton()']")));
 			Actions action=new Actions(driver);
 			String myclass=driver.findElement(By.cssSelector("#current-facility")).getAttribute("class");
-			while(!myclass.contains("ng-not-empty")){
-				    action.moveToElement(driver.findElement(By.xpath("//label[@for='select-all']/i[@class='valentino-icon']"))).click().perform();		
-				    myclass=driver.findElement(By.cssSelector("#current-facility")).getAttribute("class");
-				    delay();
-				}
-			clickElement(driver.findElement(By.xpath("//button[@ng-click='exportToCsvFile()']")));
-			delay();
-			verifyDownloadedFile("export");
-		}
+				while(!myclass.contains("ng-not-empty")){
+					    action.moveToElement(driver.findElement(By.xpath("//label[@for='select-all']/i[@class='valentino-icon']"))).click().perform();		
+					    myclass=driver.findElement(By.cssSelector("#current-facility")).getAttribute("class");
+					    delay();
+					    System.out.println("New Class"+myclass);
+					    }
+		        clickElement(driver.findElement(By.xpath("//button[@ng-click='exportToCsvFile()']")));
+				delay();
+				verifyDownloadedFile("export");
+			}
 	}
-	}
+	}	
+	
+	
     
