@@ -61,12 +61,15 @@ Feature: To verify the options and functionality of Caregiver section of Carl fo
     Then I click on the delete button on the transition to delete all the transitions
     Then I wait to the see the visibility of loader to disappear
     Then I click on add a new transition to add a new episode
-    Then I will wait to see "Transition Info" followed by "a" tag
-    Then I fill in "Admit" with logic "minus" with "8" days
-    Then I select the care setting value "HHH - Hospital" on add a new transition
     Then I wait to the see the visibility of loader to disappear
-    Then I select the care type value "Inpatient" on add a new transition
-    Then I select the facility value "Stamford Hospital" on add a new transition
+    Then I will wait to see "Transition Info" followed by "a" tag
+    Then I fill in "Admit" with logic "minus" with "7" days
+    Then I wait to the see the visibility of loader to disappear
+    Then I select the "Admit" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
+    Then I wait to the see the visibility of loader to disappear
+    Then I select the "Admit" "caretype" "Inpatient" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
+    Then I select the "Admit" facility "Stamford Hospital" by "#s2id_bp_personbundle_bpadmissiontype_admitFacility" on add a new transition
+    Then I select the "1" LOS days on Discharge date on Add Transition
     Then I click on the Diagnosis and DRG tab on add a new transition to select the DRG
     Then I select the "Working" DRG type on the Diagnosis and DRG tab on add a new transition
     Then I select the "61" DRG value on the Diagnosis and DRG tab on add a new transition
@@ -105,9 +108,34 @@ Feature: To verify the options and functionality of Caregiver section of Carl fo
     Then I verify that Add Caregiver link should not appear under Choose Caregiver
     Then I click on Yes, 24 hours a day option under Does the patient have a capable caregiver
     And I click on Add Caregiver link under Choose Caregiver
+    Then I verify first name is mandatory field to a create Caregiver
+    Then I verify last name is mandatory field to a create Caregiver
+    Then I verify create button is disabled
     Then I Enter "<F_Name>" and "<L_Name>" on Add Caregiver form
+    Then I verify create button is enabled
+    Then I verify Relationship field to create Caregiver
+    Then I verify the label dropdown under Relationship field
+    Then I verify Email field to create Caregiver
+    Then I enter "<Email_Id>" in email field
+    Then I verify Primary Phone field to create Caregiver
+    Then I verify Home option in primary phone dropdown
+    Then I verify Mobile option in primary phone dropdown
+    Then I verify Work option in primary phone dropdown
+    Then I verify Other option in primary phone dropdown
+    Then I verify Home should be as default option
+    Then I enter "9874561230" in Primary Phone field
+    Then I click on Add Phone button for Additional phone number to Create Caredriver
+    Then I verify Additional Phone field to create Caregiver
     And I click on Create button to add Caregiver
     Then I click on close button in dropdown under Choose Caregiver
+    Then I verify that Care Network Member drop down should appear under Choose Caregiver section in Caregiver on takeover page
+    And I verify Select should appear in Care Network Member dropdwon placeholder
+    Then I click on Care Network Members dropdown under Choose Caregiver
+    Then I select "LASTNAMETEST, FIRSTNAMETEST" associated Caregiver from the dropdown
+    Then I verify the "LASTNAMETEST, FIRSTNAMETEST" is populated in Care Network Member dropdown
+    Then I verify the "LASTNAMETEST, FIRSTNAMETEST" on caregiver information card
+    Then I verify "<Email_Id>" on caregiver information card
+    Then I verify "<Phone>" number on caregiver information card
     Then I verify that Care Network Member drop down should appear under Choose Caregiver section in Caregiver on takeover page
     Then I verify that Add Caregiver link should appear under Choose Caregiver section in Caregiver on takeover page
     Then I click on No caregiver needed option under Does the patient have a capable caregiver
@@ -134,10 +162,10 @@ Feature: To verify the options and functionality of Caregiver section of Carl fo
     When I switch to default window from iframe
     Then I close the patient summary Page
 
-    Examples: 
-      | F_Name        | L_Name       |
-      | FirstNameTest | LastNameTest |
-
+      Examples: 
+      | F_Name        | L_Name       | Email_Id             | Phone        |
+      | FirstNameTest | LastNameTest | testuser@yopmail.com | 987-456-1230 |
+      
   Scenario Outline: To verify upon selecting the +Add Caregiver link in the Caregiver page, the user should be able to complete the information on the Caregiver form.
     To add a caregiver by selecting a member from a list of all Care Network Members associated with a patient
 
@@ -148,7 +176,7 @@ Feature: To verify the options and functionality of Caregiver section of Carl fo
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
     Then I verify current page "Remedy Partners" title
-    Then I click on the Impatient tab on the patient Card Page
+    Then I click on "Inpatient" tab in the filter bar on patients page
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I click on the patient on the patient card page that has no CARL button in it
@@ -176,7 +204,7 @@ Feature: To verify the options and functionality of Caregiver section of Carl fo
     Then I verify Home should be as default option
     Then I enter "9874561230" in Primary Phone field
     Then I click on Add Phone button for Additional phone number to Create Caredriver
-    Then I verify Addtional Phone field to create Caregiver
+    Then I verify Additional Phone field to create Caregiver
     And I click on Create button to add Caregiver
     Then I click on close button in dropdown under Choose Caregiver
     Then I verify that Care Network Member drop down should appear under Choose Caregiver section in Caregiver on takeover page
@@ -200,7 +228,7 @@ Feature: To verify the options and functionality of Caregiver section of Carl fo
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
     Then I verify current page "Remedy Partners" title
-    Then I click on the Impatient tab on the patient Card Page
+    Then I click on "Inpatient" tab in the filter bar on patients page
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I click on the patient on the patient card page that has no CARL button in it

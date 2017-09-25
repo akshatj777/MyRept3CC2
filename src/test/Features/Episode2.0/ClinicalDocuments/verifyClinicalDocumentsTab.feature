@@ -231,7 +231,7 @@ Feature: Verify the Clinical Documents section
     Then I will click on "CARL" appearing in the "Document" "1" column in row "1" in Document table in Clinical Documents
     Then I wait to the see the visibility of loader to disappear
     Then I verify user is able to navigate to the read only "CARL" page by selecting the title
-    Then I verify there should be a "View" link on each card and clicking the link should bring the user to that specified section of the CARL form
+    #Then I verify there should be a "View" link on each card and clicking the link should bring the user to that specified section of the CARL form
     Then I verify "Caregiver" section should appear with "Yes, 24 hours a day" on label "Does the patient have a capable caregiver?" on the review page
     Then I verify "Independence" section should appear with "Forgetful" on label "Cognitive status" on the review page
     Then I verify "Independence" section should appear with "Assistance needed for one or more ADLs" on label "Activities of daily living" on the review page
@@ -261,6 +261,7 @@ Feature: Verify the Clinical Documents section
     Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear
     Then I click on add a new transition to add a new episode
+    Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I fill in "Admit" with logic "minus" with "6" days
     Then I select the care setting value "HHH - Hospital" on add a new transition
@@ -311,64 +312,6 @@ Feature: Verify the Clinical Documents section
     Then I will wait to see "Archived" appearing in the "Status" "2" column in row "1" in Document table in Clinical Documents
     Then I verify that Archived status should be in Grey color with Color code 959595
     Then I will wait to see "In Progress" appearing in the "Status" "2" column in row "2" in Document table in Clinical Documents
-
-    Examples: 
-      | Notetext                                                                                                                                                       |
-      | In above case we have String dateString in format so to convert the String to Date in given format we have Created Object formatter of Class SimpleDateFormat. |
-
-  Scenario Outline: To verify the functionalities under Clinical Documents Section
-    Given I am on the login page
-    When I enter email field qa.emblemrn@yopmail.com for login
-    And I enter password field Episode1! for Login
-    Then I click Access button
-    Then I should see Tile text Episodes 2.0
-    When I click on the "Episodes 2.0" tile
-    Then I verify current page "Remedy Partners" title
-    Then I click on "All" tab in the filter bar on patients page
-    Then I wait to the see the visibility of loader to disappear
-    Then I verify current page "Remedy Partners" title
-    When I click on Filter button present on Patient Page
-    And I click on Filters button present on Filter Page
-    Then I verify SSN Filter is displayed under List of Filter Options
-    When I click on SSN Filter present on Filter Page
-    Then I enter SSN "784225708"
-    Then I click on Done button present on the Filter Page
-    Then I wait to the see the visibility of loader to disappear
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
-    Then I wait to the see the visibility of loader to disappear
-    Then I scroll the page to bottom by "-100"
-    Then I wait to the see the visibility of loader to disappear
-    Then I click on the patient on the patient card page that has no CARL button in it
-    Then I will wait to see and click on "Clinical Documents" followed by "span" tag
-    Then I wait to the see the visibility of loader to disappear
-    Then I wait to the see the visibility of loader to disappear
-    Then I will wait to see "Active" appearing in the "Status" "2" column in row "1" in Document table in Clinical Documents
-    Then I verify that Active status should be in green color with Color code 4EB96F
-    Then I will click on "CARL" appearing in the "Document" "1" column in row "1" in Document table in Clinical Documents
-    Then I wait to the see the visibility of loader to disappear
-    Then I verify user is able to navigate to the read only "CARL" page by selecting the title
-    Then I verify there should be a "View" link on each card and clicking the link should bring the user to that specified section of the CARL form
-    Then I verify "Caregiver" section should appear with "Yes, 24 hours a day" on label "Does the patient have a capable caregiver?" on the review page
-    Then I verify "Independence" section should appear with "Forgetful" on label "Cognitive status" on the review page
-    Then I verify "Independence" section should appear with "Assistance needed for one or more ADLs" on label "Activities of daily living" on the review page
-    Then I verify "Independence" section should appear with "Assistive device needed" on label "Ambulatory status" on the review page
-    Then I verify "Independence" section should appear with "No answer" on label "Does the patient have a history of falls" on the review page
-    Then I verify "Anticipated Discharge Needs" section should appear with "Therapies Needed" for label "Therapies" for descriptive title "Physical Therapy" on the review page
-    Then I verify "Anticipated Discharge Needs" section should appear with "Once daily or less often" for label "Injectable Meds" for descriptive title "Transition of Care Needs" on the review page
-    Then I verify "Anticipated Discharge Needs" section should appear with "Once daily or less often" for label "Blood Testing" for descriptive title "Transition of Care Needs" on the review page
-    Then I verify "Anticipated Discharge Needs" section should appear with "More than once daily" for label "Finger Stick" for descriptive title "Transition of Care Needs" on the review page
-    Then I verify "Anticipated Discharge Needs" section should appear with "Once daily or less often" for label "Wound Care" for descriptive title "Transition of Care Needs" on the review page
-    Then I verify "Anticipated Discharge Needs" section should appear with "None" for label "Teaching and Training" for descriptive title "Transition of Care Needs" on the review page
-    Then I verify "Anticipated Discharge Needs" section should appear with "None" for label "Clinical Oversight" for descriptive title "Transition of Care Needs" on the review page
-    Then I verify "Discharge" section should appear with "Home with Limited Services (HOM)" on label "CARL recommendation" on the review page
-    Then I verify "Discharge" section should appear with "HHA" on label "Actual care setting" on the review page
-    Then I verify "Discharge" section should appear with "A Helping Hand Hha" on label "Actual discharge location" on the review page
-    Then I verify "Discharge" section should appear with "Have you discussed the proposal with the Interdisciplinary Team?" on label "No answer" on the review page
-    Then I verify "Discharge" section should appear with "Why didn't the patient transfer to the recommended Next Site of Care?" on label "" on the review page
-    Then I verify "Discharge" section should appear with "None" on label "Additional Comments" on the review page
-    Then I verify "Discharge" section should appear with "Not enough caregiver support" on label "Reason for disagreement?" on the review page
-    Then I verify "Discharge" section should appear with "Additional" on label "Additional Comments" on the review page
-    Then I click on the cross button to close the CARL document form
 
     Examples: 
       | Notetext                                                                                                                                                       |

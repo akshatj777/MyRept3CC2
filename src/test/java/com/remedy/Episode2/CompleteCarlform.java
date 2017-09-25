@@ -97,6 +97,8 @@ public class CompleteCarlform extends BaseClass {
 	}
 
 	public void IClickOnOptionsUnderDoesThePatientHaveACapableCaregiverQuestioin(String text) {
+		WebDriverWait wait=new WebDriverWait(driver,30);
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div.tooltip.ng-scope.ng-isolate-scope")));
 		clickElement(driver.findElement(By.xpath("//span[contains(text(),'" + text + "')]")));
 	}
 
@@ -168,12 +170,8 @@ public class CompleteCarlform extends BaseClass {
 	public void IVerifyTheTextHoverOnCaregiver() {
 		String HoverOnCaregiverText = "Identify all caregivers physically and mentally able to provide required support to the patient in a home setting. Caregiver(s) do not necessarily need to reside in the home, but ADL support and treatment needs must be met.";
 		WebElement item = driver.findElement(By.xpath("//i[contains(@uib-tooltip,'Caregiver')]"));
-		try {
-			Assert.assertEquals(item.getAttribute("uib-tooltip"), HoverOnCaregiverText);
-		} catch (Exception e) {
-
-		}
-	}
+	    Assert.assertEquals(item.getAttribute("uib-tooltip"), HoverOnCaregiverText);
+    }
 
 	public void IClickOnAnticpatedDischargeNeeds(String text) {
 		clickElement(driver.findElement(By.xpath("//span[contains(text(),'" + text + "')]")));
