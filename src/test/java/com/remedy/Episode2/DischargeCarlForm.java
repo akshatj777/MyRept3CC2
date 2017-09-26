@@ -217,11 +217,11 @@ public class DischargeCarlForm extends BaseClass {
 	}
 
 	public void IverifySNFELOSmessageshouldappearundertheDischargeDate() {
-	verifyTextForElement(driver.findElement(By.cssSelector("span.info-message.ng-binding.ng-scope")),"The episode length of stay for this bundle is 12 - 14 days.");
+	verifyTextForElement(driver.findElement(By.cssSelector("span.info-message.ng-binding.ng-scope")),"The episode length of stay for this bundle is 13 - 16 days.");
 	}
 
 	public void IverifySNFELOSrangethatshouldbecalculatedbyDRGthattriggersthecurrentactiveepisode() {
-	verifyTextForElement(driver.findElement(By.cssSelector("span.info-message.ng-binding.ng-scope")),"The episode length of stay for this bundle is 12 - 14 days.");
+	verifyTextForElement(driver.findElement(By.cssSelector("span.info-message.ng-binding.ng-scope")),"The episode length of stay for this bundle is 13 - 16 days.");
     }
 
     public void IverifyusershouldseetheappropriatemessagebasedonActualCareSettingchosenandtheRestorationPotentialchosen(String message) {

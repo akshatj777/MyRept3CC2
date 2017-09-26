@@ -880,4 +880,10 @@ public class PatientClinicalDocuments extends BaseClass {
 			isElementVisible(driver.findElement(By.cssSelector(selector_value)));
 			
 		}
+
+		public void Isaveandcontinueonsection() {
+			delay();
+			clickElement(driver.findElement(By.xpath("//a[contains(text(),'Save & Continue')]")));
+			
+		}
 		}

@@ -97,9 +97,9 @@ public class CompleteCarlform extends BaseClass {
 	}
 
 	public void IClickOnOptionsUnderDoesThePatientHaveACapableCaregiverQuestioin(String text) {
-		WebDriverWait wait=new WebDriverWait(driver,30);
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div.tooltip.ng-scope.ng-isolate-scope")));
 		clickElement(driver.findElement(By.xpath("//span[contains(text(),'" + text + "')]")));
+		WebDriverWait wait=new WebDriverWait(driver,5);
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div.tooltip.ng-scope.ng-isolate-scope")));
 	}
 
 	public void IVerifyThatCareNetworkMemberDropDwonAppearsUnderChooseCaregiverSection() {

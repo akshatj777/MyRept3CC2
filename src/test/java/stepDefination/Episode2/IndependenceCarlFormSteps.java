@@ -10,9 +10,9 @@ public class IndependenceCarlFormSteps extends DriverScript {
 	
 	IndependenceCarlForm independencecarl = new IndependenceCarlForm(driver);
 
-	@Then("^I click on \"([^\"]*)\" section on left navigator$") 
-	public void I_Click_On_SideNavigationTab_On_CarlForm(String text) throws Throwable {
-		independencecarl.IClickOnSideNavigationTabOnCarlForm(text);
+	@Then("^I click on \"([^\"]*)\" \"([^\"]*)\" section on left navigator$") 
+	public void I_Click_On_SideNavigationTab_On_CarlForm(String text,int i) throws Throwable {
+		independencecarl.IClickOnSideNavigationTabOnCarlForm(text,i);
 	}
 	
 	@And("^I verify the \"([^\"]*)\" section of the carl form upon clicking on it$")

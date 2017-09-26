@@ -2,7 +2,9 @@ package com.remedy.Episode2;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import com.remedy.baseClass.BaseClass;
 
@@ -13,21 +15,18 @@ public class IndependenceCarlForm extends BaseClass {
 
 	}
 
-	public void IClickOnSideNavigationTabOnCarlForm(String text) {
+	public void IClickOnSideNavigationTabOnCarlForm(String text,int i) {
 		delay();
-		iWillWaitToSee(By.xpath("//a/div/h5/div/span[text()='" + text + "']"));
-		try{
-			clickElement(driver.findElement(By.xpath("//a/div/h5/div/span[text()='" + text + "']")));
-		}catch(Exception e)
-		{
-		Actions actions=new Actions(driver);
-		actions.moveToElement(driver.findElement(By.xpath("//a/div/h5/div/span[text()='" + text + "']"))).click().perform();
-		}longDelay();
+		iWillWaitToSee(By.xpath("//nav/ol/li["+i+"]"));
+		WebElement element=driver.findElement(By.xpath("//nav/ol/li["+i+"]"));
+			clickElement(element);
+		longDelay();
 		}
 
 	public void IVerifySelectedSectionOnTheCarlFormUponClickingOnIt(String text) {
         delay();
-		String text1 = driver.findElement(By.cssSelector("h2.ng-binding")).getText();
+        iWillWaitToSee(By.cssSelector("h2.ng-binding"));
+		String text1 =driver.findElement(By.cssSelector("h2.ng-binding")).getText();
 		String subtext = text1.substring(3);
 		Assert.assertEquals(text, subtext);
 	}
@@ -37,6 +36,7 @@ public class IndependenceCarlForm extends BaseClass {
 	}
 
 	public void IVerifyTheDropdownBarsPresentInIndependenceSection(String text) {
+		delay();
 		verifyTextForElement(driver.findElement(By.xpath("//section[@label='" + text + "']")), text);
 	}
 
@@ -49,6 +49,7 @@ public class IndependenceCarlForm extends BaseClass {
 	}
 
 	public void IVerifyOptionSelectedAppearsInThePlaceHolderOfDropDownOnIndependenceSection(String text1,String text2) {
+		delay();
 		verifyTextForElement(driver.findElement(By.xpath("//section[@label='" + text2 + "']//span[text()='" + text1 + "']")), text1);
 	}
 
@@ -81,6 +82,7 @@ public class IndependenceCarlForm extends BaseClass {
 	}
 
 	public void IVerifyTheSelectedRadioButtonOnIndependenceSection(String text) {
+		delay();
 		try {
 			Assert.assertTrue(driver.findElement(By.xpath("//label[span[text()='" + text + "']]/preceding-sibling::input")).isSelected());
 		} catch (Exception e) {

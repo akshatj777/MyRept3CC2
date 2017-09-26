@@ -56,6 +56,11 @@ public class PatientFormStatusSteps extends DriverScript {
 	public void I_save_and_continue_the_complete_CARL_form() throws Throwable {
 		patientclinical.IsaveandcontinuethecompleteCARLform();
 	}
+	
+	@Then("^I click on save and continue on \"([^\"]*)\" on the complete CARL form$")
+	public void I_save_and_continue_on_section(String section) throws Throwable {
+		patientclinical.Isaveandcontinueonsection();
+	}
 
 	@Then("^I verify that if user submits a patient form status should be read as Active$")
 	public void I_verify_that_if_user_submits_a_patient_form_status_should_be_read_as_Active() throws Throwable {

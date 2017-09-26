@@ -89,7 +89,7 @@ Feature: Upon selecting the Actual Care Setting, user should be able to view the
     Then I will wait to see the CARL section "Caregiver" header appears on the CARL form
     Then I click on Yes, 24 hours a day option under Does the patient have a capable caregiver
     Then I save and continue the complete CARL form
-    Then I click on "Independence" section on left navigator
+    Then I click on "Independence" "2" section on left navigator
     Then I will wait to see the CARL section "Independence" header appears on the CARL form
     Then I click on "Cognitive Status" dropdown on Independece Section
     Then I select "Forgetful" option in dropdown for cognitive status
@@ -97,7 +97,7 @@ Feature: Upon selecting the Actual Care Setting, user should be able to view the
     Then I select "Assistance needed for one or more ADLs" option in dropdown for cognitive status
     Then I click on "Ambulatory Status" dropdown on Independece Section
     Then I select "Assistive device needed" option in dropdown for cognitive status
-    Then I click on "Anticipated Discharge Needs" section on left navigator
+    Then I click on "Anticipated Discharge Needs" "3" section on left navigator
     Then I will wait to see the CARL section "Anticipated Discharge Needs" header appears on the CARL form
     Then I click "Physical therapy" checkbox under Therapies Needed on Anticipated Discharge Needs section
     Then I click on Physical Therapy dropdown on Patients Restoration Potential
