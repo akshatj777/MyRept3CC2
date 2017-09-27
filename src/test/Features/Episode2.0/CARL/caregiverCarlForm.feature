@@ -212,7 +212,7 @@ Feature: To verify the options and functionality of Caregiver section of Carl fo
     Then I verify the correct "Caretype" "Inpatient" which user has selected by the time of filling the form should appearing after saving the done form
     Then I verify the correct "DischargeLocation" "Allentown" which user has selected by the time of filling the form should appearing after saving the done form
     Then I click on edit button to update the values of discharge subform under discharge test in Carl form
-    Then I click on "Actual Care Setting" subform dropdown under Recommendation on Discharge section
+    Then I click on Actual Care Setting subform dropdown under Recommendation on Discharge section
     Then I select "(UNK) Unknown" in subform dropdown for "Actual Care Setting" on Discharge section
     Then I click on Calendar Icon On Discharge date under subform on Discharge section
     Then I select "Discharge current" with logic "current" "1" days on Calendar Discharge Date under subform on Discharge section
@@ -269,7 +269,7 @@ Feature: To verify the options and functionality of Caregiver section of Carl fo
     Then I verify the correct "CareSetting" "(HHA) Home Health Agency" which user has selected by the time of filling the form should appearing after saving the done form
     Then I verify the correct "Caretype" "Skilled Services" which user has selected by the time of filling the form should appearing after saving the done form
     Then I verify the correct "DischargeLocation" "A Helping Hand Hha" which user has selected by the time of filling the form should appearing after saving the done form
-    Then I click on "Caregiver" section on left navigator
+    Then I click on "Caregiver" "1" section on left navigator
     And I click on Add Caregiver link under Choose Caregiver
     Then I verify first name is mandatory field to a create Caregiver
     Then I verify last name is mandatory field to a create Caregiver
@@ -348,7 +348,7 @@ Feature: To verify the options and functionality of Caregiver section of Carl fo
     Then I wait to the see the visibility of loader to disappear
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
-    Then I click on "Anticipated Discharge Needs" section on left navigator
+    Then I click on "Anticipated Discharge Needs" "3" section on left navigator
     Then I select "<Check>" checkbox for Transition of Care Needs on Anticipated Discharge Needs
     Then I verify upon select "<Check>" checkbox sub field section appears for Transition of Care Needs
     Then I verify on selecting "<Check>" requierd field "<Label>" appears for Transition of Care Needs
@@ -395,7 +395,7 @@ Feature: To verify the options and functionality of Caregiver section of Carl fo
     Then I wait to the see the visibility of loader to disappear
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
-    Then I click on "Anticipated Discharge Needs" section on left navigator
+    Then I click on "Anticipated Discharge Needs" "3" section on left navigator
     Then I select "<Check>" checkbox for Transition of Care Needs on Anticipated Discharge Needs
     Then I verify upon select "<Check>" checkbox sub field section appears for Transition of Care Needs
     Then I verify on selecting "<Check>" requierd field "<Label1>" appears for Transition of Care Needs
@@ -524,7 +524,7 @@ Feature: To verify the options and functionality of Caregiver section of Carl fo
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter SSN "784227083"
+    Then I enter SSN "784228394"
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
@@ -532,110 +532,112 @@ Feature: To verify the options and functionality of Caregiver section of Carl fo
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
-    Then I wait to the see the visibility of loader to disappear
-    Then I Verify that Carl form should appear with Save your progress link
-    Then I Verify that Carl form should appear with review the form link
-    Then I Verify that Carl form should appear Left navigator displaying four sections
-    Then I hover on i icon present on Caregiver on TakeOver page
-    Then I Verify the text hovering i icon on caregiver
-    Then I verify that Does the patient have a capable caregiver? should appear on takeover page
-    And I verfiy that Yes, 24 hours a day option is present under Does the patient have a capable caregiver
-    And I verfiy that Yes, has caregiver support less than 24 hours a day option is present under Does the patient have a capable caregiver
-    And I verfiy that No caregiver available option is present under Does the patient have a capable caregiver
-    And I verfiy that No caregiver needed option is present under Does the patient have a capable caregiver
-    Then I click on Yes, has caregiver support less than 24 hours a day option under Does the patient have a capable caregiver
-    Then I verify that Add Caregiver link should appear under Choose Caregiver section in Caregiver on takeover page
-    Then I click on No caregiver available option under Does the patient have a capable caregiver
-    Then I verify that Add Caregiver link should not appear under Choose Caregiver
-    Then I click on No caregiver needed option under Does the patient have a capable caregiver
-    Then I verify that Add Caregiver link should not appear under Choose Caregiver
-    Then I click on Yes, 24 hours a day option under Does the patient have a capable caregiver
-    Then I click on "Independence" "2" section on left navigator
-    And I verify the "Independence" section of the carl form upon clicking on it
-    Then I verify that "Independence" section on carl form should be highlighted in left navigator upon clicking
-    Then I verify "Cognitive Status" dropdown bar should appear on Independence section
-    Then I verify "Activities of Daily Living" dropdown bar should appear on Independence section
-    Then I verify "Ambulatory Status" dropdown bar should appear on Independence section
-    Then I verify "Does the patient have a history of falls?" question appears on Independence section
-    Then I verify "Yes" option should appear below Does the patient have a history of falls on Independece section
-    Then I verify "No" option should appear below Does the patient have a history of falls on Independece section
-    Then I verify "Not Sure" option should appear below Does the patient have a history of falls on Independece section
-    Then I Verify that Carl form should appear with Save & Go Back link
-    Then I Verify that Carl form should appear with Save & Continue link
-    
-    Then I click on "Cognitive Status" dropdown on Independece Section
-    Then I verify "Oriented" option present in dropdown for cognitive status on Independece Section
-    Then I verify "Forgetful" option present in dropdown for cognitive status on Independece Section
-    Then I verify "Disoriented" option present in dropdown for cognitive status on Independece Section
-    Then I select "Forgetful" option in dropdown for cognitive status
-    Then I verify "Forgetful" selected appears in the place holder of "Cognitive Status" dropdown on Independence section
-    Then I click on "Activities of Daily Living" dropdown on Independece Section
-    Then I verify "No assistance needed" option present in dropdown for cognitive status on Independece Section
-    Then I verify "Assistance needed for one or more ADLs" option present in dropdown for cognitive status on Independece Section
-    Then I verify "Dependent on caregiver for one or more ADLs" option present in dropdown for cognitive status on Independece Section
-    Then I select "No assistance needed" option in dropdown for cognitive status
-    Then I verify "No assistance needed" selected appears in the place holder of "Activities of Daily Living" dropdown on Independence section
-    Then I click on "Ambulatory Status" dropdown on Independece Section
-    Then I verify "No assistance needed" option present in dropdown for cognitive status on Independece Section
-    Then I verify "Assistive device needed" option present in dropdown for cognitive status on Independece Section
-    Then I verify "Caregiver needed" option present in dropdown for cognitive status on Independece Section
-    Then I select "Caregiver needed" option in dropdown for cognitive status
-    Then I verify "Caregiver needed" selected appears in the place holder of "Ambulatory Status" dropdown on Independence section
-    Then I verify "Yes" radio button on Independence section
-    Then I verify "No" radio button on Independence section
-    Then I verify "Not Sure" radio button on Independence section
-    Then I click on "No" radio button on Independence section
-    And I verify "No" radio button is seclected on Independence section
-    Then I click on "Anticipated Discharge Needs" "3" section on left navigator
-    And I verify the "Anticipated Discharge Needs" section of the carl form upon clicking on it
-    Then I verify that "Anticipated Discharge Needs" section on carl form should be highlighted in left navigator upon clicking
-    Then I verify "Therapies Needed" should appear on Anticipated Discharge Needs section
-    Then I verify "Physical therapy" checkbox appears under Therapies Needed on Anticipated Discharge Needs section
-    Then I verify "Speech and language" checkbox appears under Therapies Needed on Anticipated Discharge Needs section
-    Then I verify "Occupational therapyPhysical therapy" checkbox appears under Therapies Needed on Anticipated Discharge Needs section
-    Then I verify "None" checkbox appears under Therapies Needed on Anticipated Discharge Needs section
-    Then I verify "Transition of Care Needs" should appear on Anticipated Discharge Needs section
-    Then I verify "Injetctable Meds" checkbox appears under Transition of Care Needs on Anticipated Discharge Needs section
-    Then I verify "Blood Testing" checkbox appears under Transition of Care Needs on Anticipated Discharge Needs section
-    Then I verify "Finger Stick" checkbox appears under Transition of Care Needs on Anticipated Discharge Needs section
-    Then I verify "Wound Care" checkbox appears under Transition of Care Needs on Anticipated Discharge Needs section
-    Then I verify "Ostomy" checkbox appears under Transition of Care Needs on Anticipated Discharge Needs section
-    Then I verify "Tracheostomy" checkbox appears under Transition of Care Needs on Anticipated Discharge Needs section
-    Then I verify "Catheter" checkbox appears under Transition of Care Needs on Anticipated Discharge Needs section
-    Then I verify "Tube feeding" checkbox appears under Transition of Care Needs on Anticipated Discharge Needs section
-    Then I verify "Oxygen" checkbox appears under Transition of Care Needs on Anticipated Discharge Needs section
-    Then I verify "CPAP" checkbox appears under Transition of Care Needs on Anticipated Discharge Needs section
-    Then I verify "BIPAP" checkbox appears under Transition of Care Needs on Anticipated Discharge Needs section
-    Then I verify "New disease process or diagnosis" checkbox appears under Transition of Care Needs on Anticipated Discharge Needs section
-    Then I verify "New discharge medication" checkbox appears under Transition of Care Needs on Anticipated Discharge Needs section
-    Then I Verify that Carl form should appear with Save & Go Back link
-    Then I Verify that Carl form should appear with Save & Continue link
-   
-    Then I click "Physical therapy" checkbox under Therapies Needed on Anticipated Discharge Needs section
-    Then I verify "Physical therapy" checkbox is clickable
-    Then I hover on i icon present on Restoration on TakeOver page
-    Then I Verify the text hovering i icon on Patients Restoration Potential
-    Then I verify Patients Restoration Potential section on selecting PhysicalTherapy
-    Then I click on Physical Therapy dropdown on Patients Restoration Potential
-    Then I verify "Select" text in place holder of Physical Therapy dropdown on Patients Restoration Potential
-    Then I verify "Good restoration potential" option in Physical Therapy dropdown on Anticipated Discharge Needs
-    Then I verify "Questionable restoration potential" option in Physical Therapy dropdown on Anticipated Discharge Needs
-    Then I verify "Poor restoration potentia" option in Physical Therapy dropdown on Anticipated Discharge Needs
-    Then I select "Good restoration potential" in Physical Therapy dropdown on Anticipated Discharge Needs
-    Then I verify "Good restoration potential" is selected in Physical Therapy place holder on Anticipated Discharge Needs
-    
-    Then I verify "Speech and language" checkbox is clickable  
-    Then I verify "Occupational therapy" checkbox is clickable
-    Then I verify "None" checkbox is not clickable
-    Then I click "Physical therapy" checkbox under Therapies Needed on Anticipated Discharge Needs section
-    Then I click "None" checkbox under Therapies Needed on Anticipated Discharge Needs section
-    Then I verify "Physical therapy" checkbox is not clickable
-    Then I verify "Speech and language" checkbox is not clickable
-    Then I verify "Occupational therapy" checkbox is not clickable
-    Then I click "None" checkbox under Therapies Needed on Anticipated Discharge Needs section
-    Then I click "Physical therapy" checkbox under Therapies Needed on Anticipated Discharge Needs section
-    
-    Then I click on save and continue on "Discharge" on the complete CARL form
+    #Then I wait to the see the visibility of loader to disappear
+    #Then I Verify that Carl form should appear with Save your progress link
+    #Then I Verify that Carl form should appear with review the form link
+    #Then I Verify that Carl form should appear Left navigator displaying four sections
+    #Then I hover on i icon present on Caregiver on TakeOver page
+    #Then I Verify the text hovering i icon on caregiver
+    #Then I verify that Does the patient have a capable caregiver? should appear on takeover page
+    #And I verfiy that Yes, 24 hours a day option is present under Does the patient have a capable caregiver
+    #And I verfiy that Yes, has caregiver support less than 24 hours a day option is present under Does the patient have a capable caregiver
+    #And I verfiy that No caregiver available option is present under Does the patient have a capable caregiver
+    #And I verfiy that No caregiver needed option is present under Does the patient have a capable caregiver
+    #Then I click on Yes, has caregiver support less than 24 hours a day option under Does the patient have a capable caregiver
+    #Then I verify that Add Caregiver link should appear under Choose Caregiver section in Caregiver on takeover page
+    #Then I click on No caregiver available option under Does the patient have a capable caregiver
+    #Then I verify that Add Caregiver link should not appear under Choose Caregiver
+    #Then I click on No caregiver needed option under Does the patient have a capable caregiver
+    #Then I verify that Add Caregiver link should not appear under Choose Caregiver
+    #Then I click on Yes, 24 hours a day option under Does the patient have a capable caregiver
+    #Then I click on "Independence" "2" section on left navigator
+    #And I verify the "Independence" section of the carl form upon clicking on it
+    #Then I verify that "Independence" section on carl form should be highlighted in left navigator upon clicking
+    #Then I verify "Cognitive Status" dropdown bar should appear on Independence section
+    #Then I verify "Activities of Daily Living" dropdown bar should appear on Independence section
+    #Then I verify "Ambulatory Status" dropdown bar should appear on Independence section
+    #Then I verify "Does the patient have a history of falls?" question appears on Independence section
+    #Then I verify "Yes" option should appear below Does the patient have a history of falls on Independece section
+    #Then I verify "No" option should appear below Does the patient have a history of falls on Independece section
+    #Then I verify "Not Sure" option should appear below Does the patient have a history of falls on Independece section
+    #Then I Verify that Carl form should appear with Save & Go Back link
+    #Then I Verify that Carl form should appear with Save & Continue link
+    #
+    #Then I click on "Cognitive Status" dropdown on Independece Section
+    #Then I verify "Oriented" option present in dropdown for cognitive status on Independece Section
+    #Then I verify "Forgetful" option present in dropdown for cognitive status on Independece Section
+    #Then I verify "Disoriented" option present in dropdown for cognitive status on Independece Section
+    #Then I select "Forgetful" option in dropdown for cognitive status
+    #Then I verify "Forgetful" selected appears in the place holder of "Cognitive Status" dropdown on Independence section
+    #Then I click on "Activities of Daily Living" dropdown on Independece Section
+    #Then I verify "No assistance needed" option present in dropdown for cognitive status on Independece Section
+    #Then I verify "Assistance needed for one or more ADLs" option present in dropdown for cognitive status on Independece Section
+    #Then I verify "Dependent on caregiver for one or more ADLs" option present in dropdown for cognitive status on Independece Section
+    #Then I select "No assistance needed" option in dropdown for cognitive status
+    #Then I verify "No assistance needed" selected appears in the place holder of "Activities of Daily Living" dropdown on Independence section
+    #Then I click on "Ambulatory Status" dropdown on Independece Section
+    #Then I verify "No assistance needed" option present in dropdown for cognitive status on Independece Section
+    #Then I verify "Assistive device needed" option present in dropdown for cognitive status on Independece Section
+    #Then I verify "Caregiver needed" option present in dropdown for cognitive status on Independece Section
+    #Then I select "Caregiver needed" option in dropdown for cognitive status
+    #Then I verify "Caregiver needed" selected appears in the place holder of "Ambulatory Status" dropdown on Independence section
+    #Then I verify "Yes" radio button on Independence section
+    #Then I verify "No" radio button on Independence section
+    #Then I verify "Not Sure" radio button on Independence section
+    #Then I click on "No" radio button on Independence section
+    #And I verify "No" radio button is seclected on Independence section
+    #Then I click on "Anticipated Discharge Needs" "3" section on left navigator
+    #And I verify the "Anticipated Discharge Needs" section of the carl form upon clicking on it
+    #Then I verify that "Anticipated Discharge Needs" section on carl form should be highlighted in left navigator upon clicking
+    #Then I verify "Therapies Needed" should appear on Anticipated Discharge Needs section
+    #Then I verify "Physical therapy" checkbox appears under Therapies Needed on Anticipated Discharge Needs section
+    #Then I verify "Speech and language" checkbox appears under Therapies Needed on Anticipated Discharge Needs section
+    #Then I verify "Occupational therapyPhysical therapy" checkbox appears under Therapies Needed on Anticipated Discharge Needs section
+    #Then I verify "None" checkbox appears under Therapies Needed on Anticipated Discharge Needs section
+    #Then I verify "Transition of Care Needs" should appear on Anticipated Discharge Needs section
+    #Then I verify "Injetctable Meds" checkbox appears under Transition of Care Needs on Anticipated Discharge Needs section
+    #Then I verify "Blood Testing" checkbox appears under Transition of Care Needs on Anticipated Discharge Needs section
+    #Then I verify "Finger Stick" checkbox appears under Transition of Care Needs on Anticipated Discharge Needs section
+    #Then I verify "Wound Care" checkbox appears under Transition of Care Needs on Anticipated Discharge Needs section
+    #Then I verify "Ostomy" checkbox appears under Transition of Care Needs on Anticipated Discharge Needs section
+    #Then I verify "Tracheostomy" checkbox appears under Transition of Care Needs on Anticipated Discharge Needs section
+    #Then I verify "Catheter" checkbox appears under Transition of Care Needs on Anticipated Discharge Needs section
+    #Then I verify "Tube feeding" checkbox appears under Transition of Care Needs on Anticipated Discharge Needs section
+    #Then I verify "Oxygen" checkbox appears under Transition of Care Needs on Anticipated Discharge Needs section
+    #Then I verify "CPAP" checkbox appears under Transition of Care Needs on Anticipated Discharge Needs section
+    #Then I verify "BIPAP" checkbox appears under Transition of Care Needs on Anticipated Discharge Needs section
+    #Then I verify "New disease process or diagnosis" checkbox appears under Transition of Care Needs on Anticipated Discharge Needs section
+    #Then I verify "New discharge medication" checkbox appears under Transition of Care Needs on Anticipated Discharge Needs section
+    #Then I Verify that Carl form should appear with Save & Go Back link
+    #Then I Verify that Carl form should appear with Save & Continue link
+   #
+    #Then I click "Physical therapy" checkbox under Therapies Needed on Anticipated Discharge Needs section
+    #Then I verify "Physical therapy" checkbox is clickable
+    #Then I hover on i icon present on Restoration on TakeOver page
+    #Then I Verify the text hovering i icon on Patients Restoration Potential
+    #Then I verify Patients Restoration Potential section on selecting PhysicalTherapy
+    #Then I click on Physical Therapy dropdown on Patients Restoration Potential
+    #Then I verify "Select" text in place holder of Physical Therapy dropdown on Patients Restoration Potential
+    #Then I verify "Good restoration potential" option in Physical Therapy dropdown on Anticipated Discharge Needs
+    #Then I verify "Questionable restoration potential" option in Physical Therapy dropdown on Anticipated Discharge Needs
+    #Then I verify "Poor restoration potentia" option in Physical Therapy dropdown on Anticipated Discharge Needs
+    #Then I select "Good restoration potential" in Physical Therapy dropdown on Anticipated Discharge Needs
+    #Then I verify "Good restoration potential" is selected in Physical Therapy place holder on Anticipated Discharge Needs
+    #
+    #Then I verify "Speech and language" checkbox is clickable  
+    #Then I verify "Occupational therapy" checkbox is clickable
+    #Then I verify "None" checkbox is not clickable
+    #Then I click "Physical therapy" checkbox under Therapies Needed on Anticipated Discharge Needs section
+    #Then I click "None" checkbox under Therapies Needed on Anticipated Discharge Needs section
+    #Then I verify "Physical therapy" checkbox is not clickable
+    #Then I verify "Speech and language" checkbox is not clickable
+    #Then I verify "Occupational therapy" checkbox is not clickable
+    #Then I click "None" checkbox under Therapies Needed on Anticipated Discharge Needs section
+    #Then I click "Physical therapy" checkbox under Therapies Needed on Anticipated Discharge Needs section
+    #
+    #Then I click on save and continue on "Discharge" on the complete CARL form
+    Then I click on "Discharge" "4" section on left navigator
+    Then I click on edit button to update the values of discharge subform under discharge test in Carl form
     Then I click on "Actual Care Setting" subform dropdown under Recommendation on Discharge section
     Then I select "(SNF) Skilled Nursing Facility" in subform dropdown for "Actual Care Setting" on Discharge section
     Then I click on "Care Type" subform dropdown under Recommendation on Discharge section
@@ -660,7 +662,7 @@ Feature: To verify the options and functionality of Caregiver section of Carl fo
     Then I verify the correct "Caretype" "Inpatient" which user has selected by the time of filling the form should appearing after saving the done form
     Then I verify the correct "DischargeLocation" "Allentown" which user has selected by the time of filling the form should appearing after saving the done form
     Then I click on edit button to update the values of discharge subform under discharge test in Carl form
-    Then I click on "Actual Care Setting" subform dropdown under Recommendation on Discharge section
+    Then I click on Actual Care Setting subform dropdown under Recommendation on Discharge section
     Then I select "(UNK) Unknown" in subform dropdown for "Actual Care Setting" on Discharge section
     Then I click on Calendar Icon On Discharge date under subform on Discharge section
     Then I select "Discharge current" with logic "current" "1" days on Calendar Discharge Date under subform on Discharge section
@@ -717,7 +719,7 @@ Feature: To verify the options and functionality of Caregiver section of Carl fo
     Then I verify the correct "CareSetting" "(HHA) Home Health Agency" which user has selected by the time of filling the form should appearing after saving the done form
     Then I verify the correct "Caretype" "Skilled Services" which user has selected by the time of filling the form should appearing after saving the done form
     Then I verify the correct "DischargeLocation" "A Helping Hand Hha" which user has selected by the time of filling the form should appearing after saving the done form
-    Then I click on "Caregiver" section on left navigator
+    Then I click on "Caregiver" "1" section on left navigator
     And I click on Add Caregiver link under Choose Caregiver
     Then I verify first name is mandatory field to a create Caregiver
     Then I verify last name is mandatory field to a create Caregiver

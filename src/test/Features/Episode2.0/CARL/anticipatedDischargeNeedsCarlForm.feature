@@ -83,7 +83,7 @@ Feature: To verify the options and functionality of Anticipated Discharge Needs 
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
-    Then I click on "Anticipated Discharge Needs" section on left navigator
+    Then I click on "Anticipated Discharge Needs" "3" section on left navigator
     And I verify the "Anticipated Discharge Needs" section of the carl form upon clicking on it
     Then I verify that "Anticipated Discharge Needs" section on carl form should be highlighted in left navigator upon clicking
     Then I verify "Therapies Needed" should appear on Anticipated Discharge Needs section
@@ -124,7 +124,7 @@ Feature: To verify the options and functionality of Anticipated Discharge Needs 
     Then I wait to the see the visibility of loader to disappear
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
-    Then I click on "Anticipated Discharge Needs" section on left navigator
+    Then I click on "Anticipated Discharge Needs" "3" section on left navigator
     Then I click "Physical therapy" checkbox under Therapies Needed on Anticipated Discharge Needs section
     Then I verify "Physical therapy" checkbox is clickable
     Then I verify "Speech and language" checkbox is clickable
@@ -153,7 +153,7 @@ Feature: To verify the options and functionality of Anticipated Discharge Needs 
     Then I wait to the see the visibility of loader to disappear
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
-    Then I click on "Anticipated Discharge Needs" section on left navigator
+    Then I click on "Anticipated Discharge Needs" "3" section on left navigator
     Then I click "Physical therapy" checkbox under Therapies Needed on Anticipated Discharge Needs section
     Then I verify Patients Restoration Potential section on selecting PhysicalTherapy
     Then I click on Physical Therapy dropdown on Patients Restoration Potential
@@ -180,7 +180,7 @@ Feature: To verify the options and functionality of Anticipated Discharge Needs 
     Then I wait to the see the visibility of loader to disappear
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
-    Then I click on "Anticipated Discharge Needs" section on left navigator
+    Then I click on "Anticipated Discharge Needs" "3" section on left navigator
     Then I select "<Check>" checkbox for Transition of Care Needs on Anticipated Discharge Needs
     Then I verify upon select "<Check>" checkbox sub field section appears for Transition of Care Needs
     Then I verify on selecting "<Check>" requierd field "<Label>" appears for Transition of Care Needs
@@ -227,7 +227,7 @@ Feature: To verify the options and functionality of Anticipated Discharge Needs 
     Then I wait to the see the visibility of loader to disappear
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
-    Then I click on "Anticipated Discharge Needs" section on left navigator
+    Then I click on "Anticipated Discharge Needs" "3" section on left navigator
     Then I select "<Check>" checkbox for Transition of Care Needs on Anticipated Discharge Needs
     Then I verify upon select "<Check>" checkbox sub field section appears for Transition of Care Needs
     Then I verify on selecting "<Check>" requierd field "<Label1>" appears for Transition of Care Needs

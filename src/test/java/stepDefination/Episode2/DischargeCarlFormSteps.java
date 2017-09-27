@@ -33,6 +33,12 @@ public class DischargeCarlFormSteps extends DriverScript {
 	public void I_Click_On_Subform_Dropdown_Under_Recommendation_On_Discharge_Section(String text) throws Throwable {
 		dischargecarlform.IClickOnSubFormDropDownUnderRecommendationOnDischargeSectionOnCarlForm(text);	
 	}
+	
+	@Then ("^I click on Actual Care Setting subform dropdown under Recommendation on Discharge section$")
+	public void I_click_on_Actual_Care_Setting_subform_dropdown_under_Recommendation_on_Discharge_section()
+	{
+		dischargecarlform.IclickonActualCare_SettingsubformdropdownunderRecommendationonDischargesection();
+	}
 
 	@Then("^I select \"([^\"]*)\" in subform dropdown for \"([^\"]*)\" on Discharge section$")
 	public void I_Select_Option_From_Subform_Dropdown_Under_Recommendation_On_Discharge_Section(String dropdown, String subForm) throws Throwable {

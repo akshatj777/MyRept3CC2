@@ -130,7 +130,9 @@ public class PatientClinicalDocuments extends BaseClass {
 	}
 
 	public void IcountthenumberofdocumentsthatappearintheclinicalDocuments() {
-        getElementCount("table > tbody");
+        int count=getElementCount(" div > div:nth-child(2) > div > div.ng-scope > table > tbody > tr");
+        int count1=4;
+        Assert.assertEquals(count, count1);
 	}
 
 	public void Iverifytableshouldbesortedchronologicallybyactivitydatemostrecentfirst() throws ParseException {
@@ -448,9 +450,12 @@ public class PatientClinicalDocuments extends BaseClass {
 
 	public void IverifythatuponSelectingShowHistoryshoulddisplaytheinformationofalluserswhohavesavedthatform() throws InterruptedException {
        	WebDriverWait wait=new WebDriverWait(driver,10);
-       	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("table > tbody > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1).doc-edit.ng-scope")));
-       	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("table > tbody > tr:nth-child(1) > td:nth-child(4) > div:nth-child(2).doc-edit.ng-scope.ng-hide")));
-       	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("table > tbody > tr:nth-child(1) > td:nth-child(4) > div:nth-child(3).doc-edit.ng-scope.ng-hide")));
+       	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(1).doc-edit.ng-scope")));
+       	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(2).doc-edit.ng-scope.ng-hide")));
+       	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(3).doc-edit.ng-scope.ng-hide")));
+    	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(4).doc-edit.ng-scope.ng-hide")));
+    	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(5).doc-edit.ng-scope.ng-hide")));
+    	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(6).doc-edit.ng-scope.ng-hide")));
 	}
 
 	public void Iverifydateandtimeinformationappearsinlastsavedsection() {
@@ -483,10 +488,11 @@ public class PatientClinicalDocuments extends BaseClass {
          clickElement(driver.findElement(By.xpath("//a[contains(text(),'Hide History')]")));
          delay();
          WebDriverWait wait=new WebDriverWait(driver,10);
-         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("table > tbody > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1).doc-edit.ng-scope")));
-         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("table > tbody > tr:nth-child(1) > td:nth-child(4) > div:nth-child(2).doc-edit.ng-scope.ng-hide")));
-         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("table > tbody > tr:nth-child(1) > td:nth-child(4) > div:nth-child(3).doc-edit.ng-scope.ng-hide")));
-         
+         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(1).doc-edit.ng-scope")));
+         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(2).doc-edit.ng-scope.ng-hide")));
+         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(3).doc-edit.ng-scope.ng-hide")));
+         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(4).doc-edit.ng-scope.ng-hide")));
+         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(5).doc-edit.ng-scope.ng-hide")));
 	}
 
 	public void IclickontheTransitionInfoonaddanewtransition() {
@@ -652,7 +658,7 @@ public class PatientClinicalDocuments extends BaseClass {
 	}
 
 	public void IverifythatthereshouldbeanAttachmenticononClinicalDocumentsActivitySection() {
-		isElementVisible(driver.findElement(By.cssSelector("table > tbody > tr:nth-child(2) > td:nth-child(5) > img.hover-pointer.ng-scope")));
+		isElementVisible(driver.findElement(By.cssSelector("table > tbody > tr:nth-child(3) > td:nth-child(5) > img.hover-pointer.ng-scope")));
 	}
 
 	public void Ifilldateinwithlogicwithndays(String logic,int days) throws InterruptedException {

@@ -1295,7 +1295,7 @@ public class PatientsPage extends BaseClass {
 		    return;	
 		}
 		
-		else if(str.contains("less")){ 
+		 if(str.contains("less")){ 
 			if(Patient_count<=1000){
 				Assert.assertTrue(Patient_count<=1000);}
 			else{ while(!(Patient_count<=1000)){

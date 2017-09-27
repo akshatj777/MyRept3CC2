@@ -24,6 +24,7 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -68,7 +69,15 @@ public class DischargeCarlForm extends BaseClass {
 	}
 	
 	public void IClickOnSubFormDropDownUnderRecommendationOnDischargeSectionOnCarlForm(String text) {
+		delay(); 
+       try{
 		clickElement(driver.findElement(By.xpath("//label[text()='"+text+"']/preceding-sibling::div")));
+		}catch(Exception e)
+		{
+			JavascriptExecutor js = (JavascriptExecutor)driver;
+			js.executeScript("arguments[0].scrollIntoView(true);",driver.findElement(By.xpath("//label[text()='"+text+"']/preceding-sibling::div")));
+			clickElement(driver.findElement(By.xpath("//label[text()='"+text+"']/preceding-sibling::div")));
+		}
 	}
 	
 	public void ISelectOptionFromSubFormDropDownUnderRecommendationOnDischargeSectionOnCarlForm(String dropdown, String subForm) {
@@ -526,4 +535,13 @@ public class DischargeCarlForm extends BaseClass {
     longDelay();
 	WebDriverWait wait=new WebDriverWait(driver,5);
 	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div.content-well > footer > div.top-row > div:nth-child(2) > button")));
-	}}
+	}
+
+	public void IclickonActualCare_SettingsubformdropdownunderRecommendationonDischargesection() {
+		delay();
+		iWillWaitToSee(By.cssSelector("div:nth-child(1) > div > div.col-xs-8 > div:nth-child(1) > div.form-control > div.ui-select-match"));
+		
+//		Actions action=new Actions(driver);
+//		action.moveToElement(driver.findElement(By.cssSelector("div:nth-child(1) > div > div.col-xs-8 > div:nth-child(1) > div.form-control > div.ui-select-match"))).click().perform();
+		}
+}
