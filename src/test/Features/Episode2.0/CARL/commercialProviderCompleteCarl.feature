@@ -561,7 +561,7 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     Then I will wait to see the CARL section "Caregiver" header appears on the CARL form
     Then I click on Yes, 24 hours a day option under Does the patient have a capable caregiver
     Then I save and continue the complete CARL form
-    Then I click on "Independence" section on left navigator
+    Then I click on "Independence" "2" section on left navigator
     Then I will wait to see the CARL section "Independence" header appears on the CARL form
     Then I click on "Cognitive Status" dropdown on Independece Section
     Then I select "Forgetful" option in dropdown for cognitive status
@@ -569,7 +569,7 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     Then I select "Assistance needed for one or more ADLs" option in dropdown for cognitive status
     Then I click on "Ambulatory Status" dropdown on Independece Section
     Then I select "Assistive device needed" option in dropdown for cognitive status
-    Then I click on "Anticipated Discharge Needs" section on left navigator
+    Then I click on "Anticipated Discharge Needs" "3" section on left navigator
     Then I will wait to see the CARL section "Anticipated Discharge Needs" header appears on the CARL form
     Then I click "Physical therapy" checkbox under Therapies Needed on Anticipated Discharge Needs section
     Then I select "Injectable Meds" checkbox for Transition of Care Needs on Anticipated Discharge Needs
@@ -591,7 +591,7 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
-    Then I click on "Discharge" section on left navigator
+    Then I click on "Discharge" "4" section on left navigator
     Then I save and continue the complete CARL form
     Then I click on the Submit button to submit the CARL form
     Then I wait to the see the visibility of loader to disappear
@@ -700,7 +700,7 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     Then I will wait to see the CARL section "Caregiver" header appears on the CARL form
     Then I click on Yes, 24 hours a day option under Does the patient have a capable caregiver
     Then I save and continue the complete CARL form
-    Then I click on "Independence" section on left navigator
+    Then I click on "Independence" "2" section on left navigator
     Then I will wait to see the CARL section "Independence" header appears on the CARL form
     Then I click on "Cognitive Status" dropdown on Independece Section
     Then I select "Forgetful" option in dropdown for cognitive status
@@ -708,7 +708,7 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     Then I select "Assistance needed for one or more ADLs" option in dropdown for cognitive status
     Then I click on "Ambulatory Status" dropdown on Independece Section
     Then I select "Assistive device needed" option in dropdown for cognitive status
-    Then I click on "Anticipated Discharge Needs" section on left navigator
+    Then I click on "Anticipated Discharge Needs" "3" section on left navigator
     Then I will wait to see the CARL section "Anticipated Discharge Needs" header appears on the CARL form
     Then I click "Physical therapy" checkbox under Therapies Needed on Anticipated Discharge Needs section
     Then I select "Injectable Meds" checkbox for Transition of Care Needs on Anticipated Discharge Needs
@@ -729,7 +729,7 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
-    Then I click on "Discharge" section on left navigator
+    Then I click on "Discharge" "4" section on left navigator
     Then I save and continue the complete CARL form
     Then I click on the Submit button to submit the CARL form
     Then I wait to the see the visibility of loader to disappear

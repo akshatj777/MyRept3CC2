@@ -32,7 +32,7 @@ public class NoteCreation extends BaseClass {
 	public NoteCreation(WebDriver driver) {
 		super(driver);
 	}
-
+	
 	public void I_click_on_the_patient_card_on_Patient_Card_Page() {
 		clickElement(driver.findElement(By.cssSelector("div.row.cards-mode.isotope > div:nth-child(1) > div > div.card-header.col-xs-12.hover-pointer.ng-scope > div.card-header-content > div")));
 	}
@@ -334,16 +334,14 @@ public class NoteCreation extends BaseClass {
 		clickElement(driver.findElement(By.cssSelector("table > tbody > tr:nth-child(1) > td:nth-child(1) > a > span ")));
 	}
 
-	public void IverifymessageshoulddisplayingreencolorYourclinicaldocumentforAngelaPenahasbeenadded() {
+	public void IverifymessageshoulddisplayingreencolorYourclinicaldocumentfortheuser() {
 		String created_note_message = driver.findElement(By.cssSelector("div.alert.alert-action.alert-page.alert-dismissible.ng-scope.alert-success > div > div > div > content > description > message")).getText();
 		String search = Igetthenameofthefirstpatientfromthepatientlistonpatientcardpage();
 		String[] words = search.split(",");
 		String lastname = words[0];
 		String firstname = words[1];
-		if (created_note_message.equals("Your clinical document for " + firstname + " " + lastname + " has been added")) {
-			return;
-		}
-	}
+		Assert.assertEquals(created_note_message, "Your clinical document for " + firstname + " " + lastname + " has been added");
+	  }
 
 	public void IverifyonnotificationthereshouldbelinktoViewclinicaldocument() {
 		clickElement(driver.findElement(By.cssSelector("a.btn.btn-outbound.ng-binding")));

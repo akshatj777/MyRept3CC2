@@ -154,9 +154,9 @@ public class PatientNotesPatientCardSteps extends DriverScript {
 		noteCreation.IverifythatcreateNotehasbeensuccessfullycreated();
 	}
 
-	@Then("^I verify message should display in green color Your clinical document for Angela Pena has been added$")
-	public void I_verify_message_should_display_in_green_color_Your_clinical_document_for_Angela_Pena_has_been_added() throws Throwable {
-		noteCreation.IverifymessageshoulddisplayingreencolorYourclinicaldocumentforAngelaPenahasbeenadded();
+	@Then("^I verify message should display in green color Your clinical document for the user$")
+	public void I_verify_message_should_display_in_green_color_Your_clinical_document_for_the_user() throws Throwable {
+		noteCreation.IverifymessageshoulddisplayingreencolorYourclinicaldocumentfortheuser();
 	}
 
 	@Then("^I verify on notification there should be link to View clinical document$")

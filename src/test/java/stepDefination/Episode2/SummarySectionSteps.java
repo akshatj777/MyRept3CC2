@@ -189,6 +189,22 @@ public class SummarySectionSteps extends DriverScript {
 		patientclinical.Iwillwaittoseeandclickontext(text,tag);
 	}
 	
+	@Then ("^I switch to \"([^\"]*)\" frame followed by \"([^\"]*)\"$")
+	public void I_switch_to_frame(String frame,String cssvalue)
+	{
+		patientclinical.Iswitchtoframe(frame,cssvalue);
+	}
+	@Then ("^I will wait to see and click on Notes tab in Care plan$")
+	public void I_will_wait_to_see_and_click_on_Notes_tab_in_Care_plan()
+	{
+		patientclinical.IwillwaittoseeandclickonNotestabinCareplan();
+	}
+	
+	@Then ("^I verify \"([^\"]*)\"  notes should not appear in Notes in Care Plan$")
+	public void notes_should_not_appear_in_Notes_in_Care_Plan()
+	{
+		patientclinical.notesshouldnotappearinNotesinCarePlan();
+	}
 	@Then("^I will wait to see and click on \"([^\"]*)\" with attribute \"([^\"]*)\" \"([^\"]*)\" in \"([^\"]*)\" tag$")
 	public void I_will_wait_to_see_and_click_on_attribute_in_tag(String name,String variable,String value,String tag) throws Throwable {
 		patientclinical.Iwillwaittoseeandclickonattributeintag(variable,value,tag);

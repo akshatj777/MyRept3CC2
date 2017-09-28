@@ -892,4 +892,20 @@ public class PatientClinicalDocuments extends BaseClass {
 			clickElement(driver.findElement(By.xpath("//a[contains(text(),'Save & Continue')]")));
 			
 		}
+
+		public void IwillwaittoseeandclickonNotestabinCareplan() {
+			delay();
+			clickElement(driver.findElement(By.xpath("//a[@href='#careFlowNotes']")));
+		}
+
+		public void Iswitchtoframe(String frame, String cssvalue) {
+			WebDriverWait wait=new WebDriverWait(driver,30);
+			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(driver.findElement(By.cssSelector(""+cssvalue+""))));
+
+		}
+
+		public void notesshouldnotappearinNotesinCarePlan() {
+			WebDriverWait wait=new WebDriverWait(driver,5);
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@id='notesTable']/tbody/tr[1]")));
+		}
 		}

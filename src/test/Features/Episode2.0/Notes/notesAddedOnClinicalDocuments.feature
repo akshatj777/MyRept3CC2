@@ -61,7 +61,15 @@ Feature: Notes Sorting on Clinical Documents
     Then I will wait to see "Baseline" appearing in the "Document" "1" column in row "1" in Document table in Clinical Documents
     Then I click on the cross button Note Read only form to navigate to patient card
     Then I click on the patient card to navigate to the patient summary page
-    Then I click on the Activity tab on the Patient Summary Page
+    Then I will wait to see and click on "Care Plan" followed by "span" tag
+    Then I wait to the see the visibility of loader to disappear
+    Then I switch to "Care Plan" frame followed by "#iFrameEC2PatientCarePlan"
+    Then I will wait to see and click on Notes tab in Care plan
+    Then I wait to the see the visibility of loader to disappear
+    Then I verify "Baseline" notes should not appear in Notes in Care Plan
+    When I switch to default window from iframe
+    Then I will wait to see and click on "Activity" followed by "span" tag
+    Then I wait to the see the visibility of loader to disappear
     Then I switch to the Activity frame on the Patient Summary Page
     Then I click on the Notification button on the Activity frame on Patient Summary Page
     Then I Verify that the notification logs activity date on the Notification on Activity tab on Patient Summary

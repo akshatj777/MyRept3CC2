@@ -73,6 +73,11 @@ public class CompleteCarlformSteps extends DriverScript {
 	public void I_ClickOn_Option_Under_DoesThePatientHaveACapableCaregiver_question(String text) throws Throwable {
 		completecarl.IClickOnOptionsUnderDoesThePatientHaveACapableCaregiverQuestioin(text);
 	}
+	
+	@Then("^I verify on moving the mouse hover away from the icon the message should disapper$")
+	public void I_verify_on_moving_the_mouse_hover_away_from_the_icon_the_message_should_disapper() throws Throwable {
+		completecarl.Iverifyonmovingthemousehoverawayfromtheiconthemessageshoulddisapper();
+	}
 
 	@Then("^I verify that Care Network Member drop down should appear under Choose Caregiver section in Caregiver on takeover page$")
 	public void I_Verify_That_CareNetworkMember_DropDown_Should_Appear_Under_ChooseCaregiverSection() throws Throwable {

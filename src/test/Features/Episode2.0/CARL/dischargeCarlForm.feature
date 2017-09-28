@@ -60,12 +60,10 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear
     Then I click on the delete button on the transition to delete all the transitions
-    Then I wait for 3000 milli seconds
     Then I wait to the see the visibility of loader to disappear
     Then I click on add a new transition to add a new episode
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag
-    Then I wait for 3000 milli seconds
     Then I fill in "Admit" with logic "minus" with "8" days
     Then I wait to the see the visibility of loader to disappear
     Then I select the care setting value "HHH - Hospital" on add a new transition
@@ -75,11 +73,9 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I click on the Diagnosis and DRG tab on add a new transition to select the DRG
     Then I select the "Working" DRG type on the Diagnosis and DRG tab on add a new transition
     Then I select the "61" DRG value on the Diagnosis and DRG tab on add a new transition
-    Then I wait for 5000 milli seconds
     Then I click on the Create Transition Button to add a new transition
     Then I wait to the see the visibility of loader to disappear
     When I switch to default window from iframe
-    Then I wait for 1000 milli seconds
     Then I close the patient summary Page
     Then I verify current page "Remedy Partners" title
     When I click on Filter button present on Patient Page
@@ -89,7 +85,7 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
-    Then I click on "Discharge" section on left navigator
+    Then I click on "Discharge" "4" section on left navigator
     And I verify the "Discharge" section of the carl form upon clicking on it
     Then I verify that "Discharge" section on carl form should be highlighted in left navigator upon clicking
     Then I verify "Next Site of Care" appears on Discharge section of carl form
@@ -185,7 +181,7 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
-    Then I click on "Discharge" section on left navigator
+    Then I click on "Discharge" "4" section on left navigator
     Then I click on "Actual Care Setting" subform dropdown under Recommendation on Discharge section
     Then I select "(HHH) Hospital" in subform dropdown for "Actual Care Setting" on Discharge section
     Then I click on "Care Type" subform dropdown under Recommendation on Discharge section
@@ -323,7 +319,7 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
-    Then I click on "Discharge" section on left navigator
+    Then I click on "Discharge" "4" section on left navigator
     Then I click on "Actual Care Setting" subform dropdown under Recommendation on Discharge section
     Then I select "(SNF) Skilled Nursing Facility" in subform dropdown for "Actual Care Setting" on Discharge section
     Then I click on "Care Type" subform dropdown under Recommendation on Discharge section
@@ -384,7 +380,7 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
-    Then I click on "Discharge" section on left navigator
+    Then I click on "Discharge" "4" section on left navigator
     Then I click on "Actual Care Setting" subform dropdown under Recommendation on Discharge section
     Then I select "(HHA) Home Health Agency" in subform dropdown for "Actual Care Setting" on Discharge section
     Then I click on "Care Type" subform dropdown under Recommendation on Discharge section
@@ -475,7 +471,7 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I get the patient last name who have no CARL button in it
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
-    Then I click on "Independence" section on left navigator
+    Then I click on "Independence" "2" section on left navigator
     Then I will wait to see the CARL section "Independence" header appears on the CARL form
     Then I click on "Cognitive Status" dropdown on Independece Section
     Then I select "Forgetful" option in dropdown for cognitive status
@@ -483,12 +479,12 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I select "Assistance needed for one or more ADLs" option in dropdown for cognitive status
     Then I click on "Ambulatory Status" dropdown on Independece Section
     Then I select "Caregiver needed" option in dropdown for cognitive status
-    Then I click on "Anticipated Discharge Needs" section on left navigator
+    Then I click on "Anticipated Discharge Needs" "3" section on left navigator
     Then I will wait to see the CARL section "Anticipated Discharge Needs" header appears on the CARL form
     Then I click "Physical therapy" checkbox under Therapies Needed on Anticipated Discharge Needs section
     Then I select "Injectable Meds" checkbox for Transition of Care Needs on Anticipated Discharge Needs
     Then I click "Once daily or less often" radio option under "Injectable Meds" for Transition Care Needs
-    Then I click on "Discharge" section on left navigator
+    Then I click on "Discharge" "4" section on left navigator
     Then I will wait to see the CARL section "Discharge" header appears on the CARL form
     Then I click on "Actual Care Setting" subform dropdown under Recommendation on Discharge section
     Then I select "(HHA) Home Health Agency" in subform dropdown for "Actual Care Setting" on Discharge section
@@ -592,7 +588,7 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I verify Save and Go Back does not appear on the "Caregiver" section on CARL form
     Then I click on Yes, 24 hours a day option under Does the patient have a capable caregiver
     Then I save and continue the complete CARL form
-    Then I click on "Independence" section on left navigator
+    Then I click on "Independence" "2" section on left navigator
     Then I will wait to see the CARL section "Independence" header appears on the CARL form
     Then I click on "Cognitive Status" dropdown on Independece Section
     Then I select "Forgetful" option in dropdown for cognitive status
@@ -603,7 +599,7 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I click on the Save and Go Back on the "Independence" section on CARL form
     Then I will wait to see the CARL section "Caregiver" header appears on the CARL form
     Then I verify on Yes, 24 hours a day option is enabled under Does the patient have a capable caregiver
-    Then I click on "Independence" section on left navigator
+    Then I click on "Independence" "2" section on left navigator
     Then I verify "Forgetful" option appears in dropdown for "Cognitive Status" label on "Independence" on CARL form
     Then I verify "Assistance needed for one or more ADLs" option appears in dropdown for "Activities of Daily Living" label on "Independence" on CARL form
     Then I verify "Assistive device needed" option appears in dropdown for "Ambulatory Status" label on "Independence" on CARL form
@@ -675,7 +671,7 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I get the patient last name who have no CARL button in it
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
-    Then I click on "Independence" section on left navigator
+    Then I click on "Independence" "2" section on left navigator
     Then I will wait to see the CARL section "Independence" header appears on the CARL form
     Then I click on "Cognitive Status" dropdown on Independece Section
     Then I select "Forgetful" option in dropdown for cognitive status
@@ -683,12 +679,12 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I select "Assistance needed for one or more ADLs" option in dropdown for cognitive status
     Then I click on "Ambulatory Status" dropdown on Independece Section
     Then I select "Caregiver needed" option in dropdown for cognitive status
-    Then I click on "Anticipated Discharge Needs" section on left navigator
+    Then I click on "Anticipated Discharge Needs" "3" section on left navigator
     Then I will wait to see the CARL section "Anticipated Discharge Needs" header appears on the CARL form
     Then I click "Physical therapy" checkbox under Therapies Needed on Anticipated Discharge Needs section
     Then I select "Injectable Meds" checkbox for Transition of Care Needs on Anticipated Discharge Needs
     Then I click "Once daily or less often" radio option under "Injectable Meds" for Transition Care Needs
-    Then I click on "Discharge" section on left navigator
+    Then I click on "Discharge" "4" section on left navigator
     And I click on the top user account link
     Then I select Log Out option from the dropdown
     Given I am on the login page
@@ -734,7 +730,7 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I get the patient last name who have no CARL button in it
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
-    Then I click on "Discharge" section on left navigator
+    Then I click on "Discharge" "4" section on left navigator
     Then I will wait to see the CARL section "Discharge" header appears on the CARL form
     Then I click on "Actual Care Setting" subform dropdown under Recommendation on Discharge section
     Then I select "(HHA) Home Health Agency" in subform dropdown for "Actual Care Setting" on Discharge section

@@ -107,7 +107,7 @@ public class PatientsPage extends BaseClass {
 	public void iClickOnFiltersButtonPresentOnFilterPage() {
 		delay();
 		iWillWaitToSee(By.cssSelector("div.row-controls>a"));
-		clickElement(driver.findElement(By.cssSelector("div.row-controls>a")));
+        clickElement(driver.findElement(By.cssSelector("div.row-controls>a")));
 	}
 
 	public void iVerifyVariousFilterIsPresentUnderListofFilterOptions(String filterOption) {
@@ -1312,9 +1312,23 @@ public class PatientsPage extends BaseClass {
 					String count = getTextForElement(driver.findElement(By.cssSelector(".controls-bar.ng-scope>div>strong")));
 					String count_in=count.substring(0, count.length() - 9).replaceAll(",", "");
 					Patient_count = Integer.parseInt(count_in);
+					longDelay();
+				    clickElement(driver.findElement(By.xpath("//a[@ng-click='handleExportButton()']")));
+					Actions action=new Actions(driver);
+					String myclass=driver.findElement(By.cssSelector("#current-facility")).getAttribute("class");
+						while(!myclass.contains("ng-not-empty")){
+							    action.moveToElement(driver.findElement(By.xpath("//label[@for='select-all']/i[@class='valentino-icon']"))).click().perform();		
+							    myclass=driver.findElement(By.cssSelector("#current-facility")).getAttribute("class");
+							    delay();
+							    }
+						WebDriverWait wait=new WebDriverWait(driver,30);
+						wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//button[@ng-click='exportToCsvFile()' and @disabled='disabled']")));
+				        clickElement(driver.findElement(By.xpath("//button[@ng-click='exportToCsvFile()']")));
+						delay();
+						verifyDownloadedFile("export");
 				}
 			} }
-		else if(str.contains("equal"))
+		 if(str.contains("equal"))
 		{
 			clickElement(driver.findElement(By.cssSelector(".filter-bar-search-left .btn-quaternary span")));
 			delay();
@@ -1329,8 +1343,7 @@ public class PatientsPage extends BaseClass {
 			String count = getTextForElement(driver.findElement(By.cssSelector(".controls-bar.ng-scope>div>strong")));
 			String count_in=count.substring(0, count.length() - 9).replaceAll(",", "");
 			Patient_count = Integer.parseInt(count_in);
-		}
-		    longDelay();
+			longDelay();
 		    clickElement(driver.findElement(By.xpath("//a[@ng-click='handleExportButton()']")));
 			Actions action=new Actions(driver);
 			String myclass=driver.findElement(By.cssSelector("#current-facility")).getAttribute("class");
@@ -1344,6 +1357,8 @@ public class PatientsPage extends BaseClass {
 		        clickElement(driver.findElement(By.xpath("//button[@ng-click='exportToCsvFile()']")));
 				delay();
 				verifyDownloadedFile("export");
+		}
+		    
 	}
 		
 			 public void verifyDownloadedFile(String fileName) {

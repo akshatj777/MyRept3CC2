@@ -43,7 +43,6 @@ Feature: Verify the Clinical Documents section
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter SSN "784222717"
     Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
@@ -259,6 +258,8 @@ Feature: Verify the Clinical Documents section
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I switch to PatientTransitions frame
+    Then I wait to the see the visibility of loader to disappear
+    Then I delete the active transition no "1" to make the patient cancelled
     Then I wait to the see the visibility of loader to disappear
     Then I click on add a new transition to add a new episode
     Then I wait to the see the visibility of loader to disappear

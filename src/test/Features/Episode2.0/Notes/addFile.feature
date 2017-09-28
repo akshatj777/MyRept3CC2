@@ -134,7 +134,7 @@ Feature: Note - Add files
     Then I verify user should be able to remove the file by selecting the trash icon
     Then I click on the create Note Button on Add Clinical Document on Patient Card
     Then I verify that create Note has been successfully created
-    Then I verify message should display in green color Your clinical document for Angela Pena has been added
+    Then I verify message should display in green color Your clinical document for the user
     Then I verify on notification there should be link to View clinical document
 
   Scenario Outline: To verify user should be able to cancel the Note creation and user is able to select previous,current and future date.
@@ -178,7 +178,7 @@ Feature: Note - Add files
     Then I verify on canceling Note creation Note window should get close
 
     Examples: 
-      | date       |
-      | 12/07/2014 |
-      | 15/05/2017 |
-      | 26/10/2026 |
+      | date |
+      |   40 |
+      |    0 |
+      |  -40 |

@@ -69,7 +69,7 @@ public class DischargeCarlForm extends BaseClass {
 	}
 	
 	public void IClickOnSubFormDropDownUnderRecommendationOnDischargeSectionOnCarlForm(String text) {
-		delay(); 
+		longDelay(); 
        try{
 		clickElement(driver.findElement(By.xpath("//label[text()='"+text+"']/preceding-sibling::div")));
 		}catch(Exception e)
@@ -539,9 +539,9 @@ public class DischargeCarlForm extends BaseClass {
 
 	public void IclickonActualCare_SettingsubformdropdownunderRecommendationonDischargesection() {
 		delay();
-		iWillWaitToSee(By.cssSelector("div:nth-child(1) > div > div.col-xs-8 > div:nth-child(1) > div.form-control > div.ui-select-match"));
-		
-//		Actions action=new Actions(driver);
-//		action.moveToElement(driver.findElement(By.cssSelector("div:nth-child(1) > div > div.col-xs-8 > div:nth-child(1) > div.form-control > div.ui-select-match"))).click().perform();
+		iWillWaitToSee(By.xpath("//div[(@ng-model='admission.dischargeFacilityCategory')]"));
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[(@ng-model='admission.dischargeFacilityCategory')]")));
+		clickElement(driver.findElement(By.xpath("//div[(@ng-model='admission.dischargeFacilityCategory')]")));
 		}
 }

@@ -98,10 +98,10 @@ public class CompleteCarlform extends BaseClass {
 
 	public void IClickOnOptionsUnderDoesThePatientHaveACapableCaregiverQuestioin(String text) {
 		clickElement(driver.findElement(By.xpath("//span[contains(text(),'" + text + "')]")));
-		WebDriverWait wait=new WebDriverWait(driver,5);
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div.tooltip.ng-scope.ng-isolate-scope")));
 	}
-
+	
+    
+	
 	public void IVerifyThatCareNetworkMemberDropDwonAppearsUnderChooseCaregiverSection() {
 		isElementVisible(driver.findElement(By.cssSelector(".col-md-8")));
 	}
@@ -303,6 +303,12 @@ public class CompleteCarlform extends BaseClass {
 	public void IselectoptionfromdropdowntocreateCaregiver(String value) {
 		clickElement(driver.findElement(By.cssSelector("div:nth-child(3) > div.col-xs-8 > div > div.ui-select-match.ng-scope")));
 		clickElement(driver.findElement(By.xpath("//span[@class='ui-select-choices-row-inner']/div[text()='"+value+"']")));
+		
+	}
+
+	public void Iverifyonmovingthemousehoverawayfromtheiconthemessageshoulddisapper() {
+        WebDriverWait wait=new WebDriverWait(driver,5);
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div.tooltip.ng-scope.ng-isolate-scope")));
 		
 	}
 
