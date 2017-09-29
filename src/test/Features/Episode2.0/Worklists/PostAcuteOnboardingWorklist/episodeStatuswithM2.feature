@@ -70,7 +70,7 @@ Feature: Patient status in Post Acute Onboarding Worklist
     Then I scroll the page to bottom by "-100"
     Then I will wait to see and click on "Post Acute" followed by "span" tag
     Then I will wait to see and click on "Post-Acute Onboarding" followed by "span" tag
-       Then I wait to the see the visibility of loader to disappear
+    Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page

@@ -239,7 +239,7 @@ Feature: Patient status on Readmission Discharges Work List
     Then I select the "Discharge" "caresetting" "REH - Rehabilitation" by "#bp_personbundle_bpadmissiontype_dischargeFacilityCategory" on add a new transition
     Then I wait to the see the visibility of loader to disappear
     Then I select the "Discharge" "caretype" "Inpatient" by "#bp_personbundle_bpadmissiontype_dischargeCareType" on add a new transition
-    Then I select the "Discharge" facility "CHI Saint Luke's Health Memorial Lufkin IRF" by "#s2id_bp_personbundle_bpadmissiontype_dischargeFacility" on add a new transition
+    Then I select the "Discharge" facility "CHI Saint" by "#s2id_bp_personbundle_bpadmissiontype_dischargeFacility" on add a new transition
     Then I click on the Create Transition Button to add a new transition
     Then I wait to the see the visibility of loader to disappear
     When I switch to default window from iframe
