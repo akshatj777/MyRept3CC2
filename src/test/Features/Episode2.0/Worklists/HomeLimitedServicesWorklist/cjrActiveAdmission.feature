@@ -149,7 +149,6 @@ Feature: Patient status on Home Limited Service Worklist
     Then I will fetch the value attribute of "Social Security Number" on patient details
     When I switch to default window from iframe
     Then I will wait to see and click on "Transitions" followed by "span" tag
-    Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear
     Then I delete the active transition no "2" to make the patient cancelled

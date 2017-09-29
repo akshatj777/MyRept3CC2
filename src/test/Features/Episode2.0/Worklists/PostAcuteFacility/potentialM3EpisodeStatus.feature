@@ -98,6 +98,7 @@ Feature: Patient status on Post Acute Facility Work List
     Then I select the "3" DRG value on the Diagnosis and DRG tab on add a new transition
     Then I click on update transition to add a new episode
     Then I wait to the see the visibility of loader to disappear
+    When I switch to default window from iframe
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
     Then I will wait to see and click on "Post Acute" followed by "span" tag

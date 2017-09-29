@@ -682,11 +682,11 @@ public class PatientClinicalDocuments extends BaseClass {
 				driver.findElement(By.cssSelector("#bp_personbundle_bpadmissiontype_dischargeDate")).click();
 		}try {
 			WebDriverWait wait = new WebDriverWait(driver, 60);
-			wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("body > div:nth-child(17) > div.datetimepicker-days > table > thead> tr > th:nth-child(2)")));
-			wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("body > div:nth-child(17) > div.datetimepicker-days > table > thead> tr > th:nth-child(2)"))).click();
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[13]/div[3]/table/thead/tr[1]/th[2]")));
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[13]/div[3]/table/thead/tr[1]/th[2]"))).click();
 		}catch (WebDriverException wde) {
-			scrollToElement(driver.findElement(By.cssSelector("body > div:nth-child(17) > div.datetimepicker-days > table > thead> tr > th:nth-child(2)")));
-			driver.findElement(By.cssSelector("body > div:nth-child(17) > div.datetimepicker-days > table > thead> tr > th:nth-child(2)")).click();
+			scrollToElement(driver.findElement(By.xpath("/html/body/div[13]/div[3]/table/thead/tr[1]/th[2]")));
+			driver.findElement(By.xpath("/html/body/div[13]/div[3]/table/thead/tr[1]/th[2]")).click();
 		}
 		}
 		
@@ -715,13 +715,13 @@ public class PatientClinicalDocuments extends BaseClass {
 			list_AllDateToBook.get(Integer.parseInt(date_dd_MM_yyyy[0]) - 1).click();
 			clickElement(driver.findElement(By.cssSelector("span.hour.active")));
 			clickElement(driver.findElement(By.cssSelector("span.minute.active")));
-		
+			
 		}else if(logic.equals("Discharge"))
 		{
-	    iWillWaitToSee(By.cssSelector("body > div:nth-child(18) > div.datetimepicker-months > table > thead > tr > th.next"));
-		iWillWaitToSee(By.cssSelector("body > div:nth-child(18) > div.datetimepicker-months > table > thead > tr > th.prev"));
-		WebElement nextLink = driver.findElement(By.cssSelector("body > div:nth-child(18) > div.datetimepicker-months > table > thead > tr > th.next"));
-		WebElement previousLink = driver.findElement(By.cssSelector("body > div:nth-child(18) > div.datetimepicker-months > table > thead > tr > th.prev"));
+	    iWillWaitToSee(By.xpath("/html/body/div[13]/div[4]/table/thead/tr/th[3]"));
+		iWillWaitToSee(By.xpath("/html/body/div[13]/div[4]/table/thead/tr/th[3]"));
+		WebElement nextLink = driver.findElement(By.xpath("/html/body/div[13]/div[4]/table/thead/tr/th[3]"));
+		WebElement previousLink = driver.findElement(By.xpath("/html/body/div[13]/div[4]/table/thead/tr/th[3]"));
 		 if(yearDiff!=0){
              if(yearDiff>0){
                    for(int i=0;i< yearDiff;i++){

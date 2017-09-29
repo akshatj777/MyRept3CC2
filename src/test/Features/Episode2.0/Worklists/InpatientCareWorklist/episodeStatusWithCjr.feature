@@ -173,8 +173,6 @@ Feature: Patient status in Inpatient Care Worklist
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear
-    Then I delete the active transition no "1" to make the patient cancelled
-    Then I wait to the see the visibility of loader to disappear
     Then I click on add a new transition to add a new episode
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag

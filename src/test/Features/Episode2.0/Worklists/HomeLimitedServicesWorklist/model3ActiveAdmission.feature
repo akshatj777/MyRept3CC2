@@ -219,7 +219,6 @@ Feature: Patient status on Home Limited Service Worklist
     When I switch to default window from iframe
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the delete button on the transition to delete all the transitions
     Then I click on add a new transition to add a new episode
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag
@@ -245,6 +244,6 @@ Feature: Patient status on Home Limited Service Worklist
     Then I verify the patient "not present" on "Home With Limited Services" worklist on the Patient Card Page
 
     Examples: 
-      | email                | password  | Patient First Name | Patient Last Name | care setting             |
+      | email                | password  | Patient First Name | Patient Last Name | care setting                            |
       | qa.admin@yopmail.com | Episode1! | PATIENT            | MTHREEHOMELIMITED | HHA - Home With Limited Services Agency |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | MTHREEHOMELIMITED | HPC - Hospice            |
+      | qa.admin@yopmail.com | Episode1! | PATIENT            | MTHREEHOMELIMITED | HPC - Hospice                           |

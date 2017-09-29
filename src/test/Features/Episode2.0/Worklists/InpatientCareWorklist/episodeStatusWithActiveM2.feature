@@ -86,11 +86,11 @@ Feature: Patient status in Inpatient Care Worklist
       | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTINPATIENTCARE | Possible | Inpatient |
 
   Scenario Outline: Verify patient status in inpatient care with HHH- Inpatient  with confirmed Working/Final respectively BPCI M2 DRG.
-      Given I am on the login page
+    Given I am on the login page
     When I enter email field <email> for login
     And I enter password field <password> for Login
     Then I click Access button
-     Then I should see Tile text Episodes 2.0
+    Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
     Then I verify current page "Remedy Partners" title
     And I should see "All" tab in the filter bar on patients page
@@ -118,7 +118,6 @@ Feature: Patient status in Inpatient Care Worklist
     Then I wait to the see the visibility of loader to disappear
     Then I click on the edit button on the "1" transition to edit the Active transition
     Then I wait to the see the visibility of loader to disappear
-    Then I will wait to see "Transition Info" followed by "a" tag
     Then I click on the Diagnosis and DRG tab on add a new transition to select the DRG
     Then I select the "<DRG type>" DRG type on the Diagnosis and DRG tab on add a new transition
     Then I select the "63" DRG value on the Diagnosis and DRG tab on add a new transition
@@ -142,11 +141,11 @@ Feature: Patient status in Inpatient Care Worklist
       | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTINPATIENTCARE | Final    | Inpatient |
 
   Scenario Outline: Verify patient status in inpatient care with HHH-Scheduled with confirmed Possible/Working/Final respectively BPCI M2 DRG.
-       Given I am on the login page
+    Given I am on the login page
     When I enter email field <email> for login
     And I enter password field <password> for Login
     Then I click Access button
-     Then I should see Tile text Episodes 2.0
+    Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
     Then I verify current page "Remedy Partners" title
     And I should see "All" tab in the filter bar on patients page
@@ -172,11 +171,9 @@ Feature: Patient status in Inpatient Care Worklist
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear
-    Then I delete the active transition no "1" to make the patient cancelled
     Then I wait to the see the visibility of loader to disappear
     Then I click on add a new transition to add a new episode
     Then I wait to the see the visibility of loader to disappear
-    Then I will wait to see "Transition Info" followed by "a" tag
     Then I fill in "Admit" with logic "minus" with "6" days
     Then I wait to the see the visibility of loader to disappear
     Then I select the "Admit" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition

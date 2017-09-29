@@ -200,7 +200,7 @@ Scenario Outline: To verify the functionalities under Clinical Documents Section
     Then I click on "Care Type" subform dropdown under Recommendation on Discharge section
     Then I select "Inpatient" in subform dropdown for "Care Type" on Discharge section
     Then I click on "Discharge Location" subform dropdown under Recommendation on Discharge section
-    Then I enter "Stamford hospital" and select location in the Discharge Location search box
+    Then I enter "Stamford Hospital" and select location in the Discharge Location search box
     Then I click on Calendar Icon On Discharge date under subform on Discharge section
     Then I select "Discharge current" with logic "minus" "3" days on Calendar Discharge Date under subform on Discharge section
     Then I click on Done button under subform on Discharge sections

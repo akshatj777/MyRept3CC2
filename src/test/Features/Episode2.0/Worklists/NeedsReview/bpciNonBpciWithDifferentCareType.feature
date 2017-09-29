@@ -73,7 +73,6 @@ Feature: Patient status in Need Review Worklist
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
     Then I will wait to see and click on "Inpatient" followed by "span" tag
-    Then I will wait to see and click on "Need Review" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
     Then I enter "SSN" value under "ssn" filter
@@ -135,7 +134,6 @@ Feature: Patient status in Need Review Worklist
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
     Then I will wait to see and click on "Inpatient" followed by "span" tag
-    Then I will wait to see and click on "Need Review" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
     Then I enter "SSN" value under "ssn" filter
@@ -158,7 +156,6 @@ Feature: Patient status in Need Review Worklist
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
     Then I will wait to see and click on "Inpatient" followed by "span" tag
-    Then I will wait to see and click on "Need Review" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
     Then I enter "SSN" value under "ssn" filter
@@ -183,7 +180,6 @@ Feature: Patient status in Need Review Worklist
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
     Then I will wait to see and click on "Inpatient" followed by "span" tag
-    Then I will wait to see and click on "Need Review" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
     Then I enter "SSN" value under "ssn" filter
@@ -247,7 +243,6 @@ Feature: Patient status in Need Review Worklist
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
     Then I will wait to see and click on "Inpatient" followed by "span" tag
-    Then I will wait to see and click on "Need Review" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
     Then I enter "SSN" value under "ssn" filter
@@ -308,7 +303,6 @@ Feature: Patient status in Need Review Worklist
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
     Then I will wait to see and click on "Inpatient" followed by "span" tag
-    Then I will wait to see and click on "Need Review" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
     Then I enter "SSN" value under "ssn" filter

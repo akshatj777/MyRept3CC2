@@ -84,7 +84,12 @@ public class ExceededSnfLos extends BaseClass {
 			Assert.assertTrue(Int_Los_value > Int_ELos_maximum_value);
 		}else if(flag.equals("below"))
 		{
-			Assert.assertFalse(Int_Los_value < Int_ELos_minimum_value);
+			try{
+			Assert.assertTrue(Int_Los_value < Int_ELos_minimum_value);
+			}catch(Exception e)
+			{
+				return;
+			}
 		}
 	
 		}

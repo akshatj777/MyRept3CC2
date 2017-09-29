@@ -71,6 +71,17 @@ Feature: Episode 2.0 Export Patient List
     Then I verify the total number of patients present on the Patients Page
     Then I fetch the count of patients appearing on the Patients Page
     Then I verify the export functionality with patient count "less than 1000"
+    Then I scroll the page to bottom by "-100"
+    And I click on the top user account link
+    Then I select Log Out option from the dropdown
+    Given I am on the login page
+    When I enter email field pgoel+medicareTCS@remedypartners.com for login
+    And I enter password field Testing1 for Login
+    Then I click Access button
+    Then I should see Tile text Episodes 2.0
+    When I click on the "Episodes 2.0" tile
+    Then I verify current page "Remedy Partners" title
+    Then I click on "Inpatient" tab in the filter bar on patients page
     Then I click on "Inpatient Care" tab in the filter bar on patients page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the export functionality with patient count "equal to 0"

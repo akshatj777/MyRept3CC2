@@ -177,7 +177,7 @@ Feature: Patient status on Home Health Worklist
       | email                | password  | Patient First Name | Patient Last Name     |
       | qa.admin@yopmail.com | Episode1! | FILTER             | MTHREEPATIENTAUTOMATE |
       
-    Scenario Outline: Verify patient should be present in Home Health worklist when Episode is M2 Active and patient is discharge to HHA - Home Health Agency
+    Scenario Outline: Verify patient should be present in Home Health worklist when Episode is M3 Active and patient is discharge to HHA - Home Health Agency
     Given I am on the login page
     When I enter email field <email> for login
     And I enter password field <password> for Login
