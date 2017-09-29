@@ -240,7 +240,7 @@ Feature: To verify the options and functionality of Caregiver section of Carl fo
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
     Then I will wait to see the "Transitionno" "2" appears on the transition table on the Patient Summary page
-    Then I will wait to see column "2" header "Facility" "(HHH) St Luke's - Allentown" appears in transition column "1" on transitions table on Patient Summary Page
+    Then I will wait to see column "2" header "Facility" "(HHA) St Luke's - Allentown" appears in transition column "1" on transitions table on Patient Summary Page
     When I switch to default window from iframe
    
 

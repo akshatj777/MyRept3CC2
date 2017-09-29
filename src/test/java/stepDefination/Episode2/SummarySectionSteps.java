@@ -83,6 +83,11 @@ public class SummarySectionSteps extends DriverScript {
 	public void I_click_on_the_Diagnosis_and_DRG_tab_on_add_a_new_transition_to_select_the_DRG() throws Throwable {
 		patientclinical.IclickontheDiagnosisandDRGtabonaddanewtransitiontoselecttheDRG();
 	}
+	
+	@Then("^I click on the Diagnosis and DRG tab on add a new transition to select the DRG using JavaScript$")
+	public void I_click_on_the_Diagnosis_and_DRG_tab_on_add_a_new_transition_to_select_the_DRG_using_JavaScript() throws Throwable {
+		patientclinical.IclickontheDiagnosisandDRGtabonaddanewtransitiontoselecttheDRGusingJavaScript();
+	}
 
 	@Then("^I select the DRG type on the Diagnosis and DRG tab on add a new transition$")
 	public void I_select_the_DRG_type_on_the_Diagnosis_and_DRG_tab_on_add_a_new_transition() throws Throwable {
@@ -201,7 +206,7 @@ public class SummarySectionSteps extends DriverScript {
 	}
 	
 	@Then ("^I verify \"([^\"]*)\"  notes should not appear in Notes in Care Plan$")
-	public void notes_should_not_appear_in_Notes_in_Care_Plan()
+	public void notes_should_not_appear_in_Notes_in_Care_Plan(String notes)
 	{
 		patientclinical.notesshouldnotappearinNotesinCarePlan();
 	}

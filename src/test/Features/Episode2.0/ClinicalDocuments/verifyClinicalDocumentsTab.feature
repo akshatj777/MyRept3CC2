@@ -1,6 +1,6 @@
 Feature: Verify the Clinical Documents section
 
-  Scenario Outline: To verify the functionalities under Clinical Documents Section
+Scenario Outline: To verify the functionalities under Clinical Documents Section
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
@@ -196,11 +196,11 @@ Feature: Verify the Clinical Documents section
     Then I click on "Discharge" "4" section on left navigator
     Then I will wait to see the CARL section "Discharge" header appears on the CARL form
     Then I click on "Actual Care Setting" subform dropdown under Recommendation on Discharge section
-    Then I select "(HHA) Home Health Agency" in subform dropdown for "Actual Care Setting" on Discharge section
+    Then I select "(HHH) Hospital" in subform dropdown for "Actual Care Setting" on Discharge section
     Then I click on "Care Type" subform dropdown under Recommendation on Discharge section
-    Then I select "Skilled Services" in subform dropdown for "Care Type" on Discharge section
+    Then I select "Inpatient" in subform dropdown for "Care Type" on Discharge section
     Then I click on "Discharge Location" subform dropdown under Recommendation on Discharge section
-    Then I enter "A Helping Hand Hha" and select location in the Discharge Location search box
+    Then I enter "Stamford hospital" and select location in the Discharge Location search box
     Then I click on Calendar Icon On Discharge date under subform on Discharge section
     Then I select "Discharge current" with logic "minus" "3" days on Calendar Discharge Date under subform on Discharge section
     Then I click on Done button under subform on Discharge sections
@@ -259,22 +259,12 @@ Feature: Verify the Clinical Documents section
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear
-    Then I delete the active transition no "1" to make the patient cancelled
+    Then I click on the edit button on the "1" transition to edit the Active transition
     Then I wait to the see the visibility of loader to disappear
-    Then I click on add a new transition to add a new episode
-    Then I wait to the see the visibility of loader to disappear
-    Then I will wait to see "Transition Info" followed by "a" tag
-    Then I fill in "Admit" with logic "minus" with "6" days
-    Then I select the care setting value "HHH - Hospital" on add a new transition
-    Then I wait to the see the visibility of loader to disappear
-    Then I select the care type value "Inpatient" on add a new transition
-    Then I wait to the see the visibility of loader to disappear
-    Then I select the facility value "Stamford Hospital" on add a new transition
     Then I click on the Diagnosis and DRG tab on add a new transition to select the DRG
     Then I select the "Working" DRG type on the Diagnosis and DRG tab on add a new transition
     Then I select the "61" DRG value on the Diagnosis and DRG tab on add a new transition
-    Then I wait to the see the visibility of loader to disappear
-    Then I click on the Create Transition Button to add a new transition
+    Then I click on update transition to add a new episode
     Then I wait to the see the visibility of loader to disappear
     When I switch to default window from iframe
     Then I close the patient summary Page
@@ -317,10 +307,10 @@ Feature: Verify the Clinical Documents section
     Examples: 
       | Notetext                                                                                                                                                       |
       | In above case we have String dateString in format so to convert the String to Date in given format we have Created Object formatter of Class SimpleDateFormat. |
-
+  
   Scenario Outline: The Last saved section on the clinical documents table should display the information of the last user who saved the individual form(To verify information Acivity column in Clinical Documents table).
     Given I am on the login page
-    When I enter email field qa.admin@yopmail.com for login
+    When I enter email field qa.emblemrn@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes
@@ -397,3 +387,5 @@ Feature: Verify the Clinical Documents section
     Examples: 
       | date | Text Description        |
       |   12 | Remedy Document Section |
+
+     

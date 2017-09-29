@@ -1292,13 +1292,15 @@ public class PatientsPage extends BaseClass {
 	        clickElement(driver.findElement(By.xpath("//a[@ng-click='handleExportButton()']")));
 			isElementVisible(driver.findElement(By.xpath("//div[@state='exportDrawer.tooManyPatientsTooltip']")));
 			isElementVisible(driver.findElement(By.xpath("//div[contains(text(),'Lists with more than 1000 patients cannot be exported. Please refine your search.')]")));
+			clickElement(driver.findElement(By.cssSelector("body > div.main-container.container > div > div > div.row.controls-bar.ng-scope > div.col-md-6.col-sm-4.col-xs-12 > div > div:nth-child(2) > i.alert-close-icon")));
+			
 		    return;	
 		}
 		
 		 if(str.contains("less")){ 
 			if(Patient_count<=1000){
 				Assert.assertTrue(Patient_count<=1000);}
-			else{ while(!(Patient_count<=1000)){
+			else if(Patient_count>=1000){ while(!(Patient_count<=1000)){
 					clickElement(driver.findElement(By.cssSelector(".filter-bar-search-left .btn-quaternary span")));
 					delay();
 					clickElement(driver.findElement(By.cssSelector("div.row-controls>a")));
@@ -1306,13 +1308,16 @@ public class PatientsPage extends BaseClass {
 					delay();
 					clickElement(driver.findElement(By.xpath("//label[@for='genderM']/i")));
 					clickElement(driver.findElement(By.cssSelector("button[class='btn btn-primary'][ng-click='closeFilters()']")));
-					delay();
-					JavascriptExecutor js = ((JavascriptExecutor)driver);
+					iWillWaitToSee(By.cssSelector(".controls-bar.ng-scope>div>strong"));
+				
+			        longDelay();	
+			        JavascriptExecutor js = ((JavascriptExecutor)driver);
 			    	js.executeScript("scroll(0,-100)");
 					String count = getTextForElement(driver.findElement(By.cssSelector(".controls-bar.ng-scope>div>strong")));
 					String count_in=count.substring(0, count.length() - 9).replaceAll(",", "");
 					Patient_count = Integer.parseInt(count_in);
 					longDelay();
+			}
 				    clickElement(driver.findElement(By.xpath("//a[@ng-click='handleExportButton()']")));
 					Actions action=new Actions(driver);
 					String myclass=driver.findElement(By.cssSelector("#current-facility")).getAttribute("class");
@@ -1320,14 +1325,13 @@ public class PatientsPage extends BaseClass {
 							    action.moveToElement(driver.findElement(By.xpath("//label[@for='select-all']/i[@class='valentino-icon']"))).click().perform();		
 							    myclass=driver.findElement(By.cssSelector("#current-facility")).getAttribute("class");
 							    delay();
-							    }
-						WebDriverWait wait=new WebDriverWait(driver,30);
-						wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//button[@ng-click='exportToCsvFile()' and @disabled='disabled']")));
+							   }
+						delay();
 				        clickElement(driver.findElement(By.xpath("//button[@ng-click='exportToCsvFile()']")));
 						delay();
 						verifyDownloadedFile("export");
 				}
-			} }
+			} 
 		 if(str.contains("equal"))
 		{
 			clickElement(driver.findElement(By.cssSelector(".filter-bar-search-left .btn-quaternary span")));
@@ -1338,6 +1342,7 @@ public class PatientsPage extends BaseClass {
 			iFillInText(driver.findElement(By.xpath("//div[@class='ng-scope']/input")),"877344332");
 			clickElement(driver.findElement(By.cssSelector("button[class='btn btn-primary'][ng-click='closeFilters()']")));
 			delay();
+		
 			JavascriptExecutor js = ((JavascriptExecutor)driver);
 	    	js.executeScript("scroll(0,-100)");
 			String count = getTextForElement(driver.findElement(By.cssSelector(".controls-bar.ng-scope>div>strong")));
@@ -1352,11 +1357,9 @@ public class PatientsPage extends BaseClass {
 					    myclass=driver.findElement(By.cssSelector("#current-facility")).getAttribute("class");
 					    delay();
 					    }
-				WebDriverWait wait=new WebDriverWait(driver,30);
-				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//button[@ng-click='exportToCsvFile()' and @disabled='disabled']")));
-		        clickElement(driver.findElement(By.xpath("//button[@ng-click='exportToCsvFile()']")));
-				delay();
-				verifyDownloadedFile("export");
+			 clickElement(driver.findElement(By.xpath("//button[@ng-click='exportToCsvFile()']")));
+			delay();
+			verifyDownloadedFile("export");
 		}
 		    
 	}
@@ -1368,6 +1371,11 @@ public class PatientsPage extends BaseClass {
 				  String downloadFilepath = importDir + File.separator + "src" + File.separator + "test" + File.separator + "Imports" + File.separator + "Downloads" ;
 				  File dir = new File(downloadFilepath);
 				  File[] dir_contents = dir.listFiles();
+				  
+				  for (int i = 0; i < dir_contents.length; i++) 
+				     {
+					  dir_contents[i].delete();
+				     }
 				     for (int i = 0; i < dir_contents.length; i++) 
 				     {
 				      if(dir_contents[i].isFile())
@@ -1375,14 +1383,16 @@ public class PatientsPage extends BaseClass {
 				       if (dir_contents[i].getName().equals("export"))
 				       {
 				    	   Assert.assertEquals(fileName, dir_contents[i].getName());
+				    	   dir_contents[i].delete();
 				       }
 				       else
 				       {
 				    	   System.out.println("No Hurray");
 				       }
 				      }
-//		   		     
+		   		      
 				     }
+				 
 				  }
 				  catch(Exception e)
 				  {

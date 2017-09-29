@@ -4,6 +4,7 @@ import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -504,5 +505,12 @@ public class NoteCreation extends BaseClass {
 		longDelay();
 		isElementVisible(driver.findElement(By.xpath("//div[contains(@ng-repeat,'attachment in $clinicalDocument')]["+index+"]/div/span[contains(@class,'ng-binding')]")));
 		verifyTextForElement(driver.findElement(By.xpath("//div[contains(@ng-repeat,'attachment in $clinicalDocument')]["+index+"]/div/span[contains(@class,'ng-binding')]")),image);
+	}
+
+	public void Iverifyuserisabletouploadmultiplefiles() throws IOException {
+		String importDir = System.getProperty("user.dir");
+		String newDir = importDir + "\\" + "src" + "\\" + "test" + "\\" + "Imports";
+		String FileName="upload.exe";
+//	    Runtime.getRuntime().exec((newDir + "\\" + FileName) );
 	}
     }

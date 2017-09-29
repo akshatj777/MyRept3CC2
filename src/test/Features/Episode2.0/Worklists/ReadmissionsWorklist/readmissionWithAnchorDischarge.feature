@@ -89,7 +89,7 @@ Feature: Verify Readmission status with anchor discharge
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I verify the patient "present" on "Home Health" worklist on the Patient Card Page
+    Then I verify the patient "present" on "Readmissions" worklist on the Patient Card Page
 
     Examples: 
       | email                | password  | Patient First Name | Patient Last Name |

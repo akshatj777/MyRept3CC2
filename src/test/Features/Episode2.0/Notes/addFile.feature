@@ -49,7 +49,7 @@ Feature: Note - Add files
     And I enter the Note Text "Remedy Notes" in the textarea on Add Clinical Document on Patient Card
     Then I click on Add Files link on Note Section on Patient Card
     Then I verify that user should be able to select and upload file "<FileName>" through Add files link
-    Then I verify the image is attached or not
+    Then I verify the "<FileName>" image is successfully attached at index "1"
     Then I click on the create Note Button on Add Clinical Document on Patient Card
     Then I verify that create Note has been successfully created
     Then I verify Dismiss button should be there on notification message
@@ -121,15 +121,17 @@ Feature: Note - Add files
     And I verify Cancel button appears on the Add Clinical Document on Patient Card
     And I verify Create note appears on the Add Clinical Document on Patient Card
     And I enter the Note Text "Remedy Notes" in the textarea on Add Clinical Document on Patient Card
-    Then I click on Add Files link on Note Section on Patient Card
+  #  Then I click on Add Files link on Note Section on Patient Card
+ #   Then I verify user is able to upload multiple files
+ 
     Then I verify that user should be able to select and upload file "Remedy.csv" through Add files link
-    Then I verify the image is attached or not
+    Then I verify the "Remedy.csv" image is successfully attached at index "1"
     Then I click on Add Files link on Note Section on Patient Card
     Then I verify that user should be able to select and upload file "Remedy.doc" through Add files link
-    Then I verify the image is attached or not
+    Then I verify the "Remedy.doc" image is successfully attached at index "2"
     Then I click on Add Files link on Note Section on Patient Card
     Then I verify that user should be able to select and upload file "Remedy.txt" through Add files link
-    Then I verify the image is attached or not
+    Then I verify the "Remedy.txt" image is successfully attached at index "3"
     Then I verify that trash icon is available for each file after uploading all file
     Then I verify user should be able to remove the file by selecting the trash icon
     Then I click on the create Note Button on Add Clinical Document on Patient Card
@@ -172,7 +174,7 @@ Feature: Note - Add files
     And I enter the Note Text in the textarea on Add Clinical Document on Patient Card
     Then I click on Add Files link on Note Section on Patient Card
     Then I verify that user should be able to select and upload file "Remedy.csv" through Add files link
-    Then I verify the image is attached or not
+       Then I verify the "Remedy.csv" image is successfully attached at index "1"
     Then I click on the Cancel button on the Note Section on Patient Card
     Then I verify create note successful message doesnot appear on Patient Card
     Then I verify on canceling Note creation Note window should get close

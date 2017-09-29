@@ -908,4 +908,13 @@ public class PatientClinicalDocuments extends BaseClass {
 			WebDriverWait wait=new WebDriverWait(driver,5);
 			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@id='notesTable']/tbody/tr[1]")));
 		}
+
+		public void IclickontheDiagnosisandDRGtabonaddanewtransitiontoselecttheDRGusingJavaScript() {
+			WebElement element2=driver.findElement(By.xpath("//a[contains(text(),'Diagnosis and DRG')]"));
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].click();", element2);
+			clickElement(element2);
+	     	delay();
+			
+		}
 		}

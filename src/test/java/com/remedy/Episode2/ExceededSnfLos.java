@@ -79,10 +79,7 @@ public class ExceededSnfLos extends BaseClass {
 		int Int_Los_value = Integer.parseInt(Los_value);
 		int Int_ELos_minimum_value = Integer.parseInt(minimum_Elos_value);
 		int Int_ELos_maximum_value = Integer.parseInt(maximum_Elos_value);
-		System.out.println("$$$$Minimum Value is"+Int_ELos_minimum_value);
-		System.out.println("$$$$Maximum Value is"+Int_ELos_maximum_value);
-		System.out.println("$$$$Los_value Value is"+Int_Los_value );
-    	if(flag.equals("above"))
+		if(flag.equals("above"))
 		{
 			Assert.assertTrue(Int_Los_value > Int_ELos_maximum_value);
 		}else if(flag.equals("below"))

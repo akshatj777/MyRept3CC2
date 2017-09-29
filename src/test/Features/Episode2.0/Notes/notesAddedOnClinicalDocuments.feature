@@ -50,7 +50,7 @@ Feature: Notes Sorting on Clinical Documents
     And I enter the Note Text "Remedy Notes" in the textarea on Add Clinical Document on Patient Card
     Then I click on Add Files link on Note Section on Patient Card
     Then I verify that user should be able to select and upload file "Remedy.csv" through Add files link
-    Then I verify the image is attached or not
+    Then I verify the "Remedy.csv" image is successfully attached at index "1"
     Then I click on the create Note Button on Add Clinical Document on Patient Card
     Then I verify that create Note has been successfully created
     Then I wait to the see the visibility of loader to disappear
@@ -66,7 +66,7 @@ Feature: Notes Sorting on Clinical Documents
     Then I switch to "Care Plan" frame followed by "#iFrameEC2PatientCarePlan"
     Then I will wait to see and click on Notes tab in Care plan
     Then I wait to the see the visibility of loader to disappear
-    Then I verify "Baseline" notes should not appear in Notes in Care Plan
+    Then I verify "Baseline"  notes should not appear in Notes in Care Plan
     When I switch to default window from iframe
     Then I will wait to see and click on "Activity" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear

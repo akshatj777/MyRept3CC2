@@ -1,6 +1,7 @@
 package stepDefination.Episode2;
 
 import java.awt.AWTException;
+import java.io.IOException;
 import java.text.ParseException;
 
 import com.remedy.Episode2.NoteCreation;
@@ -178,6 +179,12 @@ public class PatientNotesPatientCardSteps extends DriverScript {
 	public void I_verify_that_Add_Files_link_is_clickable() throws Throwable {
 		noteCreation.IverifythatAdd_Fileslinkisclickable();
 	}
+	
+    @Then ("^I verify user is able to upload multiple files$")
+    public void I_verify_user_is_able_to_upload_multiple_files() throws IOException
+    {
+    	noteCreation.Iverifyuserisabletouploadmultiplefiles();
+    }
 
 	@Then("^I verify that user should be able to select and upload file \"(.*)\" through Add files link$")
 	public void I_verify_that_usershould_be_able_to_select_and_upload_files_from_the_computer_through_Add_files_link(String FileName) throws Throwable, AWTException, InterruptedException {
