@@ -29,6 +29,7 @@ Feature: Episode 2.0 Export Drawer Column List Verification
     Then I verify checkbox is present beside each of the column list in export drawer box
     Then I verify "Cancel" button is appearing in the export drawer box
     Then I click on "Cancel" button appearing on the export drawer box
+    Then I scroll the page to bottom by "-100"
     Then I verify current page "Remedy Partners" title
     When I click on Filter button present on Patient Page
     Then I verify "Filters" is appearing on clicking filters on patient page

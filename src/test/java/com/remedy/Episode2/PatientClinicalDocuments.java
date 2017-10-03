@@ -18,6 +18,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
+
+import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -28,6 +30,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import com.remedy.baseClass.BaseClass;
+
 
 public class PatientClinicalDocuments extends BaseClass {
 
@@ -481,7 +484,7 @@ public class PatientClinicalDocuments extends BaseClass {
 
 	public void IclickontheSubmitbuttontosubmittheCARLform() {
         clickElement(driver.findElement(By.cssSelector("div.top-row > div:nth-child(2) > button")));
-
+        delay(); 
 	}
 
 	public void IverifythatuponselectingHideHistoryusershouldonlyseetheinformationofthelastuserwhosavedtheform() {
@@ -519,10 +522,12 @@ public class PatientClinicalDocuments extends BaseClass {
 		  try
 		  {
 		  String filename=driver.findElement(By.cssSelector("div > div:nth-child(2) > div.attachment-info > div.margin-left-30 > a")).getText();
+		
 		  clickElement(driver.findElement(By.cssSelector(" div > div:nth-child(2) > div.valentino-icon-archive.hover-pointer")));
 		  String importDir = System.getProperty("user.dir");
 		  String downloadFilepath = importDir + File.separator + "src" + File.separator + "test" + File.separator + "Imports" + File.separator + "Downloads" ;
 		  File dir = new File(downloadFilepath);
+		  FileUtils.cleanDirectory(dir); 
 		  File[] dir_contents = dir.listFiles();
 		     for (int i = 0; i < dir_contents.length; i++) 
 		     {
@@ -650,7 +655,7 @@ public class PatientClinicalDocuments extends BaseClass {
 	}
 
 	public void IclickontheShowHistoryButtontoseethelistofuserwhosavedtheform() {
-		clickElement(driver.findElement(By.xpath("//a[contains(text(), 'Show History')]")));
+		clickElement(driver.findElement(By.xpath("//table/tbody/tr[2]/td[4]/span/a")));
 	}
 
 	public void IverifythatHideHistorylinkshouldappearwhenusercurrentlyonShowHistorysection() {

@@ -2,6 +2,7 @@ package com.remedy.Episode2;
 
 import com.remedy.baseClass.BaseClass;
 
+import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -1312,6 +1313,7 @@ public class PatientsPage extends BaseClass {
 			        longDelay();	
 			        JavascriptExecutor js = ((JavascriptExecutor)driver);
 			    	js.executeScript("scroll(0,-100)");
+			    	iWillWaitToSee(By.cssSelector(".controls-bar.ng-scope>div>strong"));
 					String count = getTextForElement(driver.findElement(By.cssSelector(".controls-bar.ng-scope>div>strong")));
 					String count_in=count.substring(0, count.length() - 9).replaceAll(",", "");
 					Patient_count = Integer.parseInt(count_in);
@@ -1325,8 +1327,11 @@ public class PatientsPage extends BaseClass {
 							    myclass=driver.findElement(By.cssSelector("#current-facility")).getAttribute("class");
 							    delay();
 							   }
+						System.out.println("Export Button working");
 						delay();
-				        clickElement(driver.findElement(By.xpath("//button[@ng-click='exportToCsvFile()']")));
+						WebDriverWait wait=new WebDriverWait(driver,10);
+						wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//button[@ng-click='exportToCsvFile()' and @disabled='disabled']")));
+					    clickElement(driver.findElement(By.xpath("//button[@ng-click='exportToCsvFile()']")));
 						delay();
 						verifyDownloadedFile("export");
 						longDelay();
@@ -1344,6 +1349,7 @@ public class PatientsPage extends BaseClass {
 			delay();
 		    JavascriptExecutor js = ((JavascriptExecutor)driver);
 	    	js.executeScript("scroll(0,-100)");
+	    	iWillWaitToSee(By.cssSelector(".controls-bar.ng-scope>div>strong"));
 			String count = getTextForElement(driver.findElement(By.cssSelector(".controls-bar.ng-scope>div>strong")));
 			String count_in=count.substring(0, count.length() - 9).replaceAll(",", "");
 			Patient_count = Integer.parseInt(count_in);
@@ -1356,6 +1362,8 @@ public class PatientsPage extends BaseClass {
 					    myclass=driver.findElement(By.cssSelector("#current-facility")).getAttribute("class");
 					    delay();
 					    }
+				WebDriverWait wait=new WebDriverWait(driver,10);
+		   wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//button[@ng-click='exportToCsvFile()' and @disabled='disabled']")));
 			clickElement(driver.findElement(By.xpath("//button[@ng-click='exportToCsvFile()']")));
 			delay();
 			verifyDownloadedFile("export");
@@ -1370,6 +1378,7 @@ public class PatientsPage extends BaseClass {
 				  String importDir = System.getProperty("user.dir");
 				  String downloadFilepath = importDir + File.separator + "src" + File.separator + "test" + File.separator + "Imports" + File.separator + "Downloads" ;
 				  File dir = new File(downloadFilepath);
+				  FileUtils.cleanDirectory(dir); 
 				  File[] dir_contents = dir.listFiles();
 				  
 				  

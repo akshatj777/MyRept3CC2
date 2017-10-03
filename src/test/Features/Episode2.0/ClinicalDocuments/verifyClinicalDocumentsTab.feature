@@ -210,24 +210,37 @@ Scenario Outline: To verify the functionalities under Clinical Documents Section
     Then I select the "Family" from the "Who disagrees?" dropdown "2" for "Reason1" under Recommendation on Discharge section
     Then I select the "Not enough caregiver support" from the "Reason for Disagreement" dropdown "4" for "Reason1" under Recommendation on Discharge section
     Then I verify that User should be able to provide additional comments "Additional" in a free text box
-    Then I save and continue the complete CARL form
+    Then I click on save and continue on "Discharge" on the complete CARL form
+    Then I verify user should be able to navigate to the read only form and no server error should appear on Discharge section
     Then I click on the Submit button to submit the CARL form
-    Then I click on the cross button to close the CARL document form
     Then I scroll the page to bottom by "-100"
     Then I verify current page "Remedy Partners" title
-    Then I click on "All" tab in the filter bar on patients page
+    Then I click on "Inpatient" tab in the filter bar on patients page
     When I click on Filter button present on Patient Page
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
-    Then I verify CARL button is "not appearing" on the patient card
+    Then I verify CARL button is "appearing" on the patient card
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I wait to the see the visibility of loader to disappear
-    Then I get the patient last name who have no CARL button in it
+    Then I click on the complete CARL on the Patient Summary
+    Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
+    Then I will wait to see the CARL section "Caregiver" header appears on the CARL form
+    Then I click on Yes, 24 hours a day option under Does the patient have a capable caregiver
+    Then I click on save and continue on "Caregiver" on the complete CARL form
+    Then I click on "Cognitive Status" dropdown on Independece Section
+    Then I select "Forgetful" option in dropdown for cognitive status
+    Then I click on save and continue on "Independence" on the complete CARL form
+    Then I close the patient summary Page
+    Then I scroll the page to bottom by "-100"
+    Then I verify current page "Remedy Partners" title
+    Then I click on the patient on the patient card page that has no CARL button in it
+    Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Clinical Documents" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
-    Then I will wait to see "Active" appearing in the "Status" "2" column in row "1" in Document table in Clinical Documents
+    Then I will wait to see "In Progress" appearing in the "Status" "2" column in row "1" in Document table in Clinical Documents
+    Then I will wait to see "Active" appearing in the "Status" "2" column in row "2" in Document table in Clinical Documents
     Then I verify that Active status should be in green color with Color code 4EB96F
-    Then I will click on "CARL" appearing in the "Document" "1" column in row "1" in Document table in Clinical Documents
+    Then I will click on "CARL" appearing in the "Document" "1" column in row "2" in Document table in Clinical Documents
     Then I wait to the see the visibility of loader to disappear
     Then I verify user is able to navigate to the read only "CARL" page by selecting the title
     #Then I verify there should be a "View" link on each card and clicking the link should bring the user to that specified section of the CARL form
@@ -267,42 +280,11 @@ Scenario Outline: To verify the functionalities under Clinical Documents Section
     Then I click on update transition to add a new episode
     Then I wait to the see the visibility of loader to disappear
     When I switch to default window from iframe
-    Then I close the patient summary Page
-    Then I scroll the page to bottom by "-100"
-    Then I verify current page "Remedy Partners" title
-    Then I wait to the see the visibility of loader to disappear
-    Then I click on "Inpatient" tab in the filter bar on patients page
-    When I click on Filter button present on Patient Page
-    Then I enter "SSN" value under "ssn" filter
-    Then I click on Done button present on the Filter Page
-    Then I wait to the see the visibility of loader to disappear
-    Then I verify CARL button is "appearing" on the patient card
-    Then I wait to the see the visibility of loader to disappear
-    Then I click on the patient on the patient card page that has no CARL button in it
-    Then I wait to the see the visibility of loader to disappear
-    Then I click on the complete CARL on the Patient Summary
-    Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
-    Then I will wait to see the CARL section "Caregiver" header appears on the CARL form
-    Then I click on Yes, 24 hours a day option under Does the patient have a capable caregiver
-    Then I save and continue the complete CARL form
-    Then I wait to the see the visibility of loader to disappear
-    Then I close the patient summary Page
-    Then I scroll the page to bottom by "-100"
-    Then I verify current page "Remedy Partners" title
-    Then I click on "Inpatient" tab in the filter bar on patients page
-    When I click on Filter button present on Patient Page
-    Then I enter "SSN" value under "ssn" filter
-    Then I click on Done button present on the Filter Page
-    Then I wait to the see the visibility of loader to disappear
-    Then I verify CARL button is "appearing" on the patient card
-    Then I click on the patient on the patient card page that has no CARL button in it
-    Then I wait to the see the visibility of loader to disappear
-    Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Clinical Documents" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
-    Then I will wait to see "Archived" appearing in the "Status" "2" column in row "1" in Document table in Clinical Documents
+    Then I will wait to see "Active" appearing in the "Status" "2" column in row "1" in Document table in Clinical Documents
     Then I verify that Archived status should be in Grey color with Color code 959595
-    Then I will wait to see "In Progress" appearing in the "Status" "2" column in row "2" in Document table in Clinical Documents
+    Then I will wait to see "Archived" appearing in the "Status" "2" column in row "2" in Document table in Clinical Documents
 
     Examples: 
       | Notetext                                                                                                                                                       |

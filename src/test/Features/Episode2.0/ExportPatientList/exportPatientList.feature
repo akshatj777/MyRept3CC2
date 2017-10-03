@@ -9,8 +9,6 @@ Feature: Episode 2.0 Export Patient List
     When I click on the "Episodes 2.0" tile
     Then I verify current page "Remedy Partners" title
     Then I verify "Export" button is appearing beside the number of patients present on the patient page
-    Then I scroll the page to bottom by "-100"
-    Then I verify "Export" button is appearing beside the number of patients present on the patient page
     When I click on export button present on the Patient Page
     Then I should see export drawer is appearing on clicking on export button
     And I should see "Export" button is still appearing beside patient count after export drawer opened
