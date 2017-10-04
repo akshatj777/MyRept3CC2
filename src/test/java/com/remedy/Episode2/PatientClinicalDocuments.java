@@ -483,7 +483,8 @@ public class PatientClinicalDocuments extends BaseClass {
 	}
 
 	public void IclickontheSubmitbuttontosubmittheCARLform() {
-        clickElement(driver.findElement(By.cssSelector("div.top-row > div:nth-child(2) > button")));
+        iWillWaitToSee(By.cssSelector("div.top-row > div:nth-child(2) > button"));
+		clickElement(driver.findElement(By.cssSelector("div.top-row > div:nth-child(2) > button")));
         delay(); 
 	}
 

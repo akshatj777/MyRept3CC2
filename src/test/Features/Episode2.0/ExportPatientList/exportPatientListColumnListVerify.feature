@@ -8,6 +8,9 @@ Feature: Episode 2.0 Export Drawer Column List Verification
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
     Then I verify current page "Remedy Partners" title
+    Then I click on "Post Acute" tab in the filter bar on patients page
+    Then I click on "Readmission Discharges" tab in the filter bar on patients page
+    Then I wait to the see the visibility of loader to disappear
     Then I verify "Export" button is appearing beside the number of patients present on the patient page
     Then I scroll the page to bottom by "-100"
     When I click on export button present on the Patient Page

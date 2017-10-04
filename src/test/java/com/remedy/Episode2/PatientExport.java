@@ -11,7 +11,8 @@ public class PatientExport extends BaseClass {
 	}
 
 	public void iVerifyExportBesidePatientCount(String export) {
-		verifyTextForElement(driver.findElement(By.cssSelector(".export-link>a")), export);
+		iWillWaitToSee(By.xpath("//a[@ng-click='handleExportButton()']"));
+		verifyTextForElement(driver.findElement(By.xpath("//a[@ng-click='handleExportButton()']")), export);
 	}
 
 	public void iSeeExportDrawerIsAppearingOnClickingExportButton() {
@@ -47,7 +48,7 @@ public class PatientExport extends BaseClass {
 	}
 
 	public void iVerifyFiltersAppearingOnClickingOnFiltersOnPatientPage(String text) {
-		verifyTextForElement(driver.findElement(By.cssSelector(".btn.btn-tertiary.open")), text);
+		isElementVisible(driver.findElement(By.cssSelector("div.filter-bar-search.ng-scope.open")));
 	}
 
 	public void iVerifyColumnListAppearingOnExportDrawerBox(String text) {

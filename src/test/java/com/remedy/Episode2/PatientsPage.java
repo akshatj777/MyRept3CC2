@@ -463,7 +463,8 @@ public class PatientsPage extends BaseClass {
 	}
 
 	public void iClickOnExportButtonPresentOnThePatientPage() {
-		clickElement(driver.findElement(By.xpath("//div[@class='export-link']/a")));
+		iWillWaitToSee(By.xpath("//a[@ng-click='handleExportButton()']"));
+		clickElement(driver.findElement(By.xpath("//a[@ng-click='handleExportButton()']")));
 	}
 
 	public void iClickOnSelectAllCheckboxPresentOnThePatientPage() {
