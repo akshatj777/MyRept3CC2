@@ -55,20 +55,36 @@ Feature: Created Patient Note Comparision in EC1 and viewed in EC2
     Then I scroll the page to bottom by "-100"
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-    Then I wait to the see the visibility of loader to disappear
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
-    Then I will wait to see and click on "Transitions" followed by "span" tag
+    Then I switch to PatientTransitions frame
+    Then I wait to the see the visibility of loader to disappear
+    Then I click on add a new transition to add a new episode
+    Then I wait to the see the visibility of loader to disappear
+    Then I will wait to see "Transition Info" followed by "a" tag
+    Then I fill in "Admit" with logic "minus" with "10" days
+    Then I wait to the see the visibility of loader to disappear
+    Then I select the "Admit" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
+    Then I wait to the see the visibility of loader to disappear
+    Then I select the "Admit" "caretype" "Inpatient" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
+    Then I select the "Admit" facility "Stamford Hospital" by "#s2id_bp_personbundle_bpadmissiontype_admitFacility" on add a new transition
+    Then I click on the Create Transition Button to add a new transition
+    Then I wait to the see the visibility of loader to disappear
+    When I switch to default window from iframe
+    Then I close the patient summary Page
+    Then I scroll the page to bottom by "-100"
+    Then I click on the patient on the patient card page that has no CARL button in it
+    Then I wait to the see the visibility of loader to disappear
+    Then I will wait to see and click on "Care Plan" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame   
-    Then I click on "Care Plan" tab appearing under patient summary page to verify care plan created
     Then I click on the "Notes" tab appearing under care plan frame on patient summary page
     Then I verify the notes created in the episode1 should appear in the notes section in care plan in episode2
     When I switch to default window from iframe
     Then I will wait to see and click on "Clinical Documents" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
-    Then I will wait to see "" appearing in the "Document" "1" column in row "1" in Document table in Clinical Documents
+    Then I will wait to see " " appearing in the "Document" "1" column in row "1" in Document table in Clinical Documents
     
     Examples: 
       | email                | password  | patient first name | patient last name |

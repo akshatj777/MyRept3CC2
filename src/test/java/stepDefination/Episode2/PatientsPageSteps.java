@@ -1599,7 +1599,7 @@ public class PatientsPageSteps extends DriverScript {
     }
    
     @Then ("^I click on the \"([^\"]*)\" tab appearing under care plan frame on patient summary page$")
-    public void I_click_on_the_notes_tab_appearing_under_care_plan_frame_on_patient_summary_page() throws Throwable {
+    public void I_click_on_the_notes_tab_appearing_under_care_plan_frame_on_patient_summary_page(String note) throws Throwable {
     	patientsPage.Iclickonthenotestabappearingundercareplanframeonpatientsummarypage();
     }
    

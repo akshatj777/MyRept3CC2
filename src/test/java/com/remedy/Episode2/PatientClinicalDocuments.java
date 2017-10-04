@@ -133,9 +133,9 @@ public class PatientClinicalDocuments extends BaseClass {
 	}
 
 	public void IcountthenumberofdocumentsthatappearintheclinicalDocuments() {
-        int count=getElementCount(" div > div:nth-child(2) > div > div.ng-scope > table > tbody > tr");
-        int count1=4;
-        Assert.assertEquals(count, count1);
+		List<WebElement> elements=getElementsList("div > div:nth-child(2) > div > div.ng-scope > table > tbody > tr");
+	    int count1=4;
+        Assert.assertEquals(elements.size(), count1);
 	}
 
 	public void Iverifytableshouldbesortedchronologicallybyactivitydatemostrecentfirst() throws ParseException {
@@ -434,7 +434,7 @@ public class PatientClinicalDocuments extends BaseClass {
 	    String role=information[1];
 		String name1 = name.trim();
 	    String role1 = role.trim();
-     	Assert.assertEquals(name1,"Emblemrn, Qa");
+	    Assert.assertEquals(name1,"Emblemtesting, Rn");
         Assert.assertEquals(role1,"RN");
 		
 	}
@@ -453,12 +453,12 @@ public class PatientClinicalDocuments extends BaseClass {
 
 	public void IverifythatuponSelectingShowHistoryshoulddisplaytheinformationofalluserswhohavesavedthatform() throws InterruptedException {
        	WebDriverWait wait=new WebDriverWait(driver,10);
-       	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(1).doc-edit.ng-scope")));
-       	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(2).doc-edit.ng-scope.ng-hide")));
-       	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(3).doc-edit.ng-scope.ng-hide")));
-    	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(4).doc-edit.ng-scope.ng-hide")));
-    	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(5).doc-edit.ng-scope.ng-hide")));
-    	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(6).doc-edit.ng-scope.ng-hide")));
+       	wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(1).doc-edit.ng-scope")));
+       	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(2).doc-edit.ng-scope.ng-hide")));
+       	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(3).doc-edit.ng-scope.ng-hide")));
+    	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(4).doc-edit.ng-scope.ng-hide")));
+    	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(5).doc-edit.ng-scope.ng-hide")));
+    	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(6).doc-edit.ng-scope.ng-hide")));
 	}
 
 	public void Iverifydateandtimeinformationappearsinlastsavedsection() {
@@ -492,11 +492,11 @@ public class PatientClinicalDocuments extends BaseClass {
          clickElement(driver.findElement(By.xpath("//a[contains(text(),'Hide History')]")));
          delay();
          WebDriverWait wait=new WebDriverWait(driver,10);
-         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(1).doc-edit.ng-scope")));
-         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(2).doc-edit.ng-scope.ng-hide")));
-         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(3).doc-edit.ng-scope.ng-hide")));
-         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(4).doc-edit.ng-scope.ng-hide")));
-         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(5).doc-edit.ng-scope.ng-hide")));
+         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(1).doc-edit.ng-scope")));
+         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(2).doc-edit.ng-scope.ng-hide")));
+         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(3).doc-edit.ng-scope.ng-hide")));
+         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(4).doc-edit.ng-scope.ng-hide")));
+         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(5).doc-edit.ng-scope.ng-hide")));
 	}
 
 	public void IclickontheTransitionInfoonaddanewtransition() {
@@ -528,8 +528,12 @@ public class PatientClinicalDocuments extends BaseClass {
 		  String importDir = System.getProperty("user.dir");
 		  String downloadFilepath = importDir + File.separator + "src" + File.separator + "test" + File.separator + "Imports" + File.separator + "Downloads" ;
 		  File dir = new File(downloadFilepath);
-		  FileUtils.cleanDirectory(dir); 
+		 
 		  File[] dir_contents = dir.listFiles();
+		  for (int i = 0; i < dir_contents.length; i++) 
+		    {
+		     dir_contents[i].delete();
+		    }
 		     for (int i = 0; i < dir_contents.length; i++) 
 		     {
 		      if(dir_contents[i].isFile())
@@ -656,6 +660,7 @@ public class PatientClinicalDocuments extends BaseClass {
 	}
 
 	public void IclickontheShowHistoryButtontoseethelistofuserwhosavedtheform() {
+		iWillWaitToSee(By.xpath("//table/tbody/tr[2]/td[4]/span/a"));
 		clickElement(driver.findElement(By.xpath("//table/tbody/tr[2]/td[4]/span/a")));
 	}
 
@@ -778,6 +783,11 @@ public class PatientClinicalDocuments extends BaseClass {
 		}
 
 		public void Iwillwaittoseelinkappearingindocumenttable(String text, String document_head, int column, int row) {
+			if(text.equals(""))
+			{
+				 iWillWaitToSee(By.xpath("//table/tbody/tr["+row+"]/td["+column+"]"));
+			     isElementVisible(driver.findElement(By.xpath("//table/tbody/tr["+row+"]/td["+column+"]")));
+			}
 			if(document_head.equals("Document"))
 			{
 		    iWillWaitToSee(By.xpath("//table/tbody/tr["+row+"]/td["+column+"]/a/span[contains(text(),'"+text+"')]"));

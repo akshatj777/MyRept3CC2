@@ -173,7 +173,9 @@ public class NoteCreation extends BaseClass {
 	}
 
 	public void IclickonActivityDateonAddClinicalDocumentonPatientCard() {
-		clickElement(driver.findElement(By.cssSelector("a > div > div > i.valentino-icon-calendar")));
+		longDelay();
+		iWillWaitToSee(By.xpath("//input[@ng-model='$selection']"));
+		clickElement(driver.findElement(By.xpath("//input[@ng-model='$selection']")));
 	}
 
 	public void IverifyCalendarappearstoselectthedatemanuallyonAddClinicalDocumentonPatientCard() {
@@ -303,8 +305,11 @@ public class NoteCreation extends BaseClass {
 	public void Iselectthemonthfromcalendarfromdatepicker(int days) throws InterruptedException {
 		String dateTime = getcurrentdate(days);
 		String date_dd_MM_yyyy[] = (dateTime.split("/"));
+		delay();
 		List<WebElement> list_AllMonthToBook = driver.findElements(By.cssSelector("span.month"));
+		delay();
 		list_AllMonthToBook.get(Integer.parseInt(date_dd_MM_yyyy[1]) - 1).click();
+		delay();
 		Thread.sleep(1000);
 	}
 
@@ -413,30 +418,43 @@ public class NoteCreation extends BaseClass {
 	}
 
 	public void Iclickonthecentreofthecalendarheadertoselectdateandmonth() {
-		clickElement(driver.findElement(By.cssSelector("th.switch")));
+		delay();
+		iWillWaitToSee(By.xpath("//h3[@ng-bind='data.previousViewDate.display']"));
+		clickElement(driver.findElement(By.xpath("//h3[@ng-bind='data.previousViewDate.display']")));
 	}
 
-	public void Iclickonthenextlinktoselecttherequiredyearondatepicker(String dateTime) {
-		String date_dd_MM_yyyy[] = (dateTime.split("/"));
+	public void Iclickonthenextlinktoselecttherequiredyearondatepicker(int dateTime) {
+		String date=getcurrentdate11(dateTime);
+		String date_dd_MM_yyyy[] = date.split("/");
 		int yearDiff = Integer.parseInt(date_dd_MM_yyyy[2]) - Calendar.getInstance().get(Calendar.YEAR);
-		WebElement nextLink = driver.findElement(By.cssSelector("th.right"));
-		WebElement previousLink = driver.findElement(By.cssSelector("th.left"));
-		if (yearDiff != 0) {
-			if (yearDiff > 0) {
-				for (int i = 0; i < yearDiff; i++) {
-					nextLink.click();
-				}
-			} else if (yearDiff < 0) {
-				for (int i = 0; i < (yearDiff * (-1)); i++) {
-					previousLink.click();
-				}
+		delay();
+		WebElement nextLink = driver.findElement(By.cssSelector("section > form > div:nth-child(2) > div > ul > div > div > table > thead > tr:nth-child(1) > th.right"));
+		WebElement previousLink = driver.findElement(By.cssSelector("section > form > div:nth-child(2) > div > ul > div > div > table > thead > tr:nth-child(1) > th.left"));
+		delay(); 
+		if(yearDiff!=0){
+             if(yearDiff>0){
+                   for(int i=0;i< yearDiff;i++){
+                   nextLink.click();}
+                 }  else if(yearDiff<0){
+                   for(int i=0;i< (yearDiff*(-1));i++){
+                   previousLink.click(); }}
+                   }
 			}
-		}
+		
+    public static String getcurrentdate11(int days) {
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		LocalDate localDate = LocalDate.now();
+		LocalDate b = localDate.minus(Period.ofDays(days));
+		String date = dtf.format(b);
+		return date;
 	}
 
-	public void Iselectthedatefromthecalendarfromdatepicker(String dateTime) {
+	public void Iselectthedatefromthecalendarfromdatepicker(int date) {
+		String dateTime = getcurrentdate(date);
 		String date_dd_MM_yyyy[] = (dateTime.split("/"));
+		delay();
 		List<WebElement> list_AllDateToBook = driver.findElements(By.xpath("//table//tbody//td[not(contains(@class,'past')) and not(contains(@class,'future'))]"));
+		delay();
 		list_AllDateToBook.get(Integer.parseInt(date_dd_MM_yyyy[0]) - 1).click();
 	}
 
@@ -457,7 +475,7 @@ public class NoteCreation extends BaseClass {
 
 	public void Iverifyuponuploadinganycorruptedfilethenvalidationshouldthrowandfileshouldnotgetaddedoncreatingnote() {
 		iWillWaitToSee(By.cssSelector("div.ng-binding.error"));
-		verifyTextForElement(driver.findElement(By.cssSelector("div.ng-binding.error")),"File content is not valid: sample.docx");
+		verifyTextForElement(driver.findElement(By.cssSelector("div.ng-binding.error")),"File content is not valid: Corrupt.docx");
 	}
 
 	public void IVerifythattodaydateshouldbehighlightedincalendarasdefaultdate() {
@@ -510,7 +528,9 @@ public class NoteCreation extends BaseClass {
 	public void Iverifyuserisabletouploadmultiplefiles() throws IOException {
 		String importDir = System.getProperty("user.dir");
 		String newDir = importDir + "\\" + "src" + "\\" + "test" + "\\" + "Imports";
-		String FileName="upload.exe";
-//	    Runtime.getRuntime().exec((newDir + "\\" + FileName) );
+		String FileName=newDir+"\\"+"upload.exe";
+		String FileName1=newDir+"\\"+"Remedy.csv";
+		String file=FileName+FileName1;
+	    Runtime.getRuntime().exec(file) ;
 	}
     }

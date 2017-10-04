@@ -574,6 +574,7 @@ public class PatientsPage extends BaseClass {
 	}
 
 	public void iClickOnCalenderButtonPresentOnTheAddPatientPage() {
+		iWillWaitToSee(By.cssSelector("input#bp_personbundle_bpadmissiontype_admitDate"));
 		clickElement(driver.findElement(By.cssSelector("input#bp_personbundle_bpadmissiontype_admitDate")));
 	}
 

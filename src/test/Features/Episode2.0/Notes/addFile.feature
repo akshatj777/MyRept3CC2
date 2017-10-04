@@ -115,14 +115,16 @@ Feature: Note - Add files
     Then I click on quick action button for note creation on Patient Card page
     Then I verify whether topic drop down appears on Add Clinical Document on Patient Card page
     And I select the "Baseline" from the topic drop down on Add Clinical Document on Patient Card
-    Then I verify Activity Date drop down calendar appears on the Add Clinical Document on Patient Card
     And I verify Activity Body text box appears on the Add Clinical Document on Patient Card
+    And I enter the Note Text "Remedy Notes" in the textarea on Add Clinical Document on Patient Card
     And I verify attach files link appears on the Add Clinical Document on Patient Card
     And I verify Cancel button appears on the Add Clinical Document on Patient Card
     And I verify Create note appears on the Add Clinical Document on Patient Card
-    And I enter the Note Text "Remedy Notes" in the textarea on Add Clinical Document on Patient Card
-  #  Then I click on Add Files link on Note Section on Patient Card
+    Then I click on Add Files link on Note Section on Patient Card
     Then I verify user is able to upload multiple files
+    Then I verify the "Remedy.csv" image is successfully attached at index "1"
+     
+   
  
     Then I verify that user should be able to select and upload file "Remedy.csv" through Add files link
     Then I verify the "Remedy.csv" image is successfully attached at index "1"
@@ -155,14 +157,12 @@ Feature: Note - Add files
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
+   # Then I enter SSN "784228989"
     Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I scroll the page to bottom by "-100"
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-    Then I click on quick action button for note creation on Patient Card page
-    Then I verify whether topic drop down appears on Add Clinical Document on Patient Card page
     Then I click on quick action button for note creation on Patient Card page
     Then I verify whether topic drop down appears on Add Clinical Document on Patient Card page
     And I select the "Baseline" from the topic drop down on Add Clinical Document on Patient Card

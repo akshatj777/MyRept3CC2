@@ -116,12 +116,12 @@ public class PatientNotesPatientCardSteps extends DriverScript {
 	}
 
 	@Then("^I select the \"(.*)\" from the calendar from date picker$")
-	public void I_select_the_date_from_the_calendar_from_date_picker(String date) throws Throwable {
+	public void I_select_the_date_from_the_calendar_from_date_picker(int date) throws Throwable {
 		noteCreation.Iselectthedatefromthecalendarfromdatepicker(date);
 	}
 
 	@Then("^I click on the next link to select the required year \"(.*)\" on date picker$")
-	public void I_click_on_the_next_link_to_select_the_required_year_on_date_picker(String date) throws Throwable {
+	public void I_click_on_the_next_link_to_select_the_required_year_on_date_picker(int date) throws Throwable {
 		noteCreation.Iclickonthenextlinktoselecttherequiredyearondatepicker(date);
 	}
 

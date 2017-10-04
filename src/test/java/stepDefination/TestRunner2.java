@@ -27,14 +27,14 @@ import stepDefination.Hooks.*;
 
 @RunWith(ExtendedCucumberRunner.class)
 @CucumberOptions(
-        plugin = {"html:target/cucumber-results", "usage:target/cucumber-results/cucumber-usage.json",
-                "junit:target/cucumber-results/cucumber-results.xml", "json:target/cucumber-results/cucumber.json",
-                "com.cucumber.listener.ExtentCucumberFormatter:target/vimalSelvam-cucumberReport/report.html","rerun:target/rerun.txt"},
-        features = { "src/test/Features"},
+        plugin = {"html:target/rerun/cucumber-results", "usage:target/rerun/cucumber-results/cucumber-usage.json",
+                "junit:target/rerun/cucumber-results/cucumber-results.xml", "json:target/rerun/cucumber-results/cucumber.json",
+                "com.cucumber.listener.ExtentCucumberFormatter:target/rerun/vimalSelvam-cucumberReport/report.html","rerun:target/rerun.txt"},
+        features = {"@target/rerun.txt"},
         //glue = { "./src/test/java/stepDefination" },
         tags = {}
 )
-public class TestRunner {
+public class TestRunner2 {
 
         @BeforeSuite
         public static void setUp() {

@@ -1,6 +1,6 @@
 Feature: Verify the Clinical Documents section
 
-Scenario Outline: To verify the functionalities under Clinical Documents Section
+  Scenario Outline: To verify the functionalities under Clinical Documents Section
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
@@ -78,6 +78,7 @@ Scenario Outline: To verify the functionalities under Clinical Documents Section
     When I switch to default window from iframe
     Then I will wait to see and click on "Clinical Documents" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
+    Then I verify that Show History section should not be applicable for note section
     Then I verify the presence of Summary Section of the Clinical Document table
     Then I verify body text of the Note is appearing in the summary section
     Then I verify for clinical note and baseline summary should be displayed up to 2 lines
@@ -274,8 +275,8 @@ Scenario Outline: To verify the functionalities under Clinical Documents Section
     Then I will wait to see the CARL section "Discharge" header appears on the CARL form
     Then I click on save and continue on "Discharge" on the complete CARL form
     Then I click on the Submit button to submit the CARL form
-    Then I scroll the page to bottom by "-100"
     Then I verify current page "Remedy Partners" title
+    Then I scroll the page to bottom by "-100"
     Then I click on "All" tab in the filter bar on patients page
     When I click on Filter button present on Patient Page
     Then I enter "SSN" value under "ssn" filter
@@ -292,7 +293,7 @@ Scenario Outline: To verify the functionalities under Clinical Documents Section
     Examples: 
       | Notetext                                                                                                                                                       |
       | In above case we have String dateString in format so to convert the String to Date in given format we have Created Object formatter of Class SimpleDateFormat. |
-  
+
   Scenario Outline: The Last saved section on the clinical documents table should display the information of the last user who saved the individual form(To verify information Acivity column in Clinical Documents table).
     Given I am on the login page
     When I enter email field qa.emblemrn@yopmail.com for login
@@ -316,17 +317,6 @@ Scenario Outline: To verify the functionalities under Clinical Documents Section
     Then I wait to the see the visibility of loader to disappear
     Then I scroll the page to bottom by "-100"
     Then I wait to the see the visibility of loader to disappear
-    Then I click on quick action button for note creation on Patient Card page
-    And I verify to submit the Note Topic is the mandatory field to fill
-    Then I verify whether topic drop down appears on Add Clinical Document on Patient Card page
-    And I select the "Baseline" from the topic drop down on Add Clinical Document on Patient Card
-    And I enter the Note Text "Remedy Notes" in the textarea on Add Clinical Document on Patient Card
-    Then I click on Add Files link on Note Section on Patient Card
-    Then I verify that user should be able to select and upload file "Remedy.txt" through Add files link
-    Then I verify the image is attached or not
-    Then I click on the create Note Button on Add Clinical Document on Patient Card
-    Then I verify that create Note has been successfully created
-    Then I wait to the see the visibility of loader to disappear
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
@@ -336,7 +326,6 @@ Scenario Outline: To verify the functionalities under Clinical Documents Section
     Then I verify LastName FirstName and userrole appears in last saved section
     Then I click on the Show History Button to see the list of user who saved the form
     Then I verify that upon Selecting Show History should display the information of all users who have saved that form
-    Then I verify that Show History section should not be applicable for note section
     Then I verify that Hide History link should appear when user currently on Show History section
     Then I verify that upon selecting Hide History user should only see the information of the last user who saved the form
     Then I verify that there should be an Attachment icon on Clinical Documents Activity Section
@@ -344,5 +333,3 @@ Scenario Outline: To verify the functionalities under Clinical Documents Section
     Examples: 
       | date | Text Description        |
       |   12 | Remedy Document Section |
-
-     
