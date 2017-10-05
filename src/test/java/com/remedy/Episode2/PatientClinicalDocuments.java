@@ -483,7 +483,8 @@ public class PatientClinicalDocuments extends BaseClass {
 	}
 
 	public void IclickontheSubmitbuttontosubmittheCARLform() {
-        iWillWaitToSee(By.cssSelector("div.top-row > div:nth-child(2) > button"));
+		delay(); 
+		iWillWaitToSee(By.cssSelector("div.top-row > div:nth-child(2) > button"));
 		clickElement(driver.findElement(By.cssSelector("div.top-row > div:nth-child(2) > button")));
         delay(); 
 	}
@@ -493,7 +494,7 @@ public class PatientClinicalDocuments extends BaseClass {
          delay();
          WebDriverWait wait=new WebDriverWait(driver,10);
          wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(1).doc-edit.ng-scope")));
-         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(2).doc-edit.ng-scope.ng-hide")));
+         wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(2).doc-edit.ng-scope.ng-hide")));
          wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(3).doc-edit.ng-scope.ng-hide")));
          wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(4).doc-edit.ng-scope.ng-hide")));
          wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(5).doc-edit.ng-scope.ng-hide")));

@@ -63,10 +63,10 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     Then I click on add a new transition to add a new episode
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I fill in "Admit" with logic "minus" with "8" days
-    Then I select the care setting value "HHH - Hospital" on add a new transition
+    Then I select the "Admit" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
     Then I wait to the see the visibility of loader to disappear
-    Then I select the care type value "<Care Type>" on add a new transition
-    Then I select the facility value "Stamford Hospital" on add a new transition
+    Then I select the "Admit" "caretype" "<Care Type>" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
+    Then I select the "Admit" facility "Stamford Hospital" by "#s2id_bp_personbundle_bpadmissiontype_admitFacility" on add a new transition
     Then I wait to the see the visibility of loader to disappear
     Then I click on the Create Transition Button to add a new transition
     Then I wait to the see the visibility of loader to disappear
@@ -150,11 +150,10 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     Then I click on add a new transition to add a new episode
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I fill in "Admit" with logic "<Operand>" with "<Date>" days
-    Then I select the care setting value "HHH - Hospital" on add a new transition
+    Then I select the "Admit" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
     Then I wait to the see the visibility of loader to disappear
-    Then I select the care type value "<Care Type>" on add a new transition
-    Then I wait to the see the visibility of loader to disappear
-    Then I select the facility value "Stamford Hospital" on add a new transition
+    Then I select the "Admit" "caretype" "<Care Type>" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
+    Then I select the "Admit" facility "Stamford Hospital" by "#s2id_bp_personbundle_bpadmissiontype_admitFacility" on add a new transition
     Then I click on the Diagnosis and DRG tab on add a new transition to select the DRG
     Then I select the "Working" DRG type on the Diagnosis and DRG tab on add a new transition
     Then I select the "61" DRG value on the Diagnosis and DRG tab on add a new transition
@@ -204,13 +203,13 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     Then I verify CARL button is "<CARL action>" on the patient card
 
     Examples: 
-      | Date | Operand | Care Type | CARL action    |
-      |    0 | current | Inpatient | appearing      |
-      |    8 | past    | Inpatient | appearing      |
-      |    0 | current | Scheduled | appearing      |
-      |    8 | past    | Scheduled | appearing      |
-      |   -8 | future  | Scheduled | not appearing  |
-      |   -8 | future  | Inpatient |  appearing     |
+      | Date | Operand | Care Type | CARL action   |
+      |    0 | current | Inpatient | appearing     |
+      |    8 | past    | Inpatient | appearing     |
+      |    0 | current | Scheduled | appearing     |
+      |    8 | past    | Scheduled | appearing     |
+      |   -8 | future  | Scheduled | not appearing |
+      |   -8 | future  | Inpatient | appearing     |
 
   Scenario Outline: Verify complete CARL button with active episode M2 in anchor admission HHH_Inpatient+Scheduled active episode and Edit - add discharge HOM
     Given I am on the login page
@@ -276,10 +275,10 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     Then I click on add a new transition to add a new episode
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I fill in "Admit" with logic "minus" with "20" days
-    Then I select the care setting value "HHH - Hospital" on add a new transition
+    Then I select the "Admit" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
     Then I wait to the see the visibility of loader to disappear
-    Then I select the care type value "Inpatient" on add a new transition
-    Then I select the facility value "Stamford Hospital" on add a new transition
+    Then I select the "Admit" "caretype" "Inpatient" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
+    Then I select the "Admit" facility "Stamford Hospital" by "#s2id_bp_personbundle_bpadmissiontype_admitFacility" on add a new transition
     Then I select the "<LOS>" LOS days on Discharge date on Add Transition
     Then I select the "Discharge" "caresetting" "HOM - Home" by "#bp_personbundle_bpadmissiontype_dischargeFacilityCategory" on add a new transition
     Then I wait to the see the visibility of loader to disappear
@@ -557,7 +556,7 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
-     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
+    Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
     Then I will wait to see the CARL section "Caregiver" header appears on the CARL form
     Then I click on Yes, 24 hours a day option under Does the patient have a capable caregiver
     Then I save and continue the complete CARL form

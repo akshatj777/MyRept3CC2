@@ -143,7 +143,9 @@ public class DischargeCarlForm extends BaseClass {
 	}
 
 	public void IclickonDonebuttonundersubformonDischargesections() {
+		delay();
 		clickElement(driver.findElement(By.xpath("//button[text()='Done']")));
+		longDelay();
 	}
 
 	public void IselectadmissionwithlogiccounterDateonCalendarDischargeDateundersubformonDischargesection(int days) throws InterruptedException {
@@ -391,17 +393,20 @@ public class DischargeCarlForm extends BaseClass {
     public void IverifythatCareTypefortheActualCareSettingshouldincludethefollowing() {
 	String[] values = { "(HHH) Hospital","(HHA) Home Health Agency","(SNF) Skilled Nursing Facility",                   
 						"(REH) Rehabilitation","(OTHER) Other" ,"(EXPIRED) Expired"};
-	String[][] newArray = {	{"Inpatient","Outpatient","Emergency","Scheduled","Observation"},{"Skilled services","Non-skilled services"},{"Skilled nursing",
-						"Custodial care","TCU","Leave of Absence"},{"Inpatient","Outpatient"},
-						{"Acute care hospital","Assisted living","Intermediate care facility","Another institution","Left against medical advice",	"Admitted as an inpatient to this hospital","Court/law enforcement","Federal hospital",
-						"Still a patient","Shelter","Hospice at home","Hospice in Medical Facility","Hospital-based medicare approved swing bed","Medicaid-certified nursing facility","Psychiatric hospital/unit","Critical access hospital"},
+	String[][] newArray = {	{"Inpatient","Outpatient","Emergency","Scheduled","Observation"},{"Skilled Services","Non-Skilled Services"},{"Skilled Care",
+						"Custodial Care","TCU","Leave of Absence"},{"Inpatient","Outpatient"},
+						{"Acute care hospital","Admitted as an Inpatient to this Hospital","Another Institution","Assisted living","Critical Access Hospital","Court/Law Enforcement","Federal Hospital","Hospice in Medical Facility","Hospital-Based Medicare Approved Swing Bed",
+							"Hospice at Home","Intermediate care facility","Left against medical advice","Medicaid Certified Nursing Facility","Psychiatric Hospital/Unit","Shelter","Still a Patient"},
 						{"Expired as inpatient","Expired at Home","Expired at Medical Facility","Expired at Unknown"} };
 	List<List<String>> list = Arrays.stream(newArray).map(Arrays::asList).collect(Collectors.toList());
 	for(int j=0;j<list.size();j++)
 	{
 	clickElement(driver.findElement(By.xpath("//label[text()='Actual Care Setting']/preceding-sibling::div")));			
+	delay();
     clickElement(driver.findElement(By.xpath("//label[text()='Actual Care Setting']/preceding-sibling::div//div[text()='"+values[j]+"']")));
+    delay();
     clickElement(driver.findElement(By.xpath("//label[text()='Care Type']/preceding-sibling::div")));			
+    delay();
     List<String> list1=getTextForElementfromList("span.ui-select-choices-row-inner> div.ng-binding");
     Assert.assertEquals(list.get(j),list1);
      }}
@@ -544,4 +549,16 @@ public class DischargeCarlForm extends BaseClass {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[(@ng-model='admission.dischargeFacilityCategory')]")));
 		clickElement(driver.findElement(By.xpath("//div[(@ng-model='admission.dischargeFacilityCategory')]")));
 		}
+
+	public void iverifybuttonshouldappearwhenformnotsaved(String text, int position) {
+		delay();
+		iWillWaitToSee(By.xpath("//a["+position+"][@ng-repeat='action in alert.actions']"));
+		String new_text=driver.findElement(By.xpath("//a["+position+"][@ng-repeat='action in alert.actions']")).getText().trim();
+		Assert.assertEquals(new_text,text);
+		}
+
+	public void iclickonthebuttonwhensavedtheformwithoutsaving(int position) {
+		iWillWaitToSee(By.xpath("//a["+position+"][@ng-repeat='action in alert.actions']"));
+		clickElement(driver.findElement(By.xpath("//a["+position+"][@ng-repeat='action in alert.actions']")));
+	}
 }

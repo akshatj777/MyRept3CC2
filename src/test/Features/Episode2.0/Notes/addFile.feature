@@ -106,10 +106,10 @@ Feature: Note - Add files
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
+    Then I enter SSN "784224095"
     Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I scroll the page to bottom by "-100"
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on quick action button for note creation on Patient Card page
@@ -123,9 +123,6 @@ Feature: Note - Add files
     Then I click on Add Files link on Note Section on Patient Card
     Then I verify user is able to upload multiple files
     Then I verify the "Remedy.csv" image is successfully attached at index "1"
-     
-   
- 
     Then I verify that user should be able to select and upload file "Remedy.csv" through Add files link
     Then I verify the "Remedy.csv" image is successfully attached at index "1"
     Then I click on Add Files link on Note Section on Patient Card
@@ -141,7 +138,7 @@ Feature: Note - Add files
     Then I verify message should display in green color Your clinical document for the user
     Then I verify on notification there should be link to View clinical document
 
-  Scenario Outline: To verify user should be able to cancel the Note creation and user is able to select previous,current and future date.
+  Scenario Outline: To verify user should be able to cancel the Note creation.
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
@@ -157,7 +154,6 @@ Feature: Note - Add files
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-   # Then I enter SSN "784228989"
     Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
@@ -166,11 +162,7 @@ Feature: Note - Add files
     Then I click on quick action button for note creation on Patient Card page
     Then I verify whether topic drop down appears on Add Clinical Document on Patient Card page
     And I select the "Baseline" from the topic drop down on Add Clinical Document on Patient Card
-    Then I click on Activity Date on  Add Clinical Document on Patient Card
-    Then I click on the centre of the calendar header to select date and month
-    Then I click on the next link to select the required year "<date>" on date picker
-    Then I select the month "<date>" from calendar from date picker
-    Then I select the "<date>" from the calendar from date picker
+    Then I enter the "<logic>" date by "<date>"  in the date calendar
     And I enter the Note Text in the textarea on Add Clinical Document on Patient Card
     Then I click on Add Files link on Note Section on Patient Card
     Then I verify that user should be able to select and upload file "Remedy.csv" through Add files link
@@ -180,7 +172,45 @@ Feature: Note - Add files
     Then I verify on canceling Note creation Note window should get close
 
     Examples: 
-      | date |
-      |   40 |
-      |    0 |
-      |  -40 |
+      | date | logic |
+      |   40 | plus  |
+
+  Scenario Outline: To verify user is able to select previous,current and future date.
+    Given I am on the login page
+    When I enter email field qa.admin@yopmail.com for login
+    And I enter password field Episode1! for Login
+    Then I click Access button
+    Then I should see Tile text Episodes 2.0
+    When I click on the "Episodes 2.0" tile
+    Then I verify current page "Remedy Partners" title
+    And I should see "All" tab in the filter bar on patients page
+    Then I click on "All" tab in the filter bar on patients page
+    Then I wait to the see the visibility of loader to disappear
+    Then I verify current page "Remedy Partners" title
+    When I click on Filter button present on Patient Page
+    And I click on Filters button present on Filter Page
+    Then I verify SSN Filter is displayed under List of Filter Options
+    When I click on SSN Filter present on Filter Page
+    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I click on Done button present on the Filter Page
+    Then I wait to the see the visibility of loader to disappear
+    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to the see the visibility of loader to disappear
+    Then I click on quick action button for note creation on Patient Card page
+    Then I verify whether topic drop down appears on Add Clinical Document on Patient Card page
+    And I select the "Baseline" from the topic drop down on Add Clinical Document on Patient Card
+    Then I enter the "<logic>" date by "<date>"  in the date calendar
+    And I enter the Note Text in the textarea on Add Clinical Document on Patient Card
+    Then I click on Add Files link on Note Section on Patient Card
+    Then I verify that user should be able to select and upload file "Remedy.csv" through Add files link
+    Then I verify the "Remedy.csv" image is successfully attached at index "1"
+    Then I click on the create Note Button on Add Clinical Document on Patient Card
+    Then I verify that create Note has been successfully created
+    Then I verify message should display in green color Your clinical document for the user
+    Then I verify on notification there should be link to View clinical document
+
+    Examples: 
+      | date | logic   |
+      |   40 | minus   |
+      |    0 | current |
+      |  -40 | plus    |

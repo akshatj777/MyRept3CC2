@@ -109,6 +109,12 @@ public class PatientNotesPatientCardSteps extends DriverScript {
 	public void I_click_on_Activity_Date_on_Add_Clinical_Document_on_Patient_Card() throws Throwable {
 		noteCreation.IclickonActivityDateonAddClinicalDocumentonPatientCard();
 	}
+	
+	@Then ("^I enter the \"(.*)\" date by \"(.*)\"  in the date calendar$")
+	public void I_enter_the_date_in_the_date_calendar(String flag,int days)
+	{
+		noteCreation.Ienterthedateinthedatecalendar(days);
+	}
 
 	@Then("^I click on the centre of the calendar header to select date and month$")
 	public void I_click_on_the_centre_of_the_calendar_header_to_select_date_and_month() throws Throwable {

@@ -55,6 +55,17 @@ public class DischargeCarlFormSteps extends DriverScript {
 	    dischargecarlform.IVerifyDoneButtonIsEnabledUnderSubFormOnDischargeSectionOnCarlForm();
 	}
 	
+	@Then ("^I verify \"([^\"]*)\" should appear at position \"([^\"]*)\" when user doesn't save the form$")
+	public void i_verify_button_should_appear_when_form_not_saved(String text,int position)
+	{
+		dischargecarlform.iverifybuttonshouldappearwhenformnotsaved(text,position);
+	}
+	
+	@Then ("^I click on \"([^\"]*)\" at position \"([^\"]*)\"  which \"([^\"]*)\" the user to \"([^\"]*)\"$")
+	public void i_click_on_the_button_when_saved_the_form_without_saving(String button,int position,String action,String description)
+	{
+		dischargecarlform.iclickonthebuttonwhensavedtheformwithoutsaving(position);
+	}
 	@Then ("^I click on Done button under subform on Discharge sections$")
 	public void I_click_on_Done_button_under_subform_on_Discharge_sections() throws Throwable {
 		dischargecarlform.IclickonDonebuttonundersubformonDischargesections();

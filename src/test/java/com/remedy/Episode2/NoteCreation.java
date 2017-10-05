@@ -281,7 +281,7 @@ public class NoteCreation extends BaseClass {
 	}
 
 	public String getcurrentdate(int days) {
-		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyyy");
 		LocalDate localDate = LocalDate.now();
 		LocalDate b = localDate.minus(Period.ofDays(days));
 		String date = dtf.format(b);
@@ -342,13 +342,17 @@ public class NoteCreation extends BaseClass {
 
 	public void IverifymessageshoulddisplayingreencolorYourclinicaldocumentfortheuser() {
 		String created_note_message = driver.findElement(By.cssSelector("div.alert.alert-action.alert-page.alert-dismissible.ng-scope.alert-success > div > div > div > content > description > message")).getText();
-		String search = Igetthenameofthefirstpatientfromthepatientlistonpatientcardpage();
-		String[] words = search.split(",");
-		String lastname = words[0];
-		String firstname = words[1];
-		Assert.assertEquals(created_note_message, "Your clinical document for " + firstname + " " + lastname + " has been added");
+        String search = Igetthenameofthefirstpatientfromthepatientlistonpatientcardpage();
+	    String[] words = search.split(",");
+		String lastname = capitalise(words[0]);
+		delay();
+		String firstname = capitalise(words[1].trim());
+		Assert.assertEquals(created_note_message, "Your clinical document for" + " " + firstname + " " + lastname + " "+"has been added");
 	  }
 
+	public static String capitalise(String name) {
+		return name.substring(0, 1).toUpperCase() + name.substring(1).toLowerCase();
+	}
 	public void IverifyonnotificationthereshouldbelinktoViewclinicaldocument() {
 		clickElement(driver.findElement(By.cssSelector("a.btn.btn-outbound.ng-binding")));
 	}
@@ -516,7 +520,7 @@ public class NoteCreation extends BaseClass {
 	}
 
 	public void IverifyNoteshouldnotbecreatedwithoutActivitydate() {
-		Assert.assertEquals("disabled",driver.findElement(By.xpath("//button[@ng-click='$clinicalDocument.submitNote()']")).getAttribute("disabled"));
+		Assert.assertEquals("true",driver.findElement(By.xpath("//button[@ng-click='$clinicalDocument.submitNote()']")).getAttribute("disabled"));
 	}
 
 	public void Iverifytheimageissuccessfullyattached(String image,int index) {
@@ -530,7 +534,14 @@ public class NoteCreation extends BaseClass {
 		String newDir = importDir + "\\" + "src" + "\\" + "test" + "\\" + "Imports";
 		String FileName=newDir+"\\"+"upload.exe";
 		String FileName1=newDir+"\\"+"Remedy.csv";
-		String file=FileName+FileName1;
+		String file=FileName+" "+FileName1;
 	    Runtime.getRuntime().exec(file) ;
 	}
+
+	public void Ienterthedateinthedatecalendar(int days) {
+		String dateTime = getcurrentdate(days);
+		longDelay();
+		iWillWaitToSee(By.xpath("//input[@ng-model='$selection']"));
+		iFillInText(driver.findElement(By.xpath("//input[@ng-model='$selection']")),dateTime);
+		}
     }

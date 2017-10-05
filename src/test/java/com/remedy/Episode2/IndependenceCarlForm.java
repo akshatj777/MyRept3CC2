@@ -6,6 +6,9 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import com.remedy.baseClass.BaseClass;
 
 public class IndependenceCarlForm extends BaseClass {
@@ -101,5 +104,16 @@ public class IndependenceCarlForm extends BaseClass {
 	public void IverifytextnotpresentonCARLRecommendationfieldondischargesection(String text) {
 		Assert.assertTrue(!(driver.findElement(By.cssSelector("p.text-bold-700.margin-left-20.margin-top-0")).getText().equals(text)));
 	}
+
+	public void IverifytheunsavedsectioninDischargesection(String section, int position) {
+		iWillWaitToSee(By.xpath("//section/ul/li["+position+"]/a[text()='"+section+"']"));
+		isElementVisible(driver.findElement(By.xpath("//section/ul/li["+position+"]/a[text()='"+section+"']")));
+		
+	}
+
+	public void IverifythesavedsectioninDischargesection(String section, int position) {
+	    WebDriverWait wait=new WebDriverWait(driver,5);
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//section/ul/li["+position+"]/a[text()='"+section+"']")));
+    }
 
 }

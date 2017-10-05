@@ -25,6 +25,17 @@ public class IndependenceCarlFormSteps extends DriverScript {
 		independencecarl.IVerifyThatSelectedSectionOnCarlFormGetsHihlightedInLeftNavigatorUponClick(text);
 	}
 	
+	 @Then ("^I verify the unsaved section \"([^\"]*)\" at position \"([^\"]*)\" should appear in Discharge section$")
+	 public void I_verify_the_unsaved_section_in_Discharge_section(String section,int position)
+	 {
+		 independencecarl.IverifytheunsavedsectioninDischargesection(section,position);
+	 }
+	
+	 @Then ("^I verify the saved section \"([^\"]*)\" at position \"([^\"]*)\" should not appear in Discharge section$")
+	 public void I_verify_the_saved_section_in_Discharge_section(String section,int position)
+	 {
+		 independencecarl.IverifythesavedsectioninDischargesection(section,position);
+	 }
 	@Then("^I verify \"([^\"]*)\" dropdown bar should appear on Independence section$")
 	public void I_Verify_DropdownBars_Should_Appear_On_Independence_Section(String text) throws Throwable {
 		independencecarl.IVerifyTheDropdownBarsPresentInIndependenceSection(text);

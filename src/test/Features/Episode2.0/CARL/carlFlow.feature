@@ -96,7 +96,7 @@ Feature: To verify the options and functionality of Caregiver section of Carl fo
     And I verfiy that No caregiver available option is present under Does the patient have a capable caregiver
     And I verfiy that No caregiver needed option is present under Does the patient have a capable caregiver
     Then I click on Yes, has caregiver support less than 24 hours a day option under Does the patient have a capable caregiver
-    Then I verify on moving the mouse hover away from the icon the message should disapper
+#    Then I verify on moving the mouse hover away from the icon the message should disapper
     Then I verify that Add Caregiver link should appear under Choose Caregiver section in Caregiver on takeover page
     Then I click on No caregiver available option under Does the patient have a capable caregiver
     Then I verify that Add Caregiver link should not appear under Choose Caregiver
@@ -333,7 +333,7 @@ Feature: To verify the options and functionality of Caregiver section of Carl fo
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
     Then I wait to the see the visibility of loader to disappear
-    And I verify the "Independence" section of the carl form upon clicking on it
+    Then I will wait to see the CARL section "Caregiver" header appears on the CARL form
     Then I click on Yes, 24 hours a day option under Does the patient have a capable caregiver
     And I click on Add Caregiver link under Choose Caregiver
     Then I verify first name is mandatory field to a create Caregiver
@@ -387,33 +387,6 @@ Feature: To verify the options and functionality of Caregiver section of Carl fo
       | FirstNameTest | LastNameTest | testuser@yopmail.com | 987-456-1230 |
 
   Scenario Outline: To verify the options present under Transition of Care Needs on the Anticicpated section of the Carl Form
-    Given I am on the login page
-    When I enter email field qa.admin@yopmail.com for login
-    And I enter password field Episode1! for Login
-    Then I click Access button
-    Then I should see Tile text Episodes
-    And I click on the "Episodes" tile
-    And I switch to new window
-    Then I should see Episode header text "Dashboard"
-    When I click on "Patients" in the left navigator present on the episode dashboard page
-    When I click on "Patient List" in the Patients dropdown menu
-    When I click on Add Patient button present on the ec1 patients page
-    Then I verify "Add Patient" text is present on the add patient page
-    Then I verify "Patient Information" text is present on the add patient page
-    Then I enter random Patient First Name in the first name text box field present on the Add Patient page
-    Then I enter random Patient Last Name in the last name text box field present on the Add Patient page
-    And I enter date of birth "01/05/1995" present on the Add Patient Page
-    And I selected "Male" from the gender drop down list present on the Add Patient page
-    And I enter random social security number in the SSN text box field present on the Add Patient page
-    When I click on Admitting Facility present on the Add Patient page
-    And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page
-    And I enter "WA784654785" in the Medicare ID present on the Add Patient page
-    Then I click on the next button present on the Add Patient page
-    Then I click on the next button present on the Add Patient page
-    Then I click on the Cancel Button on the New Transition on Add Patient page
-    Then I switch back to old window
-    And I click on the top user account link
-    Then I select Log Out option from the dropdown
     Given I am on the login page
     When I enter email field qa.emblemrn@yopmail.com for login
     And I enter password field Episode1! for Login

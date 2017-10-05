@@ -50,11 +50,7 @@ Feature: Notes Activity Date
     Then I verify user should be able to remove the default date by clicking on the cross icon
     Then I verify on clicking on cross icon "Activity Date" text should show
     Then I verify Note should not be created without Activity date
-    Then I click on Activity Date on  Add Clinical Document on Patient Card
-    Then I click on the centre of the calendar header to select date and month
-    Then I click on the next link to select the required year "40" on date picker
-    Then I select the month "40" from calendar from date picker
-    Then I select the "40" from the calendar from date picker
+    Then I select the "20"  from date picker on Add Clinical Document on Patient Card
     Then I Verify that upon selecting date through calendar date should get populated the field in the format mmddyyyy
     Then I verify user should be able to pick any date and exact date should get selected and highlighted
     
