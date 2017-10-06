@@ -121,7 +121,6 @@ Feature: Note - Add files
     And I verify Cancel button appears on the Add Clinical Document on Patient Card
     And I verify Create note appears on the Add Clinical Document on Patient Card
     Then I click on Add Files link on Note Section on Patient Card
-    Then I verify user is able to upload multiple files
     Then I verify the "Remedy.csv" image is successfully attached at index "1"
     Then I verify that user should be able to select and upload file "Remedy.csv" through Add files link
     Then I verify the "Remedy.csv" image is successfully attached at index "1"

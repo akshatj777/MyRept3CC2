@@ -64,10 +64,10 @@ Feature: Upon selecting the Actual Care Setting, user should be able to view the
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I wait for 3000 milli seconds
     Then I fill in "Admit" with logic "minus" with "8" days
-    Then I select the care setting value "HHH - Hospital" on add a new transition
+    Then I select the "Admit" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
     Then I wait to the see the visibility of loader to disappear
-    Then I select the care type value "Inpatient" on add a new transition
-    Then I select the facility value "Stamford Hospital" on add a new transition
+    Then I select the "Admit" "caretype" "Inpatient" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
+    Then I select the "Admit" facility "Stamford Hospital" by "#s2id_bp_personbundle_bpadmissiontype_admitFacility" on add a new transition
     Then I click on the Diagnosis and DRG tab on add a new transition to select the DRG
     Then I select the "Working" DRG type on the Diagnosis and DRG tab on add a new transition
     Then I select the "61" DRG value on the Diagnosis and DRG tab on add a new transition
@@ -75,6 +75,7 @@ Feature: Upon selecting the Actual Care Setting, user should be able to view the
     Then I wait to the see the visibility of loader to disappear
     When I switch to default window from iframe
     Then I close the patient summary Page
+    Then I scroll the page to bottom by "-100"
     Then I verify current page "Remedy Partners" title
     When I click on Filter button present on Patient Page
     Then I enter "SSN" value under "ssn" filter
@@ -85,7 +86,6 @@ Feature: Upon selecting the Actual Care Setting, user should be able to view the
     Then I click on the complete CARL on the Patient Summary
     Then I wait to the see the visibility of loader to disappear
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
-    And I wait for 2000 milli seconds
     Then I will wait to see the CARL section "Caregiver" header appears on the CARL form
     Then I click on Yes, 24 hours a day option under Does the patient have a capable caregiver
     Then I save and continue the complete CARL form
@@ -126,9 +126,7 @@ Feature: Upon selecting the Actual Care Setting, user should be able to view the
     Then I verify physical therapy recommendation message should appear in green color
 
     Examples: 
-      | Patient Restoration Potential      | Care Setting                   | message                                                                                                                    | Care Setting1            | message1                                                                          | Care Setting2                    | message2                                                                        |
-      | Good restoration potential         | (SNF) Skilled Nursing Facility | PT 2x daily up to 7 days then reassess                                                                                     | (HHA) Home Health Agency | PT up to 4 visits week 1 then reassess                                            | Home with Limited Services (HOM) | PT 3 days/week x 1 week then reassess                                           |
-      | Questionable Restoration Potential | (SNF) Skilled Nursing Facility | PT daily x 3, then reassess                                                                                                | (HHA) Home Health Agency | PT up to 4 visits week 1 then reassess                                            | Home with Limited Services (HOM) | PT 3 days/week x 1 week then reassess                                           |
-      | Poor Restoration Potential         | (SNF) Skilled Nursing Facility | PT daily x 3 days, to establish Restorative Nursing Program and/or Certified Nursing Assistant training to meet care needs | (HHA) Home Health Agency | PT up to 3 visits over 3 weeks for caregiver training and education then reassess | Home with Limited Services (HOM) | PT for caregiver training and education x 3 sessions over 3 weeks then reassess |
-
-   
+      | Patient Restoration Potential      | Care Setting                   | message                                                                                                                    | Care Setting1            | message1                                                                          | Care Setting2 | message2                                                                        |
+      | Good restoration potential         | (SNF) Skilled Nursing Facility | PT 2x daily up to 7 days then reassess                                                                                     | (HHA) Home Health Agency | PT up to 4 visits week 1 then reassess                                            | (HOM) Home    | PT 3 days/week x 1 week then reassess                                           |
+      | Questionable Restoration Potential | (SNF) Skilled Nursing Facility | PT daily x 3, then reassess                                                                                                | (HHA) Home Health Agency | PT up to 4 visits week 1 then reassess                                            | (HOM) Home    | PT 3 days/week x 1 week then reassess                                           |
+      | Poor Restoration Potential         | (SNF) Skilled Nursing Facility | PT daily x 3 days, to establish Restorative Nursing Program and/or Certified Nursing Assistant training to meet care needs | (HHA) Home Health Agency | PT up to 3 visits over 3 weeks for caregiver training and education then reassess | (HOM) Home    | PT for caregiver training and education x 3 sessions over 3 weeks then reassess |

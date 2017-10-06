@@ -14,10 +14,10 @@
     <protocol>https</protocol>
     
     <!-- title of the document -->
-    <documentTitle>Peacock Automation Report</documentTitle>
+    <documentTitle>EC2 Automation Report</documentTitle>
     
     <!-- report name - displayed at top-nav -->
-    <reportName>Peacock Automation Report</reportName>
+    <reportName>EC2 Automation Report</reportName>
     
     <!-- report headline - displayed at top-nav, after reportHeadline -->
     <reportHeadline></reportHeadline>

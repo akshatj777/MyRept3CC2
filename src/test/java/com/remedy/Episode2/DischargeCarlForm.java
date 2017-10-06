@@ -397,7 +397,7 @@ public class DischargeCarlForm extends BaseClass {
 						"Custodial Care","TCU","Leave of Absence"},{"Inpatient","Outpatient"},
 						{"Acute care hospital","Admitted as an Inpatient to this Hospital","Another Institution","Assisted living","Critical Access Hospital","Court/Law Enforcement","Federal Hospital","Hospice in Medical Facility","Hospital-Based Medicare Approved Swing Bed",
 							"Hospice at Home","Intermediate care facility","Left against medical advice","Medicaid Certified Nursing Facility","Psychiatric Hospital/Unit","Shelter","Still a Patient"},
-						{"Expired as inpatient","Expired at Home","Expired at Medical Facility","Expired at Unknown"} };
+						{"Expired as Inpatient","Expired at Home","Expired at Medical Facility","Expired at Unknown"}};
 	List<List<String>> list = Arrays.stream(newArray).map(Arrays::asList).collect(Collectors.toList());
 	for(int j=0;j<list.size();j++)
 	{

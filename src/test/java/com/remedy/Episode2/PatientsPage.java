@@ -1380,9 +1380,12 @@ public class PatientsPage extends BaseClass {
 				  String importDir = System.getProperty("user.dir");
 				  String downloadFilepath = importDir + File.separator + "src" + File.separator + "test" + File.separator + "Imports" + File.separator + "Downloads" ;
 				  File dir = new File(downloadFilepath);
-				  FileUtils.cleanDirectory(dir); 
+				 
 				  File[] dir_contents = dir.listFiles();
-				  
+				   for (int i = 0; i < dir_contents.length; i++) 
+				     {
+					  dir_contents[i].delete();
+				     }
 				  
 				     for (int i = 0; i < dir_contents.length; i++) 
 				     {

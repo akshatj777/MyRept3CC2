@@ -59,11 +59,33 @@ Feature: Notes Sorting on Clinical Documents
     Then I will wait to see and click on "Clinical Documents" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Baseline" appearing in the "Document" "1" column in row "1" in Document table in Clinical Documents
+    Then I will wait to see and click on "Transitions" followed by "span" tag
+    Then I wait to the see the visibility of loader to disappear
+    Then I switch to PatientTransitions frame
+    Then I wait to the see the visibility of loader to disappear
+    Then I click on the delete button on the transition to delete all the transitions
+    Then I click on add a new transition to add a new episode
+    Then I wait to the see the visibility of loader to disappear
+    Then I will wait to see "Transition Info" followed by "a" tag
+    Then I fill in "Admit" with logic "minus" with "30" days
+    Then I wait to the see the visibility of loader to disappear
+    Then I select the "Admit" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
+    Then I wait to the see the visibility of loader to disappear
+    Then I select the "Admit" "caretype" "Inpatient" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
+    Then I select the "Admit" facility "Stamford Hospital" by "#s2id_bp_personbundle_bpadmissiontype_admitFacility" on add a new transition
+    Then I click on the Diagnosis and DRG tab on add a new transition to select the DRG
+    Then I select the "Working" DRG type on the Diagnosis and DRG tab on add a new transition
+    Then I select the "63" DRG value on the Diagnosis and DRG tab on add a new transition
+    Then I wait to the see the visibility of loader to disappear
+    Then I click on the Create Transition Button to add a new transition
+    Then I wait to the see the visibility of loader to disappear
     Then I click on the cross button Note Read only form to navigate to patient card
-    Then I click on the patient card to navigate to the patient summary page
+    Then I click on the patient on the patient card page that has no CARL button in it
+    Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Care Plan" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to "Care Plan" frame followed by "#iFrameEC2PatientCarePlan"
+    Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on Notes tab in Care plan
     Then I wait to the see the visibility of loader to disappear
     Then I verify "Baseline"  notes should not appear in Notes in Care Plan

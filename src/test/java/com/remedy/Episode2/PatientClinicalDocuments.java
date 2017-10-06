@@ -490,15 +490,15 @@ public class PatientClinicalDocuments extends BaseClass {
 	}
 
 	public void IverifythatuponselectingHideHistoryusershouldonlyseetheinformationofthelastuserwhosavedtheform() {
-         clickElement(driver.findElement(By.xpath("//a[contains(text(),'Hide History')]")));
-         delay();
-         WebDriverWait wait=new WebDriverWait(driver,10);
-         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(1).doc-edit.ng-scope")));
-         wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(2).doc-edit.ng-scope.ng-hide")));
-         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(3).doc-edit.ng-scope.ng-hide")));
-         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(4).doc-edit.ng-scope.ng-hide")));
-         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(5).doc-edit.ng-scope.ng-hide")));
-	}
+         clickElement(driver.findElement(By.cssSelector("table > tbody > tr:nth-child(2) > td:nth-child(4) > span > a")));
+         longDelay();
+         isElementVisible(driver.findElement(By.cssSelector("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(1).doc-edit.ng-scope")));
+         isElementVisible(driver.findElement(By.cssSelector("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(2).doc-edit.ng-scope.ng-hide")));
+         isElementVisible(driver.findElement(By.cssSelector("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(3).doc-edit.ng-scope.ng-hide")));
+         isElementVisible(driver.findElement(By.cssSelector("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(4).doc-edit.ng-scope.ng-hide")));
+         isElementVisible(driver.findElement(By.cssSelector("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(5).doc-edit.ng-scope.ng-hide")));
+         isElementVisible(driver.findElement(By.cssSelector("table > tbody > tr:nth-child(2) > td:nth-child(4) > div:nth-child(6).doc-edit.ng-scope.ng-hide")));
+    }
 
 	public void IclickontheTransitionInfoonaddanewtransition() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
