@@ -232,19 +232,7 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
   Then I select "Discharge current" with logic "current" "12" days on Calendar Discharge Date under subform on Discharge section
   Then I verify User should not get an error message on adding a past date in the discharge date section
   Then I verify Done button under subform is disabled on Discharge section
-  Then I click on Calendar Icon On Discharge date under subform on Discharge section
-  Then I select "Discharge current" with logic "current" "2" days on Calendar Discharge Date under subform on Discharge section
-  Then I verify Done button under subform is enabled on Discharge section
-  Then I click on Done button under subform on Discharge sections
-  Then I verify user should be able to navigate to the read only form and no server error should appear on Discharge section
-  Then I verify the correct "CareSetting" "(HHH) Hospital" which user has selected by the time of filling the form should appearing after saving the done form
-  Then I verify the correct "Caretype" "Inpatient" which user has selected by the time of filling the form should appearing after saving the done form
-  Then I verify the correct "DischargeLocation" "Allentown" which user has selected by the time of filling the form should appearing after saving the done form
-  Then I click on edit button to update the values of discharge subform under discharge test in Carl form
-  Then I verify first question "Have you discussed the proposal with the Interdisciplinary team?" under Discharge section
-  And I verify "Yes" radio option for "Have you discussed the proposal with the Interdisciplinary team?" under Discharge section
-  And I verify "No" radio option for "Have you discussed the proposal with the Interdisciplinary team?" under Discharge section
-  Then I verify Additional Comments section under Discharge on Carl form
+ 
   
   Scenario: Verify that updating CARL form present discharge date
   Given I am on the login page
