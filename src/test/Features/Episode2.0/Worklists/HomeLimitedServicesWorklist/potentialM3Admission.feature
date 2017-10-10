@@ -1,7 +1,7 @@
 Feature: Patient status on Home Limited Service Worklist
 
   Scenario Outline: Verify patient should be present in Home Limited Services worklist when Episode is Potential M3 Pend Canc and patient is readmitted to REH - Rehabilitation
-    Given I am on the login page
+     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button

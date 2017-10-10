@@ -20,7 +20,7 @@ Feature: Patient status on Home Limited Service Worklist
     And I selected "Male" from the gender drop down list present on the Add Patient page
     And I enter random social security number in the SSN text box field present on the Add Patient page
     When I click on Admitting Facility present on the Add Patient page
-    And I Select "coosa valley health care" from the list of admitting facility present on the Add Patient page
+    And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page
     And I enter "WA784654785" in the Medicare ID present on the Add Patient page
     Then I click on the next button present on the Add Patient page
     Then I click on the next button present on the Add Patient page
@@ -219,6 +219,7 @@ Feature: Patient status on Home Limited Service Worklist
     When I switch to default window from iframe
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
+    Then I switch to PatientTransitions frame
     Then I click on add a new transition to add a new episode
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag

@@ -40,7 +40,6 @@ Feature: Notes Activity Date
     Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I scroll the page to bottom by "-100"
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on quick action button for note creation on Patient Card page

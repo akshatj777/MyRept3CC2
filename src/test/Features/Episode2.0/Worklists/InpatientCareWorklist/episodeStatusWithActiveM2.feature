@@ -206,11 +206,11 @@ Feature: Patient status in Inpatient Care Worklist
       | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTINPATIENTCARE | Final    | Scheduled |
 
   Scenario Outline: Verify patient status in inpatient care While patient is in Worklist, care setting is updated Outpatient/Observation/Emergency
-      Given I am on the login page
+    Given I am on the login page
     When I enter email field <email> for login
     And I enter password field <password> for Login
     Then I click Access button
-     Then I should see Tile text Episodes 2.0
+    Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
     Then I verify current page "Remedy Partners" title
     And I should see "All" tab in the filter bar on patients page

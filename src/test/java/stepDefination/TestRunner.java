@@ -36,28 +36,28 @@ import stepDefination.Hooks.*;
 @CucumberOptions(
         plugin = {"html:target/cucumber-results","usage:target/cucumber-results/cucumber-usage.json",
                 "junit:target/cucumber-results/cucumber-results.xml", "json:target/cucumber-results/cucumber.json",
-                "stepDefination.ExtentCucumberFormatter","rerun:target/rerun.txt"},
-        features = {"src/test/Features/"},
+                "com.cucumber.listener.ExtentCucumberFormatter:target/vimalSelvam-cucumberReport/report.html","rerun:target/rerun.txt"},
+        features = {"src/test/Features"},
         //glue = { "./src/test/java/stepDefination" },
         tags = {}
 )
 public class TestRunner {
 
-	ExtentReports extent;
+	static ExtentReports extent;
     ExtentTest test;
         @BeforeSuite
         public static void setUp() {
                 // TODO: Add your pre-processing
-        	ExtentCucumberFormatter.initiateExtentCucumberFormatter();
-            ExtentCucumberFormatter.loadConfig(new File("extent-config.xml"));
-            ExtentCucumberFormatter.addSystemInfo("Browser Name", "Firefox");
-            ExtentCucumberFormatter.addSystemInfo("Browser version", "v31.0");
-            ExtentCucumberFormatter.addSystemInfo("Selenium version", "v2.53.0");
-
-               Map systemInfo = new HashMap();
-               systemInfo.put("Cucumber version", "v1.2.3");
-               systemInfo.put("Extent Cucumber Reporter version", "v1.1.0");
-               ExtentCucumberFormatter.addSystemInfo(systemInfo);
+//        	ExtentCucumberFormatter.initiateExtentCucumberFormatter();
+//            ExtentCucumberFormatter.loadConfig(new File("extent-config.xml"));
+//            ExtentCucumberFormatter.addSystemInfo("Browser Name", "Firefox");
+//            ExtentCucumberFormatter.addSystemInfo("Browser version", "v31.0");
+//            ExtentCucumberFormatter.addSystemInfo("Selenium version", "v2.53.0");
+//
+//               Map systemInfo = new HashMap();
+//               systemInfo.put("Cucumber version", "v1.2.3");
+//               systemInfo.put("Extent Cucumber Reporter version", "v1.1.0");
+//               ExtentCucumberFormatter.addSystemInfo(systemInfo);
         }
 
         @AfterSuite
@@ -68,7 +68,7 @@ public class TestRunner {
                testReportFinal.generateFeatureOverviewReport();
                 testReportFinal.testGenerateDetailedAggregatedReport();
                 testReportFinal.generateCoverageOverviewReport();*/
-
+        //	extent.close();
                 if (DriverScript.Config.getProperty("wantToSendReportViaAutoEmail").equalsIgnoreCase("true")){
                         //System.out.println("control should move here only if I want to send email- cheers !!");
                         AutoReportEmailSender sendReportEmailAutomatically = new AutoReportEmailSender();

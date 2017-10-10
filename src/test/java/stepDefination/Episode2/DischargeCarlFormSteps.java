@@ -1,5 +1,6 @@
 package stepDefination.Episode2;
 
+import java.text.ParseException;
 import java.util.List;
 
 import com.remedy.Episode2.DischargeCarlForm;
@@ -120,6 +121,11 @@ public class DischargeCarlFormSteps extends DriverScript {
 		 dischargecarlform.IselectadmissionwithlogiccounterDateonCalendarDischargeDateundersubformonDischargesection(days);
 	}
 	
+	@Then ("^I verify on clicking discharge date the field should show the date in the format of MMDDYYYY$")
+	public void I_verify_on_clicking_discharge_date_the_field_should_show_the_date_in_the_format_of_MMDDYYYY() throws ParseException
+	{
+		dischargecarlform.IverifyonclickingdischargedatethefieldshouldshowthedateintheformatofMMDDYYYY();
+	}
 	@Then("^I verify User should not get an error message on adding a past date in the discharge date section$")
 	public void I_verify_User_should_not_get_an_error_message_on_adding_a_past_date_in_the_discharge_date_section() throws Throwable {
 		dischargecarlform.IverifyUsershouldnotgetanerrormessageonaddingapastdateinthedischargedatesection();
@@ -307,6 +313,11 @@ public class DischargeCarlFormSteps extends DriverScript {
     @Then ("^I verify \"([^\"]*)\" section should appear with \"([^\"]*)\" for label \"([^\"]*)\" for descriptive title \"([^\"]*)\" on the review page$")
     public void I_verify_section_should_appear_with_value_for_descriptive_title_on_the_review_page(String section,String label,String descriptive_title,String value) throws Throwable {
     	dischargecarlform.Iverifysectionshouldappearwithvaluefordescriptivetitleonthereviewpage(section,label,descriptive_title,value);
+    }
+    
+    @Then ("^I verify Save and Go Back on the \"([^\"]*)\" section on CARL form$")
+    public void I_verify_Save_and_Go_Back_on_section_on_CARL_form() throws Throwable   {
+    	dischargecarlform.IverifySaveandGoBackonsectiononCARLform();
     }
     
     @Then ("^I click on the Save and Go Back on the \"([^\"]*)\" section on CARL form$")

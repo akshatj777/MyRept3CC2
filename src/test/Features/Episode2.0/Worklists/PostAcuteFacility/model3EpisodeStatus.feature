@@ -100,8 +100,6 @@ Feature: Patient status on Post Acute Facility Work List
     Then I wait to the see the visibility of loader to disappear
     When I switch to default window from iframe
     Then I close the patient summary Page
-    When I switch to default window from iframe
-    Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
     Then I will wait to see and click on "Post Acute" followed by "span" tag
     Then I will wait to see and click on "Post-Acute Facility" followed by "span" tag

@@ -5,6 +5,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.Period;
@@ -561,4 +562,23 @@ public class DischargeCarlForm extends BaseClass {
 		iWillWaitToSee(By.xpath("//a["+position+"][@ng-repeat='action in alert.actions']"));
 		clickElement(driver.findElement(By.xpath("//a["+position+"][@ng-repeat='action in alert.actions']")));
 	}
+
+	public void IverifyonclickingdischargedatethefieldshouldshowthedateintheformatofMMDDYYYY() throws ParseException {
+		String text=driver.findElement(By.cssSelector("//input[@ng-model='$selection']")).getAttribute("value");
+	    String information=text.substring(0,10);
+     	validateDateFormat(information);
+		
+	}
+	
+	  public void validateDateFormat(String dateToValdate) throws ParseException {
+			SimpleDateFormat formatter = new SimpleDateFormat("mm/dd/yyyy");
+		    formatter.setLenient(false);
+		    formatter.parse(dateToValdate);
+	    }
+
+	public void IverifySaveandGoBackonsectiononCARLform() {
+		delay();
+	    isElementVisible(driver.findElement(By.xpath("//a[@ng-click='saveCarlAndPrevious($event)']")));			
+		
+	}	
 }

@@ -1,6 +1,6 @@
 Feature: Created Patient Note Comparision in EC1 and viewed in EC2
 
-  Scenario Outline: To verify Notes created in EC1 through i framing should only be accessible on EC2 care plan tab should not be seen under Clinical Documents tab .
+  Scenario: To verify Notes created in EC1 through i framing should only be accessible on EC2 care plan tab should not be seen under Clinical Documents tab .
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
@@ -78,14 +78,10 @@ Feature: Created Patient Note Comparision in EC1 and viewed in EC2
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Care Plan" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
-    Then I switch to PatientTransitions frame   
+    Then I switch to PatientTransitions frame
     Then I click on the "Notes" tab appearing under care plan frame on patient summary page
     Then I verify the notes created in the episode1 should appear in the notes section in care plan in episode2
     When I switch to default window from iframe
     Then I will wait to see and click on "Clinical Documents" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see " " appearing in the "Document" "1" column in row "1" in Document table in Clinical Documents
-    
-    Examples: 
-      | email                | password  | patient first name | patient last name |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | AUTOMATETESTNOTES |

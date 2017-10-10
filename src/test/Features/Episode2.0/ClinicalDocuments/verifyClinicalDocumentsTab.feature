@@ -294,7 +294,7 @@ Feature: Verify the Clinical Documents section
       | Notetext                                                                                                                                                       |
       | In above case we have String dateString in format so to convert the String to Date in given format we have Created Object formatter of Class SimpleDateFormat. |
 
-  Scenario Outline: The Last saved section on the clinical documents table should display the information of the last user who saved the individual form(To verify information Acivity column in Clinical Documents table).
+  Scenario: The Last saved section on the clinical documents table should display the information of the last user who saved the individual form(To verify information Acivity column in Clinical Documents table).
     Given I am on the login page
     When I enter email field qa.emblemrn@yopmail.com for login
     And I enter password field Episode1! for Login
@@ -330,6 +330,4 @@ Feature: Verify the Clinical Documents section
     Then I verify that upon selecting Hide History user should only see the information of the last user who saved the form
     Then I verify that there should be an Attachment icon on Clinical Documents Activity Section
 
-    Examples: 
-      | date | Text Description        |
-      |   12 | Remedy Document Section |
+ 

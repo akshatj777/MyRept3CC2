@@ -438,6 +438,7 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
   Then I close the Discharge Location dropdown on Discharge Section
   Then I click on Calendar Icon On Discharge date under subform on Discharge section
   Then I select "Discharge current" with logic "minus" "3" days on Calendar Discharge Date under subform on Discharge section
+  Then I verify on clicking discharge date the field should show the date in the format of MMDDYYYY
   Then I verify Done button under subform is disabled on Discharge section
   Then I click on "Actual Care Setting" subform dropdown under Recommendation on Discharge section
   Then I select "(HHA) Home Health Agency" in subform dropdown for "Actual Care Setting" on Discharge section
@@ -608,7 +609,7 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I verify "Discharge" section should appear with "Additional Comments" on label "Additional" on the review page
 
   Scenario: As a user I would like to Save my progress in the CARL form and return to a previous page by selecting the "Save & Go Back" link
-      Given I am on the login page
+    Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
@@ -695,8 +696,7 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I will wait to see the CARL section "Caregiver" header appears on the CARL form
     Then I verify Save and Go Back does not appear on the "Caregiver" section on CARL form
     Then I click on Yes, 24 hours a day option under Does the patient have a capable caregiver
-    Then I save and continue the complete CARL form
-    Then I click on "Independence" "2" section on left navigator
+    Then I click on save and continue on "Caregiver" on the complete CARL form
     Then I will wait to see the CARL section "Independence" header appears on the CARL form
     Then I click on "Cognitive Status" dropdown on Independece Section
     Then I select "Forgetful" option in dropdown for cognitive status
@@ -704,14 +704,27 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I select "Assistance needed for one or more ADLs" option in dropdown for cognitive status
     Then I click on "Ambulatory Status" dropdown on Independece Section
     Then I select "Assistive device needed" option in dropdown for cognitive status
+    Then I verify Save and Go Back on the "Independence" section on CARL form
+    Then I click on save and continue on "Independence" on the complete CARL form
+    And I verify the "Anticipated Discharge Needs" section of the carl form upon clicking on it
+    Then I verify that "Anticipated Discharge Needs" section on carl form should be highlighted in left navigator upon clicking
+    Then I click "Physical therapy" checkbox under Therapies Needed on Anticipated Discharge Needs section
+    Then I verify "Physical therapy" checkbox is clickable
+    Then I verify Save and Go Back on the "Anticipated Discharge Needs" section on CARL form
+    Then I click on save and continue on "Anticipated Discharge Needs" on the complete CARL form
+    Then I will wait to see the CARL section "Discharge" header appears on the CARL form
+    Then I verify CARL Recommendation field should show "Home with Limited Services (HOM)" on discharge section when total score is "less than or equal to 16"
+    Then I verify Save and Go Back on the "Discharge" section on CARL form
+    Then I click on the Save and Go Back on the "Discharge" section on CARL form
+    And I verify the "Anticipated Discharge Needs" section of the carl form upon clicking on it
+    Then I verify that "Anticipated Discharge Needs" section on carl form should be highlighted in left navigator upon clicking
+    Then I verify "Physical therapy" checkbox is clickable
+    Then I click on the Save and Go Back on the "Anticipated Discharge Needs" section on CARL form
+    Then I will wait to see the CARL section "Independence" header appears on the CARL form
     Then I click on the Save and Go Back on the "Independence" section on CARL form
     Then I will wait to see the CARL section "Caregiver" header appears on the CARL form
     Then I verify on Yes, 24 hours a day option is enabled under Does the patient have a capable caregiver
-    Then I click on "Independence" "2" section on left navigator
-    Then I verify "Forgetful" option appears in dropdown for "Cognitive Status" label on "Independence" on CARL form
-    Then I verify "Assistance needed for one or more ADLs" option appears in dropdown for "Activities of Daily Living" label on "Independence" on CARL form
-    Then I verify "Assistive device needed" option appears in dropdown for "Ambulatory Status" label on "Independence" on CARL form
-
+   
   Scenario: As a user, I would like to submit the CARL form upon clicking the “Submit” link on the CARL Review form
      Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
