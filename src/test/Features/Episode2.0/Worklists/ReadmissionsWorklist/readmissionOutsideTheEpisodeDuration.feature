@@ -1,7 +1,7 @@
 Feature: Patient with readmission outside the episode duration i want to use this template for my feature file
 
   Scenario Outline: Patient with readmission outside the episode duration
-    Given I am on the login page
+   Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
@@ -20,7 +20,7 @@ Feature: Patient with readmission outside the episode duration i want to use thi
     And I selected "Male" from the gender drop down list present on the Add Patient page
     And I enter random social security number in the SSN text box field present on the Add Patient page
     When I click on Admitting Facility present on the Add Patient page
-    And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page
+    And I Select "coosa valley health care" from the list of admitting facility present on the Add Patient page
     And I enter "WA784654785" in the Medicare ID present on the Add Patient page
     Then I click on the next button present on the Add Patient page
     Then I click on the next button present on the Add Patient page

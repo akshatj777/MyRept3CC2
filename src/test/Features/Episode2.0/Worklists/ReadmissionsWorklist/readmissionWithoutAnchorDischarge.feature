@@ -73,7 +73,7 @@ Feature: Verify Readmission status without anchor discharge readmission
     Then I select the "Admit" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
     Then I wait to the see the visibility of loader to disappear
     Then I select the "Admit" "caretype" "Inpatient" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
-    Then I select the "Admit" facility "St Luke's - Allentown" by "#s2id_bp_personbundle_bpadmissiontype_admitFacility" on add a new transition
+    Then I select the "Admit" facility "Allentown" by "#s2id_bp_personbundle_bpadmissiontype_admitFacility" on add a new transition
     Then I click on the Create Transition Button to add a new transition
     Then I wait to the see the visibility of loader to disappear
     When I switch to default window from iframe
