@@ -784,7 +784,7 @@ public class PatientClinicalDocuments extends BaseClass {
 		}
 
 		public void Iwillwaittoseelinkappearingindocumenttable(String text, String document_head, int column, int row) {
-			if(text.equals(""))
+			if(text.equals("no value"))
 			{
 				 iWillWaitToSee(By.xpath("//table/tbody/tr["+row+"]/td["+column+"]"));
 			     isElementVisible(driver.findElement(By.xpath("//table/tbody/tr["+row+"]/td["+column+"]")));
@@ -932,6 +932,12 @@ public class PatientClinicalDocuments extends BaseClass {
 			js.executeScript("arguments[0].click();", element2);
 			clickElement(element2);
 	     	delay();
+			
+		}
+
+		public void I_am_on_URL(String uRL) {
+			String newURL="https://qa.remedypartners.com"+uRL;
+			driver.get(newURL);
 			
 		}
 		}

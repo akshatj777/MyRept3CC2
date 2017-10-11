@@ -66,7 +66,6 @@ Feature: Patient status on Home Health Worklist
     Then I click on the Diagnosis and DRG tab on add a new transition to select the DRG
     Then I select the "Working" DRG type on the Diagnosis and DRG tab on add a new transition
     Then I select the "63" DRG value on the Diagnosis and DRG tab on add a new transition
-    Then I wait to the see the visibility of loader to disappear
     Then I click on the Create Transition Button to add a new transition
     Then I wait to the see the visibility of loader to disappear
     Then I click on add a new transition to add a new episode
@@ -78,7 +77,6 @@ Feature: Patient status on Home Health Worklist
     Then I wait to the see the visibility of loader to disappear
     Then I select the "Admit" "caretype" "Skilled services" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
     Then I select the "Admit" facility "Amedisys Home Health - Stamford" by "#s2id_bp_personbundle_bpadmissiontype_admitFacility" on add a new transition
-    Then I wait to the see the visibility of loader to disappear
     Then I click on the Create Transition Button to add a new transition
     Then I wait to the see the visibility of loader to disappear
     When I switch to default window from iframe

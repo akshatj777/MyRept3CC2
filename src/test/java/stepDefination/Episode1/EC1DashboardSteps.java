@@ -54,6 +54,48 @@ public class EC1DashboardSteps extends DriverScript {
         ec1Dashboard.iverifyEc1DashboardHeaderText(header);
     }
     
+    @Then ("^I will wait to see and click on \"([^\"]*)\" followed by id \"([^\"]*)\" on \"([^\"]*)\"$")
+    public void i_will_click_followed_by_id(String text,String id,String page)
+    {
+    	ec1Dashboard.i_will_click_followed_by_id(id);
+    }
+    
+    @Then ("^I will wait to see and click on \"([^\"]*)\" followed by href \"([^\"]*)\" on \"([^\"]*)\"$")
+    public void i_will_click_followed_by_href(String text,String href,String page)
+    {
+    	ec1Dashboard.i_will_click_followed_by_href(href);
+    }
+    
+    @Then ("^I will wait to see and enter \"([^\"]*)\" on \"([^\"]*)\" followed by id \"([^\"]*)\" on \"([^\"]*)\"$")
+    public void i_will_enter_followed_by_id(String text,String variable,String id,String page)
+    {
+    	ec1Dashboard.i_will_enter_followed_by_id(text,id);
+    }
+    
+    @Then ("^I will wait to see and select \"([^\"]*)\" on \"([^\"]*)\" followed by id \"([^\"]*)\" on \"([^\"]*)\"$")
+    public void i_will_select_followed_by_id(String text,String variable,String id,String page)
+    {
+    	ec1Dashboard.i_will_select_followed_by_id(text,id);
+    }
+    
+    @Then ("^I will wait to see and click on \"([^\"]*)\" followed by css \"([^\"]*)\" on \"([^\"]*)\"$")
+    public void i_will_click_followed_by_css(String text,String css,String page)
+    {
+    	ec1Dashboard.i_will_click_followed_by_css(css);
+    }
+    
+    @Then ("^I will wait to see and check \"([^\"]*)\" followed by \"([^\"]*)\"$")
+    public void i_will_check_followed_by_id(String text,String id)
+    {
+    	ec1Dashboard.i_will_check_followed_by_id(text,id);
+    }
+    
+    @When ("^I will wait to see and select facility from facility widget on Create User with \"([^\"]*)\"$")
+    public void I_select_facility_from_facility_widget(String text)
+    {
+    	ec1Dashboard.I_select_facility_from_facility_widget(text);
+    }
+    
     @Then("^I should see user profile icon on product tile page$")
     public void i_should_see_user_profile_icon_on_product_tile_page() throws Throwable {
     	ec1Dashboard.iShouldSeeUserProfileIconOnProductTilePage();

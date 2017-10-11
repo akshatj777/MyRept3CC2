@@ -426,16 +426,25 @@ public class DischargeCarlForm extends BaseClass {
 	public void Iverifysectionshouldappearwithvalueonlabelonthereviewpage(String section,String value,String label) {
 	if(section.equals("Caregiver"))
 	isElementVisible(driver.findElement(By.xpath("//div[1]/div[@class='review-body']/*[self::h4[contains(text(),'"+label+"')]  or self::div[contains(text(),'"+value+"')]]")));	
-	else if(section.equals("Anticipated Discharge Needs"))
-	{
+	else if(section.equals("Independence")){
 	isElementVisible(driver.findElement(By.xpath("//section/div[2]/div[@class='review-body']/*[self::h4[contains(text(),'"+label+"')]  or self::div[contains(text(),'"+value+"')]]")));		
+	}else if(section.equals("Anticipated Discharge Needs")){
+	isElementVisible(driver.findElement(By.xpath("//section/div[3]/div[2]/div[1]/div[contains(text(),'Therapies Needed')]/following-sibling::div/div[contains(text(),'Therapies')]/following-sibling::div[contains(text(),'Physical Therapy')]")));		
 	}else if(section.equals("Discharge")){
-	isElementVisible(driver.findElement(By.xpath("//section/div[4]/div[@class='review-body']/*[self::h4[contains(text(),'"+label+"')]  or self::div[contains(text(),'"+value+"')]]")));		
-	}
-	}
+	isElementVisible(driver.findElement(By.xpath("//div[4]/div[@class='review-body']/h4[contains(text(),'"+label+"')]/following-sibling::div[contains(text(),'"+value+"')]")));		
+    }else if(section.equals("Discharge Disagreement")){
+    isElementVisible(driver.findElement(By.xpath("//div[4]/div[@class='review-body']/div[7]/h4[contains(text(),'"+label+"')]/following-sibling::div[contains(text(),'"+value+"')]")));			
+    }
+	}	
 
-    public void Iverifysectionshouldappearwithvaluefordescriptivetitleonthereviewpage(String section,String label,String descriptive_title,String value) {
-	isElementVisible(driver.findElement(By.xpath("//div[@class='therapies-needed']//div[contains(text(),'"+value+"')]/following-sibling::div/div[contains(text(),'"+label+"')]/following-sibling::div[contains(text(),'"+descriptive_title+"')]")));	
+    public void Iverifysectionshouldappearwithvaluefordescriptivetitleonthereviewpage(String section,String value,String label,String descriptive_title) {
+    	if(descriptive_title.equals("Therapies Needed"))
+    	{
+    	isElementVisible(driver.findElement(By.xpath("//section/div[3]/div[2]/div[1]/div[contains(text(),'"+descriptive_title+"')]/following-sibling::div/div[contains(text(),'"+label+"')]/following-sibling::div[contains(text(),'"+value+"')]")));	
+    	}else{
+    	isElementVisible(driver.findElement(By.xpath("//section/div[3]/div[2]/div[2]/div[contains(text(),'"+descriptive_title+"')]/following-sibling::div/div[contains(text(),'"+label+"')]/following-sibling::div[contains(text(),'"+value+"')]")));	
+    	}
+    //	isElementVisible(driver.findElement(By.xpath("//div[@class='therapies-needed']//div[contains(text(),'"+value+"')]/following-sibling::div/div[contains(text(),'"+label+"')]/following-sibling::div[contains(text(),'"+descriptive_title+"')]")));	
 	}
 
     public void IclickontheSaveandGoBackonsectiononCARLform() {
@@ -580,5 +589,10 @@ public class DischargeCarlForm extends BaseClass {
 		delay();
 	    isElementVisible(driver.findElement(By.xpath("//a[@ng-click='saveCarlAndPrevious($event)']")));			
 		
+	}
+
+	public void Iverifyusershouldbeabletonavigatetothereviewform() {
+		iWillWaitToSee(By.xpath("//h2[contains(text(),'Review')]"));	
+		isElementVisible(driver.findElement(By.xpath("//h2[contains(text(),'Review')]")));
 	}	
 }

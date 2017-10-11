@@ -56,6 +56,7 @@ Feature: Patient Notes on Patient Summary
     And I enter the Note Text "Remedy Notes" in the textarea on Add Clinical Document on Patient Summary
     Then I click on Add Files link on Note Section on Patient Summary
     Then I verify that user should be able to select and upload file "Corrupt.docx" through Add files link
+    Then I verify the "Corrupt.docx" image is successfully attached at index "1"
     Then I verify upon uploading any corrupted file then validation should throw and file should not get added on creating note
     And I verify Cancel button appears on the Add Clinical Document on Note Creation
     Then I will wait to see and click on "Create Note" followed by "button" tag

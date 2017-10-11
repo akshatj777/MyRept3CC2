@@ -3,6 +3,7 @@ package com.remedy.episode1;
 import com.remedy.baseClass.BaseClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
 
 /**
  * Created by salam on 5/6/16.
@@ -274,4 +275,57 @@ public class Ec1DashboardPage extends BaseClass{
     public void iClickOnDismissAllButtonPresentOnTheNotificationDropdownMenu(){
     	clickElement(driver.findElement(By.cssSelector("button.btn-dismiss-all")));
     }
+
+
+
+	public void i_will_click_followed_by_id(String id) {
+		iWillWaitToSee(By.id(id));
+		clickElement(driver.findElement(By.id(id)));
+		
+	}
+
+
+   public void i_will_click_followed_by_href(String href) {
+	   iWillWaitToSee((By.xpath("//a[@href='"+href+"']")));
+	   clickElement(driver.findElement(By.xpath("//a[@href='"+href+"']")));
+		
+	}
+
+  public void i_will_enter_followed_by_id(String text,String id) {
+	  iWillWaitToSee(By.id(id));
+	  iFillInText(driver.findElement(By.id(id)),text);
+}
+
+
+
+public void i_will_select_followed_by_id(String text, String id) {
+	Select select = new Select(driver.findElement(By.id(id)));
+	select.selectByVisibleText(text);
+	
+}
+
+
+
+public void i_will_click_followed_by_css(String css) {
+	iWillWaitToSee(By.cssSelector(css));
+	clickElement(driver.findElement(By.cssSelector(css)));
+}
+
+
+
+public void i_will_check_followed_by_id(String text, String id) {
+	iWillWaitToSee(By.id(id));
+	clickElement(driver.findElement(By.id(id)));
+	
+}
+
+
+
+public void I_select_facility_from_facility_widget(String text) {
+       iWillWaitToSee(By.id("s2id_new_bppatientnavigator_facilities"));
+	   iFillInText(driver.findElement(By.cssSelector("input.select2-input")),text);
+	   iWillWaitToSee(By.cssSelector("li.select2-highlighted"));
+	   clickElement(driver.findElement(By.cssSelector("li.select2-highlighted")));
+	   
+}
 }

@@ -84,4 +84,4 @@ Feature: Created Patient Note Comparision in EC1 and viewed in EC2
     When I switch to default window from iframe
     Then I will wait to see and click on "Clinical Documents" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
-    Then I will wait to see " " appearing in the "Document" "1" column in row "1" in Document table in Clinical Documents
+    Then I will wait to see "no value" appearing in the "Document" "1" column in row "1" in Document table in Clinical Documents

@@ -67,6 +67,12 @@ public class DischargeCarlFormSteps extends DriverScript {
 	{
 		dischargecarlform.iclickonthebuttonwhensavedtheformwithoutsaving(position);
 	}
+	
+	@Then ("^I verify user should be able to navigate to the review form on Discharge section$")
+	public void I_verify_user_should_be_able_to_navigate_to_the_review_form()
+	{
+		dischargecarlform.Iverifyusershouldbeabletonavigatetothereviewform();
+	}
 	@Then ("^I click on Done button under subform on Discharge sections$")
 	public void I_click_on_Done_button_under_subform_on_Discharge_sections() throws Throwable {
 		dischargecarlform.IclickonDonebuttonundersubformonDischargesections();
@@ -311,8 +317,8 @@ public class DischargeCarlFormSteps extends DriverScript {
     }
    
     @Then ("^I verify \"([^\"]*)\" section should appear with \"([^\"]*)\" for label \"([^\"]*)\" for descriptive title \"([^\"]*)\" on the review page$")
-    public void I_verify_section_should_appear_with_value_for_descriptive_title_on_the_review_page(String section,String label,String descriptive_title,String value) throws Throwable {
-    	dischargecarlform.Iverifysectionshouldappearwithvaluefordescriptivetitleonthereviewpage(section,label,descriptive_title,value);
+    public void I_verify_section_should_appear_with_value_for_descriptive_title_on_the_review_page(String section,String value,String label,String descriptive_title) throws Throwable {
+    	dischargecarlform.Iverifysectionshouldappearwithvaluefordescriptivetitleonthereviewpage(section,value,label,descriptive_title);
     }
     
     @Then ("^I verify Save and Go Back on the \"([^\"]*)\" section on CARL form$")

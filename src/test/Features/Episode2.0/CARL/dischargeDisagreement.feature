@@ -62,7 +62,6 @@ Feature: Discharge – Disagreement Reason(s)
     Then I wait to the see the visibility of loader to disappear
     Then I click on add a new transition to add a new episode
     Then I will wait to see "Transition Info" followed by "a" tag
-    Then I wait for 3000 milli seconds
     Then I fill in "Admit" with logic "minus" with "8" days
     Then I select the care setting value "HHH - Hospital" on add a new transition
     Then I wait to the see the visibility of loader to disappear
@@ -173,35 +172,30 @@ Feature: Discharge – Disagreement Reason(s)
     Then I wait to the see the visibility of loader to disappear
     Then I click on add a new transition to add a new episode
     Then I will wait to see "Transition Info" followed by "a" tag
-    Then I wait for 3000 milli seconds
     Then I fill in "Admit" with logic "minus" with "8" days
     Then I wait to the see the visibility of loader to disappear
-     Then I select the "Admit" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
+    Then I select the "Admit" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
     Then I wait to the see the visibility of loader to disappear
     Then I select the "Admit" "caretype" "Inpatient" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
     Then I select the "Admit" facility "Stamford Hospital" by "#s2id_bp_personbundle_bpadmissiontype_admitFacility" on add a new transition
     Then I click on the Diagnosis and DRG tab on add a new transition to select the DRG
     Then I select the "Working" DRG type on the Diagnosis and DRG tab on add a new transition
     Then I select the "61" DRG value on the Diagnosis and DRG tab on add a new transition
-    Then I wait for 5000 milli seconds
     Then I click on the Create Transition Button to add a new transition
     Then I wait to the see the visibility of loader to disappear
     When I switch to default window from iframe
-    Then I wait for 1000 milli seconds
     Then I close the patient summary Page
     Then I verify current page "Remedy Partners" title
     When I click on Filter button present on Patient Page
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    And I wait for 2000 milli seconds
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I scroll the page to bottom by "-100"
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
-    And I wait for 2000 milli seconds
     Then I will wait to see the CARL section "Caregiver" header appears on the CARL form
     Then I click on Yes, 24 hours a day option under Does the patient have a capable caregiver
     Then I save and continue the complete CARL form

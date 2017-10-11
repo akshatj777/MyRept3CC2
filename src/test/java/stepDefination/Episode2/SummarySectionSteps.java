@@ -6,6 +6,7 @@ import com.remedy.Episode2.PatientClinicalDocuments;
 
 import com.remedy.resources.DriverScript;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 
 public class SummarySectionSteps extends DriverScript {
 
@@ -187,6 +188,12 @@ public class SummarySectionSteps extends DriverScript {
 	@Then("^I will wait to see \"([^\"]*)\" followed by \"([^\"]*)\" tag$")
 	public void Iwillwaittoseetext(String text,String tag) throws Throwable {
 		patientclinical.Iwillwaittoseetext(text,tag);
+	}
+	
+	@When("^I am on \"([^\"]*)\" URL$")
+	public void I_am_on_URL(String URL) throws Throwable
+	{
+		patientclinical.I_am_on_URL(URL);
 	}
 	
 	@Then("^I will wait to see and click on \"([^\"]*)\" followed by \"([^\"]*)\" tag$")
