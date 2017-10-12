@@ -391,6 +391,5 @@ Feature: As a user, I would like to see the recommended next site of care within
     Then I select "New discharge medication" checkbox for Transition of Care Needs on Anticipated Discharge Needs
     Then I click "One" radio option under "New discharge medication" for Transition Care Needs
     Then I save and continue the complete CARL form
-    Then I click on "Discharge" "4" section on left navigator
     Then I will wait to see the CARL section "Discharge" header appears on the CARL form
     Then I verify CARL Recommendation field should show "Post Acute Facility" on discharge section when total score is "greater than 25"

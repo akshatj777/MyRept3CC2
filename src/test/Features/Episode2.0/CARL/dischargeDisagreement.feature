@@ -74,6 +74,7 @@ Feature: Discharge – Disagreement Reason(s)
     Then I wait to the see the visibility of loader to disappear
     When I switch to default window from iframe
     Then I close the patient summary Page
+    Then I scroll the page to bottom by "-100"
     Then I verify current page "Remedy Partners" title
     When I click on Filter button present on Patient Page
     Then I enter "SSN" value under "ssn" filter
@@ -187,9 +188,6 @@ Feature: Discharge – Disagreement Reason(s)
     Then I close the patient summary Page
     Then I verify current page "Remedy Partners" title
     When I click on Filter button present on Patient Page
-    And I click on Filters button present on Filter Page
-    Then I verify SSN Filter is displayed under List of Filter Options
-    When I click on SSN Filter present on Filter Page
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I scroll the page to bottom by "-100"
@@ -221,7 +219,6 @@ Feature: Discharge – Disagreement Reason(s)
     Then I save and continue the complete CARL form
     Then I will wait to see the CARL section "Discharge" header appears on the CARL form
     Then I verify CARL Recommendation field should show "Home with Limited Services (HOM)" on discharge section when total score is "less than or equal to 16"
-    Then I verify a legal message should appear when Carl recommendation field show Home with Limited Services
     Then I click on "Actual Care Setting" subform dropdown under Recommendation on Discharge section
     Then I select "(HHA) Home Health Agency" in subform dropdown for "Actual Care Setting" on Discharge section
     Then I verify that upon selecting any value to Actual care setting field presence of "Have you discussed the proposal with the Interdisciplinary team?" question is appearing

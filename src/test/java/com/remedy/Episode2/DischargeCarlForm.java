@@ -573,7 +573,7 @@ public class DischargeCarlForm extends BaseClass {
 	}
 
 	public void IverifyonclickingdischargedatethefieldshouldshowthedateintheformatofMMDDYYYY() throws ParseException {
-		String text=driver.findElement(By.cssSelector("//input[@ng-model='$selection']")).getAttribute("value");
+		String text=driver.findElement(By.xpath("//input[@ng-model='$selection']")).getAttribute("value");
 	    String information=text.substring(0,10);
      	validateDateFormat(information);
 		

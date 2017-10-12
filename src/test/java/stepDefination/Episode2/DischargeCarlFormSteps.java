@@ -342,7 +342,7 @@ public class DischargeCarlFormSteps extends DriverScript {
     }
     
     @Then("^I verify Save and Go Back does not appear on the \"([^\"]*)\" section on CARL form$")
-    public void I_verify_Save_and_Go_Back_does_not_appear() throws Throwable {
+    public void I_verify_Save_and_Go_Back_does_not_appear(String section) throws Throwable {
     	dischargecarlform.IverifySaveandGoBackdoesnotappear();
     }
     

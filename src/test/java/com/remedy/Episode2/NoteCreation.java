@@ -131,8 +131,9 @@ public class NoteCreation extends BaseClass {
 	}
 
 	public void IselectthedatefromdatepickeronAddClinicalDocumentonPatientCard(String date_element) {
-		iWillWaitToSee(By.xpath("//input[@ng-model='$selection']"));
-		clickElement(driver.findElement(By.xpath("//input[@ng-model='$selection']")));
+		delay();
+		iWillWaitToSee(By.xpath("//section/form/div[2]/div[1]/a/div/div/i[1]"));
+		clickElement(driver.findElement(By.xpath("//section/form/div[2]/div[1]/a/div/div/i[1]")));
 		delay();
 		iWillWaitToSee(By.cssSelector("td.day.ng-scope"));
 		selectElementByDesc("td.day.ng-scope", date_element);

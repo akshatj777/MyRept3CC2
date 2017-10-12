@@ -100,7 +100,7 @@ public class AnticipatedCarlForm extends BaseClass {
 	}
 
 	public void IClickRadioOptionAfterSelectingCheckBoxUnderTransitionOfCareNeedsOnAnticipatedDischargeNeeds(String radio, String text) {
-		delay();
+		longDelay();
 		iWillWaitToSee(By.xpath("//div[input[contains(@id,'" + text + "')]]//label//span[contains(text(),'" + radio + "')]"));
 		clickElement(driver.findElement(By.xpath("//div[input[contains(@id,'" + text + "')]]//label//span[contains(text(),'" + radio + "')]")));
 	}
