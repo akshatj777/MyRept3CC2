@@ -16,6 +16,8 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.net.URL;
 import java.util.*;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 
 /**
  * Cucumber custom format listener which generates ExtentsReport html file
@@ -29,7 +31,9 @@ public class ExtentCucumberFormatter implements Reporter, Formatter {
     private static File htmlReportDir;
     private static Map systemInfo;
     private boolean scenarioOutlineTest;
-    public static String ReportPath = "Reports" + File.separator + "ExecutionResults_" + System.currentTimeMillis();
+    static Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+    private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+    public static String ReportPath = "target" + File.separator + "Reports" + File.separator + "ExecutionResults_" + sdf.format(timestamp) + System.currentTimeMillis();
     public String value=null; 
 
     private static final Map<String, String> MIME_TYPES_EXTENSIONS = new HashMap() {
