@@ -1,3 +1,4 @@
+@Episode @Worklist @Exceed
 Feature: Patient status on Exceed SNF LOS Work List (Model 2 state)
 
   Scenario Outline: Verify patient should be present in EXCEED SNF LOS Worklist when Episode is M2 Active and patient is Admit with readmission admit care setting-SNF 

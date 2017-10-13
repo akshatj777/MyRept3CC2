@@ -1,3 +1,4 @@
+@Episode @Notes 
 Feature: Patient Notes on Patient Summary
 
   Scenario: To Verify Quick Action has the following criteria on Patient Summary

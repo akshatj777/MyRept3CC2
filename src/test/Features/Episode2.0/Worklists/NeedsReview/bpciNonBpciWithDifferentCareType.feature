@@ -1,3 +1,4 @@
+@Episode @Worklist @NeedReview
 Feature: Patient status in Need Review Worklist
 
   Scenario Outline: Verify patient status not included on need review worklist with patient having HHH-Outpatient with BPCI possible DRG and No Episode

@@ -1,3 +1,4 @@
+@Episode @TopNaviagtion
 Feature: Episode 2.0 Product List
 
 Scenario Outline: User should be able to redirect to any product in the list from product icon

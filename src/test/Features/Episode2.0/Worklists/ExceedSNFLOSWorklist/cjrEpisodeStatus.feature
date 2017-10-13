@@ -1,3 +1,4 @@
+@Episode @Worklist @Exceed
 Feature: Patient status on Exceed SNF LOS Work List (CJR state)
 
   Scenario Outline: Verify patient included in Exceed SNF LOS when patient is admitted to SNF TCU with CJR Pend Can.

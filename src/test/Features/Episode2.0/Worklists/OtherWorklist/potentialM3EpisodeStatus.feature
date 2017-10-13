@@ -1,3 +1,4 @@
+@Episode @Worklist @Alternative
 Feature: Patient status on Other Work List
 
   Scenario Outline: Verify patient present in Other Worklist with Potential M3 Episode status when patient is discharged to SNF

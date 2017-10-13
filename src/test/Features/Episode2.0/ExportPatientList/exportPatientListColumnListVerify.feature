@@ -1,3 +1,4 @@
+@Episode @Export 
 Feature: Episode 2.0 Export Drawer Column List Verification
 
   Scenario: Verfication of column list in the export drawer box

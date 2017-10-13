@@ -1,3 +1,4 @@
+@Episode @Worklist @InpatientCare
 Feature: Patient status in Inpatient Care Worklist
 
   Scenario Outline: Admitted today or in past(considering current date >= admit date) in any post acute facility with confirmed Working BPCI M3 DRG.

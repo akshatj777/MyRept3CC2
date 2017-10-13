@@ -1,3 +1,4 @@
+@Episode @Worklist @PostAcuteOnboarding
 Feature: Patient status in Post Acute Onboarding Worklist
 
   Scenario Outline: Patient status in post onboarding worklist when admitted to HHH-inpatient without any drg

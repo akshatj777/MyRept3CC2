@@ -1,774 +1,0 @@
-
-C:\Users\akshat.jain\git\automation\Execution Scripts>call Maven.bat 
-
-C:\Users\akshat.jain\git\automation\Execution Scripts>cd..
-
-C:\Users\akshat.jain\git\automation>mvn clean install test 
-[INFO] Scanning for projects...
-[INFO] 
-[INFO] ------------------------------------------------------------------------
-[INFO] Building Remedy2Application 1.0-SNAPSHOT
-[INFO] ------------------------------------------------------------------------
-[INFO] 
-[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ Remedy2Application ---
-[INFO] Deleting C:\Users\akshat.jain\git\automation\target
-[INFO] 
-[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ Remedy2Application ---
-[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
-[INFO] skip non existing resourceDirectory C:\Users\akshat.jain\git\automation\src\main\resources
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ Remedy2Application ---
-[INFO] Nothing to compile - all classes are up to date
-[INFO] 
-[INFO] --- cucumber-jvm-parallel-plugin:4.2.0:generateRunners (generateRunners) @ Remedy2Application ---
-[WARNING] The format parameter is deprecated. Please use plugins
-[INFO] Adding C:\Users\akshat.jain\git\automation\target\generated-test-sources\cucumber to test-compile source root
-[INFO] 
-[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ Remedy2Application ---
-[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
-[INFO] skip non existing resourceDirectory C:\Users\akshat.jain\git\automation\src\test\resources
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ Remedy2Application ---
-[INFO] Changes detected - recompiling the module!
-[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
-[INFO] Compiling 102 source files to C:\Users\akshat.jain\git\automation\target\test-classes
-[WARNING] error reading C:\Users\akshat.jain\.m2\repository\org\projectlombok\lombok\1.16.10\lombok-1.16.10.jar; invalid LOC header (bad signature)
-[WARNING] /C:/Users/akshat.jain/git/automation/src/test/java/com/remedy/userAdmin/CreateUserPage.java: Some input files use unchecked or unsafe operations.
-[WARNING] /C:/Users/akshat.jain/git/automation/src/test/java/com/remedy/userAdmin/CreateUserPage.java: Recompile with -Xlint:unchecked for details.
-[INFO] 
-[INFO] --- maven-surefire-plugin:2.19:test (default-test) @ Remedy2Application ---
-Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/maven-surefire-common/2.19/maven-surefire-common-2.19.pom
-Progress (1): 2.3/7.3 kBProgress (1): 5.0/7.3 kBProgress (1): 7.3 kB                        Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/maven-surefire-common/2.19/maven-surefire-common-2.19.pom (7.3 kB at 4.4 kB/s)
-Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/2.19/surefire-api-2.19.pom
-Progress (1): 2.3/3.5 kBProgress (1): 3.5 kB                        Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/2.19/surefire-api-2.19.pom (3.5 kB at 7.0 kB/s)
-Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/2.19/surefire-booter-2.19.pom
-Progress (1): 2.3/3.2 kBProgress (1): 3.2 kB                        Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/2.19/surefire-booter-2.19.pom (3.2 kB at 6.2 kB/s)
-Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-api/3.0/maven-reporting-api-3.0.pom
-Progress (1): 2.3/2.4 kBProgress (1): 2.4 kB                        Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-api/3.0/maven-reporting-api-3.0.pom (2.4 kB at 4.7 kB/s)
-Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/15/maven-shared-components-15.pom
-Progress (1): 2.3/9.3 kBProgress (1): 5.0/9.3 kBProgress (1): 7.8/9.3 kBProgress (1): 9.3 kB                        Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/15/maven-shared-components-15.pom (9.3 kB at 18 kB/s)
-Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/16/maven-parent-16.pom
-Progress (1): 2.3/23 kBProgress (1): 5.0/23 kBProgress (1): 7.8/23 kBProgress (1): 11/23 kB Progress (1): 13/23 kBProgress (1): 16/23 kBProgress (1): 19/23 kBProgress (1): 21/23 kBProgress (1): 23 kB                      Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/16/maven-parent-16.pom (23 kB at 32 kB/s)
-Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/maven-surefire-common/2.19/maven-surefire-common-2.19.jar
-Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-api/3.0/maven-reporting-api-3.0.jar
-Downloading: https://repo.maven.apache.org/maven2/junit/junit/4.12/junit-4.12.jar
-Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/2.19/surefire-api-2.19.jar
-Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/2.19/surefire-booter-2.19.jar
-Progress (1): 2.3/293 kBProgress (1): 5.0/293 kBProgress (1): 7.8/293 kBProgress (1): 11/293 kB Progress (1): 13/293 kBProgress (1): 16/293 kBProgress (1): 19/293 kBProgress (1): 21/293 kBProgress (1): 24/293 kBProgress (1): 27/293 kBProgress (1): 30/293 kBProgress (1): 32/293 kBProgress (1): 36/293 kBProgress (1): 40/293 kBProgress (1): 45/293 kBProgress (1): 49/293 kBProgress (1): 53/293 kBProgress (1): 57/293 kBProgress (1): 61/293 kBProgress (1): 65/293 kBProgress (1): 69/293 kBProgress (1): 73/293 kBProgress (1): 77/293 kBProgress (1): 81/293 kBProgress (1): 86/293 kBProgress (1): 90/293 kBProgress (1): 94/293 kBProgress (1): 98/293 kBProgress (1): 102/293 kBProgress (1): 106/293 kBProgress (1): 110/293 kBProgress (1): 114/293 kBProgress (2): 114/293 kB | 2.3/315 kBProgress (2): 114/293 kB | 5.0/315 kBProgress (2): 114/293 kB | 7.8/315 kBProgress (2): 114/293 kB | 11/315 kB Progress (2): 114/293 kB | 13/315 kBProgress (2): 118/293 kB | 13/315 kBProgress (2): 122/293 kB | 13/315 kBProgress (2): 126/293 kB | 13/315 kBProgress (2): 131/293 kB | 13/315 kBProgress (2): 135/293 kB | 13/315 kBProgress (2): 139/293 kB | 13/315 kBProgress (2): 143/293 kB | 13/315 kBProgress (2): 147/293 kB | 13/315 kBProgress (2): 151/293 kB | 13/315 kBProgress (2): 155/293 kB | 13/315 kBProgress (2): 159/293 kB | 13/315 kBProgress (2): 163/293 kB | 13/315 kBProgress (3): 163/293 kB | 13/315 kB | 2.3/45 kBProgress (3): 163/293 kB | 13/315 kB | 5.0/45 kBProgress (3): 163/293 kB | 13/315 kB | 7.8/45 kBProgress (3): 163/293 kB | 13/315 kB | 11/45 kB Progress (3): 163/293 kB | 13/315 kB | 13/45 kBProgress (3): 167/293 kB | 13/315 kB | 13/45 kBProgress (3): 172/293 kB | 13/315 kB | 13/45 kBProgress (3): 176/293 kB | 13/315 kB | 13/45 kBProgress (3): 180/293 kB | 13/315 kB | 13/45 kBProgress (4): 180/293 kB | 13/315 kB | 13/45 kB | 2.3/195 kBProgress (4): 180/293 kB | 13/315 kB | 13/45 kB | 5.0/195 kBProgress (4): 180/293 kB | 13/315 kB | 13/45 kB | 7.8/195 kBProgress (4): 180/293 kB | 13/315 kB | 13/45 kB | 11/195 kB Progress (4): 180/293 kB | 13/315 kB | 13/45 kB | 13/195 kBProgress (5): 180/293 kB | 13/315 kB | 13/45 kB | 13/195 kB | 2.3/11 kBProgress (5): 180/293 kB | 13/315 kB | 13/45 kB | 13/195 kB | 5.0/11 kBProgress (5): 180/293 kB | 13/315 kB | 13/45 kB | 13/195 kB | 7.8/11 kBProgress (5): 180/293 kB | 13/315 kB | 13/45 kB | 13/195 kB | 11/11 kB Progress (5): 180/293 kB | 13/315 kB | 13/45 kB | 13/195 kB | 11 kB   Progress (5): 180/293 kB | 16/315 kB | 13/45 kB | 13/195 kB | 11 kBProgress (5): 180/293 kB | 19/315 kB | 13/45 kB | 13/195 kB | 11 kBProgress (5): 184/293 kB | 19/315 kB | 13/45 kB | 13/195 kB | 11 kBProgress (5): 188/293 kB | 19/315 kB | 13/45 kB | 13/195 kB | 11 kBProgress (5): 192/293 kB | 19/315 kB | 13/45 kB | 13/195 kB | 11 kBProgress (5): 196/293 kB | 19/315 kB | 13/45 kB | 13/195 kB | 11 kBProgress (5): 196/293 kB | 21/315 kB | 13/45 kB | 13/195 kB | 11 kBProgress (5): 196/293 kB | 24/315 kB | 13/45 kB | 13/195 kB | 11 kBProgress (5): 196/293 kB | 27/315 kB | 13/45 kB | 13/195 kB | 11 kBProgress (5): 196/293 kB | 30/315 kB | 13/45 kB | 13/195 kB | 11 kBProgress (5): 196/293 kB | 32/315 kB | 13/45 kB | 13/195 kB | 11 kBProgress (5): 200/293 kB | 32/315 kB | 13/45 kB | 13/195 kB | 11 kBProgress (5): 204/293 kB | 32/315 kB | 13/45 kB | 13/195 kB | 11 kBProgress (5): 208/293 kB | 32/315 kB | 13/45 kB | 13/195 kB | 11 kBProgress (5): 212/293 kB | 32/315 kB | 13/45 kB | 13/195 kB | 11 kBProgress (5): 217/293 kB | 32/315 kB | 13/45 kB | 13/195 kB | 11 kBProgress (5): 221/293 kB | 32/315 kB | 13/45 kB | 13/195 kB | 11 kBProgress (5): 225/293 kB | 32/315 kB | 13/45 kB | 13/195 kB | 11 kBProgress (5): 229/293 kB | 32/315 kB | 13/45 kB | 13/195 kB | 11 kBProgress (5): 229/293 kB | 32/315 kB | 16/45 kB | 13/195 kB | 11 kBProgress (5): 233/293 kB | 32/315 kB | 16/45 kB | 13/195 kB | 11 kBProgress (5): 237/293 kB | 32/315 kB | 16/45 kB | 13/195 kB | 11 kBProgress (5): 241/293 kB | 32/315 kB | 16/45 kB | 13/195 kB | 11 kBProgress (5): 245/293 kB | 32/315 kB | 16/45 kB | 13/195 kB | 11 kBProgress (5): 245/293 kB | 32/315 kB | 19/45 kB | 13/195 kB | 11 kBProgress (5): 245/293 kB | 32/315 kB | 21/45 kB | 13/195 kB | 11 kBProgress (5): 245/293 kB | 32/315 kB | 21/45 kB | 16/195 kB | 11 kBProgress (5): 245/293 kB | 32/315 kB | 24/45 kB | 16/195 kB | 11 kBProgress (5): 245/293 kB | 32/315 kB | 24/45 kB | 19/195 kB | 11 kBProgress (5): 249/293 kB | 32/315 kB | 24/45 kB | 19/195 kB | 11 kBProgress (5): 253/293 kB | 32/315 kB | 24/45 kB | 19/195 kB | 11 kBProgress (5): 258/293 kB | 32/315 kB | 24/45 kB | 19/195 kB | 11 kBProgress (5): 262/293 kB | 32/315 kB | 24/45 kB | 19/195 kB | 11 kBProgress (5): 262/293 kB | 32/315 kB | 27/45 kB | 19/195 kB | 11 kBProgress (5): 262/293 kB | 32/315 kB | 27/45 kB | 21/195 kB | 11 kBProgress (5): 262/293 kB | 32/315 kB | 30/45 kB | 21/195 kB | 11 kBProgress (5): 262/293 kB | 32/315 kB | 30/45 kB | 24/195 kB | 11 kBProgress (5): 262/293 kB | 36/315 kB | 30/45 kB | 24/195 kB | 11 kBProgress (5): 262/293 kB | 40/315 kB | 30/45 kB | 24/195 kB | 11 kBProgress (5): 262/293 kB | 45/315 kB | 30/45 kB | 24/195 kB | 11 kBProgress (5): 262/293 kB | 49/315 kB | 30/45 kB | 24/195 kB | 11 kBProgress (5): 262/293 kB | 49/315 kB | 32/45 kB | 24/195 kB | 11 kBProgress (5): 262/293 kB | 49/315 kB | 32/45 kB | 27/195 kB | 11 kBProgress (5): 266/293 kB | 49/315 kB | 32/45 kB | 27/195 kB | 11 kBProgress (5): 270/293 kB | 49/315 kB | 32/45 kB | 27/195 kB | 11 kBProgress (5): 270/293 kB | 49/315 kB | 32/45 kB | 30/195 kB | 11 kBProgress (5): 274/293 kB | 49/315 kB | 32/45 kB | 30/195 kB | 11 kBProgress (5): 278/293 kB | 49/315 kB | 32/45 kB | 30/195 kB | 11 kBProgress (5): 278/293 kB | 49/315 kB | 32/45 kB | 32/195 kB | 11 kBProgress (5): 278/293 kB | 53/315 kB | 32/45 kB | 32/195 kB | 11 kBProgress (5): 278/293 kB | 57/315 kB | 32/45 kB | 32/195 kB | 11 kBProgress (5): 278/293 kB | 61/315 kB | 32/45 kB | 32/195 kB | 11 kBProgress (5): 278/293 kB | 65/315 kB | 32/45 kB | 32/195 kB | 11 kB                                                                   Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-api/3.0/maven-reporting-api-3.0.jar (11 kB at 8.7 kB/s)
-Progress (4): 282/293 kB | 65/315 kB | 32/45 kB | 32/195 kBProgress (4): 286/293 kB | 65/315 kB | 32/45 kB | 32/195 kBProgress (4): 290/293 kB | 65/315 kB | 32/45 kB | 32/195 kBProgress (4): 293 kB | 65/315 kB | 32/45 kB | 32/195 kB    Progress (4): 293 kB | 69/315 kB | 32/45 kB | 32/195 kBProgress (4): 293 kB | 73/315 kB | 32/45 kB | 32/195 kBProgress (4): 293 kB | 77/315 kB | 32/45 kB | 32/195 kBProgress (4): 293 kB | 81/315 kB | 32/45 kB | 32/195 kBProgress (4): 293 kB | 86/315 kB | 32/45 kB | 32/195 kBProgress (4): 293 kB | 90/315 kB | 32/45 kB | 32/195 kBProgress (4): 293 kB | 94/315 kB | 32/45 kB | 32/195 kBProgress (4): 293 kB | 98/315 kB | 32/45 kB | 32/195 kBProgress (4): 293 kB | 98/315 kB | 36/45 kB | 32/195 kBProgress (4): 293 kB | 98/315 kB | 40/45 kB | 32/195 kBProgress (4): 293 kB | 98/315 kB | 45/45 kB | 32/195 kBProgress (4): 293 kB | 98/315 kB | 45 kB | 32/195 kB   Progress (4): 293 kB | 98/315 kB | 45 kB | 36/195 kBProgress (4): 293 kB | 98/315 kB | 45 kB | 40/195 kBProgress (4): 293 kB | 98/315 kB | 45 kB | 45/195 kBProgress (4): 293 kB | 98/315 kB | 45 kB | 49/195 kBProgress (4): 293 kB | 98/315 kB | 45 kB | 53/195 kBProgress (4): 293 kB | 98/315 kB | 45 kB | 57/195 kBProgress (4): 293 kB | 98/315 kB | 45 kB | 61/195 kBProgress (4): 293 kB | 98/315 kB | 45 kB | 65/195 kBProgress (4): 293 kB | 102/315 kB | 45 kB | 65/195 kBProgress (4): 293 kB | 106/315 kB | 45 kB | 65/195 kBProgress (4): 293 kB | 110/315 kB | 45 kB | 65/195 kBProgress (4): 293 kB | 114/315 kB | 45 kB | 65/195 kBProgress (4): 293 kB | 114/315 kB | 45 kB | 69/195 kBProgress (4): 293 kB | 114/315 kB | 45 kB | 73/195 kBProgress (4): 293 kB | 114/315 kB | 45 kB | 77/195 kBProgress (4): 293 kB | 114/315 kB | 45 kB | 81/195 kB                                                     Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/maven-surefire-common/2.19/maven-surefire-common-2.19.jar (293 kB at 192 kB/s)
-Progress (3): 114/315 kB | 45 kB | 86/195 kBProgress (3): 114/315 kB | 45 kB | 90/195 kBProgress (3): 114/315 kB | 45 kB | 94/195 kBProgress (3): 114/315 kB | 45 kB | 98/195 kBProgress (3): 118/315 kB | 45 kB | 98/195 kBProgress (3): 122/315 kB | 45 kB | 98/195 kBProgress (3): 126/315 kB | 45 kB | 98/195 kBProgress (3): 131/315 kB | 45 kB | 98/195 kBProgress (3): 135/315 kB | 45 kB | 98/195 kBProgress (3): 139/315 kB | 45 kB | 98/195 kBProgress (3): 143/315 kB | 45 kB | 98/195 kBProgress (3): 147/315 kB | 45 kB | 98/195 kBProgress (3): 147/315 kB | 45 kB | 102/195 kBProgress (3): 147/315 kB | 45 kB | 106/195 kBProgress (3): 147/315 kB | 45 kB | 110/195 kBProgress (3): 147/315 kB | 45 kB | 114/195 kBProgress (3): 151/315 kB | 45 kB | 114/195 kBProgress (3): 155/315 kB | 45 kB | 114/195 kBProgress (3): 159/315 kB | 45 kB | 114/195 kBProgress (3): 163/315 kB | 45 kB | 114/195 kBProgress (3): 163/315 kB | 45 kB | 118/195 kBProgress (3): 163/315 kB | 45 kB | 122/195 kBProgress (3): 163/315 kB | 45 kB | 126/195 kBProgress (3): 163/315 kB | 45 kB | 131/195 kBProgress (3): 163/315 kB | 45 kB | 135/195 kBProgress (3): 163/315 kB | 45 kB | 139/195 kBProgress (3): 163/315 kB | 45 kB | 143/195 kBProgress (3): 163/315 kB | 45 kB | 147/195 kBProgress (3): 167/315 kB | 45 kB | 147/195 kBProgress (3): 172/315 kB | 45 kB | 147/195 kBProgress (3): 176/315 kB | 45 kB | 147/195 kBProgress (3): 180/315 kB | 45 kB | 147/195 kBProgress (3): 180/315 kB | 45 kB | 151/195 kBProgress (3): 180/315 kB | 45 kB | 155/195 kBProgress (3): 180/315 kB | 45 kB | 159/195 kBProgress (3): 180/315 kB | 45 kB | 163/195 kB                                             Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/2.19/surefire-booter-2.19.jar (45 kB at 25 kB/s)
-Progress (2): 184/315 kB | 163/195 kBProgress (2): 188/315 kB | 163/195 kBProgress (2): 192/315 kB | 163/195 kBProgress (2): 196/315 kB | 163/195 kBProgress (2): 196/315 kB | 167/195 kBProgress (2): 196/315 kB | 172/195 kBProgress (2): 196/315 kB | 176/195 kBProgress (2): 196/315 kB | 180/195 kBProgress (2): 200/315 kB | 180/195 kBProgress (2): 204/315 kB | 180/195 kBProgress (2): 208/315 kB | 180/195 kBProgress (2): 212/315 kB | 180/195 kBProgress (2): 212/315 kB | 184/195 kBProgress (2): 212/315 kB | 188/195 kBProgress (2): 212/315 kB | 192/195 kBProgress (2): 212/315 kB | 195 kB    Progress (2): 217/315 kB | 195 kBProgress (2): 219/315 kB | 195 kBProgress (2): 223/315 kB | 195 kBProgress (2): 227/315 kB | 195 kBProgress (2): 231/315 kB | 195 kBProgress (2): 235/315 kB | 195 kBProgress (2): 239/315 kB | 195 kBProgress (2): 243/315 kB | 195 kBProgress (2): 247/315 kB | 195 kBProgress (2): 252/315 kB | 195 kBProgress (2): 256/315 kB | 195 kBProgress (2): 260/315 kB | 195 kBProgress (2): 264/315 kB | 195 kBProgress (2): 268/315 kB | 195 kBProgress (2): 272/315 kB | 195 kBProgress (2): 276/315 kB | 195 kBProgress (2): 280/315 kB | 195 kBProgress (2): 284/315 kB | 195 kB                                 Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/2.19/surefire-api-2.19.jar (195 kB at 90 kB/s)
-Progress (1): 288/315 kBProgress (1): 292/315 kBProgress (1): 297/315 kBProgress (1): 301/315 kBProgress (1): 305/315 kBProgress (1): 309/315 kBProgress (1): 313/315 kBProgress (1): 315 kB                        Downloaded: https://repo.maven.apache.org/maven2/junit/junit/4.12/junit-4.12.jar (315 kB at 126 kB/s)
-Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.19/surefire-junit4-2.19.pom
-Progress (1): 3.3 kB                    Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.19/surefire-junit4-2.19.pom (3.3 kB at 6.4 kB/s)
-Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/2.19/surefire-providers-2.19.pom
-Progress (1): 2.3/2.6 kBProgress (1): 2.6 kB                        Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/2.19/surefire-providers-2.19.pom (2.6 kB at 5.0 kB/s)
-Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.19/surefire-junit4-2.19.jar
-Progress (1): 2.3/76 kBProgress (1): 5.0/76 kBProgress (1): 7.8/76 kBProgress (1): 11/76 kB Progress (1): 13/76 kBProgress (1): 16/76 kBProgress (1): 19/76 kBProgress (1): 21/76 kBProgress (1): 24/76 kBProgress (1): 27/76 kBProgress (1): 30/76 kBProgress (1): 32/76 kBProgress (1): 36/76 kBProgress (1): 40/76 kBProgress (1): 45/76 kBProgress (1): 49/76 kBProgress (1): 53/76 kBProgress (1): 57/76 kBProgress (1): 61/76 kBProgress (1): 65/76 kBProgress (1): 69/76 kBProgress (1): 73/76 kBProgress (1): 76 kB                      Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.19/surefire-junit4-2.19.jar (76 kB at 102 kB/s)
-
--------------------------------------------------------
- T E S T S
--------------------------------------------------------
-Running Parallel01IT
-Running Parallel02IT
-Running Parallel03IT
-Running Parallel04IT
-Running Parallel05IT
-Running Parallel06IT
-Running Parallel07IT
-Running Parallel08IT
-Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.377 sec - in Parallel04IT
-initialize Browser: chrome
-initialize OS: win
-initialize Browser: chrome
-initialize OS: win
-initialize Browser: chrome
-initialize OS: win
-initialize Browser: chrome
-initialize OS: win
-initialize Browser: chrome
-initialize OS: win
-initialize Browser: chrome
-initialize OS: win
-initialize Browser: chrome
-initialize OS: win
-initialize Browser: chrome
-initialize OS: win
-com.relevantcodes.extentreports.ExtentTestInterruptedException: Close was called before test could end safely using EndTest.
-	at com.relevantcodes.extentreports.Report.terminate(Report.java:425)
-	at com.relevantcodes.extentreports.ExtentReports.close(ExtentReports.java:917)
-	at stepDefination.ExtentCucumberFormatter.close(ExtentCucumberFormatter.java:334)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at cucumber.runtime.Utils$1.call(Utils.java:37)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
-	at cucumber.runtime.Utils.invoke(Utils.java:31)
-	at cucumber.runtime.RuntimeOptions$1.invoke(RuntimeOptions.java:290)
-	at com.sun.proxy.$Proxy18.close(Unknown Source)
-	at cucumber.runtime.junit.JUnitReporter.close(JUnitReporter.java:213)
-	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:344)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:269)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:240)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:184)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:286)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:240)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
-
-com.relevantcodes.extentreports.ExtentTestInterruptedException: Close was called before test could end safely using EndTest.
-	at com.relevantcodes.extentreports.Report.terminate(Report.java:425)
-	at com.relevantcodes.extentreports.ExtentReports.close(ExtentReports.java:917)
-	at stepDefination.ExtentCucumberFormatter.close(ExtentCucumberFormatter.java:334)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at cucumber.runtime.Utils$1.call(Utils.java:37)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
-	at cucumber.runtime.Utils.invoke(Utils.java:31)
-	at cucumber.runtime.RuntimeOptions$1.invoke(RuntimeOptions.java:290)
-	at com.sun.proxy.$Proxy18.close(Unknown Source)
-	at cucumber.runtime.junit.JUnitReporter.close(JUnitReporter.java:213)
-	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:344)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:269)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:240)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:184)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:286)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:240)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
-
-
-0 Scenarios ()
-10 Steps (1 failed, 9 passed)
-3m38.266s
-
-java.lang.Error: Timeout reached element not visiblie
-	at com.remedy.baseClass.BaseClass.isElementVisible(BaseClass.java:61)
-	at com.remedy.baseClass.BaseClass.clickElement(BaseClass.java:206)
-	at com.remedy.episode1.PatientsListPage.iClickOnInThePatientsDropdownMenu(PatientsListPage.java:33)
-	at stepDefination.Episode1.PatientListPageSteps.i_click_on_in_the_Patients_dropdown_menu(PatientListPageSteps.java:34)
-	at ?.When I click on "Patient List" in the Patients dropdown menu(C:/Users/akshat.jain/git/automation/src/test/Features/Episode2.0/CARL/commercialProviderCompleteProviderDischarge.feature:13)
-
-Tests run: 13, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 225.193 sec <<< FAILURE! - in Parallel03IT
-When I click on "Patient List" in the Patients dropdown menu(| 3 | 2 | Scheduled | appearing |)  Time elapsed: 0.006 sec  <<< ERROR!
-java.lang.Error: Timeout reached element not visiblie
-
-| 3 | 2 | Scheduled | appearing |  Time elapsed: 0.007 sec  <<< ERROR!
-java.lang.Error: Timeout reached element not visiblie
-
-Examples:   Time elapsed: 0.009 sec  <<< ERROR!
-java.lang.StringIndexOutOfBoundsException: String index out of range: -1
-
-Feature: As a user, I should be able to complete and submit a CARL form for an Emblem patient that was discharged from my facility in the last week (7 days) by clicking on ?Complete CARL (Discharged)?  Time elapsed: 0.027 sec  <<< ERROR!
-cucumber.runtime.CucumberException: Expected step: "I click on Add Patient button present on the ec1 patients page" got step: "I am on the login page"
-
-com.relevantcodes.extentreports.ExtentTestInterruptedException: Close was called before test could end safely using EndTest.
-	at com.relevantcodes.extentreports.Report.terminate(Report.java:425)
-	at com.relevantcodes.extentreports.ExtentReports.close(ExtentReports.java:917)
-	at stepDefination.ExtentCucumberFormatter.close(ExtentCucumberFormatter.java:334)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at cucumber.runtime.Utils$1.call(Utils.java:37)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
-	at cucumber.runtime.Utils.invoke(Utils.java:31)
-	at cucumber.runtime.RuntimeOptions$1.invoke(RuntimeOptions.java:290)
-	at com.sun.proxy.$Proxy18.close(Unknown Source)
-	at cucumber.runtime.junit.JUnitReporter.close(JUnitReporter.java:213)
-	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:344)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:269)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:240)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:184)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:286)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:240)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
-
-com.relevantcodes.extentreports.ExtentTestInterruptedException: Close was called before test could end safely using EndTest.
-	at com.relevantcodes.extentreports.Report.terminate(Report.java:425)
-	at com.relevantcodes.extentreports.ExtentReports.close(ExtentReports.java:917)
-	at stepDefination.ExtentCucumberFormatter.close(ExtentCucumberFormatter.java:334)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at cucumber.runtime.Utils$1.call(Utils.java:37)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
-	at cucumber.runtime.Utils.invoke(Utils.java:31)
-	at cucumber.runtime.RuntimeOptions$1.invoke(RuntimeOptions.java:290)
-	at com.sun.proxy.$Proxy18.close(Unknown Source)
-	at cucumber.runtime.junit.JUnitReporter.close(JUnitReporter.java:213)
-	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:344)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:269)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:240)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:184)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:286)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:240)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
-
-com.relevantcodes.extentreports.ExtentTestInterruptedException: Close was called before test could end safely using EndTest.
-	at com.relevantcodes.extentreports.Report.terminate(Report.java:425)
-	at com.relevantcodes.extentreports.ExtentReports.close(ExtentReports.java:917)
-	at stepDefination.ExtentCucumberFormatter.close(ExtentCucumberFormatter.java:334)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at cucumber.runtime.Utils$1.call(Utils.java:37)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
-	at cucumber.runtime.Utils.invoke(Utils.java:31)
-	at cucumber.runtime.RuntimeOptions$1.invoke(RuntimeOptions.java:290)
-	at com.sun.proxy.$Proxy18.close(Unknown Source)
-	at cucumber.runtime.junit.JUnitReporter.close(JUnitReporter.java:213)
-	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:344)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:269)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:240)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:184)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:286)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:240)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
-
-com.relevantcodes.extentreports.ExtentTestInterruptedException: Close was called before test could end safely using EndTest.
-	at com.relevantcodes.extentreports.Report.terminate(Report.java:425)
-	at com.relevantcodes.extentreports.ExtentReports.close(ExtentReports.java:917)
-	at stepDefination.ExtentCucumberFormatter.close(ExtentCucumberFormatter.java:334)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at cucumber.runtime.Utils$1.call(Utils.java:37)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
-	at cucumber.runtime.Utils.invoke(Utils.java:31)
-	at cucumber.runtime.RuntimeOptions$1.invoke(RuntimeOptions.java:290)
-	at com.sun.proxy.$Proxy18.close(Unknown Source)
-	at cucumber.runtime.junit.JUnitReporter.close(JUnitReporter.java:213)
-	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:344)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:269)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:240)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:184)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:286)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:240)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
-
-
-0 Scenarios ()
-20 Steps (1 failed, 19 passed)
-3m55.919s
-
-java.lang.Error: Timeout reached element not visiblie
-	at com.remedy.baseClass.BaseClass.isElementVisible(BaseClass.java:61)
-	at com.remedy.baseClass.BaseClass.iFillInText(BaseClass.java:195)
-	at com.remedy.Episode2.PatientsPage.iSelectFromTheListOfAdmittingFacilityPresentOnTheAddPatientPage(PatientsPage.java:556)
-	at stepDefination.Episode2.PatientsPageSteps.i_Select_from_the_list_of_admitting_facility_present_on_the_Add_Patient_page(PatientsPageSteps.java:765)
-	at ?.And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page(C:/Users/akshat.jain/git/automation/src/test/Features/Episode2.0/CARL/carlFlow.feature:23)
-
-Tests run: 25, Failures: 0, Errors: 6, Skipped: 0, Time elapsed: 243.495 sec <<< FAILURE! - in Parallel01IT
-And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page(| FirstNameTest | LastNameTest | testuser@yopmail.com | 987-456-1230 |)  Time elapsed: 0.011 sec  <<< ERROR!
-java.lang.Error: Timeout reached element not visiblie
-
-| FirstNameTest | LastNameTest | testuser@yopmail.com | 987-456-1230 |  Time elapsed: 0.012 sec  <<< ERROR!
-java.lang.Error: Timeout reached element not visiblie
-
-Examples:   Time elapsed: 0.015 sec  <<< ERROR!
-java.lang.StringIndexOutOfBoundsException: String index out of range: -1
-
-Examples:   Time elapsed: 0.023 sec  <<< ERROR!
-cucumber.runtime.CucumberException: Expected step: "I enter "WA784654785" in the Medicare ID present on the Add Patient page" got step: "I am on the login page"
-
-Examples:   Time elapsed: 0.043 sec  <<< ERROR!
-cucumber.runtime.CucumberException: Expected step: "I click on the next button present on the Add Patient page" got step: "I am on the login page"
-
-Examples:   Time elapsed: 0.007 sec  <<< ERROR!
-cucumber.runtime.CucumberException: Expected step: "I click on the next button present on the Add Patient page" got step: "I am on the login page"
-
-com.relevantcodes.extentreports.ExtentTestInterruptedException: Close was called before test could end safely using EndTest.
-	at com.relevantcodes.extentreports.Report.terminate(Report.java:425)
-	at com.relevantcodes.extentreports.ExtentReports.close(ExtentReports.java:917)
-	at stepDefination.ExtentCucumberFormatter.close(ExtentCucumberFormatter.java:334)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at cucumber.runtime.Utils$1.call(Utils.java:37)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
-	at cucumber.runtime.Utils.invoke(Utils.java:31)
-	at cucumber.runtime.RuntimeOptions$1.invoke(RuntimeOptions.java:290)
-	at com.sun.proxy.$Proxy18.close(Unknown Source)
-	at cucumber.runtime.junit.JUnitReporter.close(JUnitReporter.java:213)
-	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:344)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:269)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:240)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:184)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:286)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:240)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
-
-
-0 Scenarios ()
-20 Steps (1 failed, 19 passed)
-4m5.081s
-
-java.lang.Error: Timeout reached element not visiblie
-	at com.remedy.baseClass.BaseClass.isElementVisible(BaseClass.java:61)
-	at com.remedy.baseClass.BaseClass.iFillInText(BaseClass.java:195)
-	at com.remedy.Episode2.PatientsPage.iSelectFromTheListOfAdmittingFacilityPresentOnTheAddPatientPage(PatientsPage.java:556)
-	at stepDefination.Episode2.PatientsPageSteps.i_Select_from_the_list_of_admitting_facility_present_on_the_Add_Patient_page(PatientsPageSteps.java:765)
-	at ?.And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page(C:/Users/akshat.jain/git/automation/src/test/Features/Episode2.0/CARL/dischargeCarlRecommendation.feature:23)
-
-Tests run: 22, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 252.103 sec <<< FAILURE! - in Parallel06IT
-And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page(Scenario: As a user verify the CARL Recommendation field should show "Home with Limited Services (HOM)" when user fill the form with the options so that total score is less than or equal to 16)  Time elapsed: 0.009 sec  <<< ERROR!
-java.lang.Error: Timeout reached element not visiblie
-
-Scenario: As a user verify the CARL Recommendation field should show "Home with Limited Services (HOM)" when user fill the form with the options so that total score is less than or equal to 16  Time elapsed: 0.011 sec  <<< ERROR!
-java.lang.Error: Timeout reached element not visiblie
-
-Feature: As a user, I would like to see the recommended next site of care within the CARL Recommendation field based on the CARL calculation  Time elapsed: 0.013 sec  <<< ERROR!
-java.lang.StringIndexOutOfBoundsException: String index out of range: -1
-
-com.relevantcodes.extentreports.ExtentTestInterruptedException: Close was called before test could end safely using EndTest.
-	at com.relevantcodes.extentreports.Report.terminate(Report.java:425)
-	at com.relevantcodes.extentreports.ExtentReports.close(ExtentReports.java:917)
-	at stepDefination.ExtentCucumberFormatter.close(ExtentCucumberFormatter.java:334)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at cucumber.runtime.Utils$1.call(Utils.java:37)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
-	at cucumber.runtime.Utils.invoke(Utils.java:31)
-	at cucumber.runtime.RuntimeOptions$1.invoke(RuntimeOptions.java:290)
-	at com.sun.proxy.$Proxy18.close(Unknown Source)
-	at cucumber.runtime.junit.JUnitReporter.close(JUnitReporter.java:213)
-	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:344)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:269)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:240)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:184)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:286)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:240)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
-
-com.relevantcodes.extentreports.ExtentTestInterruptedException: Close was called before test could end safely using EndTest.
-	at com.relevantcodes.extentreports.Report.terminate(Report.java:425)
-	at com.relevantcodes.extentreports.ExtentReports.close(ExtentReports.java:917)
-	at stepDefination.ExtentCucumberFormatter.close(ExtentCucumberFormatter.java:334)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at cucumber.runtime.Utils$1.call(Utils.java:37)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
-	at cucumber.runtime.Utils.invoke(Utils.java:31)
-	at cucumber.runtime.RuntimeOptions$1.invoke(RuntimeOptions.java:290)
-	at com.sun.proxy.$Proxy18.close(Unknown Source)
-	at cucumber.runtime.junit.JUnitReporter.close(JUnitReporter.java:213)
-	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:344)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:269)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:240)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:184)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:286)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:240)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
-
-com.relevantcodes.extentreports.ExtentTestInterruptedException: Close was called before test could end safely using EndTest.
-	at com.relevantcodes.extentreports.Report.terminate(Report.java:425)
-	at com.relevantcodes.extentreports.ExtentReports.close(ExtentReports.java:917)
-	at stepDefination.ExtentCucumberFormatter.close(ExtentCucumberFormatter.java:334)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at cucumber.runtime.Utils$1.call(Utils.java:37)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
-	at cucumber.runtime.Utils.invoke(Utils.java:31)
-	at cucumber.runtime.RuntimeOptions$1.invoke(RuntimeOptions.java:290)
-	at com.sun.proxy.$Proxy18.close(Unknown Source)
-	at cucumber.runtime.junit.JUnitReporter.close(JUnitReporter.java:213)
-	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:344)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:269)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:240)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:184)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:286)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:240)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
-
-com.relevantcodes.extentreports.ExtentTestInterruptedException: Close was called before test could end safely using EndTest.
-	at com.relevantcodes.extentreports.Report.terminate(Report.java:425)
-	at com.relevantcodes.extentreports.ExtentReports.close(ExtentReports.java:917)
-	at stepDefination.ExtentCucumberFormatter.close(ExtentCucumberFormatter.java:334)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at cucumber.runtime.Utils$1.call(Utils.java:37)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
-	at cucumber.runtime.Utils.invoke(Utils.java:31)
-	at cucumber.runtime.RuntimeOptions$1.invoke(RuntimeOptions.java:290)
-	at com.sun.proxy.$Proxy18.close(Unknown Source)
-	at cucumber.runtime.junit.JUnitReporter.close(JUnitReporter.java:213)
-	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:344)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:269)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:240)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:184)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:286)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:240)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
-
-
-0 Scenarios ()
-20 Steps (1 failed, 19 passed)
-4m5.880s
-
-java.lang.Error: Timeout reached element not visiblie
-	at com.remedy.baseClass.BaseClass.isElementVisible(BaseClass.java:61)
-	at com.remedy.baseClass.BaseClass.iFillInText(BaseClass.java:195)
-	at com.remedy.Episode2.PatientsPage.iSelectFromTheListOfAdmittingFacilityPresentOnTheAddPatientPage(PatientsPage.java:556)
-	at stepDefination.Episode2.PatientsPageSteps.i_Select_from_the_list_of_admitting_facility_present_on_the_Add_Patient_page(PatientsPageSteps.java:765)
-	at ?.And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page(C:/Users/akshat.jain/git/automation/src/test/Features/Episode2.0/CARL/commercialProviderCompleteCarl.feature:23)
-
-Tests run: 25, Failures: 0, Errors: 6, Skipped: 0, Time elapsed: 253.3 sec <<< FAILURE! - in Parallel02IT
-And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page(| Outpatient |)  Time elapsed: 0.009 sec  <<< ERROR!
-java.lang.Error: Timeout reached element not visiblie
-
-| Outpatient |  Time elapsed: 0.009 sec  <<< ERROR!
-java.lang.Error: Timeout reached element not visiblie
-
-Examples:   Time elapsed: 0.012 sec  <<< ERROR!
-java.lang.StringIndexOutOfBoundsException: String index out of range: -1
-
-Examples:   Time elapsed: 0.052 sec  <<< ERROR!
-cucumber.runtime.CucumberException: Expected step: "I enter "WA784654785" in the Medicare ID present on the Add Patient page" got step: "I am on the login page"
-
-Examples:   Time elapsed: 0.032 sec  <<< ERROR!
-cucumber.runtime.CucumberException: Expected step: "I click on the next button present on the Add Patient page" got step: "I am on the login page"
-
-Feature: As an EMBLEM associated provider I would like to complete the CARL form for my patients  Time elapsed: 0.041 sec  <<< ERROR!
-cucumber.runtime.CucumberException: Expected step: "I click on the next button present on the Add Patient page" got step: "I am on the login page"
-
-com.relevantcodes.extentreports.ExtentTestInterruptedException: Close was called before test could end safely using EndTest.
-	at com.relevantcodes.extentreports.Report.terminate(Report.java:425)
-	at com.relevantcodes.extentreports.ExtentReports.close(ExtentReports.java:917)
-	at stepDefination.ExtentCucumberFormatter.close(ExtentCucumberFormatter.java:334)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at cucumber.runtime.Utils$1.call(Utils.java:37)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
-	at cucumber.runtime.Utils.invoke(Utils.java:31)
-	at cucumber.runtime.RuntimeOptions$1.invoke(RuntimeOptions.java:290)
-	at com.sun.proxy.$Proxy18.close(Unknown Source)
-	at cucumber.runtime.junit.JUnitReporter.close(JUnitReporter.java:213)
-	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:344)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:269)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:240)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:184)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:286)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:240)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
-
-
-0 Scenarios ()
-20 Steps (1 failed, 19 passed)
-5m32.135s
-
-java.lang.Error: Timeout reached element not visiblie
-	at com.remedy.baseClass.BaseClass.isElementVisible(BaseClass.java:61)
-	at com.remedy.baseClass.BaseClass.iFillInText(BaseClass.java:195)
-	at com.remedy.Episode2.PatientsPage.iSelectFromTheListOfAdmittingFacilityPresentOnTheAddPatientPage(PatientsPage.java:556)
-	at stepDefination.Episode2.PatientsPageSteps.i_Select_from_the_list_of_admitting_facility_present_on_the_Add_Patient_page(PatientsPageSteps.java:765)
-	at ?.And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page(C:/Users/akshat.jain/git/automation/src/test/Features/Episode2.0/CARL/dischargeCarlForm.feature:23)
-
-Tests run: 22, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 338.813 sec <<< FAILURE! - in Parallel05IT
-And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page(Scenario: To verify discharge form when patient save the form without filling the complete information and vice-versa)  Time elapsed: 0.014 sec  <<< ERROR!
-java.lang.Error: Timeout reached element not visiblie
-
-Scenario: To verify discharge form when patient save the form without filling the complete information and vice-versa  Time elapsed: 0.016 sec  <<< ERROR!
-java.lang.Error: Timeout reached element not visiblie
-
-Feature: To verify the options and functionality of Discharge section of Carl form  Time elapsed: 0.018 sec  <<< ERROR!
-java.lang.StringIndexOutOfBoundsException: String index out of range: -1
-
-com.relevantcodes.extentreports.ExtentTestInterruptedException: Close was called before test could end safely using EndTest.
-	at com.relevantcodes.extentreports.Report.terminate(Report.java:425)
-	at com.relevantcodes.extentreports.ExtentReports.close(ExtentReports.java:917)
-	at stepDefination.ExtentCucumberFormatter.close(ExtentCucumberFormatter.java:334)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at cucumber.runtime.Utils$1.call(Utils.java:37)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
-	at cucumber.runtime.Utils.invoke(Utils.java:31)
-	at cucumber.runtime.RuntimeOptions$1.invoke(RuntimeOptions.java:290)
-	at com.sun.proxy.$Proxy18.close(Unknown Source)
-	at cucumber.runtime.junit.JUnitReporter.close(JUnitReporter.java:213)
-	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:344)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:269)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:240)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:184)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:286)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:240)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
-
-
-0 Scenarios ()
-64 Steps (1 failed, 56 skipped, 7 passed)
-5m45.948s
-
-org.openqa.selenium.TimeoutException: timeout
-  (Session info: chrome=61.0.3163.100)
-  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 301.10 seconds
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'IITC-WS-QA27', ip: '10.96.97.219', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a), userDataDir=C:\Users\AKSHAT~1.JAI\AppData\Local\Temp\scoped_dir3276_11946}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 46dc6d2309062504ba07910ca5ba9793
-*** Element info: {Using=css selector, value=.ec2-embed-patient-name}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:492)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at com.remedy.episode1.Ec1DashboardPage.iverifyEc1DashboardHeaderText(Ec1DashboardPage.java:60)
-	at stepDefination.Episode1.EC1DashboardSteps.iShouldSeeEpisodeHeaderText(EC1DashboardSteps.java:54)
-	at ?.Then I should see Episode header text "Dashboard"(C:/Users/akshat.jain/git/automation/src/test/Features/Episode2.0/CARL/dischargePtProposal.feature:11)
-
-Tests run: 66, Failures: 0, Errors: 3, Skipped: 56, Time elapsed: 351.342 sec <<< FAILURE! - in Parallel08IT
-Then I should see Episode header text "Dashboard"(| Good restoration potential | (SNF) Skilled Nursing Facility | PT 2x daily up to 7 days then reassess | (HHA) Home Health Agency | PT up to 4 visits week 1 then reassess | (HOM) Home | PT 3 days/week x 1 week then reassess |)  Time elapsed: 0.01 sec  <<< ERROR!
-org.openqa.selenium.TimeoutException: 
-timeout
-  (Session info: chrome=61.0.3163.100)
-  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 301.10 seconds
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'IITC-WS-QA27', ip: '10.96.97.219', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a), userDataDir=C:\Users\AKSHAT~1.JAI\AppData\Local\Temp\scoped_dir3276_11946}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 46dc6d2309062504ba07910ca5ba9793
-*** Element info: {Using=css selector, value=.ec2-embed-patient-name}
-
-| Good restoration potential | (SNF) Skilled Nursing Facility | PT 2x daily up to 7 days then reassess | (HHA) Home Health Agency | PT up to 4 visits week 1 then reassess | (HOM) Home | PT 3 days/week x 1 week then reassess |  Time elapsed: 0.014 sec  <<< ERROR!
-org.openqa.selenium.TimeoutException: 
-timeout
-  (Session info: chrome=61.0.3163.100)
-  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 301.10 seconds
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'IITC-WS-QA27', ip: '10.96.97.219', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a), userDataDir=C:\Users\AKSHAT~1.JAI\AppData\Local\Temp\scoped_dir3276_11946}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 46dc6d2309062504ba07910ca5ba9793
-*** Element info: {Using=css selector, value=.ec2-embed-patient-name}
-
-Examples:   Time elapsed: 0.101 sec  <<< ERROR!
-java.lang.StringIndexOutOfBoundsException: String index out of range: -1
-
-com.relevantcodes.extentreports.ExtentTestInterruptedException: Close was called before test could end safely using EndTest.
-	at com.relevantcodes.extentreports.Report.terminate(Report.java:425)
-	at com.relevantcodes.extentreports.ExtentReports.close(ExtentReports.java:917)
-	at stepDefination.ExtentCucumberFormatter.close(ExtentCucumberFormatter.java:334)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at cucumber.runtime.Utils$1.call(Utils.java:37)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
-	at cucumber.runtime.Utils.invoke(Utils.java:31)
-	at cucumber.runtime.RuntimeOptions$1.invoke(RuntimeOptions.java:290)
-	at com.sun.proxy.$Proxy18.close(Unknown Source)
-	at cucumber.runtime.junit.JUnitReporter.close(JUnitReporter.java:213)
-	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:344)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:269)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:240)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:184)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:286)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:240)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
-
-
-Failed scenarios:
-C:/Users/akshat.jain/git/automation/src/test/Features/Episode2.0/CARL/dischargeDisagreement.feature:3 # Scenario: As a user, I would like to provide "Who disagrees?" and the "Reason for Disagreement" if the Actual Care Setting does not match the CARL recommendation proposed facility
-
-1 Scenarios (1 failed)
-159 Steps (1 failed, 119 skipped, 39 passed)
-5m46.243s
-
-org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"a#patient-add-button"}
-  (Session info: chrome=61.0.3163.100)
-  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.03 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'IITC-WS-QA27', ip: '10.96.97.219', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a), userDataDir=C:\Users\AKSHAT~1.JAI\AppData\Local\Temp\scoped_dir5804_28051}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 2647e153db0a5631211aa7cc9f46dbc7
-*** Element info: {Using=css selector, value=a#patient-add-button}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:492)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at com.remedy.episode1.PatientsListPage.iClickOnAddPatientButtonPresentOnTheEcPatientsPage(PatientsListPage.java:37)
-	at stepDefination.Episode1.PatientListPageSteps.i_click_on_Add_Patient_button_present_on_the_ec_patients_page(PatientListPageSteps.java:60)
-	at ?.When I click on Add Patient button present on the ec1 patients page(C:/Users/akshat.jain/git/automation/src/test/Features/Episode2.0/CARL/dischargeDisagreement.feature:14)
-
-Tests run: 161, Failures: 0, Errors: 3, Skipped: 119, Time elapsed: 352.722 sec <<< FAILURE! - in Parallel07IT
-When I click on Add Patient button present on the ec1 patients page(Scenario: As a user, I would like to provide "Who disagrees?" and the "Reason for Disagreement" if the Actual Care Setting does not match the CARL recommendation proposed facility)  Time elapsed: 0.017 sec  <<< ERROR!
-org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"css selector","selector":"a#patient-add-button"}
-  (Session info: chrome=61.0.3163.100)
-  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.03 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'IITC-WS-QA27', ip: '10.96.97.219', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a), userDataDir=C:\Users\AKSHAT~1.JAI\AppData\Local\Temp\scoped_dir5804_28051}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 2647e153db0a5631211aa7cc9f46dbc7
-*** Element info: {Using=css selector, value=a#patient-add-button}
-
-Scenario: As a user, I would like to provide "Who disagrees?" and the "Reason for Disagreement" if the Actual Care Setting does not match the CARL recommendation proposed facility  Time elapsed: 0.019 sec  <<< ERROR!
-org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"css selector","selector":"a#patient-add-button"}
-  (Session info: chrome=61.0.3163.100)
-  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.03 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'IITC-WS-QA27', ip: '10.96.97.219', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a), userDataDir=C:\Users\AKSHAT~1.JAI\AppData\Local\Temp\scoped_dir5804_28051}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 2647e153db0a5631211aa7cc9f46dbc7
-*** Element info: {Using=css selector, value=a#patient-add-button}
-
-Feature: Discharge ? Disagreement Reason(s)  Time elapsed: 0.002 sec  <<< ERROR!
-java.lang.StringIndexOutOfBoundsException: String index out of range: -1
-
-
-Results :
-
-Tests in error: 
-  Timeout reached element not visiblie
-Examples: .Examples: 
-  Run 1: String index out of range: -1
-  Run 2: String index out of range: -1
-  Run 3: Expected step: "I enter "WA784654785" in the Medicare ID present on the Add Patient page" got step: "I am on the login page"
-  Run 4: Expected step: "I click on the next button present on the Add Patient page" got step: "I am on the login page"
-  Run 5: Expected step: "I click on the next button present on the Add Patient page" got step: "I am on the login page"
-  Run 6: String index out of range: -1
-  Run 7: String index out of range: -1
-  Run 8: Expected step: "I enter "WA784654785" in the Medicare ID present on the Add Patient page" got step: "I am on the login page"
-  Run 9: Expected step: "I click on the next button present on the Add Patient page" got step: "I am on the login page"
-
-  Expected step: "I click on Add Patient button present on the ec1 patients page" got step: "I am on the login page"
-  String index out of range: -1
-  Expected step: "I click on the next button present on the Add Patient page" got step: "I am on the login page"
-  String index out of range: -1
-  Timeout reached element not visiblie
-  no such element: Unable to locate element: {"method":"css selector","selector":"a#patient-add-button"}
-  (Session info: chrome=61.0.3163.100)
-  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.03 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'IITC-WS-QA27', ip: '10.96.97.219', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a), userDataDir=C:\Users\AKSHAT~1.JAI\AppData\Local\Temp\scoped_dir5804_28051}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 2647e153db0a5631211aa7cc9f46dbc7
-*** Element info: {Using=css selector, value=a#patient-add-button}
-  no such element: Unable to locate element: {"method":"css selector","selector":"a#patient-add-button"}
-  (Session info: chrome=61.0.3163.100)
-  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.03 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'IITC-WS-QA27', ip: '10.96.97.219', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a), userDataDir=C:\Users\AKSHAT~1.JAI\AppData\Local\Temp\scoped_dir5804_28051}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 2647e153db0a5631211aa7cc9f46dbc7
-*** Element info: {Using=css selector, value=a#patient-add-button}
-  Timeout reached element not visiblie
-  Timeout reached element not visiblie
-  timeout
-  (Session info: chrome=61.0.3163.100)
-  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 301.10 seconds
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'IITC-WS-QA27', ip: '10.96.97.219', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a), userDataDir=C:\Users\AKSHAT~1.JAI\AppData\Local\Temp\scoped_dir3276_11946}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 46dc6d2309062504ba07910ca5ba9793
-*** Element info: {Using=css selector, value=.ec2-embed-patient-name}
-  String index out of range: -1
-  Timeout reached element not visiblie
-  Timeout reached element not visiblie
-  Timeout reached element not visiblie
-  Timeout reached element not visiblie
-  timeout
-  (Session info: chrome=61.0.3163.100)
-  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 301.10 seconds
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'IITC-WS-QA27', ip: '10.96.97.219', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a), userDataDir=C:\Users\AKSHAT~1.JAI\AppData\Local\Temp\scoped_dir3276_11946}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 46dc6d2309062504ba07910ca5ba9793
-*** Element info: {Using=css selector, value=.ec2-embed-patient-name}
-  Timeout reached element not visiblie
-  Timeout reached element not visiblie
-
-Tests run: 293, Failures: 0, Errors: 20, Skipped: 142
-
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time: 06:12 min
-[INFO] Finished at: 2017-10-12T18:52:34+05:30
-[INFO] Final Memory: 29M/371M
-[INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.19:test (default-test) on project Remedy2Application: There are test failures.
-[ERROR] 
-[ERROR] Please refer to C:\Users\akshat.jain\git\automation\target\surefire-reports for the individual test results.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
-1.json
-2.json
-3.json
-5.json
-6.json
-7.json
-8.json

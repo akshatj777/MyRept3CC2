@@ -1,3 +1,4 @@
+@Episode @CARL
 Feature: As a user, I would like to see the recommended next site of care within the CARL Recommendation field based on the CARL calculation
 
   Scenario: As a user verify the CARL Recommendation field should show "Home with Limited Services (HOM)" when user fill the form with the options so that total score is less than or equal to 16

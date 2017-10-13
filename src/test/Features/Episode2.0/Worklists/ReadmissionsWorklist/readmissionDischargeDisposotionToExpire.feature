@@ -1,3 +1,4 @@
+@Episode @Worklist @Readmission
 Feature: Readmission Discharge Disposition to Expire
 
   Scenario Outline: Patient with Active/Pending Cancellation episode having readmission as HHH-I without facility

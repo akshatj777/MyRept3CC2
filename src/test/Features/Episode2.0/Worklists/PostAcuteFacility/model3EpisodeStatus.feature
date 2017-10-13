@@ -1,3 +1,4 @@
+@Episode @Worklist @PostAcute
 Feature: Patient status on Post Acute Facility Work List
 
   Scenario Outline: Verify patient present in post acute facility worklist with Model3 Pend Can Episode Status and patient is discharged in REH

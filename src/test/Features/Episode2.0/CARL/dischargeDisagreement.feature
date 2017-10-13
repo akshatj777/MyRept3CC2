@@ -1,3 +1,4 @@
+@Episode @CARL
 Feature: Discharge – Disagreement Reason(s)
 
   Scenario: As a user, I would like to provide "Who disagrees?" and the "Reason for Disagreement" if the Actual Care Setting does not match the CARL recommendation proposed facility

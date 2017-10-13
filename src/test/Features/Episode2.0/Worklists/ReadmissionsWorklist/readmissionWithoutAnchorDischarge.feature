@@ -1,3 +1,4 @@
+@Episode @Worklist @Readmission
 Feature: Verify Readmission status without anchor discharge readmission
 
   Scenario Outline: Patient without anchor discharge, readmission in different facility.

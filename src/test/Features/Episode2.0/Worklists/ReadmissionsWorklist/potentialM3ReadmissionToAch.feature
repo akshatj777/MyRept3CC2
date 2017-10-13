@@ -1,3 +1,4 @@
+@Episode @Worklist @Readmission
 Feature: Potential M3 Readmission To Ach Facility
 
   Scenario Outline: Patient with Active Episode and readmission to an ACH facility as HHH-I

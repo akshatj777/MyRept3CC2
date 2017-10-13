@@ -1,3 +1,4 @@
+@Episode @Notes 
 Feature: Note - Add files
 
   Scenario Outline: To verify that user should be able to upload the file with different extensions or not

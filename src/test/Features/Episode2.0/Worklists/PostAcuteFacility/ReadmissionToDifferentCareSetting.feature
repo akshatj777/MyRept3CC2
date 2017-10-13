@@ -1,3 +1,4 @@
+@Episode @Worklist @PostAcute
 Feature: Patient status on Post Acute Facility Work List
 
   Scenario Outline: Patient with different Episode status with a Readmission to HHH-I with discharge to different care setting respectively

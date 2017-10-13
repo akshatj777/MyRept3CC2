@@ -1,3 +1,4 @@
+@Episode @Notes 
 Feature: Created Patient Note Comparision in EC1 and viewed in EC2
 
   Scenario: To verify Notes created in EC1 through i framing should only be accessible on EC2 care plan tab should not be seen under Clinical Documents tab .

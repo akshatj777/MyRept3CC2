@@ -1,3 +1,4 @@
+@Episode @Worklist @Exceed
 Feature: Patient status on Exceed SNF LOS Work List (Model 3 state)
 
   Scenario Outline: SNF direct admission with Model3 Episode status

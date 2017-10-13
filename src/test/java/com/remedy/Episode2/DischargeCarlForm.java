@@ -427,7 +427,7 @@ public class DischargeCarlForm extends BaseClass {
 	if(section.equals("Caregiver"))
 	isElementVisible(driver.findElement(By.xpath("//div[1]/div[@class='review-body']/*[self::h4[contains(text(),'"+label+"')]  or self::div[contains(text(),'"+value+"')]]")));	
 	else if(section.equals("Independence")){
-	isElementVisible(driver.findElement(By.xpath("//section/div[2]/div[@class='review-body']/*[self::h4[contains(text(),'"+label+"')]  or self::div[contains(text(),'"+value+"')]]")));		
+	isElementVisible(driver.findElement(By.xpath("//div[2]/div[@class='review-body']/*[self::h4[contains(text(),'"+label+"')]  or self::div[contains(text(),'"+value+"')]]")));		
 	}else if(section.equals("Anticipated Discharge Needs")){
 	isElementVisible(driver.findElement(By.xpath("//section/div[3]/div[2]/div[1]/div[contains(text(),'Therapies Needed')]/following-sibling::div/div[contains(text(),'Therapies')]/following-sibling::div[contains(text(),'Physical Therapy')]")));		
 	}else if(section.equals("Discharge")){

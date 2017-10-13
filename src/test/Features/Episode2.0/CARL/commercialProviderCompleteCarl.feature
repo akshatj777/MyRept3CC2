@@ -1,3 +1,4 @@
+@Episode @CARL
 Feature: As an EMBLEM associated provider I would like to complete the CARL form for my patients
 
   Scenario Outline: Verify complete CARL button with no Episode

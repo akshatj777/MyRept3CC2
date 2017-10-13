@@ -1,3 +1,4 @@
+@Episode @Worklist @Alternative
 Feature: Patient status on Other Work List
 
   Scenario Outline: Verify Patient should be included in Other worklist Model 3 Episode status discharged to SNF .

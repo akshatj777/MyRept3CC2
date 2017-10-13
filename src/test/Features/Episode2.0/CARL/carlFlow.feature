@@ -1,3 +1,4 @@
+@Episode @CARL
 Feature: To verify the options and functionality of Caregiver section of Carl form
 
   Scenario Outline: Verify complete Carl flow functionality

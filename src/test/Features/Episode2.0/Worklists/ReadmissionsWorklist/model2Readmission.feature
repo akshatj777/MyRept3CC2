@@ -1,3 +1,4 @@
+@Episode @Worklist @Readmission
 Feature: Model 2 Readmission
 
   Scenario Outline: Patient with Active Episode and readmission to an ACH facility as HHH-I without DRG

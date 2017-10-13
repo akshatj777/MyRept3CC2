@@ -1,3 +1,4 @@
+@Episode @Worklist @NeedReview
 Feature: Patient status in Need Review Worklist
 
   Scenario Outline: Patient status with the 7 calendar days starts at midnight following the discharge date

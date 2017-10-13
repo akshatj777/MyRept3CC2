@@ -149,21 +149,21 @@ public class ExtentCucumberFormatter implements Reporter, Formatter {
         if (!scenarioOutlineTest) {
             Step step = testSteps.poll();
             String key=step.getName();
-            if(key.contains("#"))
+            /*if(key.contains("#"))
             {
             	String keyWithHash = key.substring(key.indexOf("#"), key.lastIndexOf("#")+1);
             	if(keyWithHash.startsWith("#") && keyWithHash.endsWith("#"))
             	{
                 String keyWithoutHash = key.substring(key.indexOf("#")+1, key.lastIndexOf("#"));
-           		/*String configValue= Tools.readDbConfig(keyWithoutHash);
+           		String configValue= Tools.readDbConfig(keyWithoutHash);
            		value=key.replace(keyWithHash, configValue);
             	}
             	else
             	{
             		value=key;
-            	}*/
+            	}
             }
-            }
+            }*/
          /*   else if(key.contains("$"))
             {
             	String keyWithDollar="";
@@ -227,10 +227,10 @@ public class ExtentCucumberFormatter implements Reporter, Formatter {
 				}
              }
             }*/
-            else
+            /*else
             {
             	value=key;
-            }
+            }*/
 			if ("passed".equals(result.getStatus())) {
 				//String screenshotPath = PageHelper.captureIt();
 				String screenshotPath = "";

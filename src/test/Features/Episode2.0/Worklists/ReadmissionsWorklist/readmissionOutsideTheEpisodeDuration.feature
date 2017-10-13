@@ -1,3 +1,4 @@
+@Episode @Worklist @Readmission
 Feature: Patient with readmission outside the episode duration i want to use this template for my feature file
 
   Scenario Outline: Patient with readmission outside the episode duration

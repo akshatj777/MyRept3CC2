@@ -1,3 +1,4 @@
+@Episode @TopNaviagtion 
 Feature: Episode 2.0 Expand Patient Card  for Patient Summary
 
   Scenario: verify Expand Patient Card to verify patient summary

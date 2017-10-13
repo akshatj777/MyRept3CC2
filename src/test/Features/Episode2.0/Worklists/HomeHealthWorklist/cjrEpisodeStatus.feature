@@ -1,3 +1,4 @@
+@Episode @Worklist @HomeHealth
 Feature: Patient status on Home Health Worklist
 
   Scenario Outline: Verify patient should be present in Home Health worklist when Episode is CJR Pend Canc and patient is readmitted to HHA - Home Health Agency

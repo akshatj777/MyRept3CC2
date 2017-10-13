@@ -1,3 +1,4 @@
+@Episode @Worklist @PostAcute
 Feature: Patient status on Post Acute Facility Work List
 
   Scenario Outline: Verify patient in post acute facility worklist with Episode status as Active M2 when current Discharge Care Setting is IRF

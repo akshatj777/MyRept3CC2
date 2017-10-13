@@ -1,3 +1,4 @@
+@Episode @Worklist @Exceed
 Feature: Patient status on Exceed SNF LOS Work List
 
   Scenario Outline: Verify patient included in Exceed SNF when LOS is above the ELOS range

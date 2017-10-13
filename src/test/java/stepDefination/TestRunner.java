@@ -36,14 +36,14 @@ import stepDefination.Hooks.*;
 @CucumberOptions(
         plugin = {"html:target/cucumber-results","usage:target/cucumber-results/cucumber-usage.json",
                 "junit:target/cucumber-results/cucumber-results.xml", "json:target/cucumber-results/cucumber.json",
-                "com.cucumber.listener.ExtentCucumberFormatter:target/vimalSelvam-cucumberReport/report.html","rerun:target/rerun.txt"},
-        features = {"src/test/Features"},
+                "rerun:target/rerun.txt","stepDefination.ExtentCucumberFormatter"},
+        features = {"src/test/Features/"},
         //glue = { "./src/test/java/stepDefination" },
         tags = {}
 )
 public class TestRunner {
 
-	static ExtentReports extent;
+	ExtentReports extent;
     ExtentTest test;
         @BeforeSuite
         public static void setUp() {

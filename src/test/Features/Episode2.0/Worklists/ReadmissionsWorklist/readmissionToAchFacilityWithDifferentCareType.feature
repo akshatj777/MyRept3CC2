@@ -1,3 +1,4 @@
+@Episode @Worklist @Readmission
 Feature: Patient with Active/Pending Cancellation episode having readmission to an ACH facility as HHH-Scheduled/Observation/Emergency/Outpatient
 
   Scenario Outline: Readmission to an ACH facility as HHH-Scheduled/Observation/Emergency/Outpatient

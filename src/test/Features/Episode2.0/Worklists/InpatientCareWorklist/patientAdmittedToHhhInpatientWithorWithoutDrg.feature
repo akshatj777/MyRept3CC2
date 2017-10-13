@@ -1,3 +1,4 @@
+@Episode @Worklist @InpatientCare
 Feature: Patient status in Inpatient Care Worklist
 
   Scenario Outline: Patient status in inpatient worklist when admitted to HHH-inpatient without any drg

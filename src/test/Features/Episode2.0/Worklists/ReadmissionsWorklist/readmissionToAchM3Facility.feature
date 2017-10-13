@@ -1,3 +1,4 @@
+@Episode @Worklist @Readmission
 Feature: Patient Status on readmission to an ACH M3 Facility with HHH-I
 
   Scenario Outline: Patient with M3 Active/Pending Cancellation status having readmission to an ACH facility with HHH-I

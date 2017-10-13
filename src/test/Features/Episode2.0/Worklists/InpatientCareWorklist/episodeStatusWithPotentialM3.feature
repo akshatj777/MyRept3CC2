@@ -1,3 +1,4 @@
+@Episode @Worklist @InpatientCare
 Feature: Patient status in Inpatient Care Worklist
 
   Scenario Outline: Verify patient should be present in inpatient care worklist with HHH- Inpatient with confirmed Possible BPCI Potential M3 DRG.

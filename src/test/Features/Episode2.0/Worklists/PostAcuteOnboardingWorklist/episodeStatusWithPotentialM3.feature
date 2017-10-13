@@ -1,3 +1,4 @@
+@Episode @Worklist @PostAcuteOnboarding
 Feature: Patient status in Post Acute Onboarding Worklist
 
   Scenario Outline: Patient status in post onboarding worklist when  patient admitted to HHH-I, with discharge few days ago and non-BPCI DRG - Patient is not in episode, and is not shown on worklist.

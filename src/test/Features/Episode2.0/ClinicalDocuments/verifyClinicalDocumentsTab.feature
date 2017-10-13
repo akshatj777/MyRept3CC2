@@ -1,3 +1,4 @@
+@Episode @Clinical 
 Feature: Verify the Clinical Documents section
 
   Scenario Outline: To verify the functionalities under Clinical Documents Section

@@ -1,3 +1,4 @@
+@Episode @CARL
 Feature: As a user, I should be able to complete and submit a CARL form for an Emblem patient that was discharged from my facility in the last week (7 days) by clicking on “Complete CARL (Discharged)”
 
   Scenario Outline: Discharge from anchor yesterday to HHH-Scheduled without discharge & Discharge from anchor 7 days ago (today is day 1) to HHH-Inpatient without discharge.

@@ -1,3 +1,4 @@
+@Episode @Worklist @ReadmissionDischarges
 Feature: Patient status on Readmission Discharges Work List
 
   Scenario Outline: Patient with Episode status as Active through M2 with a Readmission with discharge care setting HHH-Inpatient within last 7 days

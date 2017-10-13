@@ -1,3 +1,4 @@
+@Episode @Notes 
 Feature: Notes Activity Date
 
   Scenario: Verify that upon clicking on Notes - Activity Date, Calendar should appear to select the date manually.

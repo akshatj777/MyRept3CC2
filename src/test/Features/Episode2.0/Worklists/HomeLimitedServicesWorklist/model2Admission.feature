@@ -1,3 +1,4 @@
+@Episode @Worklist @HomeLimited
 Feature: Patient status on Home Limited Service Worklist
 
   Scenario Outline: Verify patient should be present in Home with Limited worklist when Episode is Model2 Pend Canc and patient is readmitted to REH - Rehabilitation

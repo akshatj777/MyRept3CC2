@@ -1,3 +1,4 @@
+@Episode @Notes 
 Feature: Notes Sorting on Clinical Documents
 
   Scenario: To verify note should be stored in the clinical document section once it is created and also verify the notifications on activity tab on Clinical Documents

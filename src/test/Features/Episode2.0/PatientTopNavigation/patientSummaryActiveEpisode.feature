@@ -1,3 +1,4 @@
+@Episode @TopNaviagtion
 Feature: Patient Summary Verification for Active Episodes
 
 Scenario Outline: Create a Patient with M2 active episode,no discharge date and verify patient summary

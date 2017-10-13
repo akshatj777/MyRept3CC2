@@ -1,3 +1,4 @@
+@Episode @Worklist @ReadmissionDischarges
 Feature: Patient status on Readmission Discharges Work List
 
   Scenario Outline: Patient with Episode status as Active through CJR with a Readmission with discharge care setting facility SNF (any care type) within last 7 days

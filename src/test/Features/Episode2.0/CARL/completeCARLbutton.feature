@@ -1,3 +1,4 @@
+@Episode @CARL
 Feature: Complete CARL button
 #
   #Scenario Outline: The Complete CARL button should appear on the patient card with active Episodes

@@ -1,3 +1,4 @@
+@Episode @Worklist @HomeLimited
 Feature: Patient status on Home Limited Service Worklist
 
   Scenario Outline: Patient's with past transition admit care setting is HOM / REH (Outpatient)

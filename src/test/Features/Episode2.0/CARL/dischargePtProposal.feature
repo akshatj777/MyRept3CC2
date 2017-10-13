@@ -1,3 +1,4 @@
+@Episode @CARL 
 Feature: Upon selecting the Actual Care Setting, user should be able to view the Physical Therapy Duration and Frequency proposal
 
   Scenario Outline: Verify Upon selecting the Actual Care Setting ,user should be able to view the Physical Therapy Duration and Frequency proposal

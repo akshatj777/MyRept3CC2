@@ -1,3 +1,4 @@
+@Episode @Worklist @Readmission
 Feature: CJR Readmission To Ach Facility
 
   Scenario Outline: Patient with Active Episode and readmission to an ACH facility as HHH-I

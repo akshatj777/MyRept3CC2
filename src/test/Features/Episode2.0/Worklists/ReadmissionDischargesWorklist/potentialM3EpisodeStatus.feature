@@ -1,3 +1,4 @@
+@Episode @Worklist @ReadmissionDischarges
 Feature: Patient status on Readmission Discharges Work List
 
   Scenario Outline: Patient with Episode status as Potential M3 with a Readmission to SNF (any care type) discharge care setting facility within last 7 days

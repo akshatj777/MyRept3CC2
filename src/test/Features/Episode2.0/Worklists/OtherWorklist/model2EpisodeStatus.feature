@@ -1,3 +1,4 @@
+@Episode @Worklist @Alternative
 Feature: Patient status on Other/Alternative Work List
 
   Scenario Outline: Verify patient should be present in Alternative worklist when Episode is M2 Pend Canc and patient is readmitted to SNF

@@ -1,3 +1,4 @@
+@Episode @Worklist @Readmission
 Feature: Active Episode HHH-Inpatient/Scheduled with DRG 472 W Readmitted to HHH-I/S with DRG 239
 
   Scenario Outline: Active Episode HHH-Inpatient/Scheduled with DRG 472 W Readmitted to HHH-I/S with DRG 239

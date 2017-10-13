@@ -1,3 +1,4 @@
+@Episode @Worklist @HomeLimited
 Feature: Patient status on Home Limited Service Worklist
 
   Scenario Outline: Verify patient should be present in Home Limited Services worklist when Episode is CJR Pend Can and patient is readmitted to REH - Rehabilitation(Outpatient)

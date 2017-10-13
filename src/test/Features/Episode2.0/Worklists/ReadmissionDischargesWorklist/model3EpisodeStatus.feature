@@ -1,3 +1,4 @@
+@Episode @Worklist @ReadmissionDischarges
 Feature: Patient status on Readmission Discharges Work List
 
   Scenario Outline: Patient with Episode status as Active M3 with a Readmission without discharge within last 7 days

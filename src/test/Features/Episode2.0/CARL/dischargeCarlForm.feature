@@ -1,3 +1,4 @@
+@Episode @CARL
 Feature: To verify the options and functionality of Discharge section of Carl form
 
   Scenario: To verify discharge form when patient save the form without filling the complete information and vice-versa
