@@ -206,18 +206,24 @@ public class NoteCreation extends BaseClass {
 		clickElement(driver.findElement(By.cssSelector("a.add-icon")));
 	}
 
-	public void IverifythatusershouldbeabletoselectanduploadfilesfromthecomputerthroughAddfileslink(String file) throws InterruptedException, AWTException {
+	public void IverifythatusershouldbeabletoselectanduploadfilesfromthecomputerthroughAddfileslink(String file) throws InterruptedException, AWTException, IOException {
 		Thread.sleep(6000);
-		StringSelection s = new StringSelection(file);
-        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(s, null);
-		Robot robot = new Robot();
-		robot.keyPress(java.awt.event.KeyEvent.VK_ENTER);
-		robot.keyRelease(java.awt.event.KeyEvent.VK_ENTER);
-		robot.keyPress(java.awt.event.KeyEvent.VK_CONTROL);
-		robot.keyPress(java.awt.event.KeyEvent.VK_V);
-		robot.keyRelease(java.awt.event.KeyEvent.VK_CONTROL);
-		longDelay();
-		robot.keyPress(java.awt.event.KeyEvent.VK_ENTER);
+		String importDir = System.getProperty("user.dir");
+		String newDir = importDir + "\\" + "src" + "\\" + "test" + "\\" + "Imports";
+		String FileName=newDir+"\\"+"import.exe";
+	//	String FileName1=newDir+"\\"+"Remedy.csv";
+		String file1=FileName+" "+file;
+	    Runtime.getRuntime().exec(file1) ;
+//		StringSelection s = new StringSelection(file);
+//        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(s, null);
+//		Robot robot = new Robot();
+//		robot.keyPress(java.awt.event.KeyEvent.VK_ENTER);
+//		robot.keyRelease(java.awt.event.KeyEvent.VK_ENTER);
+//		robot.keyPress(java.awt.event.KeyEvent.VK_CONTROL);
+//		robot.keyPress(java.awt.event.KeyEvent.VK_V);
+//		robot.keyRelease(java.awt.event.KeyEvent.VK_CONTROL);
+//		longDelay();
+//		robot.keyPress(java.awt.event.KeyEvent.VK_ENTER);
 
 	}
 
