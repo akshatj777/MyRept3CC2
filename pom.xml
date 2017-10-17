@@ -121,7 +121,7 @@
         </plugins>
          <outputDirectory>${project.build.directory}/generated-test-sources/cucumber</outputDirectory>
           <!-- The directory, which must be in the root of the runtime classpath, containing your feature files.  -->
-           <featuresDirectory>src/test/Features/Episode2.0/CARL/</featuresDirectory>
+           <featuresDirectory>src/test/Features/Episode2.0/ExportPatientList</featuresDirectory>
           <!-- Directory where the cucumber report files shall be written  -->
           <cucumberOutputDir>target/cucumber-parallel</cucumberOutputDir>
           <!-- comma separated list of output formats json,html,rerun.txt -->
