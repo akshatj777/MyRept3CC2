@@ -48,7 +48,7 @@ public class TestRunner {
         @BeforeSuite
         public static void setUp() {
                 // TODO: Add your pre-processing
-   //     	ExtentCucumberFormatter.initiateExtentCucumberFormatter();
+//        	ExtentCucumberFormatter.initiateExtentCucumberFormatter();
 //            ExtentCucumberFormatter.loadConfig(new File("extent-config.xml"));
 //            ExtentCucumberFormatter.addSystemInfo("Browser Name", "Firefox");
 //            ExtentCucumberFormatter.addSystemInfo("Browser version", "v31.0");

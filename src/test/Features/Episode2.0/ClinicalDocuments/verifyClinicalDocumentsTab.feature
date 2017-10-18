@@ -246,11 +246,11 @@ Feature: Verify the Clinical Documents section
     Then I wait to the see the visibility of loader to disappear
     Then I verify user is able to navigate to the read only "CARL" page by selecting the title
     #Then I verify there should be a "View" link on each card and clicking the link should bring the user to that specified section of the CARL form
-    #Then I verify "Caregiver" section should appear with "Yes, 24 hours a day" on label "Does the patient have a capable caregiver?" on the review page
-    #Then I verify "Independence" section should appear with "Forgetful" on label "Cognitive status" on the review page
-    #Then I verify "Independence" section should appear with "Assistance needed for one or more ADLs" on label "Activities of daily living" on the review page
-    #Then I verify "Independence" section should appear with "Assistive device needed" on label "Ambulatory status" on the review page
-    #Then I verify "Independence" section should appear with "No answer" on label "Does the patient have a history of falls" on the review page
+    Then I verify "Caregiver" section should appear with "Yes, 24 hours a day" on label "Does the patient have a capable caregiver?" on the review page
+    Then I verify "Independence" section should appear with "Forgetful" on label "Cognitive status" on the review page
+    Then I verify "Independence" section should appear with "Assistance needed for one or more ADLs" on label "Activities of daily living" on the review page
+    Then I verify "Independence" section should appear with "Assistive device needed" on label "Ambulatory status" on the review page
+    Then I verify "Independence" section should appear with "No answer" on label "Does the patient have a history of falls" on the review page
     #Then I verify "Anticipated Discharge Needs" section should appear with "Therapies Needed" for label "Therapies" for descriptive title "Physical Therapy" on the review page
     #Then I verify "Anticipated Discharge Needs" section should appear with "Once daily or less often" for label "Injectable Meds" for descriptive title "Transition of Care Needs" on the review page
     #Then I verify "Anticipated Discharge Needs" section should appear with "Once daily or less often" for label "Blood Testing" for descriptive title "Transition of Care Needs" on the review page

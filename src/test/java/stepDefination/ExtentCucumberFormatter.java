@@ -234,7 +234,7 @@ public class ExtentCucumberFormatter implements Reporter, Formatter {
 			if ("passed".equals(result.getStatus())) {
 				//String screenshotPath = PageHelper.captureIt();
 				String screenshotPath = "";
-			    scenarioTest.log(LogStatus.PASS,"Line Number: "+step.getLine()+" - "+key+step.getKeyword()+value, "PASSED");
+			    scenarioTest.log(LogStatus.PASS,"Line Number: "+step.getLine()+" - "+ key + value, "PASSED");
 			    scenarioTest.log(LogStatus.INFO, "Snapshot below: " + scenarioTest.addScreenCapture(screenshotPath));
 			} else if ("failed".equals(result.getStatus())) {
 				//String screenshotPath = PageHelper.captureIt();
@@ -243,7 +243,7 @@ public class ExtentCucumberFormatter implements Reporter, Formatter {
 				int i = error.indexOf("'");
 				int j = error.lastIndexOf("'");
 				error = error.substring(i+1, j);
-			    scenarioTest.log(LogStatus.FAIL,"Line Number: "+ step.getLine() +" - "+ key+step.getKeyword() + value, error);
+			    scenarioTest.log(LogStatus.FAIL,"Line Number: "+ step.getLine() +" - "+ key + value, error);
 			    scenarioTest.log(LogStatus.INFO, "Snapshot below: " + scenarioTest.addScreenCapture(screenshotPath));
 			} else if ("skipped".equals(result.getStatus())) {
 			    scenarioTest.log(LogStatus.SKIP, "Line Number: "+ step.getLine() +" - "+ key + value, "SKIPPED");
