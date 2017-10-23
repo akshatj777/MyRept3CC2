@@ -354,6 +354,7 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
+    Then I scroll the page to bottom by "-100"
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the patient on the patient card page that has no CARL button in it
@@ -724,6 +725,9 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     Then I verify CARL Recommendation field should show "Home with Limited Services (HOM)" on discharge section when total score is "less than or equal to 16"
     Then I save and continue the complete CARL form
     Then I close the patient summary Page
+    Then I scroll the page to bottom by "-100"
+    Then I wait to the see the visibility of loader to disappear
+    Then I click on "Inpatient" tab in the filter bar on patients page
     Then I wait to the see the visibility of loader to disappear
     Then I verify CARL button is "appearing" on the patient card
     Then I click on the patient on the patient card page that has no CARL button in it

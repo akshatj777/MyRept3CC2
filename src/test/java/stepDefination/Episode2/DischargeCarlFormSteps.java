@@ -322,7 +322,7 @@ public class DischargeCarlFormSteps extends DriverScript {
     }
     
     @Then ("^I verify Save and Go Back on the \"([^\"]*)\" section on CARL form$")
-    public void I_verify_Save_and_Go_Back_on_section_on_CARL_form() throws Throwable   {
+    public void I_verify_Save_and_Go_Back_on_section_on_CARL_form(String button) throws Throwable   {
     	dischargecarlform.IverifySaveandGoBackonsectiononCARLform();
     }
     

@@ -366,7 +366,8 @@ public class DischargeCarlForm extends BaseClass {
 	}
 			
 	public void IClickRadioOptionForFirstQuestionUnderDischargeSectionOnCarlForm(String radio, String text) {
-    clickElement(driver.findElement(By.xpath("//strong[text()='"+text+"']/parent::form//div[@class='radio ng-not-empty ng-valid']//span[text()='"+radio+"']")));
+    iWillWaitToSee(By.xpath("//strong[text()='"+text+"']/parent::form//div[@class='radio ng-not-empty ng-valid']//span[text()='"+radio+"']"));
+	clickElement(driver.findElement(By.xpath("//strong[text()='"+text+"']/parent::form//div[@class='radio ng-not-empty ng-valid']//span[text()='"+radio+"']")));
 	}
 
 	public void Iverifyusershouldbeabletoselecttheradiobuttononceselected() {

@@ -135,8 +135,8 @@ public class NoteCreation extends BaseClass {
 		iWillWaitToSee(By.xpath("//section/form/div[2]/div[1]/a/div/div/i[1]"));
 		clickElement(driver.findElement(By.xpath("//section/form/div[2]/div[1]/a/div/div/i[1]")));
 		delay();
-		iWillWaitToSee(By.cssSelector("td.day.ng-scope"));
-		selectElementByDesc("td.day.ng-scope", date_element);
+		iWillWaitToSee(By.xpath("//td[not(contains(@class,'past')) and not(contains(@class,'future'))]/div[contains(text(),'"+date_element+"')]"));
+		clickElement(driver.findElement(By.xpath("//td[not(contains(@class,'past')) and not(contains(@class,'future'))]/div[contains(text(),'"+date_element+"')]")));
 	}
 
 	public void IentertheNoteTextinthetextareaonAddClinicalDocumentonPatientCard(String NoteText) {

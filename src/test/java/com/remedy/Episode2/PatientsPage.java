@@ -553,6 +553,7 @@ public class PatientsPage extends BaseClass {
 
 	public void iSelectFromTheListOfAdmittingFacilityPresentOnTheAddPatientPage(String facility) {
 		longDelay();
+		iWillWaitToSee(By.cssSelector("div.select2-search>input.select2-input"));
 		iFillInText(driver.findElement(By.cssSelector("div.select2-search>input.select2-input")), facility);
 		longDelay();
 		clickElement(driver.findElement(By.cssSelector("li.select2-highlighted")));

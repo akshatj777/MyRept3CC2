@@ -46,6 +46,7 @@ public class ReadmissionWorklist extends BaseClass {
 	}
 
 	public void IselecttheDRGtypeontheDiagnosisandDRGtabonaddanewtransition(String DRGtype) {
+		delay();
 		iWillWaitToSee(By.cssSelector("#bp_personbundle_bpadmissiontype_drgType"));
 		selectDropdownVisibleElement("#bp_personbundle_bpadmissiontype_drgType", DRGtype);
 	}

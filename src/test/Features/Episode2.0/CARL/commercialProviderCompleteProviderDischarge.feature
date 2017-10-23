@@ -656,6 +656,7 @@ Feature: As a user, I should be able to complete and submit a CARL form for an E
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
     Then I verify current page "Remedy Partners" title
+    Then I click on "Inpatient" tab in the filter bar on patients page
     When I click on Filter button present on Patient Page
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page

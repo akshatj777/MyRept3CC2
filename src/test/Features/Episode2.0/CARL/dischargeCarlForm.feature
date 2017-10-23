@@ -50,8 +50,8 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the patient on the patient card page that has no CARL button in it
-    Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
+    Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Patient Details" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
@@ -437,7 +437,7 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I click on "Care Type" subform dropdown under Recommendation on Discharge section
     Then I select "Skilled Services" in subform dropdown for "Care Type" on Discharge section
     Then I click on "Discharge Location" subform dropdown under Recommendation on Discharge section
-    Then I select "(HHA) Home Health Agency" in subform dropdown for "Actual Care Setting" on Discharge section
+    Then I select "Aaa Home Health Care Inc" in subform dropdown for "Actual Care Setting" on Discharge section
     Then I click on "Actual Care Setting" subform dropdown under Recommendation on Discharge section
     Then I select "(HHA) Home Health Agency" in subform dropdown for "Actual Care Setting" on Discharge section
     Then I verify Care type and Discharge location field should get refreshed as per new Care setting
