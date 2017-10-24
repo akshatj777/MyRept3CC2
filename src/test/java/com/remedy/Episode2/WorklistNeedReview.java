@@ -24,13 +24,13 @@ public class WorklistNeedReview extends BaseClass {
 	}
 
 	public void IselectthemidinighttimefromthecalendarfromdatepickeronTransitionPage() {
-		clickElement(driver.findElement(By.cssSelector("body > div:nth-child(18) > div.datetimepicker-hours > table > tbody > tr > td > span:nth-child(1)")));
-		clickElement(driver.findElement(By.cssSelector("body > div:nth-child(18) > div.datetimepicker-minutes > table > tbody > tr > td > span:nth-child(1)")));
+		clickElement(driver.findElement(By.cssSelector("body > div:nth-child(17) > div.datetimepicker-hours > table > tbody > tr > td > span:nth-child(1)")));
+		clickElement(driver.findElement(By.cssSelector("body > div:nth-child(17) > div.datetimepicker-minutes > table > tbody > tr > td > span:nth-child(1)")));
 	}
 
 	public void IselectthebeforemidinighttimefromthecalendarfromdatepickeronTransitionPage() {
-		clickElement(driver.findElement(By.cssSelector("body > div:nth-child(18) > div.datetimepicker-hours > table > tbody > tr > td > span:nth-child(24)")));
-		clickElement(driver.findElement(By.cssSelector("body > div:nth-child(18) > div.datetimepicker-minutes > table > tbody > tr > td > span:nth-child(12)")));
+		clickElement(driver.findElement(By.cssSelector("body > div:nth-child(17) > div.datetimepicker-hours > table > tbody > tr > td > span:nth-child(24)")));
+		clickElement(driver.findElement(By.cssSelector("body > div:nth-child(17) > div.datetimepicker-minutes > table > tbody > tr > td > span:nth-child(12)")));
 	}
 
 	public void Izoomoutmybrowser(String pix) {

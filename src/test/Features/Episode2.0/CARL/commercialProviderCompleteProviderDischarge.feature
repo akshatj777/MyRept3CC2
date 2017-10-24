@@ -414,7 +414,7 @@ Feature: As a user, I should be able to complete and submit a CARL form for an E
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I wait to the see the visibility of loader to disappear
     Then I click on the complete CARL on the Patient Summary
-     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
+    Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
     Then I will wait to see the CARL section "Caregiver" header appears on the CARL form
     Then I click on Yes, 24 hours a day option under Does the patient have a capable caregiver
     Then I save and continue the complete CARL form
@@ -664,11 +664,8 @@ Feature: As a user, I should be able to complete and submit a CARL form for an E
     Then I verify CARL button is "appearing" on the patient card
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I wait to the see the visibility of loader to disappear
-    Then I get the patient last name who have no CARL button in it
-    Then I will wait to see and click on "Patient Details" followed by "span" tag
-    Then I wait to the see the visibility of loader to disappear
+    Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I switch to PatientTransitions frame
-    Then I wait to the see the visibility of loader to disappear
     Then I click on the edit button on the "1" transition to edit the Active transition
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag

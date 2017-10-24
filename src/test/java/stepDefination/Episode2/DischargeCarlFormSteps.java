@@ -327,7 +327,7 @@ public class DischargeCarlFormSteps extends DriverScript {
     }
     
     @Then ("^I click on the Save and Go Back on the \"([^\"]*)\" section on CARL form$")
-    public void I_click_on_the_Save_and_Go_Back_on_section_on_CARL_form() throws Throwable   {
+    public void I_click_on_the_Save_and_Go_Back_on_section_on_CARL_form(String section) throws Throwable   {
     	dischargecarlform.IclickontheSaveandGoBackonsectiononCARLform();
     }
     

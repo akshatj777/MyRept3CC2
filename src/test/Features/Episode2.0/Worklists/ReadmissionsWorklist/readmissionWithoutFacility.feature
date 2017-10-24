@@ -30,7 +30,6 @@ Feature: Patient Status with Active/Pending Cancellation episode having readmiss
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
     Then I verify current page "Remedy Partners" title
-    And I should see "All" tab in the filter bar on patients page
     Then I should see search box appearing on the patients page
     When I click on Filter button present on Patient Page
     And I click on Filters button present on Filter Page

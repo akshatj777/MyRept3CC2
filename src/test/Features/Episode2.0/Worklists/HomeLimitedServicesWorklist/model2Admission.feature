@@ -49,6 +49,7 @@ Feature: Patient status on Home Limited Service Worklist
     Then I switch to PatientTransitions frame
     Then I will fetch the value attribute of "Social Security Number" on patient details
     When I switch to default window from iframe
+    Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
@@ -148,6 +149,7 @@ Feature: Patient status on Home Limited Service Worklist
     Then I switch to PatientTransitions frame
     Then I will fetch the value attribute of "Social Security Number" on patient details
     When I switch to default window from iframe
+    Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame

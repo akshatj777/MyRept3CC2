@@ -562,6 +562,7 @@ public class PatientClinicalDocuments extends BaseClass {
 		 }
 
 	public void IclickontheCancelbuttononEpisodepresentontheAddPatientpage() {
+		delay();
 		iWillWaitToSee(By.xpath("//button[contains(text(),'Cancel')]"));
 		clickElement(driver.findElement(By.xpath("//button[contains(text(),'Cancel')]")));
 	}
@@ -733,9 +734,9 @@ public class PatientClinicalDocuments extends BaseClass {
 		}else if(logic.equals("Discharge"))
 		{
 	    iWillWaitToSee(By.xpath("/html/body/div[13]/div[4]/table/thead/tr/th[3]"));
-		iWillWaitToSee(By.xpath("/html/body/div[13]/div[4]/table/thead/tr/th[3]"));
+		iWillWaitToSee(By.xpath("/html/body/div[13]/div[4]/table/thead/tr/th[1]"));
 		WebElement nextLink = driver.findElement(By.xpath("/html/body/div[13]/div[4]/table/thead/tr/th[3]"));
-		WebElement previousLink = driver.findElement(By.xpath("/html/body/div[13]/div[4]/table/thead/tr/th[3]"));
+		WebElement previousLink = driver.findElement(By.xpath("/html/body/div[13]/div[4]/table/thead/tr/th[1]"));
 		 if(yearDiff!=0){
              if(yearDiff>0){
                    for(int i=0;i< yearDiff;i++){
@@ -744,8 +745,8 @@ public class PatientClinicalDocuments extends BaseClass {
                    for(int i=0;i< (yearDiff*(-1));i++){
                    previousLink.click(); }}
                    }	
-		iWillWaitToSee(By.cssSelector("body > div:nth-child(18) > div.datetimepicker-months > table > tbody > tr > td > span"));
-		List<WebElement> list_AllMonthToBook = driver.findElements(By.cssSelector("body > div:nth-child(18) > div.datetimepicker-months > table > tbody > tr > td > span"));
+		iWillWaitToSee(By.cssSelector("body > div:nth-child(17) > div.datetimepicker-months > table > tbody > tr > td > span"));
+		List<WebElement> list_AllMonthToBook = driver.findElements(By.cssSelector("body > div:nth-child(17) > div.datetimepicker-months > table > tbody > tr > td > span"));
 		Thread.sleep(1000);
 		list_AllMonthToBook.get(Integer.parseInt(date_dd_MM_yyyy[1]) - 1).click();
 		Thread.sleep(1000);
@@ -769,8 +770,9 @@ public class PatientClinicalDocuments extends BaseClass {
 		public void Iwillwaittoseeandclickontext(String text, String tag) {
 			longDelay();
 			iWillWaitToSee(By.xpath("//"+tag+"[contains(text(),'"+text+"')]"));
-			clickElement(driver.findElement(By.xpath("//"+tag+"[contains(text(),'"+text+"')]")));
-			delay();
+			Actions action=new Actions(driver);
+			action.moveToElement(driver.findElement(By.xpath("//"+tag+"[contains(text(),'"+text+"')]"))).click().perform();
+            delay();
 			}
 
 		public void Iwillfetchthevalueattributeofvariableonpatientdetails() {

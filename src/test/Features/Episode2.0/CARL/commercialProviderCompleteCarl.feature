@@ -728,6 +728,9 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     Then I scroll the page to bottom by "-100"
     Then I wait to the see the visibility of loader to disappear
     Then I click on "Inpatient" tab in the filter bar on patients page
+    When I click on Filter button present on Patient Page
+    Then I enter "SSN" value under "ssn" filter
+    Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify CARL button is "appearing" on the patient card
     Then I click on the patient on the patient card page that has no CARL button in it

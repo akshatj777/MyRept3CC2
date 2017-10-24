@@ -56,7 +56,7 @@ public class Ec1DashboardPage extends BaseClass{
 
 
     public void iverifyEc1DashboardHeaderText(String text ){
-
+        iWillWaitToSee(By.cssSelector(".ec2-embed-patient-name")); 
         verifyTextForElement(driver.findElement(By.cssSelector(".ec2-embed-patient-name")), text);
 
 

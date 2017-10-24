@@ -193,6 +193,7 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I click on the delete button on the transition to delete all the transitions
     Then I wait to the see the visibility of loader to disappear
     Then I click on add a new transition to add a new episode
+    Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I fill in "Admit" with logic "minus" with "8" days
     Then I select the "Admit" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
@@ -423,7 +424,7 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I click on "Care Type" subform dropdown under Recommendation on Discharge section
     Then I select "Skilled Services" in subform dropdown for "Care Type" on Discharge section
     Then I click on "Discharge Location" subform dropdown under Recommendation on Discharge section
-    Then I enter "Aaa Home Health Care Inc" Discharge location in the Discharge Location search box
+    Then I enter "AAA Home Health" Discharge location in the Discharge Location search box
     Then I verify "data" appears in the dropdown to select the Discharge Location under Recommendation on Discharge Section
     Then I verify Actual Discharge Location search should determined by Care Setting
     Then I verify results should be configured with list of facilities after entering characters on the Discharge Location field
@@ -437,7 +438,7 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I click on "Care Type" subform dropdown under Recommendation on Discharge section
     Then I select "Skilled Services" in subform dropdown for "Care Type" on Discharge section
     Then I click on "Discharge Location" subform dropdown under Recommendation on Discharge section
-    Then I select "Aaa Home Health Care Inc" in subform dropdown for "Actual Care Setting" on Discharge section
+    Then I enter "AAA Home Health" and select location in the Discharge Location search box
     Then I click on "Actual Care Setting" subform dropdown under Recommendation on Discharge section
     Then I select "(HHA) Home Health Agency" in subform dropdown for "Actual Care Setting" on Discharge section
     Then I verify Care type and Discharge location field should get refreshed as per new Care setting
@@ -565,7 +566,7 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I click on Calendar Icon On Discharge date under subform on Discharge section
     Then I select "Discharge current" with logic "minus" "3" days on Calendar Discharge Date under subform on Discharge section
     Then I click on Done button under subform on Discharge sections
-    Then I click "Yes" radio option for "Have you discussed the proposal with the Interdisciplinary team?" under Discharge section
+    Then I click "No" radio option for "Have you discussed the proposal with the Interdisciplinary team?" under Discharge section
     Then I verify discharge form should provide "Who disagrees?" and the "Reason for Disagreement" if the Actual Care Setting does not match the CARL recommendation proposed facility
     Then I verify question should state "Why didn't the patient transfer to the recommended Next Site of Care?" under Recommendation on Discharge section
     Then I verify that User should be able to provide additional comments "Additional" in a free text box
@@ -592,7 +593,7 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I verify "Discharge" section should appear with "Home with Limited Services (HOM)" on label "CARL recommendation" on the review page
     Then I verify "Discharge" section should appear with "HHA" on label "Actual care setting" on the review page
     #  Then I verify "Discharge" section should appear with "August 15, 2017" on label "Discharge date" on the review page
-    Then I verify "Discharge" section should appear with "Yes" on label "Have you discussed the proposal with the Interdisciplinary Team" on the review page
+    Then I verify "Discharge" section should appear with "No" on label "Have you discussed the proposal with the Interdisciplinary Team" on the review page
     Then I verify "Discharge" section should appear with "None" on label "Additional Comments" on the review page
     Then I verify "Discharge Disagreement" section should appear with "Family" on label "Who disagrees" on the review page
     Then I verify "Discharge Disagreement" section should appear with "Not enough caregiver support" on label "Reason for disagreement" on the review page

@@ -30,6 +30,7 @@ public class PatientsPage extends BaseClass {
 	
 
 	public void iVerifyTabInFilterBarOnPatientsPage(String elementText) {
+		iWillWaitToSee(By.xpath("//button//span[contains(text(),'" + elementText + "')]"));
 		verifyTextForElement(driver.findElement(By.xpath("//button//span[contains(text(),'" + elementText + "')]")),elementText);
 	}
 

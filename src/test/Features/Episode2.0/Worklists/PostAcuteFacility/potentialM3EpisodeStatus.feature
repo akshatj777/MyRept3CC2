@@ -110,7 +110,7 @@ Feature: Patient status on Post Acute Facility Work List
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I verify the patient "not present" on "Post-Acute Facility" worklist on the Patient Card Page
+    Then I verify the patient "present" on "Post-Acute Facility" worklist on the Patient Card Page
 
     Examples: 
       | email                | password  | Patient First Name | Patient Last Name     |

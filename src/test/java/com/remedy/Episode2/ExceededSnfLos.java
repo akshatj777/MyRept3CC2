@@ -77,20 +77,16 @@ public class ExceededSnfLos extends BaseClass {
 		String minimum_Elos_value = driver.findElement(By.cssSelector("div:nth-child(3) > div > span:nth-child(3).text-emphasized")).getText();
         String maximum_Elos_value = driver.findElement(By.cssSelector("span:nth-child(5).text-emphasized.ng-binding.ng-scope")).getText();
 		int Int_Los_value = Integer.parseInt(Los_value);
-		System.out.println("$$$Los is"+Int_Los_value);
-		int Int_ELos_minimum_value = Integer.parseInt(minimum_Elos_value);
-		System.out.println("$$$Min is"+Int_ELos_minimum_value);
+	    int Int_ELos_minimum_value = Integer.parseInt(minimum_Elos_value);
 		int Int_ELos_maximum_value = Integer.parseInt(maximum_Elos_value);
-		System.out.println("$$$Max is"+Int_ELos_maximum_value);
 		if(flag.equals("above"))
 		{
 			Assert.assertTrue(Int_Los_value > Int_ELos_maximum_value);
 		}else if(flag.equals("below"))
 		{
-			boolean flag1=Int_Los_value < Int_ELos_minimum_value ;
-			System.out.println("$$$Flag 1 is"+flag1);
-		    System.out.println("$$True");
-			}
+			Assert.assertTrue(Int_Los_value < Int_ELos_minimum_value);
+			Assert.assertTrue(Int_Los_value < Int_ELos_maximum_value);
+		}
 		}
 	
 		}
