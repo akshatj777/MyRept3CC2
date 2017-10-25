@@ -13,6 +13,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import javax.swing.plaf.synth.SynthSeparatorUI;
@@ -1418,5 +1421,24 @@ public class PatientsPage extends BaseClass {
 				     
 				  
 				 }
+
+			   public static String getcurrentdate(int days) {
+					DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+					LocalDate localDate = LocalDate.now();
+					LocalDate b = localDate.minus(Period.ofDays(days));
+					String date = dtf.format(b);
+					return date;
+				}
+
+	public void Iverifyadmitdateonexpandsummary(String variable1,String variable2,int value) {
+		if(variable2.equals("Admit Date")){
+		String date=getcurrentdate(value);
+		isElementVisible(driver.findElement(By.xpath("//div/label[contains(text(),'"+variable2+"')]/following-sibling::span[contains(text(),'"+date+"')]")));	  	
+		   	}
+		else if(variable2.contains("admission"))
+		{isElementVisible(driver.findElement(By.xpath("//div/label[contains(text(),'"+variable2+"')]/following-sibling::span[contains(text(),'"+value+"')]")));	  	
+			}
+		}
+	
 			}
     

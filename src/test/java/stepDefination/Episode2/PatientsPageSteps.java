@@ -1620,4 +1620,10 @@ public class PatientsPageSteps extends DriverScript {
     	patientsPage.Iverifydrgisappearing(value);
     }
     
+   @Then ("^I verify \"([^\"]*)\" should be displayed as \"([^\"]*)\" \" \"([^\"]*)\"$")
+   public void I_verify_admit_date_on_expand_summary(String variable1,String variable2,String logic,int value)
+   {
+	  patientsPage.Iverifyadmitdateonexpandsummary(variable1,variable2,value);
+   }
+    
     }
