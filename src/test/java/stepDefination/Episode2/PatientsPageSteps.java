@@ -7,6 +7,8 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+
+import java.text.ParseException;
 import java.util.List;
 
 
@@ -1620,10 +1622,33 @@ public class PatientsPageSteps extends DriverScript {
     	patientsPage.Iverifydrgisappearing(value);
     }
     
-   @Then ("^I verify \"([^\"]*)\" should be displayed as \"([^\"]*)\" \" \"([^\"]*)\"$")
+   @Then ("^I verify \"([^\"]*)\" should be displayed as \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\"$")
    public void I_verify_admit_date_on_expand_summary(String variable1,String variable2,String logic,int value)
    {
 	  patientsPage.Iverifyadmitdateonexpandsummary(variable1,variable2,value);
    }
     
+   @Then ("^I Verify that \"([^\"]*)\" should be in MM/DD/YYYY format$") 
+   public void i_Verify_Date_format(String section) throws ParseException
+   {
+	   patientsPage.i_Verify_Date_format();
+   }
+   
+   @Then ("^I verify Admit Date section should not be displayed for \"([^\"]*)\"$")
+   public void I_verify_Admit_Date_section_should_not_be_displayed(String section)
+   {
+	   patientsPage.IverifyAdmitDatesectionshouldnotbedisplayed();
+   }
+   
+   @Then ("^Patient will show \"([^\"]*)\" of episode complete$")
+   public void Patient_will_show_complete_percentage(String value)
+   {
+	   patientsPage.Patientwillshowcompletepercentage(value);
+   }
+   
+   @Then ("^I Verify following should be the list of available care settings and types filters$")
+   public void I_Verify_following_should_be_the_list_of_available_care_settings_and_types_filters(List<String> dropdownvalues)
+   {
+	   patientsPage.IVerifyfollowingshouldbethelistofavailablecaresettingsandtypesfilters(dropdownvalues);
+   }
     }

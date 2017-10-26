@@ -270,13 +270,19 @@ public class SummarySectionSteps extends DriverScript {
 	@Then ("^I select the \"([^\"]*)\" value from the eligibility dropdown$")
 	public void I_select_the_value_from_the_eligibility_dropdown(String value)
 	{
-		patientclinical.Iselectthevaluefromtheeligibilitydropdown();
+		patientclinical.Iselectthevaluefromtheeligibilitydropdown(value);
 	}
 	
 	@Then ("^I verify episode becomes Active$")
 	public void I_verify_episode_becomes_Active()
 	{
 		patientclinical.IverifyepisodebecomesActive();
+	}
+	
+	@Then ("^I select Date of Death \"([^\"]*)\" \"([^\"]*)\" to set status to Expired$")
+	public void I_select_Date_of_Death(String logic,int days)
+	{
+		patientclinical.IselectDateofDeath(days);
 	}
 	
 }

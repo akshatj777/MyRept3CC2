@@ -13,9 +13,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.plaf.synth.SynthSeparatorUI;
@@ -1439,6 +1442,48 @@ public class PatientsPage extends BaseClass {
 		{isElementVisible(driver.findElement(By.xpath("//div/label[contains(text(),'"+variable2+"')]/following-sibling::span[contains(text(),'"+value+"')]")));	  	
 			}
 		}
+
+	  public void validateDateFormat(String dateToValdate) throws ParseException {
+			SimpleDateFormat formatter = new SimpleDateFormat("mm/dd/yyyy");
+		    formatter.setLenient(false);
+		    formatter.parse(dateToValdate);
+	    }
+
+	public void i_Verify_Date_format() throws ParseException {
+	String date_value=driver.findElement(By.xpath("//span[@ng-bind='patient.admitDate.value | unix']")).getText();
+	validateDateFormat(date_value);
+	}
+
+
+	public void IverifyAdmitDatesectionshouldnotbedisplayed() {
+		WebDriverWait wait=new WebDriverWait(driver,5);
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//span[@ng-bind='patient.admitDate.value | unix']")));
+	}
+
+
+	public void Patientwillshowcompletepercentage(String value) {
+		verifyTextForElement(driver.findElement(By.cssSelector("span.text-large.margin-right.ng-binding.ng-scope")),value);
+		
+	}
+
+
+    public void IVerifyfollowingshouldbethelistofavailablecaresettingsandtypesfilters(List<String> dropdownvalues) {
+    	iWillWaitToSee(By.xpath("//label[starts-with(@for,'care-setting')]/i/following-sibling::span"));
+    	List<WebElement> elements=driver.findElements(By.xpath("//label[starts-with(@for,'care-setting')]/i/following-sibling::span"));
+        System.out.println("List of elements"+elements);
+    	List<String> actualtexts=new ArrayList<String>();
+        for(int i=0;i<dropdownvalues.size();i++)
+        {
+        	String text=elements.get(i).getText();
+        	actualtexts.add(text);
+        	
+//        	elements.get(i).getText();
+//        	System.out.println("Actual Text is"+elements.get(i).getText());
+//        	System.out.println(dropdownvalues.get(i));
+//        	verifyTextForElement(elements.get(i),dropdownvalues.get(i));
+        }
+        System.out.println("$$List of text"+actualtexts);
+	}
 	
 			}
     

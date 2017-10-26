@@ -894,9 +894,13 @@ public class PatientClinicalDocuments extends BaseClass {
 			
 		}
 
-		public void Iselectthevaluefromtheeligibilitydropdown() {
-			clickElement(driver.findElement(By.cssSelector("a.set_eligibility_value.set_eligibility_eligible")));
+		public void Iselectthevaluefromtheeligibilitydropdown(String value) {
+			if(value.equals("Eligible")){
+			clickElement(driver.findElement(By.cssSelector("a.set_eligibility_value.set_eligibility_eligible")));}
+		else if(value.equals("Expired")){
+			clickElement(driver.findElement(By.cssSelector("a.set_eligibility_expired")));}
 		}
+		
 
 		public void IverifyepisodebecomesActive() {
 			isElementVisible(driver.findElement(By.cssSelector("span.text-large.margin-right.ng-binding.ng-scope")));
@@ -944,4 +948,18 @@ public class PatientClinicalDocuments extends BaseClass {
 			driver.get(newURL);
 			
 		}
+
+	  
+		public void IselectDateofDeath(int days) {
+			String date=getcurrentdate(days);
+			setAttribute(driver.findElement(By.cssSelector("a.set_eligibility_value.set_eligibility_eligible")),"value",date);
+			
+		}
+		
+		 public void setAttribute(WebElement element, String attName, String attValue) {
+		       JavascriptExecutor js = (JavascriptExecutor) driver;
+		        js.executeScript("arguments[0].setAttribute(arguments[1], arguments[2]);", 
+		                element, attName, attValue);
+		    }
+
 		}
