@@ -1,5 +1,0 @@
-current-facility,readmitted,current-care-setting,anchor-admission-date,current-bundle,first-name,medicare-id,anchor-discharge-date,anchor-facility,date-of-birth,final-drg,last-discharge-date,working-drg,last-name,
-(HHH) Inpatient htestone - htestone,No,HHH-I,,,JWMQDJ,777888555A,,Not Assigned,07/28/1949,,,,AAXX
-(HHH) Inpatient Stamford - Stamford Hospital,No,HHH-I,09/24/2017,RESPIRATORY INFECTIONS & INFLAMMATIONS W MCC,CBUXPB,331538657A,,(HHH) Stamford Hospital,05/16/1931,,,177,ABBDWA
-"(HHH) Inpatient St Luke's - Allentown, LAB",No,HHH-I,,,BRTEST,531404896A,,Not Assigned,01/20/1988,,,,BSEPTTNTY
-(HHH) Inpatient St Luke's - Allentown,No,HHH-I,,,MYTESTPAT,859674478A,,Not Assigned,02/03/2009,,,,MYTESTPAT

@@ -1474,9 +1474,12 @@ public class PatientsPage extends BaseClass {
     	List<String> actualtexts=new ArrayList<String>();
         for(int i=0;i<dropdownvalues.size();i++)
         {
+        	System.out.println("$$Expected text"+dropdownvalues.get(i));
+        	while(!elements.get(i).getText().equals(dropdownvalues.get(i)))
+        	{
         	String text=elements.get(i).getText();
         	actualtexts.add(text);
-        	
+        	}
 //        	elements.get(i).getText();
 //        	System.out.println("Actual Text is"+elements.get(i).getText());
 //        	System.out.println(dropdownvalues.get(i));
@@ -1484,6 +1487,15 @@ public class PatientsPage extends BaseClass {
         }
         System.out.println("$$List of text"+actualtexts);
 	}
+
+
+	public void Iverifyvalueonxpandsummary(String variable1, String variable2) {
+		isElementVisible(driver.findElement(By.xpath("//div/label[contains(text(),'"+variable1+"')]/following-sibling::span[contains(text(),'"+variable2+"')]")));	  	
+			   	}
+
+
+
+		
 	
-			}
+}
     

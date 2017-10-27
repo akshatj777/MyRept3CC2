@@ -595,5 +595,52 @@ public class DischargeCarlForm extends BaseClass {
 	public void Iverifyusershouldbeabletonavigatetothereviewform() {
 		iWillWaitToSee(By.xpath("//h2[contains(text(),'Review')]"));	
 		isElementVisible(driver.findElement(By.xpath("//h2[contains(text(),'Review')]")));
-	}	
+	}
+
+	public void Iverifypatientfirstname() {
+		isElementVisible(driver.findElement(By.xpath("//h2[@class='ng-scope']/span[2][contains(text(),'"+firstname+"')]")));
+	}
+
+	public void Iverifypatientlastname() {
+		isElementVisible(driver.findElement(By.xpath("//h2[@class='ng-scope']/span[1][contains(text(),'"+lastname+"')]")));
+	}
+
+	public void Iverifypatientdateofbirth() {
+		isElementVisible(driver.findElement(By.xpath("//small/span[contains(text(),'01/05/1995')]")));
+		
+		
+	}
+
+	public void IverifypatientAge() {
+		isElementVisible(driver.findElement(By.xpath("//small/span[2][contains(text(),'22')]")));
+		}
+
+	public void IverifypatientGender() {
+		isElementVisible(driver.findElement(By.xpath("//small/span[3][contains(text(),'M')]")));
+		
+	}
+
+	public void IverifypatientSSN() {
+		String ssn_final=final_ssn;
+		String new_word = "XXX-XX-"+ssn_final.substring(ssn_final.length() - 4);
+		isElementVisible(driver.findElement(By.xpath("//div[starts-with(@ng-if,'patient.ssn')]/div/span[starts-with(@ng-if,'patient.ssn')]/label[contains(text(),'SSN')]//following-sibling::span[contains(text(),'"+new_word+"')]")));
+		
+	}
+
+	public void Iverifypatientlanguage() {
+		
+		
+	}
+
+	public void Iclickonprimarylanguagedropdown() {
+		iWillWaitToSee(By.cssSelector("#BP_patientType_primaryLanguage"));
+		clickElement(driver.findElement(By.cssSelector("#BP_patientType_primaryLanguage")));
+		}
+
+	public void I_select_the_primary_language() {
+		
+		
+	}
+
+		
 }

@@ -38,6 +38,8 @@ public class PatientClinicalDocuments extends BaseClass {
 		super(driver);
 	}
 	public static String L_name=null;
+	DischargeCarlForm carl=new DischargeCarlForm(driver);
+	
 	public static String attribute_value=null;
 	WebDriverWait wait = new WebDriverWait(driver, 30);
 	public void IverifythesearchedpatienthastheCARLcompletetextornot() {
@@ -962,4 +964,5 @@ public class PatientClinicalDocuments extends BaseClass {
 		                element, attName, attValue);
 		    }
 
+	
 		}

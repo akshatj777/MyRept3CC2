@@ -350,10 +350,61 @@ public class DischargeCarlFormSteps extends DriverScript {
     public void i_enter_in_the_first_name_text_box_field_present_on_the_Add_Patient_page() throws Throwable {
       dischargecarlform.iEnterDetailsInTextboxFieldPresentOnAddPatientModal("firstName");
     }
-            
-            
+    
+      @Then ("^I verify the patient first name on patient summary$")
+	   public void I_verify_patient_first_name()
+	   {
+    	 dischargecarlform.Iverifypatientfirstname();
+	   }
+      
+     @Then ("^I verify the patient last name on patient summary$")
+	 public void I_verify_patient_last_name()
+	   {
+   	 dischargecarlform.Iverifypatientlastname();
+	   }
+     
+     @Then ("^I verify the patient Date of birth on patient summary$")
+   	 public void I_verify_patient_Date_of_birth()
+   	   {
+      	 dischargecarlform.Iverifypatientdateofbirth();
+   	   }
+     
+     @Then ("^I verify the patient Age on patient summary$")
+   	 public void I_verify_patient_Age()
+   	   {
+      	 dischargecarlform.IverifypatientAge();
+   	   }
+     
+     @Then ("^I verify the patient Gender on patient summary$")
+   	 public void I_verify_patient_Gender()
+   	   {
+      	 dischargecarlform.IverifypatientGender();
+   	   }
+     @Then ("^I verify the patient SSN on patient summary$")
+   	 public void I_verify_patient_SSN()
+   	   {
+      	 dischargecarlform.IverifypatientSSN();
+   	   }
+    
+     @Then ("^I verify the patient language on patient summary$")
+   	 public void I_verify_patient_language()
+   	   {
+      	 dischargecarlform.Iverifypatientlanguage();
+   	   } 
 
-    @Then("^I enter random Patient Last Name in the last name text box field present on the Add Patient page$")
+     @Then ("^I click on the Primary Language dropdown to select the language in Patient Details$")
+     public void I_click_on_primary_language_dropdown()
+     {
+    	 dischargecarlform.Iclickonprimarylanguagedropdown();
+     }
+     
+     @Then ("^I select the Language from Primary Language dropdown on Patient Details$")
+     public void I_select_the_primary_language()
+     {
+    	 dischargecarlform.I_select_the_primary_language();
+     }
+     
+   @Then("^I enter random Patient Last Name in the last name text box field present on the Add Patient page$")
     public void i_enter_in_the_last_name_text_box_field_present_on_the_Add_Patient_page() throws Throwable {
     	dischargecarlform.iEnterDetailsInTextboxFieldPresentOnAddPatientModal("lastName");
     }

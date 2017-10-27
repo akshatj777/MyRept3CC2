@@ -1627,6 +1627,12 @@ public class PatientsPageSteps extends DriverScript {
    {
 	  patientsPage.Iverifyadmitdateonexpandsummary(variable1,variable2,value);
    }
+   
+   @Then ("^I verify \"([^\"]*)\" should be displayed as \"([^\"]*)\"$")
+   public void I_verify_value_on_expand_summary(String variable1,String variable2)
+   {
+	  patientsPage.Iverifyvalueonxpandsummary(variable1,variable2);
+   }
     
    @Then ("^I Verify that \"([^\"]*)\" should be in MM/DD/YYYY format$") 
    public void i_Verify_Date_format(String section) throws ParseException
@@ -1651,4 +1657,8 @@ public class PatientsPageSteps extends DriverScript {
    {
 	   patientsPage.IVerifyfollowingshouldbethelistofavailablecaresettingsandtypesfilters(dropdownvalues);
    }
+   
+ 
+   
+   
     }
