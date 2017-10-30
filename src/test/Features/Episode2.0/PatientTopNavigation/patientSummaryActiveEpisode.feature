@@ -49,12 +49,19 @@ Scenario: Create a Patient with M2 active episode,no discharge date and verify p
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
     Then I will fetch the value attribute of "Social Security Number" on patient details
+    Then I click on the Primary Language dropdown to select the language in Patient Details
+    Then I select the Language from Primary Language dropdown on Patient Details
+    Then I click on the submit button to save the "Primary Language" selected
     When I switch to default window from iframe
+    Then I close the patient summary Page
+    Then I scroll the page to bottom by "-100"
+    Then I click on the patient on the patient card page that has no CARL button in it
+    Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
-    Then I wait to the see the visibility of loader to disappear
     Then I click on add a new transition to add a new episode
+    Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I fill in "Admit" with logic "minus" with "11" days
     Then I wait to the see the visibility of loader to disappear
@@ -78,8 +85,20 @@ Scenario: Create a Patient with M2 active episode,no discharge date and verify p
     Then I verify the patient Date of birth on patient summary
     Then I verify the patient Age on patient summary
     Then I verify the patient SSN on patient summary
-    Then I verify the patient language on patient summary
-    Then Patient will show "11%" of episode complete
+    Then I verify "Admit Date" should be displayed as "days to anchor admission" "minus" "20"
+    Then I verify the patient bundle name "ACUTE ISCHEMIC STROKE W USE OF THROMBOLYTIC AGENT W/O CC/MCC" on patient summary
+    Then I verify "Current Location" should be displayed as "(HHH) Inpatient Stamford - Stamford Hospital"
+    Then I verify "Anchor Facility" should be displayed as "(HHH) Stamford Hospital"
+    Then I verify the patient language "(English)" on patient summary
+    Then I switch to "Tags" frame followed by "#iFrameEC2PatientTags"
+    Then I verify Tags is appearing on the patient summary page
+    Then I click on add a new tag in Tags on the patient summary page
+    Then I select "Medicaid Eligible" from the list of tags on patient summary page
+    Then I verify the selected "Medicaid Eligible" tag on patient summary page
+    Then I click on the remove button to remove the selected tag on patient summary
+    Then I verify the tag "Medicaid Eligible" removed successfully
+    When I switch to iframe of patient eligibility on patient summary page
+    Then I verify "Error" is appearing in eligibility dropdown on patient summary page
 
  Scenario Outline: Create a Patient with CJR active episode,no episodes in history and verify patient summary
  

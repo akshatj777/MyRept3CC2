@@ -386,10 +386,10 @@ public class DischargeCarlFormSteps extends DriverScript {
       	 dischargecarlform.IverifypatientSSN();
    	   }
     
-     @Then ("^I verify the patient language on patient summary$")
-   	 public void I_verify_patient_language()
+     @Then ("^I verify the patient language \"([^\"]*)\" on patient summary$")
+   	 public void I_verify_patient_language(String language)
    	   {
-      	 dischargecarlform.Iverifypatientlanguage();
+      	 dischargecarlform.Iverifypatientlanguage(language);
    	   } 
 
      @Then ("^I click on the Primary Language dropdown to select the language in Patient Details$")
@@ -404,6 +404,60 @@ public class DischargeCarlFormSteps extends DriverScript {
     	 dischargecarlform.I_select_the_primary_language();
      }
      
+     @Then ("^I verify Tags is appearing on the patient summary page$")
+     public void I_verify_Tags_is_appearing_on_patient_summary()
+     {
+    	 dischargecarlform.IverifyTagsisappearingonpatientsummary();
+     }
+     
+     @Then ("^I click on add a new tag in Tags on the patient summary page$")
+     public void  I_click_on_add_a_new_tag_in_Tags()
+     {
+    	 dischargecarlform.I_click_on_add_a_new_tag_in_Tags();
+     }
+     
+     @Then ("^I select \"([^\"]*)\" from the list of tags on patient summary page$")
+     public void I_select_tags_from_tag_list(String tag)
+     {
+    	 dischargecarlform.Iselecttagsfromtaglist(tag);
+     }
+     
+     @Then ("^I verify the selected \"([^\"]*)\" tag on patient summary page$")
+     public void I_verify_the_selected_tag(String tag)
+     {
+    	 dischargecarlform.Iverifytheselectedtag(tag);
+     }
+     
+     @Then ("^I click on the remove button to remove the selected tag on patient summary$")
+     public void I_click_on_the_remove_button_to_remove_the_selected_tag()
+     {
+    	 dischargecarlform.Iclickontheremovebuttontoremovetheselectedtag();
+     }
+     
+     @Then ("^I verify the tag \"([^\"]*)\" removed successfully$")
+     public void I_verify_the_tag_removed_successfully(String tag)
+     {
+    	 dischargecarlform.I_verify_the_tag_removed_successfully(tag);
+     }
+     
+     @Then ("^I verify the patient bundle name \"([^\"]*)\" on patient summary$")
+     public void I_verify_bundle_name_on_patient_summary(String bundle_name)
+     {
+    	 dischargecarlform.I_verify_bundle_name_on_patient_summary(bundle_name);
+     }
+     
+     
+     @Then ("^I verify the patient Medical Eligibility \"([^\"]*)\" on patient summary$")
+     public void I_verify_medical_Eligibility(String eligibility)
+     {
+    	 dischargecarlform.IverifymedicalEligibility(eligibility);
+     }
+     
+     @Then ("^I click on the submit button to save the \"([^\"]*)\" selected$")
+     public void I_click_on_submit_button_on_patient_Details(String field)
+     {
+    	 dischargecarlform.IclickonsubmitbuttononpatientDetails();
+     }
    @Then("^I enter random Patient Last Name in the last name text box field present on the Add Patient page$")
     public void i_enter_in_the_last_name_text_box_field_present_on_the_Add_Patient_page() throws Throwable {
     	dischargecarlform.iEnterDetailsInTextboxFieldPresentOnAddPatientModal("lastName");

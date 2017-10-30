@@ -627,19 +627,60 @@ public class DischargeCarlForm extends BaseClass {
 		
 	}
 
-	public void Iverifypatientlanguage() {
+	public void Iverifypatientlanguage(String language) {
+		isElementVisible(driver.findElement(By.xpath("//span[starts-with(@ng-if,'patient.primaryLanguage')]/em[text()='"+language+"']")));
+	}
+
+	public void Iclickonprimarylanguagedropdown() {
+		iWillWaitToSee(By.xpath("//div[@id='BP_patientType_primaryLanguage']"));
+		clickElement(driver.findElement(By.xpath("//div[@id='BP_patientType_primaryLanguage']")));
+		}
+
+	public void I_select_the_primary_language() {
+		iWillWaitToSee(By.cssSelector("div.editable-input > select.form-control"));
+		selectDropdownVisibleElement("div.editable-input > select.form-control","English");
+	}
+
+	public void IclickonsubmitbuttononpatientDetails() {
+		iWillWaitToSee(By.cssSelector("div.editable-buttons > button.editable-submit"));
+		clickElement(driver.findElement(By.cssSelector("div.editable-buttons > button.editable-submit")));
+	}
+
+	public void IverifymedicalEligibility(String eligibility) {
 		
 		
 	}
 
-	public void Iclickonprimarylanguagedropdown() {
-		iWillWaitToSee(By.cssSelector("#BP_patientType_primaryLanguage"));
-		clickElement(driver.findElement(By.cssSelector("#BP_patientType_primaryLanguage")));
-		}
+	public void I_verify_bundle_name_on_patient_summary(String bundle_name) {
+		iWillWaitToSee(By.xpath("//label[@ng-bind='::patient.bundleName.config.label']/following-sibling::span[text()='"+bundle_name+"']"));
+		isElementVisible(driver.findElement(By.xpath("//label[@ng-bind='::patient.bundleName.config.label']/following-sibling::span[text()='"+bundle_name+"']")));
+	}
 
-	public void I_select_the_primary_language() {
-		
-		
+	public void IverifyTagsisappearingonpatientsummary() {
+		isElementVisible(driver.findElement(By.xpath("//div[starts-with(@class,'card-tags-expanded-head')]/label[text()='Tags']")));
+	}
+
+	public void I_click_on_add_a_new_tag_in_Tags() {
+		clickElement(driver.findElement(By.cssSelector("#page-content-frame > div.page-patient-overview > div.row.patient-header > div > div > ul:nth-child(1) > li.tags-directive.no-border.ng-scope > div > show-tags > div > ul > li > input")));
+	}
+
+	public void Iselecttagsfromtaglist(String tag) {
+		isElementVisible(driver.findElement(By.xpath("//div[@ng-bind-html='tag.label' and text()='"+tag+"']")));
+		clickElement(driver.findElement(By.xpath("//div[@ng-bind-html='tag.label' and text()='"+tag+"']")));
+	}
+
+    public void Iverifytheselectedtag(String tag) {
+    	isElementVisible(driver.findElement(By.xpath("//div[starts-with(@class,'tag-label') and contains(text(),'"+tag+"')]")));
+	}
+
+	public void Iclickontheremovebuttontoremovetheselectedtag() {
+		delay();
+		clickElement(driver.findElement(By.xpath("//div[@class='tag-remove']")));
+	}
+
+	public void I_verify_the_tag_removed_successfully(String tag) {
+		WebDriverWait wait=new WebDriverWait(driver,05);
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[starts-with(@class,'tag-label') and contains(text(),'"+tag+"')]")));
 	}
 
 		
