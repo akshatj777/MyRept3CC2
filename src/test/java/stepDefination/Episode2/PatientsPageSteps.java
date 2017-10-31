@@ -1520,7 +1520,7 @@ public class PatientsPageSteps extends DriverScript {
     	patientsPage.iVerifyLastNameOnPatientCardsOnPatientListPage(lastname);
     }
     
-    @Then("^I verify ([^\"]*) is appearing on the patient summary page$")
+    @Then("^I verify ([^\"]*) header is appearing on the patient summary page$")
     public void i_verify_is_appearing_on_the_patient_summary_page(String fname) throws Throwable {
     	patientsPage.iVerifyFirstNameOnPatientSummaryPage(", "+fname);
     }

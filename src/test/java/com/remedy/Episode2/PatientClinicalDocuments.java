@@ -766,7 +766,7 @@ public class PatientClinicalDocuments extends BaseClass {
 
 		public void Iwillwaittoseetext(String text,String tag) {
 			iWillWaitToSee(By.xpath("//"+tag+"[contains(text(),'"+text+"')]"));
-			
+			delay();
 	}
 
 		public void Iwillwaittoseeandclickontext(String text, String tag) {

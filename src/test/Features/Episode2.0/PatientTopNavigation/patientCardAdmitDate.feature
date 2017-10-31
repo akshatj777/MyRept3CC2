@@ -530,8 +530,6 @@ Scenario: Verify patient included in Exceed SNF LOS when patient is admitted to 
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear
-    Then I will wait to see "Transition Info" followed by "a" tag
-    Then I wait to the see the visibility of loader to disappear
     Then I click on add a new transition to add a new episode
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I fill in "Admit" with logic "minus" with "11" days

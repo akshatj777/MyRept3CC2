@@ -391,6 +391,37 @@ public class DischargeCarlFormSteps extends DriverScript {
    	   {
       	 dischargecarlform.Iverifypatientlanguage(language);
    	   } 
+    
+     @Then ("^I verify the patient Onboarding status field on patient summary$")
+   	 public void I_verify_patient_Onboarding_status_field()
+   	   {
+      	 dischargecarlform.IverifypatientOnboardingstatusfield();
+   	   } 
+     
+     @Then ("^I click on the need onboarding dropdown on patient summary$")
+     public void I_click_on_need_onboarding_dropdown()
+     {
+    	 dischargecarlform.Iclickonneedonboardingdropdown();
+     }
+     
+     @Then ("^I verify the length of stay should be \"([^\"]*)\" \"([^\"]*)\"$")
+     public void I_verify_the_length_of_stay(String stay,String unit)
+     {
+    	 dischargecarlform.Iverifythelengthofstay(stay,unit);
+     }
+     
+     @Then ("^I select value \"([^\"]*)\" from the need onboarding dropdown on patient summary$")
+     public void I_select_needs_onboarding_value(String value)
+     {
+    	 dischargecarlform.Iselectneedsonboardingvalue(value);
+     }
+     
+     
+     @Then ("^I verify the patient Onboarding status \"([^\"]*)\" on patient summary$")
+   	 public void I_verify_patient_Onboarding_status(String status)
+   	   {
+      	 dischargecarlform.IverifypatientOnboardingstatus(status);
+   	   } 
 
      @Then ("^I click on the Primary Language dropdown to select the language in Patient Details$")
      public void I_click_on_primary_language_dropdown()

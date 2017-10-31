@@ -642,8 +642,10 @@ public class DischargeCarlForm extends BaseClass {
 	}
 
 	public void IclickonsubmitbuttononpatientDetails() {
+		delay();
 		iWillWaitToSee(By.cssSelector("div.editable-buttons > button.editable-submit"));
 		clickElement(driver.findElement(By.cssSelector("div.editable-buttons > button.editable-submit")));
+		delay();
 	}
 
 	public void IverifymedicalEligibility(String eligibility) {
@@ -681,6 +683,30 @@ public class DischargeCarlForm extends BaseClass {
 	public void I_verify_the_tag_removed_successfully(String tag) {
 		WebDriverWait wait=new WebDriverWait(driver,05);
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[starts-with(@class,'tag-label') and contains(text(),'"+tag+"')]")));
+	}
+
+	public void IverifypatientOnboardingstatus(String status) {
+		isElementVisible(driver.findElement(By.xpath("//span[@id='current_onboarding_status' and text()='"+status+"']")));
+	}
+
+	public void IverifypatientOnboardingstatusfield() {
+		isElementVisible(driver.findElement(By.xpath("//label[@ng-bind='patient.onboardingStatus.config.label' and contains(text(),'Onboarding Status')]")));
+		
+	}
+
+	public void Iclickonneedonboardingdropdown() {
+		delay();
+		clickElement(driver.findElement(By.cssSelector("#current_onboarding_status")));
+	}
+
+	public void Iselectneedsonboardingvalue(String value) {
+		delay();
+		clickElement(driver.findElement(By.xpath("//a[@class='onboarding-status']/span[contains(text(),'"+value+"')]")));
+	}
+
+	public void Iverifythelengthofstay(String stay,String unit) {
+		delay();
+		isElementVisible(driver.findElement(By.xpath("//div[starts-with(@ng-if,'patient.numberInpatientDays')]/div/label[text()='Length of Stay']/following-sibling::span[text()='"+stay+"']/following-sibling::span[text()='"+stay+"']")));
 	}
 
 		
