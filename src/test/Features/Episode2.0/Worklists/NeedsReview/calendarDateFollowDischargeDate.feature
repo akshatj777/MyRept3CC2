@@ -59,8 +59,7 @@ Feature: Patient status in Need Review Worklist
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I fill in "Admit" with logic "minus" with "7" days
     Then I wait to the see the visibility of loader to disappear
-    Then I fill in "Discharge" with logic "minus" with "6" days
-    Then I select the midnight time from the calendar from date picker on Transition Page
+    Then I fill in "Discharge at midnight" with logic "minus" with "6" days
     Then I wait to the see the visibility of loader to disappear
     Then I select the "Admit" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
     Then I wait to the see the visibility of loader to disappear
@@ -124,8 +123,7 @@ Feature: Patient status in Need Review Worklist
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I fill in "Admit" with logic "minus" with "9" days
     Then I wait to the see the visibility of loader to disappear
-    Then I fill in "Discharge" with logic "minus" with "7" days
-    Then I select the before midinight time from the calendar from datepicker on Transition Page
+    Then I fill in "Discharge before midinight" with logic "minus" with "7" days
     Then I wait to the see the visibility of loader to disappear
     Then I select the "Admit" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
     Then I wait to the see the visibility of loader to disappear

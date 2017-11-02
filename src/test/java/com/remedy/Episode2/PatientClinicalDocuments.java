@@ -680,12 +680,17 @@ public class PatientClinicalDocuments extends BaseClass {
 
 	public void Ifilldateinwithlogicwithndays(String logic,int days) throws InterruptedException {
 		longDelay();
+		
 		if(logic.equals("Admit"))
 		{
 			WebElement element = driver.findElement(By.cssSelector("#bp_personbundle_bpadmissiontype_admitDate"));
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("arguments[0].scrollIntoView(true);", element);
 			clickElement(element);
+			longDelay();
+//			WebElement element1=driver.findElement(By.xpath("//body/div[12]/div[3]/table/thead/tr[1]/th[2]"));
+//			js.executeScript("arguments[0].scrollIntoView(true);", element1);
+//			clickElement(element1);
 			Actions actions=new Actions(driver);
 			actions.moveToElement(driver.findElement(By.xpath("//body/div[12]/div[3]/table/thead/tr[1]/th[2]"))).click().perform();
     	 } else if(logic.equals("Discharge"))
@@ -756,6 +761,33 @@ public class PatientClinicalDocuments extends BaseClass {
 		list_AllDateToBook.get(Integer.parseInt(date_dd_MM_yyyy[0]) - 1).click();
 				} 
 	}
+	
+	public void Ifilldateinwithlogicwithndays1(String logic,int days) throws InterruptedException
+	{
+		String date=getcurrentdate1(days);
+		String date1=date+" "+"15:40";
+		String date2=date+" "+"00:00";
+		String date3=date+" "+"11:55";
+		if(logic.equals("Admit"))
+		{
+		setAttributevalue(driver.findElement(By.cssSelector("#bp_personbundle_bpadmissiontype_admitDate")),"value",date1);
+		}else if(logic.equals("Discharge"))
+		{
+	    setAttributevalue(driver.findElement(By.cssSelector("#bp_personbundle_bpadmissiontype_dischargeDate")),"value",date1);
+		}else if(logic.equals("Discharge at midnight"))
+		{
+		setAttributevalue(driver.findElement(By.cssSelector("#bp_personbundle_bpadmissiontype_dischargeDate")),"value",date2);
+		}else if(logic.equals("Discharge before midinight"))
+		{
+		setAttributevalue(driver.findElement(By.cssSelector("#bp_personbundle_bpadmissiontype_dischargeDate")),"value",date3);
+		}
+	}
+	public void setAttributevalue(WebElement element, String attName, String attValue) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].setAttribute(arguments[1], arguments[2]);", 
+                element, attName, attValue);
+    }
+	
 	    public static String getcurrentdate(int days) {
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		LocalDate localDate = LocalDate.now();
@@ -764,6 +796,14 @@ public class PatientClinicalDocuments extends BaseClass {
 		return date;
 	}
 
+	    public static String getcurrentdate1(int days) {
+			DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+			LocalDate localDate = LocalDate.now();
+			LocalDate b = localDate.minus(Period.ofDays(days));
+			String date = dtf.format(b);
+			return date;
+		}
+	    
 		public void Iwillwaittoseetext(String text,String tag) {
 			iWillWaitToSee(By.xpath("//"+tag+"[contains(text(),'"+text+"')]"));
 			delay();
