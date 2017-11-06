@@ -34,14 +34,15 @@ import com.remedy.baseClass.BaseClass;
 
 public class PatientClinicalDocuments extends BaseClass {
 
+	public static String L_name=null;
+	DischargeCarlForm carl=new DischargeCarlForm(driver);
+	public static String attribute_value=null;
+	WebDriverWait wait = new WebDriverWait(driver, 30);
+	
 	public PatientClinicalDocuments(WebDriver driver) {
 		super(driver);
 	}
-	public static String L_name=null;
-	DischargeCarlForm carl=new DischargeCarlForm(driver);
 	
-	public static String attribute_value=null;
-	WebDriverWait wait = new WebDriverWait(driver, 30);
 	public void IverifythesearchedpatienthastheCARLcompletetextornot() {
        isElementVisible(driver.findElement(By.cssSelector("button.btn.btn-primary.btn-auto-square.ng-scope > strong")));
 	}
@@ -280,17 +281,15 @@ public class PatientClinicalDocuments extends BaseClass {
 	public void Iverifythattitleofdocumentortopicofnoteshouldappearasalinkinthesection() throws InterruptedException {
         String URL = driver.findElement(By.cssSelector("table > tbody > tr > td:nth-child(1) > a > span")).getAttribute("href");
 		boolean Note = URL.contains("note");
-		System.out.println("$$Boolean Note is"+Note);
-//		Assert.assertTrue(Note);
+		Assert.assertTrue(Note);
 		boolean CARL = URL.contains("carl");
-		System.out.println("$$Boolean Note is"+CARL);
-//		Assert.assertTrue(CARL);
+		Assert.assertTrue(CARL);
 		
 	}
 
 	public void Iverifythatusershouldbeabletoclickontitleofdocument() throws InterruptedException {
     	clickElement(driver.findElement(By.cssSelector(" table > tbody > tr > td:nth-child(1) > a > span")));
-		Thread.sleep(4000);
+		longDelay();
 		isElementVisible(driver.findElement(By.cssSelector("h2.ng-binding")));
 	}
 
@@ -311,22 +310,13 @@ public class PatientClinicalDocuments extends BaseClass {
 				"PATIENT_CALL", "PATIENT_EDUCATION", "PATIENT_VISIT", "PSYCHOLOGICAL_CONDITION", "TRANSITION_NOTE",
 				"TUG_RAPT_CARE_SCORE" };
        String text= driver.findElement(By.cssSelector("ul > li:nth-child(1) > div.checkbox > label > span")).getText();
-       System.out.println("$$$Text is"+text);
        requiredcombolisttext.addAll(Arrays.asList(expectedvalues));
-       System.out.println("$$$Required list"+requiredcombolisttext);
-      
        List<WebElement> getElementsList=driver.findElements(By.cssSelector("ul > li > div.checkbox > input"));
-       System.out.println("$$Element list is"+getElementsList);
-       System.out.println("First Ekenebt"+requiredcombolisttext.get(0));
-	   Assert.assertEquals(requiredcombolisttext.get(0),text);
-		 System.out.println("Matched");
-    	 for(int i=1;i<=17;i++)
+       Assert.assertEquals(requiredcombolisttext.get(0),text);
+	   for(int i=1;i<=17;i++)
     	 {
-    		 System.out.println("Attributes in elements"+getElementsList.get(i).getAttribute("value")); 
-    		 System.out.println("Attributes in Required list"+requiredcombolisttext.get(i)); 
-    		 Assert.assertEquals(requiredcombolisttext.get(i),getElementsList.get(i).getAttribute("value"));
-    		 System.out.println(+i+"Matched");
-    	 }
+       Assert.assertEquals(requiredcombolisttext.get(i),getElementsList.get(i).getAttribute("value"));
+    	}
 	}
 
 	public void IVerifythatusershouldbeabletoselectmultiplefiltersbycheckbox() {
@@ -341,8 +331,6 @@ public class PatientClinicalDocuments extends BaseClass {
 	public void IVerifythatcheckingmultiplefilteroptionsshouldreturnrelevantpatientsinreturn() {
 		delay();
 		List<String> mytexts = getTextForElementfromList("table > tbody > tr > td:nth-child(1) > a > span");
-		System.out.println("$Text1 is"+mytexts.get(0));
-		System.out.println("$Text1 is"+mytexts.get(1));
 		Assert.assertTrue(mytexts.get(0).equals("CARL"));
 		Assert.assertTrue(mytexts.get(1).equals("Baseline"));
 		
@@ -352,8 +340,6 @@ public class PatientClinicalDocuments extends BaseClass {
     	clickElement(driver.findElement(By.xpath("//button[contains(text(),'Done')]")));
     	delay();
 		List<String> mytexts = getTextForElementfromList("table > tbody > tr > td:nth-child(1) > a > span");
-		System.out.println("$Text1 is"+mytexts.get(0));
-		System.out.println("$Text1 is"+mytexts.get(1));
 		Assert.assertTrue(mytexts.get(0).equals("CARL"));
 		Assert.assertTrue(mytexts.get(1).equals("Baseline"));
 	}
@@ -643,7 +629,7 @@ public class PatientClinicalDocuments extends BaseClass {
 	public void Iverifycreatednoteshouldappearinthedocumentsection() {
 		WebElement element=driver.findElement(By.cssSelector("table > tbody > tr > td:nth-child(1) > a > span"));
 		verifyTextForElement(element,"Baseline");
-			}
+	}
 
 	public void IVerifythatclickingClinicalDocumentsFilterslinkshouldshowthetitledocumentthathaslistofdocumentformsinit() {
 		WebElement element=driver.findElement(By.cssSelector("ng-transclude > div > div > div > h5.ng-binding.ng-scope"));
@@ -652,8 +638,6 @@ public class PatientClinicalDocuments extends BaseClass {
 
 	public void IVerifythatselectingfilterbycheckboxshouldprocessapplythefilteruntiltheuserclickedondone() {
 		List<String> mytexts = getTextForElementfromList("table > tbody > tr > td:nth-child(1) > a > span");
-		System.out.println("$$$Text 1"+mytexts.get(0));
-		System.out.println("$$$Text 1"+mytexts.get(1));
 		Assert.assertTrue(mytexts.get(0).equals("CARL"));
 		Assert.assertTrue(mytexts.get(1).equals("Baseline"));
 	}
@@ -788,7 +772,7 @@ public class PatientClinicalDocuments extends BaseClass {
                 element, attName, attValue);
     }
 	
-	    public static String getcurrentdate(int days) {
+	public static String getcurrentdate(int days) {
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		LocalDate localDate = LocalDate.now();
 		LocalDate b = localDate.minus(Period.ofDays(days));
@@ -796,7 +780,7 @@ public class PatientClinicalDocuments extends BaseClass {
 		return date;
 	}
 
-	    public static String getcurrentdate1(int days) {
+    public static String getcurrentdate1(int days) {
 			DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyyy");
 			LocalDate localDate = LocalDate.now();
 			LocalDate b = localDate.minus(Period.ofDays(days));
@@ -804,12 +788,12 @@ public class PatientClinicalDocuments extends BaseClass {
 			return date;
 		}
 	    
-		public void Iwillwaittoseetext(String text,String tag) {
+    public void Iwillwaittoseetext(String text,String tag) {
 			iWillWaitToSee(By.xpath("//"+tag+"[contains(text(),'"+text+"')]"));
-			delay();
+			longDelay();
 	}
 
-		public void Iwillwaittoseeandclickontext(String text, String tag) {
+	public void Iwillwaittoseeandclickontext(String text, String tag) {
 			longDelay();
 			iWillWaitToSee(By.xpath("//"+tag+"[contains(text(),'"+text+"')]"));
 			Actions action=new Actions(driver);
@@ -817,19 +801,19 @@ public class PatientClinicalDocuments extends BaseClass {
             delay();
 			}
 
-		public void Iwillfetchthevalueattributeofvariableonpatientdetails() {
+	public void Iwillfetchthevalueattributeofvariableonpatientdetails() {
 			iWillWaitToSee(By.cssSelector("div.clearLeft.ssn-mask.ui-editable.editable.editable-click"));
 			attribute_value=driver.findElement(By.cssSelector("div.clearLeft.ssn-mask.ui-editable.editable.editable-click")).getAttribute("value").replace("-","");
      		}
 
-		public void Ienterfiltervalueunderfilter() {
+	public void Ienterfiltervalueunderfilter() {
 			delay();
 			iWillWaitToSee(By.xpath("//div[@class='ng-scope']/input"));
 			iFillInText(driver.findElement(By.xpath("//div[@class='ng-scope']/input")),attribute_value);
 			
 		}
 
-		public void Iwillwaittoseelinkappearingindocumenttable(String text, String document_head, int column, int row) {
+	public void Iwillwaittoseelinkappearingindocumenttable(String text, String document_head, int column, int row) {
 			if(text.equals("no value"))
 			{
 				 iWillWaitToSee(By.xpath("//table/tbody/tr["+row+"]/td["+column+"]"));
@@ -846,7 +830,7 @@ public class PatientClinicalDocuments extends BaseClass {
 			}
 		}
 
-		public void Iwillclickonlinkappearingindocumenttable(String text, String document_head, int column, int row) {
+	public void Iwillclickonlinkappearingindocumenttable(String text, String document_head, int column, int row) {
 			if(document_head.equals("Document")){
 			clickElement(driver.findElement(By.xpath("//table/tbody/tr["+row+"]/td["+column+"]/a/span[contains(text(),'"+text+"')]")));
 			}else if(document_head.equals("Status")){
@@ -854,7 +838,7 @@ public class PatientClinicalDocuments extends BaseClass {
 			}
 		}
 
-		public void IverifyuponsavingCARLformPatientshouldshowinworklist(String define,String worklist) {
+	public void IverifyuponsavingCARLformPatientshouldshowinworklist(String define,String worklist) {
 			if(define.equals("show"))
 			{
 			iFillInText(driver.findElement(By.cssSelector("search-bar > div.elastic-input-directive.ng-isolate-scope.open > div > input")), L_name);
@@ -867,12 +851,12 @@ public class PatientClinicalDocuments extends BaseClass {
 			}
 		}
 
-		public void Inavigatebacktopreviouspage() {
+	public void Inavigatebacktopreviouspage() {
 			driver.navigate().back();
 			
 		}
 
-		public void Iverifyuserisabletonavigatetothereadonlypagebyselectingthetitle(String title) {
+	public void Iverifyuserisabletonavigatetothereadonlypagebyselectingthetitle(String title) {
 			delay();
 			if(title.equals("CARL"))
 			{
@@ -884,17 +868,17 @@ public class PatientClinicalDocuments extends BaseClass {
 				}
 		}
 
-		public void Iverifyformsshouldnotdisplayanymessageinthesummarysectionanditshouldbegreyedout() {
+	public void Iverifyformsshouldnotdisplayanymessageinthesummarysectionanditshouldbegreyedout() {
 			isElementVisible(driver.findElement(By.cssSelector("td.empty-cell")));	
 		}
 
-		public void IverifySelectingfiltershoulddisplayedinactivefilterbar(String text,int i) {
+	public void IverifySelectingfiltershoulddisplayedinactivefilterbar(String text,int i) {
 			delay();
 			clickElement(driver.findElement(By.xpath("//label/span[contains(text(),'"+text+"')]")));
 			isElementVisible(driver.findElement(By.xpath("//div[@class='filter-bar-active-filters-directive']/div[1]/span["+i+"]/span[contains(text(),'"+text+"')]")));
 			}
 
-		public void Iverifyremovingfiltershouldnotbedisplayedatpositioninactivefilterbar(String text,int i) {
+	public void Iverifyremovingfiltershouldnotbedisplayedatpositioninactivefilterbar(String text,int i) {
 			delay();
 			clickElement(driver.findElement(By.cssSelector("div > div.filter-bar-active-filters.filter-scroll > span:nth-child("+i+") > i.valentino-icon-x.margin-left")));
 			delay();
@@ -902,13 +886,13 @@ public class PatientClinicalDocuments extends BaseClass {
 			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//label/span[contains(text(),'"+text+"')]")));
 			}
 
-		public void IclickonDonetoclosethefilter() {
+	public void IclickonDonetoclosethefilter() {
 			delay();
 			clickElement(driver.findElement(By.xpath("//button[contains(text(),'Done')]")));
 			
 		}
 
-		public void Iveriyremovinganyappliedfilterfromactivefilterbarshouldupdatethepatientsreturnedinresult() {
+	public void Iveriyremovinganyappliedfilterfromactivefilterbarshouldupdatethepatientsreturnedinresult() {
 			List<String> mytexts = getTextForElementfromList("table > tbody > tr > td:nth-child(1) > a > span");
 			int size=mytexts.size();
 			Assert.assertTrue(size==1);
@@ -916,13 +900,13 @@ public class PatientClinicalDocuments extends BaseClass {
 			
 		}
 
-		public void Iwillwaittoseeandclickonattributeintag(String variable, String value, String tag) {
+	public void Iwillwaittoseeandclickonattributeintag(String variable, String value, String tag) {
 			delay();
 			iWillWaitToSee(By.xpath("//"+tag+"[@"+variable+"='"+value+"']"));
 			clickElement(driver.findElement(By.xpath("//"+tag+"[@"+variable+"='"+value+"']")));
 		}
 
-		public void Iwillcheckintheradiobutton(String text) {
+	public void Iwillcheckintheradiobutton(String text) {
 			longDelay();
 			try{
 			WebDriverWait wait=new WebDriverWait(driver,60);
@@ -936,7 +920,7 @@ public class PatientClinicalDocuments extends BaseClass {
 			
 		}
 
-		public void Iselectthevaluefromtheeligibilitydropdown(String value) {
+	public void Iselectthevaluefromtheeligibilitydropdown(String value) {
 			if(value.equals("Eligible")){
 			clickElement(driver.findElement(By.cssSelector("a.set_eligibility_value.set_eligibility_eligible")));}
 		else if(value.equals("Expired")){
@@ -944,39 +928,39 @@ public class PatientClinicalDocuments extends BaseClass {
 		}
 		
 
-		public void IverifyepisodebecomesActive() {
+	public void IverifyepisodebecomesActive() {
 			isElementVisible(driver.findElement(By.cssSelector("span.text-large.margin-right.ng-binding.ng-scope")));
 			
 		}
 
-		public void I_will_wait_to_see_section_appears_on_section_by_selector(String selector,String selector_value) {
+	public void I_will_wait_to_see_section_appears_on_section_by_selector(String selector,String selector_value) {
 			isElementVisible(driver.findElement(By.cssSelector(selector_value)));
 			
 		}
 
-		public void Isaveandcontinueonsection() {
+	public void Isaveandcontinueonsection() {
 			delay();
 			clickElement(driver.findElement(By.xpath("//a[contains(text(),'Save & Continue')]")));
 			
 		}
 
-		public void IwillwaittoseeandclickonNotestabinCareplan() {
+	public void IwillwaittoseeandclickonNotestabinCareplan() {
 			delay();
 			clickElement(driver.findElement(By.xpath("//a[@href='#careFlowNotes']")));
 		}
 
-		public void Iswitchtoframe(String frame, String cssvalue) {
+	public void Iswitchtoframe(String frame, String cssvalue) {
 			WebDriverWait wait=new WebDriverWait(driver,30);
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(driver.findElement(By.cssSelector(""+cssvalue+""))));
 
 		}
 
-		public void notesshouldnotappearinNotesinCarePlan() {
+	public void notesshouldnotappearinNotesinCarePlan() {
 			WebDriverWait wait=new WebDriverWait(driver,5);
 			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@id='notesTable']/tbody/tr[1]")));
 		}
 
-		public void IclickontheDiagnosisandDRGtabonaddanewtransitiontoselecttheDRGusingJavaScript() {
+	public void IclickontheDiagnosisandDRGtabonaddanewtransitiontoselecttheDRGusingJavaScript() {
 			WebElement element2=driver.findElement(By.xpath("//a[contains(text(),'Diagnosis and DRG')]"));
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("arguments[0].click();", element2);
@@ -985,24 +969,21 @@ public class PatientClinicalDocuments extends BaseClass {
 			
 		}
 
-		public void I_am_on_URL(String uRL) {
+	public void I_am_on_URL(String uRL) {
 			String newURL="https://qa.remedypartners.com"+uRL;
 			driver.get(newURL);
 			
 		}
 
 	  
-		public void IselectDateofDeath(int days) {
+	public void IselectDateofDeath(int days) {
 			String date=getcurrentdate(days);
 			setAttribute(driver.findElement(By.cssSelector("a.set_eligibility_value.set_eligibility_eligible")),"value",date);
 			
 		}
 		
-		 public void setAttribute(WebElement element, String attName, String attValue) {
+	public void setAttribute(WebElement element, String attName, String attValue) {
 		       JavascriptExecutor js = (JavascriptExecutor) driver;
 		        js.executeScript("arguments[0].setAttribute(arguments[1], arguments[2]);", 
 		                element, attName, attValue);
-		    }
-
-	
-		}
+		    }}

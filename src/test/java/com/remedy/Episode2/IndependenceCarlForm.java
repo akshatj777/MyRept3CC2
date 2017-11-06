@@ -41,7 +41,6 @@ public class IndependenceCarlForm extends BaseClass {
 	public void IVerifyTheDropdownBarsPresentInIndependenceSection(String text) {
 		delay();
 		isElementVisible(driver.findElement(By.xpath("//section[@model='carlForm.cognitiveStatus']/div[@ng-model='$independenceDropdown.model']")));
-		//verifyTextForElement(driver.findElement(By.xpath("//section[@label='" + text + "']")), text);
 	}
 
 	public void IVerifyTheQuestionPresentInIndependenceSection(String text) {
@@ -92,8 +91,7 @@ public class IndependenceCarlForm extends BaseClass {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
-	}
+		}
 
 	public void IverifyCARLRecommendationfieldondischargesection(String text) {
 		delay();

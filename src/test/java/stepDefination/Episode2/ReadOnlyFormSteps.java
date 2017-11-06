@@ -16,13 +16,11 @@ public class ReadOnlyFormSteps extends DriverScript {
 	@Then("^I click on the document to open the Notes on the Clinical Documents$")
     public void I_click_on_the_document_to_open_the_Notes_on_the_Clinical_Documents() throws Throwable {
 		patientclinical.IclickonthedocumenttoopentheNotesontheClinicalDocuments();
-
 	}
 
 	@Then("^I Verify that Notes - Read only form should be accessible$")
 	public void I_Verify_that_Notes_Read_only_form_should_be_accessible() throws Throwable {
 		patientclinical.IVerifythatNotesReadonlyformshouldbeaccessible();
-
 	}
 
 	@Then("^I verify Topic should be the note title$")
@@ -53,8 +51,7 @@ public class ReadOnlyFormSteps extends DriverScript {
 	@Then("^I verify the Activity Date and time of the note under notes read only form$")
 	public void I_verify_the_Activity_Date_and_time_of_the_note_under_notes_read_only_form() throws Throwable {
 		patientclinical.IverifytheActivityDateandtimeofthenoteundernotesreadonlyform();
-
-	}
+    }
 
 	@Then("^I Verify that Activity date should displayed date with format MM/DD/YYYY$")
 	public void I_Verify_that_Activity_date_should_displayed_date_with_format_MMDDYYYY() throws ParseException, Throwable {
@@ -74,7 +71,5 @@ public class ReadOnlyFormSteps extends DriverScript {
 	@Then("^I verify that there is an Attachments section that should display all attachments")
 	public void I_verify_that_there_is_an_Attachments_section_that_should_display_all_attachments() throws Throwable {
 		patientclinical.IverifythatthereisanAttachmentssectionthatshoulddisplayallattachments();
-
-	}
-
-}
+    }
+    }

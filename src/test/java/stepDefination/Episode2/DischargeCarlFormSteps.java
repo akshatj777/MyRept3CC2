@@ -36,7 +36,7 @@ public class DischargeCarlFormSteps extends DriverScript {
 	}
 	
 	@Then ("^I click on Actual Care Setting subform dropdown under Recommendation on Discharge section$")
-	public void I_click_on_Actual_Care_Setting_subform_dropdown_under_Recommendation_on_Discharge_section()
+	public void I_click_on_Actual_Care_Setting_subform_dropdown_under_Recommendation_on_Discharge_section() throws Throwable
 	{
 		dischargecarlform.IclickonActualCare_SettingsubformdropdownunderRecommendationonDischargesection();
 	}
@@ -57,19 +57,19 @@ public class DischargeCarlFormSteps extends DriverScript {
 	}
 	
 	@Then ("^I verify \"([^\"]*)\" should appear at position \"([^\"]*)\" when user doesn't save the form$")
-	public void i_verify_button_should_appear_when_form_not_saved(String text,int position)
+	public void i_verify_button_should_appear_when_form_not_saved(String text,int position) throws Throwable
 	{
 		dischargecarlform.iverifybuttonshouldappearwhenformnotsaved(text,position);
 	}
 	
 	@Then ("^I click on \"([^\"]*)\" at position \"([^\"]*)\"  which \"([^\"]*)\" the user to \"([^\"]*)\"$")
-	public void i_click_on_the_button_when_saved_the_form_without_saving(String button,int position,String action,String description)
+	public void i_click_on_the_button_when_saved_the_form_without_saving(String button,int position,String action,String description) throws Throwable
 	{
 		dischargecarlform.iclickonthebuttonwhensavedtheformwithoutsaving(position);
 	}
 	
 	@Then ("^I verify user should be able to navigate to the review form on Discharge section$")
-	public void I_verify_user_should_be_able_to_navigate_to_the_review_form()
+	public void I_verify_user_should_be_able_to_navigate_to_the_review_form() throws Throwable
 	{
 		dischargecarlform.Iverifyusershouldbeabletonavigatetothereviewform();
 	}
@@ -352,140 +352,133 @@ public class DischargeCarlFormSteps extends DriverScript {
     }
     
       @Then ("^I verify the patient first name on patient summary$")
-	   public void I_verify_patient_first_name()
+	   public void I_verify_patient_first_name() throws Throwable
 	   {
     	 dischargecarlform.Iverifypatientfirstname();
 	   }
       
      @Then ("^I verify the patient last name on patient summary$")
-	 public void I_verify_patient_last_name()
+	 public void I_verify_patient_last_name() throws Throwable
 	   {
    	 dischargecarlform.Iverifypatientlastname();
 	   }
      
      @Then ("^I verify the patient Date of birth on patient summary$")
-   	 public void I_verify_patient_Date_of_birth()
+   	 public void I_verify_patient_Date_of_birth() throws Throwable
    	   {
       	 dischargecarlform.Iverifypatientdateofbirth();
    	   }
      
      @Then ("^I verify the patient Age on patient summary$")
-   	 public void I_verify_patient_Age()
+   	 public void I_verify_patient_Age() throws Throwable
    	   {
       	 dischargecarlform.IverifypatientAge();
    	   }
      
      @Then ("^I verify the patient Gender on patient summary$")
-   	 public void I_verify_patient_Gender()
+   	 public void I_verify_patient_Gender() throws Throwable
    	   {
       	 dischargecarlform.IverifypatientGender();
    	   }
      @Then ("^I verify the patient SSN on patient summary$")
-   	 public void I_verify_patient_SSN()
+   	 public void I_verify_patient_SSN() throws Throwable
    	   {
       	 dischargecarlform.IverifypatientSSN();
    	   }
     
      @Then ("^I verify the patient language \"([^\"]*)\" on patient summary$")
-   	 public void I_verify_patient_language(String language)
+   	 public void I_verify_patient_language(String language) throws Throwable
    	   {
       	 dischargecarlform.Iverifypatientlanguage(language);
    	   } 
     
      @Then ("^I verify the patient Onboarding status field on patient summary$")
-   	 public void I_verify_patient_Onboarding_status_field()
+   	 public void I_verify_patient_Onboarding_status_field() throws Throwable
    	   {
       	 dischargecarlform.IverifypatientOnboardingstatusfield();
    	   } 
      
      @Then ("^I click on the need onboarding dropdown on patient summary$")
-     public void I_click_on_need_onboarding_dropdown()
+     public void I_click_on_need_onboarding_dropdown() throws Throwable
      {
     	 dischargecarlform.Iclickonneedonboardingdropdown();
      }
      
      @Then ("^I verify the length of stay should be \"([^\"]*)\" \"([^\"]*)\"$")
-     public void I_verify_the_length_of_stay(String stay,String unit)
+     public void I_verify_the_length_of_stay(String stay,String unit) throws Throwable
      {
     	 dischargecarlform.Iverifythelengthofstay(stay,unit);
      }
      
      @Then ("^I select value \"([^\"]*)\" from the need onboarding dropdown on patient summary$")
-     public void I_select_needs_onboarding_value(String value)
+     public void I_select_needs_onboarding_value(String value) throws Throwable
      {
     	 dischargecarlform.Iselectneedsonboardingvalue(value);
      }
      
      
      @Then ("^I verify the patient Onboarding status \"([^\"]*)\" on patient summary$")
-   	 public void I_verify_patient_Onboarding_status(String status)
+   	 public void I_verify_patient_Onboarding_status(String status) throws Throwable
    	   {
       	 dischargecarlform.IverifypatientOnboardingstatus(status);
    	   } 
 
      @Then ("^I click on the Primary Language dropdown to select the language in Patient Details$")
-     public void I_click_on_primary_language_dropdown()
+     public void I_click_on_primary_language_dropdown() throws Throwable
      {
     	 dischargecarlform.Iclickonprimarylanguagedropdown();
      }
      
      @Then ("^I select the Language from Primary Language dropdown on Patient Details$")
-     public void I_select_the_primary_language()
+     public void I_select_the_primary_language() throws Throwable
      {
     	 dischargecarlform.I_select_the_primary_language();
      }
      
      @Then ("^I verify Tags is appearing on the patient summary page$")
-     public void I_verify_Tags_is_appearing_on_patient_summary()
+     public void I_verify_Tags_is_appearing_on_patient_summary() throws Throwable
      {
     	 dischargecarlform.IverifyTagsisappearingonpatientsummary();
      }
      
      @Then ("^I click on add a new tag in Tags on the patient summary page$")
-     public void  I_click_on_add_a_new_tag_in_Tags()
+     public void  I_click_on_add_a_new_tag_in_Tags() throws Throwable
      {
     	 dischargecarlform.I_click_on_add_a_new_tag_in_Tags();
      }
      
      @Then ("^I select \"([^\"]*)\" from the list of tags on patient summary page$")
-     public void I_select_tags_from_tag_list(String tag)
+     public void I_select_tags_from_tag_list(String tag) throws Throwable
      {
     	 dischargecarlform.Iselecttagsfromtaglist(tag);
      }
      
      @Then ("^I verify the selected \"([^\"]*)\" tag on patient summary page$")
-     public void I_verify_the_selected_tag(String tag)
+     public void I_verify_the_selected_tag(String tag) throws Throwable
      {
     	 dischargecarlform.Iverifytheselectedtag(tag);
      }
      
      @Then ("^I click on the remove button to remove the selected tag on patient summary$")
-     public void I_click_on_the_remove_button_to_remove_the_selected_tag()
+     public void I_click_on_the_remove_button_to_remove_the_selected_tag() throws Throwable
      {
     	 dischargecarlform.Iclickontheremovebuttontoremovetheselectedtag();
      }
      
      @Then ("^I verify the tag \"([^\"]*)\" removed successfully$")
-     public void I_verify_the_tag_removed_successfully(String tag)
+     public void I_verify_the_tag_removed_successfully(String tag) throws Throwable
      {
     	 dischargecarlform.I_verify_the_tag_removed_successfully(tag);
      }
      
      @Then ("^I verify the patient bundle name \"([^\"]*)\" on patient summary$")
-     public void I_verify_bundle_name_on_patient_summary(String bundle_name)
+     public void I_verify_bundle_name_on_patient_summary(String bundle_name) throws Throwable
      {
     	 dischargecarlform.I_verify_bundle_name_on_patient_summary(bundle_name);
      }
      
-     
-     @Then ("^I verify the patient Medical Eligibility \"([^\"]*)\" on patient summary$")
-     public void I_verify_medical_Eligibility(String eligibility)
-     {
-    	 dischargecarlform.IverifymedicalEligibility(eligibility);
-     }
-     
      @Then ("^I click on the submit button to save the \"([^\"]*)\" selected$")
-     public void I_click_on_submit_button_on_patient_Details(String field)
+     public void I_click_on_submit_button_on_patient_Details(String field) throws Throwable
      {
     	 dischargecarlform.IclickonsubmitbuttononpatientDetails();
      }

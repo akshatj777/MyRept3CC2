@@ -12,7 +12,6 @@ public class HomeHealthWorklist extends BaseClass {
 
 	public void IclickonHomeHealthsubtabonthepatientCardPage() {
 		clickElement(driver.findElement(By.xpath("//span[contains(text(),'Home Health')]")));
-
 	}
 
 	public void Ideletetheactivetransitiontomakethepatientcancelled(String transition_value) throws InterruptedException {

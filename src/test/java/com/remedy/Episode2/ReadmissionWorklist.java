@@ -287,7 +287,3 @@ public class ReadmissionWorklist extends BaseClass {
 		}
 	}	
     }
-		
-
-
-	

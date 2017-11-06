@@ -1274,7 +1274,7 @@ public class PatientsPageSteps extends DriverScript {
     }
     
     @Then ("^I verify \"([^\"]*)\" is appearing under selected filters on \"([^\"]*)\" position on search box for Admit Reason$")
-    public void I_verify_filter_is_appearing_under_selected_filters_on_position_on_search_box_for_Admit_Reason(String text,int position)
+    public void I_verify_filter_is_appearing_under_selected_filters_on_position_on_search_box_for_Admit_Reason(String text,int position) throws Throwable
     {
     	patientsPage.IverifyfilterisappearingunderselectedfiltersonpositiononsearchboxforAdmitReason(text,position);
     }
@@ -1500,7 +1500,7 @@ public class PatientsPageSteps extends DriverScript {
     }
     
     @Then ("^I click on \"([^\"]*)\" dropdown$")
-    public void I_click_on_Eligibility_dropdown(String value)
+    public void I_click_on_Eligibility_dropdown(String value) throws Throwable
     {
     	patientsPage.IclickonEligibilitydropdown();
     }
@@ -1611,54 +1611,42 @@ public class PatientsPageSteps extends DriverScript {
     }
     
     @Then ("^I verify \"([^\"]*)\" is appearing under \"([^\"]*)\" in Patient Summary Page$")
-    public void I_verify_current_location_is_appearing(String value,String variable)
-    {
+    public void I_verify_current_location_is_appearing(String value,String variable) throws Throwable {
     	patientsPage.Iverifycurrentlocationisappearing(value,variable);
     }
     
     @Then ("^I verify \"([^\"]*)\" \"([^\"]*)\" is appearing under drg column under transitions on patient summary page$")
-    public void I_verify_drg_is_appearing(String variable,String value)
-    {
+    public void I_verify_drg_is_appearing(String variable,String value) throws Throwable {
     	patientsPage.Iverifydrgisappearing(value);
     }
     
    @Then ("^I verify \"([^\"]*)\" should be displayed as \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\"$")
-   public void I_verify_admit_date_on_expand_summary(String variable1,String variable2,String logic,int value)
-   {
+   public void I_verify_admit_date_on_expand_summary(String variable1,String variable2,String logic,int value) throws Throwable {
 	  patientsPage.Iverifyadmitdateonexpandsummary(variable1,variable2,value);
    }
    
    @Then ("^I verify \"([^\"]*)\" should be displayed as \"([^\"]*)\"$")
-   public void I_verify_value_on_expand_summary(String variable1,String variable2)
-   {
+   public void I_verify_value_on_expand_summary(String variable1,String variable2) throws Throwable {
 	  patientsPage.Iverifyvalueonxpandsummary(variable1,variable2);
    }
     
    @Then ("^I Verify that \"([^\"]*)\" should be in MM/DD/YYYY format$") 
-   public void i_Verify_Date_format(String section) throws ParseException
-   {
+   public void i_Verify_Date_format(String section) throws ParseException,Throwable {
 	   patientsPage.i_Verify_Date_format();
    }
    
    @Then ("^I verify Admit Date section should not be displayed for \"([^\"]*)\"$")
-   public void I_verify_Admit_Date_section_should_not_be_displayed(String section)
-   {
+   public void I_verify_Admit_Date_section_should_not_be_displayed(String section) throws Throwable {
 	   patientsPage.IverifyAdmitDatesectionshouldnotbedisplayed();
    }
    
    @Then ("^Patient will show \"([^\"]*)\" of episode complete$")
-   public void Patient_will_show_complete_percentage(String value)
-   {
+   public void Patient_will_show_complete_percentage(String value) throws Throwable {
 	   patientsPage.Patientwillshowcompletepercentage(value);
    }
    
    @Then ("^I Verify following should be the list of available care settings and types filters$")
-   public void I_Verify_following_should_be_the_list_of_available_care_settings_and_types_filters(List<String> dropdownvalues)
-   {
+   public void I_Verify_following_should_be_the_list_of_available_care_settings_and_types_filters(List<String> dropdownvalues) throws Throwable {
 	   patientsPage.IVerifyfollowingshouldbethelistofavailablecaresettingsandtypesfilters(dropdownvalues);
    }
-   
- 
-   
-   
-    }
+   }

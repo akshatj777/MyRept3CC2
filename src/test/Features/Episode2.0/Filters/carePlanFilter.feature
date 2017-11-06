@@ -1,7 +1,7 @@
 Feature: Episode 2.0 Care Plan Filters
 
   Scenario: Verify Admit Reason filter is present under list of Filter options on Patient Page
-    Given I am on the login page
+   Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
@@ -42,6 +42,7 @@ Feature: Episode 2.0 Care Plan Filters
     Then I wait to the see the visibility of loader to disappear
     Then I click on the patient on the patient card page that has no CARL button in it
     Then I wait to the see the visibility of loader to disappear
+    Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame

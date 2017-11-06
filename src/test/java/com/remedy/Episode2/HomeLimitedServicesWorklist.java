@@ -88,7 +88,5 @@ public class HomeLimitedServicesWorklist extends BaseClass {
 
 	public void Ireloadmypage() {
 		driver.navigate().refresh();
-
+   }
 	}
-
-}

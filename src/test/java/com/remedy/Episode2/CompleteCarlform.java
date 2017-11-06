@@ -60,8 +60,7 @@ public class CompleteCarlform extends BaseClass {
 
 	public void Iclickonthebuttontodeletethetransition() {
 		clickElement(driver.findElement(By.xpath("//a[contains(text(),'Delete')]")));
-
-	}
+    }
 
 	public void IclickonOktodeletethetransition() {
 		clickElement(driver.findElement(By.xpath("//button[contains(text(),'OK')]")));
@@ -91,8 +90,7 @@ public class CompleteCarlform extends BaseClass {
 
 	public void IVerifyThatDoesthePatientHaveACapableCaregiverShouldAppearOnTakeoverPage(String question) {
         isElementVisible(driver.findElement(By.xpath("//h3[contains(text(),'" + question + "')]")));
-
-	}
+    }
 
 	public void IVerifythatOptionsShouldbePresentBelowCapableCaregiverQuestion(String option) {
 		verifyTextForElementfromList(".radio.ng-empty.ng-valid>label>span", option);
@@ -102,9 +100,7 @@ public class CompleteCarlform extends BaseClass {
 		clickElement(driver.findElement(By.xpath("//span[contains(text(),'" + text + "')]")));
 	}
 	
-    
-	
-	public void IVerifyThatCareNetworkMemberDropDwonAppearsUnderChooseCaregiverSection() {
+    public void IVerifyThatCareNetworkMemberDropDwonAppearsUnderChooseCaregiverSection() {
 		isElementVisible(driver.findElement(By.cssSelector(".col-md-8")));
 	}
 
@@ -144,12 +140,11 @@ public class CompleteCarlform extends BaseClass {
 
 	public void IVerifythatCarlformshouldappearwithSaveyourprogresslink() {
 		isElementVisible(driver.findElement(By.cssSelector("//a[contains(text(),'Save your progress')]")));
-
-	}
+    }
 
 	public void IVerifythatCarlformshouldappearwithformlink() {
 		isElementVisible(driver.findElement(By.cssSelector("//a[contains(text(),'review the form')]")));
-	}
+    }
 
 	public void IClickOnAddCaregiverLinkUnderChooseCaregiver() {
 		clickElement(driver.findElement(By.xpath("//a[text()='Add Caregiver']")));
@@ -161,8 +156,7 @@ public class CompleteCarlform extends BaseClass {
 
 	public void IVerifyAddCaregiverLinkDeosNotAppearUnderChooseCaregiverSection() {
 		isElementNotPresentOnPage(".add-icon");
-
-	}
+    }
 
 	public void IHoverOn_i_IconOnTakeOverPage(String icon) {
 		MouseHoverByJavaScript(driver.findElement(By.xpath("//i[contains(@uib-tooltip,'" + icon + "')]")));
@@ -171,13 +165,13 @@ public class CompleteCarlform extends BaseClass {
 
 	public void MouseHoverByJavaScript(WebElement targetElement)
     {
-
-        String javaScript = "var evObj = document.createEvent('MouseEvents');" +
+		String javaScript = "var evObj = document.createEvent('MouseEvents');" +
                             "evObj.initMouseEvent(\"mouseover\",true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);" +
                             "arguments[0].dispatchEvent(evObj);";
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript(javaScript, targetElement);
-      }
+    }
+	
 	public void mouseHoverJScript(WebElement HoverElement) {
 		try {
 			if (isElementPresent(HoverElement)) {
@@ -340,8 +334,7 @@ public class CompleteCarlform extends BaseClass {
 	}
 
 	public void IVerifythatCarlformshouldappearLeftnavigatordisplayingfoursections() {
-
-		List<String> mylist = getTextForElementfromList("span.label-content.ng-binding");
+        List<String> mylist = getTextForElementfromList("span.label-content.ng-binding");
 		String[] expectedvalues = { "Caregiver", "Independence", "Anticipated Discharge Needs", "Discharge" };
 		List<String> requiredcombolisttext = new ArrayList<String>();
 		requiredcombolisttext.addAll(Arrays.asList(expectedvalues));
@@ -355,14 +348,10 @@ public class CompleteCarlform extends BaseClass {
 	public void IselectoptionfromdropdowntocreateCaregiver(String value) {
 		clickElement(driver.findElement(By.cssSelector("div:nth-child(3) > div.col-xs-8 > div > div.ui-select-match.ng-scope")));
 		clickElement(driver.findElement(By.xpath("//span[@class='ui-select-choices-row-inner']/div[text()='"+value+"']")));
-		
 	}
 
 	public void Iverifyonmovingthemousehoverawayfromtheiconthemessageshoulddisapper() {
         WebDriverWait wait=new WebDriverWait(driver,5);
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div.tooltip.ng-scope.ng-isolate-scope")));
-		
 	}
-
-	
-}
+	}

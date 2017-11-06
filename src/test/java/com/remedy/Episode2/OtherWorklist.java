@@ -8,17 +8,13 @@ public class OtherWorklist extends BaseClass {
 
 	public OtherWorklist(WebDriver driver) {
 		super(driver);
-
-	}
+    }
 
 	public void IclickonOthersubtabonthepatientCardPage() {
 		clickElement(driver.findElement(By.xpath("//span[contains(text(),'Other')]")));
-
 	}
 
 	public void IclickontheCancelbuttononDischargeInfoonAddatransition() {
-
-		clickElement(driver.findElement(By.cssSelector("button.btn.btn-default")));
+        clickElement(driver.findElement(By.cssSelector("button.btn.btn-default")));
 	}
-
 }

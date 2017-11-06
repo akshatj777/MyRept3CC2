@@ -192,8 +192,7 @@ public class SummarySectionSteps extends DriverScript {
 	}
 	
 	@When("^I am on \"([^\"]*)\" URL$")
-	public void I_am_on_URL(String URL) throws Throwable
-	{
+	public void I_am_on_URL(String URL) throws Throwable {
 		patientclinical.I_am_on_URL(URL);
 	}
 	
@@ -203,19 +202,16 @@ public class SummarySectionSteps extends DriverScript {
 	}
 	
 	@Then ("^I switch to \"([^\"]*)\" frame followed by \"([^\"]*)\"$")
-	public void I_switch_to_frame(String frame,String cssvalue)
-	{
+	public void I_switch_to_frame(String frame,String cssvalue) throws Throwable {
 		patientclinical.Iswitchtoframe(frame,cssvalue);
 	}
 	@Then ("^I will wait to see and click on Notes tab in Care plan$")
-	public void I_will_wait_to_see_and_click_on_Notes_tab_in_Care_plan()
-	{
+	public void I_will_wait_to_see_and_click_on_Notes_tab_in_Care_plan() {
 		patientclinical.IwillwaittoseeandclickonNotestabinCareplan();
 	}
 	
 	@Then ("^I verify \"([^\"]*)\"  notes should not appear in Notes in Care Plan$")
-	public void notes_should_not_appear_in_Notes_in_Care_Plan(String notes)
-	{
+	public void notes_should_not_appear_in_Notes_in_Care_Plan(String notes) {
 		patientclinical.notesshouldnotappearinNotesinCarePlan();
 	}
 	@Then("^I will wait to see and click on \"([^\"]*)\" with attribute \"([^\"]*)\" \"([^\"]*)\" in \"([^\"]*)\" tag$")
@@ -244,45 +240,38 @@ public class SummarySectionSteps extends DriverScript {
 	}
 	
 	@Then ("^I navigate back to previous page$")
-	public void I_navigate_back_to_previous_page()
-	{
+	public void I_navigate_back_to_previous_page() throws Throwable {
 		patientclinical.Inavigatebacktopreviouspage();
 	}
 	
 	@Then ("^I verify user is able to navigate to the read only \"([^\"]*)\" page by selecting the title$")
-	public void I_verify_user_is_able_to_navigate_to_the_read_only_page_by_selecting_the_title(String title)
-	{
+	public void I_verify_user_is_able_to_navigate_to_the_read_only_page_by_selecting_the_title(String title) throws Throwable {
 		patientclinical.Iverifyuserisabletonavigatetothereadonlypagebyselectingthetitle(title);
 	}
 	
 	@Then ("^I verify forms should not display any message in the summary section and it should be greyed out$")
-	public void I_verify_forms_should_not_display_any_message_in_the_summary_section_and_it_should_be_greyed_out()
-	{
+	public void I_verify_forms_should_not_display_any_message_in_the_summary_section_and_it_should_be_greyed_out() throws Throwable {
 		patientclinical.Iverifyformsshouldnotdisplayanymessageinthesummarysectionanditshouldbegreyedout();
 	}
 	
 	@Then ("^I will \"([^\"]*)\" the \"([^\"]*)\" radio button at index \"([^\"]*)\"$")
-	public void I_will_check_in_the_radio_button(String action,String buttonname,String position)
-	{
+	public void I_will_check_in_the_radio_button(String action,String buttonname,String position) throws Throwable {
 		patientclinical.Iwillcheckintheradiobutton(buttonname);
 		
 	}
 	
 	@Then ("^I select the \"([^\"]*)\" value from the eligibility dropdown$")
-	public void I_select_the_value_from_the_eligibility_dropdown(String value)
-	{
+	public void I_select_the_value_from_the_eligibility_dropdown(String value) throws Throwable {
 		patientclinical.Iselectthevaluefromtheeligibilitydropdown(value);
 	}
 	
 	@Then ("^I verify episode becomes Active$")
-	public void I_verify_episode_becomes_Active()
-	{
+	public void I_verify_episode_becomes_Active() throws Throwable {
 		patientclinical.IverifyepisodebecomesActive();
 	}
 	
 	@Then ("^I select Date of Death \"([^\"]*)\" \"([^\"]*)\" to set status to Expired$")
-	public void I_select_Date_of_Death(String logic,int days)
-	{
+	public void I_select_Date_of_Death(String logic,int days) throws Throwable {
 		patientclinical.IselectDateofDeath(days);
 	}
 	

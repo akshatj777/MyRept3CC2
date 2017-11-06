@@ -50,8 +50,7 @@ public class ExceededSnfLos extends BaseClass {
 	}
 
 	public void Iselectthemostrecentdatefromthedatepicker() {
-
-		clickElement(driver.findElement(By.cssSelector("td.day.active")));
+        clickElement(driver.findElement(By.cssSelector("td.day.active")));
 	}
 
 	public void Iclickondatepickerbuttontoselecttheadmitdateonnewtransition() {
@@ -87,8 +86,4 @@ public class ExceededSnfLos extends BaseClass {
 			Assert.assertTrue(Int_Los_value < Int_ELos_minimum_value);
 			Assert.assertTrue(Int_Los_value < Int_ELos_maximum_value);
 		}
-		}
-	
-		}
-	
-
+		}}

@@ -34,7 +34,7 @@ public class PatientNotesPatientCardSteps extends DriverScript {
 	}
 
 	@Then("^I verify whether topic drop down appears on Add Clinical Document on Patient Card page$")
-	public void I_verify_whether_topic_drop_down_appears_on_Add_Clinical_Document_on_Patient_Card_page()throws Throwable {
+	public void I_verify_whether_topic_drop_down_appears_on_Add_Clinical_Document_on_Patient_Card_page() throws Throwable {
 		noteCreation.IverifywhethertopicdropdownappearsonAddClinicalDocumentonPatientCardpage();
 	}
 
@@ -111,8 +111,7 @@ public class PatientNotesPatientCardSteps extends DriverScript {
 	}
 	
 	@Then ("^I enter the \"(.*)\" date by \"(.*)\"  in the date calendar$")
-	public void I_enter_the_date_in_the_date_calendar(String flag,int days)
-	{
+	public void I_enter_the_date_in_the_date_calendar(String flag,int days) throws Throwable {
 		noteCreation.Ienterthedateinthedatecalendar(days);
 	}
 
@@ -187,8 +186,7 @@ public class PatientNotesPatientCardSteps extends DriverScript {
 	}
 	
     @Then ("^I verify user is able to upload multiple files$")
-    public void I_verify_user_is_able_to_upload_multiple_files() throws IOException
-    {
+    public void I_verify_user_is_able_to_upload_multiple_files() throws IOException {
     	noteCreation.Iverifyuserisabletouploadmultiplefiles();
     }
 
@@ -200,8 +198,7 @@ public class PatientNotesPatientCardSteps extends DriverScript {
 	}
 
 	@Then ("^I verify upon uploading any corrupted file then validation should throw and file should not get added on creating note$")
-	public void I_verify_upon_uploading_any_corrupted_file_then_validation_should_throw_and_file_should_not_get_added_on_creating_note()
-	{
+	public void I_verify_upon_uploading_any_corrupted_file_then_validation_should_throw_and_file_should_not_get_added_on_creating_note() throws Throwable {
 		noteCreation.Iverifyuponuploadinganycorruptedfilethenvalidationshouldthrowandfileshouldnotgetaddedoncreatingnote();
 	}
 	
@@ -267,8 +264,7 @@ public class PatientNotesPatientCardSteps extends DriverScript {
 	}
 	
 	@Then ("^I wait to the see the visibility of loader to disappear$")
-	public void I_wait_to_the_see_the_visibility_of_loader_to_disappear() throws Throwable
-	{
+	public void I_wait_to_the_see_the_visibility_of_loader_to_disappear() throws Throwable {
 		noteCreation.Iwaittotheseethevisibilityofloadertodisappear();
 	}
 	@Then("^I click on Add Files link on Note Section on Patient Summary$")
@@ -277,38 +273,32 @@ public class PatientNotesPatientCardSteps extends DriverScript {
 	}
 	
 	@Then ("^I Verify that today date should be highlighted in calendar as default date$")
-	public void I_Verify_that_today_date_should_be_highlighted_in_calendar_as_default_date()
-	{
+	public void I_Verify_that_today_date_should_be_highlighted_in_calendar_as_default_date() throws Throwable {
 		noteCreation.IVerifythattodaydateshouldbehighlightedincalendarasdefaultdate();
 	}
 	
     @Then ("^I Verify that upon selecting date through calendar date should get populated the field in the format mmddyyyy$")
-    public void I_Verify_that_upon_selecting_date_through_calendar_date_should_get_populated_the_field_in_the_format_mmddyyyy() throws ParseException
-    {
+    public void I_Verify_that_upon_selecting_date_through_calendar_date_should_get_populated_the_field_in_the_format_mmddyyyy() throws ParseException,Throwable {
     	noteCreation.IVerifythatuponselectingdatethroughcalendardateshouldgetpopulatedthefieldintheformatmmddyyyy();
     }
     
     @Then ("^I verify user should be able to pick any date and exact date should get selected and highlighted$")
-    public void I_verify_user_should_be_able_to_pick_any_date_and_exact_date_should_get_selected_and_highlighted()
-    {
+    public void I_verify_user_should_be_able_to_pick_any_date_and_exact_date_should_get_selected_and_highlighted() throws Throwable { 
     	noteCreation.Iverifyusershouldbeabletopickanydateandexactdateshouldgetselectedandhighlighted();
     }
     
     @Then ("^I verify user should be able to remove the default date by clicking on the cross icon$")
-    public void I_verify_user_should_be_able_to_remove_the_default_date_by_clicking_on_the_cross_icon()
-    {
+    public void I_verify_user_should_be_able_to_remove_the_default_date_by_clicking_on_the_cross_icon() throws Throwable { 
     	noteCreation.Iverifyusershouldbeabletoremovethedefaultdatebyclickingonthecrossicon();
     }
     
     @Then ("^I verify on clicking on cross icon \"([^\"]*)\" text should show$")
-    public void I_verify_on_clicking_on_cross_icon_text_should_show(String text)
-    {
+    public void I_verify_on_clicking_on_cross_icon_text_should_show(String text) throws Throwable {
     	noteCreation.Iverifyonclickingoncrossicontextshouldshow();
     }
     
     @Then ("^I verify Note should not be created without Activity date$")
-    public void I_verify_Note_should_not_be_created_without_Activity_date()
-    {
+    public void I_verify_Note_should_not_be_created_without_Activity_date() throws Throwable {
     	noteCreation.IverifyNoteshouldnotbecreatedwithoutActivitydate();
     }
 	}

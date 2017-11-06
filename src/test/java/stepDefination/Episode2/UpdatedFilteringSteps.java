@@ -50,34 +50,27 @@ public class UpdatedFilteringSteps extends DriverScript {
 	}
 	
 	@Then ("^I verify Selecting \"([^\"]*)\" filter should displayed at \"([^\"]*)\" position in active filter bar$")
-	public void I_verify_Selecting_filter_should_displayed_in_active_filter_bar(String text,int i)
-	{
+	public void I_verify_Selecting_filter_should_displayed_in_active_filter_bar(String text,int i) throws Throwable {
 		patientclinical.IverifySelectingfiltershoulddisplayedinactivefilterbar(text,i);
 	}
 	
 	@Then ("^I verify removing \"([^\"]*)\" filter should not be displayed at \"([^\"]*)\" position in active filter bar$")
-	public void I_verify_removing_filter_should_not_be_displayed_at_position_in_active_filter_bar(String text,int i)
-	{
+	public void I_verify_removing_filter_should_not_be_displayed_at_position_in_active_filter_bar(String text,int i) throws Throwable {
 		patientclinical.Iverifyremovingfiltershouldnotbedisplayedatpositioninactivefilterbar(text,i);
 	}
 	
     @Then ("^I click on Done to close the filter$")
-    public void I_click_on_Done_to_close_the_filter()
-    {
+    public void I_click_on_Done_to_close_the_filter() throws Throwable {
     	patientclinical.IclickonDonetoclosethefilter();
     }
 
     @Then ("^I veriy removing any applied filter from active filter bar should update the patients returned in result$")
-    public void I_veriy_removing_any_applied_filter_from_active_filter_bar_should_update_the_patients_returned_in_result()
-    {
+    public void I_veriy_removing_any_applied_filter_from_active_filter_bar_should_update_the_patients_returned_in_result() throws Throwable {
     	patientclinical.Iveriyremovinganyappliedfilterfromactivefilterbarshouldupdatethepatientsreturnedinresult();
     }
     
     @Then ("^I will wait to see \"([^\"]*)\" appears on the \"([^\"]*)\" followed by \"([^\"]*)\" \"([^\"]*)\"$")
-    public void I_will_wait_to_see_section_appears_on_section_by_selector(String button,String section,String selector,String selector_value)
-    {
+    public void I_will_wait_to_see_section_appears_on_section_by_selector(String button,String section,String selector,String selector_value) throws Throwable {
     	patientclinical.I_will_wait_to_see_section_appears_on_section_by_selector(selector,selector_value);
     }
     }
-
-

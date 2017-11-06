@@ -26,13 +26,13 @@ public class IndependenceCarlFormSteps extends DriverScript {
 	}
 	
 	 @Then ("^I verify the unsaved section \"([^\"]*)\" at position \"([^\"]*)\" should appear in Discharge section$")
-	 public void I_verify_the_unsaved_section_in_Discharge_section(String section,int position)
+	 public void I_verify_the_unsaved_section_in_Discharge_section(String section,int position) throws Throwable
 	 {
 		 independencecarl.IverifytheunsavedsectioninDischargesection(section,position);
 	 }
 	
 	 @Then ("^I verify the saved section \"([^\"]*)\" at position \"([^\"]*)\" should not appear in Discharge section$")
-	 public void I_verify_the_saved_section_in_Discharge_section(String section,int position)
+	 public void I_verify_the_saved_section_in_Discharge_section(String section,int position) throws Throwable
 	 {
 		 independencecarl.IverifythesavedsectioninDischargesection(section,position);
 	 }

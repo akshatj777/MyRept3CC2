@@ -1382,56 +1382,46 @@ public class PatientsPage extends BaseClass {
 		    
 	}
 		
-			 public void verifyDownloadedFile(String fileName) {
-				  try
-				  {
-				  String importDir = System.getProperty("user.dir");
-				  String downloadFilepath = importDir + File.separator + "src" + File.separator + "test" + File.separator + "Imports" + File.separator + "Downloads" ;
-				  File dir = new File(downloadFilepath);
-				 
-				  File[] dir_contents = dir.listFiles();
-				   for (int i = 0; i < dir_contents.length; i++) 
-				     {
-					  dir_contents[i].delete();
-				     }
-				  
-				     for (int i = 0; i < dir_contents.length; i++) 
-				     {
-				      if(dir_contents[i].isFile())
-				      {
-				       if (dir_contents[i].getName().equals("export"))
-				       {
-				    	   Assert.assertEquals(fileName, dir_contents[i].getName());
-				    	  
-				       }
-				       else
-				       {
-				    	   System.out.println("No Hurray");
-				       }
-				      }
-				       dir_contents[i].delete();
-				     }
-				     for (int i = 0; i < dir_contents.length; i++) 
-				     {
-					  dir_contents[i].delete();
-				     }
-				 
-				  }
-				  catch(Exception e)
-				  {
-				     e.printStackTrace();
-				  }
-				     
-				  
-				 }
+	 public void verifyDownloadedFile(String fileName) {
+		try {
+			String importDir = System.getProperty("user.dir");
+			String downloadFilepath = importDir + File.separator + "src" + File.separator + "test" + File.separator
+					+ "Imports" + File.separator + "Downloads";
+			File dir = new File(downloadFilepath);
 
-			   public static String getcurrentdate(int days) {
-					DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyyy");
-					LocalDate localDate = LocalDate.now();
-					LocalDate b = localDate.minus(Period.ofDays(days));
-					String date = dtf.format(b);
-					return date;
+			File[] dir_contents = dir.listFiles();
+			for (int i = 0; i < dir_contents.length; i++) {
+				dir_contents[i].delete();
+			}
+
+			for (int i = 0; i < dir_contents.length; i++) {
+				if (dir_contents[i].isFile()) {
+					if (dir_contents[i].getName().equals("export")) {
+						Assert.assertEquals(fileName, dir_contents[i].getName());
+
+					} else {
+						System.out.println("No Hurray");
+					}
 				}
+				dir_contents[i].delete();
+			}
+			for (int i = 0; i < dir_contents.length; i++) {
+				dir_contents[i].delete();
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	public static String getcurrentdate(int days) {
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+		LocalDate localDate = LocalDate.now();
+		LocalDate b = localDate.minus(Period.ofDays(days));
+		String date = dtf.format(b);
+		return date;
+	}
 
 	public void Iverifyadmitdateonexpandsummary(String variable1,String variable2,int value) {
 		if(variable2.equals("Admit Date")){
@@ -1443,59 +1433,46 @@ public class PatientsPage extends BaseClass {
 			}
 		}
 
-	  public void validateDateFormat(String dateToValdate) throws ParseException {
-			SimpleDateFormat formatter = new SimpleDateFormat("mm/dd/yyyy");
-		    formatter.setLenient(false);
-		    formatter.parse(dateToValdate);
-	    }
+	public void validateDateFormat(String dateToValdate) throws ParseException {
+		SimpleDateFormat formatter = new SimpleDateFormat("mm/dd/yyyy");
+		formatter.setLenient(false);
+		formatter.parse(dateToValdate);
+	}
 
 	public void i_Verify_Date_format() throws ParseException {
-	String date_value=driver.findElement(By.xpath("//span[@ng-bind='patient.admitDate.value | unix']")).getText();
-	validateDateFormat(date_value);
+		String date_value = driver.findElement(By.xpath("//span[@ng-bind='patient.admitDate.value | unix']")).getText();
+		validateDateFormat(date_value);
 	}
 
 
 	public void IverifyAdmitDatesectionshouldnotbedisplayed() {
-		WebDriverWait wait=new WebDriverWait(driver,5);
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//span[@ng-bind='patient.admitDate.value | unix']")));
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		wait.until(ExpectedConditions
+				.invisibilityOfElementLocated(By.xpath("//span[@ng-bind='patient.admitDate.value | unix']")));
 	}
 
 
 	public void Patientwillshowcompletepercentage(String value) {
 		verifyTextForElement(driver.findElement(By.cssSelector("span.text-large.margin-right.ng-binding.ng-scope")),value);
-		
 	}
 
 
     public void IVerifyfollowingshouldbethelistofavailablecaresettingsandtypesfilters(List<String> dropdownvalues) {
     	iWillWaitToSee(By.xpath("//label[starts-with(@for,'care-setting')]/i/following-sibling::span"));
     	List<WebElement> elements=driver.findElements(By.xpath("//label[starts-with(@for,'care-setting')]/i/following-sibling::span"));
-        System.out.println("List of elements"+elements);
-    	List<String> actualtexts=new ArrayList<String>();
+        List<String> actualtexts=new ArrayList<String>();
         for(int i=0;i<dropdownvalues.size();i++)
         {
-        	System.out.println("$$Expected text"+dropdownvalues.get(i));
-        	while(!elements.get(i).getText().equals(dropdownvalues.get(i)))
+        while(!elements.get(i).getText().equals(dropdownvalues.get(i)))
         	{
         	String text=elements.get(i).getText();
         	actualtexts.add(text);
         	}
-//        	elements.get(i).getText();
-//        	System.out.println("Actual Text is"+elements.get(i).getText());
-//        	System.out.println(dropdownvalues.get(i));
-//        	verifyTextForElement(elements.get(i),dropdownvalues.get(i));
         }
-        System.out.println("$$List of text"+actualtexts);
-	}
+       }
 
 
 	public void Iverifyvalueonxpandsummary(String variable1, String variable2) {
 		isElementVisible(driver.findElement(By.xpath("//div/label[contains(text(),'"+variable1+"')]/following-sibling::span[contains(text(),'"+variable2+"')]")));	  	
-			   	}
-
-
-
-		
-	
+	  }
 }
-    

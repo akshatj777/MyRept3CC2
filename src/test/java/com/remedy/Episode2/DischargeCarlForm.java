@@ -45,8 +45,6 @@ public class DischargeCarlForm extends BaseClass {
 	private static String lastname  = null;
 	private static String final_ssn  = null;
 	
-	
-	
 	public DischargeCarlForm(WebDriver driver) {
 		super(driver);
 	}
@@ -73,8 +71,7 @@ public class DischargeCarlForm extends BaseClass {
 		longDelay(); 
        try{
 		clickElement(driver.findElement(By.xpath("//label[text()='"+text+"']/preceding-sibling::div")));
-		}catch(Exception e)
-		{
+		}catch(Exception e){
 			JavascriptExecutor js = (JavascriptExecutor)driver;
 			js.executeScript("arguments[0].scrollIntoView(true);",driver.findElement(By.xpath("//label[text()='"+text+"']/preceding-sibling::div")));
 			clickElement(driver.findElement(By.xpath("//label[text()='"+text+"']/preceding-sibling::div")));
@@ -335,15 +332,13 @@ public class DischargeCarlForm extends BaseClass {
 	clickElement(driver.findElement(By.cssSelector("div:nth-child("+i+") > div.ui-select-match")));
 	Actions actions=new Actions(driver);
 	actions.moveToElement(driver.findElement(By.xpath("//span[@class='ui-select-choices-row-inner']/div[text()='"+value+"']"))).click().perform();
-//	clickElement(driver.findElement(By.xpath("//span[@class='ui-select-choices-row-inner']/div[text()='"+value+"']")));
-	if(reason.equals("3"))
-	 {
+    if(reason.equals("3"))
+	{
 	if(variable.equals("Who disagrees?")){
 	clickElement(driver.findElement(By.cssSelector("div:nth-child(4) > div:nth-child(3) > div.ui-select-match")));
-	 } else{
+	}else{
 	clickElement(driver.findElement(By.cssSelector("div:nth-child(4) > div:nth-child(5) > div.ui-select-match")));  
-	 }
-	 }
+	 }}
      }
 
 	public void IclickonReasoniconunderdisagreementunderRecommendationonDischargesection() {
@@ -383,8 +378,7 @@ public class DischargeCarlForm extends BaseClass {
 	}
 
 	public void IverifyusershouldbeabletoselectanyoptionsfromfollowingdropdownfromtheWhodisagreesdropdownunderRecommendationonDischargesection(int j,List<String> dropdownvalues) {
-	for(int i=0;i<dropdownvalues.size();i++)
-	{
+	for(int i=0;i<dropdownvalues.size();i++) {
 	clickElement(driver.findElement(By.cssSelector("div:nth-child("+j+") > div.ui-select-match")));
 	String value=dropdownvalues.get(i);
     clickElement(driver.findElement(By.xpath("//span[@class='ui-select-choices-row-inner']/div[contains(text(),'"+value+"')]")));
@@ -401,8 +395,7 @@ public class DischargeCarlForm extends BaseClass {
 							"Hospice at Home","Intermediate care facility","Left against medical advice","Medicaid Certified Nursing Facility","Psychiatric Hospital/Unit","Shelter","Still a Patient"},
 						{"Expired as Inpatient","Expired at Home","Expired at Medical Facility","Expired at Unknown"}};
 	List<List<String>> list = Arrays.stream(newArray).map(Arrays::asList).collect(Collectors.toList());
-	for(int j=0;j<list.size();j++)
-	{
+	for(int j=0;j<list.size();j++) {
 	clickElement(driver.findElement(By.xpath("//label[text()='Actual Care Setting']/preceding-sibling::div")));			
 	delay();
     clickElement(driver.findElement(By.xpath("//label[text()='Actual Care Setting']/preceding-sibling::div//div[text()='"+values[j]+"']")));
@@ -418,8 +411,7 @@ public class DischargeCarlForm extends BaseClass {
 	}
 
     public void IverifythereshouldbealinkoneachcardandclickingthelinkshouldbringtheusertothatspecifiedsectionoftheCARLform(String view) {
-    for(int i=1;i<5;i++)
-	{
+    for(int i=1;i<5;i++){
 	isElementVisible(driver.findElement(By.xpath("//section/div["+i+"]/div[1]/a[text()='View']")));	
 	}
 	}
@@ -469,8 +461,7 @@ public class DischargeCarlForm extends BaseClass {
 
 	public void iEnterDetailsInTextboxFieldPresentOnAddPatientModal(String detailFileds) {
 	String start; 
-	if(detailFileds.equals("firstName"))
-    {
+	if(detailFileds.equals("firstName")) {
 	start="Patient";
     String end=generateRandomString();
     firstname=start+end;
@@ -515,18 +506,7 @@ public class DischargeCarlForm extends BaseClass {
     Reader reader = new InputStreamReader(is);
 	BufferedReader bufferedReader = new BufferedReader(reader);
 	StringBuilder builder = new StringBuilder();
-/*	while (true) {
-	try {
-    String line = bufferedReader.readLine();
-	if (line != null) {
-	builder.append(line);
-    } else {
-    break;
-	}} catch (Exception e) {
-    e.printStackTrace();}}
-    System.out.println(builder.toString());
-	System.out.println("****************");*/
-	} catch (Exception ex) {
+    } catch (Exception ex) {
 	ex.printStackTrace();
 	}}
 
@@ -554,160 +534,146 @@ public class DischargeCarlForm extends BaseClass {
 	}
 
 	public void IclickonActualCare_SettingsubformdropdownunderRecommendationonDischargesection() {
-		delay();
-		iWillWaitToSee(By.xpath("//div[(@ng-model='admission.dischargeFacilityCategory')]"));
-		WebDriverWait wait=new WebDriverWait(driver,20);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[(@ng-model='admission.dischargeFacilityCategory')]")));
-		clickElement(driver.findElement(By.xpath("//div[(@ng-model='admission.dischargeFacilityCategory')]")));
-		}
+    delay();
+	iWillWaitToSee(By.xpath("//div[(@ng-model='admission.dischargeFacilityCategory')]"));
+	WebDriverWait wait=new WebDriverWait(driver,20);
+	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[(@ng-model='admission.dischargeFacilityCategory')]")));
+	clickElement(driver.findElement(By.xpath("//div[(@ng-model='admission.dischargeFacilityCategory')]")));
+    }
 
 	public void iverifybuttonshouldappearwhenformnotsaved(String text, int position) {
-		delay();
-		iWillWaitToSee(By.xpath("//a["+position+"][@ng-repeat='action in alert.actions']"));
-		String new_text=driver.findElement(By.xpath("//a["+position+"][@ng-repeat='action in alert.actions']")).getText().trim();
-		Assert.assertEquals(new_text,text);
-		}
+	delay();
+	iWillWaitToSee(By.xpath("//a["+position+"][@ng-repeat='action in alert.actions']"));
+	String new_text=driver.findElement(By.xpath("//a["+position+"][@ng-repeat='action in alert.actions']")).getText().trim();
+	Assert.assertEquals(new_text,text);
+	}
 
 	public void iclickonthebuttonwhensavedtheformwithoutsaving(int position) {
-		iWillWaitToSee(By.xpath("//a["+position+"][@ng-repeat='action in alert.actions']"));
-		clickElement(driver.findElement(By.xpath("//a["+position+"][@ng-repeat='action in alert.actions']")));
+	iWillWaitToSee(By.xpath("//a["+position+"][@ng-repeat='action in alert.actions']"));
+	clickElement(driver.findElement(By.xpath("//a["+position+"][@ng-repeat='action in alert.actions']")));
 	}
 
 	public void IverifyonclickingdischargedatethefieldshouldshowthedateintheformatofMMDDYYYY() throws ParseException {
-		String text=driver.findElement(By.xpath("//input[@ng-model='$selection']")).getAttribute("value");
-	    String information=text.substring(0,10);
-     	validateDateFormat(information);
-		
+	String text=driver.findElement(By.xpath("//input[@ng-model='$selection']")).getAttribute("value");
+	String information=text.substring(0,10);
+    validateDateFormat(information);
 	}
-	
-	  public void validateDateFormat(String dateToValdate) throws ParseException {
-			SimpleDateFormat formatter = new SimpleDateFormat("mm/dd/yyyy");
-		    formatter.setLenient(false);
-		    formatter.parse(dateToValdate);
-	    }
+
+	public void validateDateFormat(String dateToValdate) throws ParseException {
+	SimpleDateFormat formatter = new SimpleDateFormat("mm/dd/yyyy");
+    formatter.setLenient(false);
+    formatter.parse(dateToValdate);
+	}
 
 	public void IverifySaveandGoBackonsectiononCARLform() {
-		delay();
-	    isElementVisible(driver.findElement(By.xpath("//a[@ng-click='saveCarlAndPrevious($event)']")));			
-		
+	delay();
+	isElementVisible(driver.findElement(By.xpath("//a[@ng-click='saveCarlAndPrevious($event)']")));			
 	}
 
 	public void Iverifyusershouldbeabletonavigatetothereviewform() {
-		iWillWaitToSee(By.xpath("//h2[contains(text(),'Review')]"));	
-		isElementVisible(driver.findElement(By.xpath("//h2[contains(text(),'Review')]")));
+	iWillWaitToSee(By.xpath("//h2[contains(text(),'Review')]"));	
+	isElementVisible(driver.findElement(By.xpath("//h2[contains(text(),'Review')]")));
 	}
 
 	public void Iverifypatientfirstname() {
-		isElementVisible(driver.findElement(By.xpath("//h2[@class='ng-scope']/span[2][contains(text(),'"+firstname+"')]")));
+	isElementVisible(driver.findElement(By.xpath("//h2[@class='ng-scope']/span[2][contains(text(),'"+firstname+"')]")));
 	}
 
 	public void Iverifypatientlastname() {
-		isElementVisible(driver.findElement(By.xpath("//h2[@class='ng-scope']/span[1][contains(text(),'"+lastname+"')]")));
+	isElementVisible(driver.findElement(By.xpath("//h2[@class='ng-scope']/span[1][contains(text(),'"+lastname+"')]")));
 	}
 
 	public void Iverifypatientdateofbirth() {
-		isElementVisible(driver.findElement(By.xpath("//small/span[contains(text(),'01/05/1995')]")));
-		
-		
+	isElementVisible(driver.findElement(By.xpath("//small/span[contains(text(),'01/05/1995')]")));
 	}
 
 	public void IverifypatientAge() {
-		isElementVisible(driver.findElement(By.xpath("//small/span[2][contains(text(),'22')]")));
-		}
+	isElementVisible(driver.findElement(By.xpath("//small/span[2][contains(text(),'22')]")));
+	}
 
 	public void IverifypatientGender() {
-		isElementVisible(driver.findElement(By.xpath("//small/span[3][contains(text(),'M')]")));
-		
+	isElementVisible(driver.findElement(By.xpath("//small/span[3][contains(text(),'M')]")));
 	}
 
 	public void IverifypatientSSN() {
-		String ssn_final=final_ssn;
-		String new_word = "XXX-XX-"+ssn_final.substring(ssn_final.length() - 4);
-		isElementVisible(driver.findElement(By.xpath("//div[starts-with(@ng-if,'patient.ssn')]/div/span[starts-with(@ng-if,'patient.ssn')]/label[contains(text(),'SSN')]//following-sibling::span[contains(text(),'"+new_word+"')]")));
-		
+	String ssn_final=final_ssn;
+	String new_word = "XXX-XX-"+ssn_final.substring(ssn_final.length() - 4);
+	isElementVisible(driver.findElement(By.xpath("//div[starts-with(@ng-if,'patient.ssn')]/div/span[starts-with(@ng-if,'patient.ssn')]/label[contains(text(),'SSN')]//following-sibling::span[contains(text(),'"+new_word+"')]")));
 	}
 
 	public void Iverifypatientlanguage(String language) {
-		isElementVisible(driver.findElement(By.xpath("//span[starts-with(@ng-if,'patient.primaryLanguage')]/em[text()='"+language+"']")));
+	isElementVisible(driver.findElement(By.xpath("//span[starts-with(@ng-if,'patient.primaryLanguage')]/em[text()='"+language+"']")));
 	}
 
 	public void Iclickonprimarylanguagedropdown() {
-		iWillWaitToSee(By.xpath("//div[@id='BP_patientType_primaryLanguage']"));
-		clickElement(driver.findElement(By.xpath("//div[@id='BP_patientType_primaryLanguage']")));
-		}
+	iWillWaitToSee(By.xpath("//div[@id='BP_patientType_primaryLanguage']"));
+	clickElement(driver.findElement(By.xpath("//div[@id='BP_patientType_primaryLanguage']")));
+	}
 
 	public void I_select_the_primary_language() {
-		iWillWaitToSee(By.cssSelector("div.editable-input > select.form-control"));
-		selectDropdownVisibleElement("div.editable-input > select.form-control","English");
+	iWillWaitToSee(By.cssSelector("div.editable-input > select.form-control"));
+	selectDropdownVisibleElement("div.editable-input > select.form-control","English");
 	}
 
 	public void IclickonsubmitbuttononpatientDetails() {
-		delay();
-		iWillWaitToSee(By.cssSelector("div.editable-buttons > button.editable-submit"));
-		clickElement(driver.findElement(By.cssSelector("div.editable-buttons > button.editable-submit")));
-		delay();
+	delay();
+	iWillWaitToSee(By.cssSelector("div.editable-buttons > button.editable-submit"));
+	clickElement(driver.findElement(By.cssSelector("div.editable-buttons > button.editable-submit")));
+	delay();
 	}
 
-	public void IverifymedicalEligibility(String eligibility) {
-		
-		
-	}
-
-	public void I_verify_bundle_name_on_patient_summary(String bundle_name) {
-		iWillWaitToSee(By.xpath("//label[@ng-bind='::patient.bundleName.config.label']/following-sibling::span[text()='"+bundle_name+"']"));
-		isElementVisible(driver.findElement(By.xpath("//label[@ng-bind='::patient.bundleName.config.label']/following-sibling::span[text()='"+bundle_name+"']")));
+    public void I_verify_bundle_name_on_patient_summary(String bundle_name) {
+	iWillWaitToSee(By.xpath("//label[@ng-bind='::patient.bundleName.config.label']/following-sibling::span[text()='"+bundle_name+"']"));
+	isElementVisible(driver.findElement(By.xpath("//label[@ng-bind='::patient.bundleName.config.label']/following-sibling::span[text()='"+bundle_name+"']")));
 	}
 
 	public void IverifyTagsisappearingonpatientsummary() {
-		isElementVisible(driver.findElement(By.xpath("//div[starts-with(@class,'card-tags-expanded-head')]/label[text()='Tags']")));
+	isElementVisible(driver.findElement(By.xpath("//div[starts-with(@class,'card-tags-expanded-head')]/label[text()='Tags']")));
 	}
 
 	public void I_click_on_add_a_new_tag_in_Tags() {
-		clickElement(driver.findElement(By.cssSelector("#page-content-frame > div.page-patient-overview > div.row.patient-header > div > div > ul:nth-child(1) > li.tags-directive.no-border.ng-scope > div > show-tags > div > ul > li > input")));
+	clickElement(driver.findElement(By.cssSelector("#page-content-frame > div.page-patient-overview > div.row.patient-header > div > div > ul:nth-child(1) > li.tags-directive.no-border.ng-scope > div > show-tags > div > ul > li > input")));
 	}
 
 	public void Iselecttagsfromtaglist(String tag) {
-		isElementVisible(driver.findElement(By.xpath("//div[@ng-bind-html='tag.label' and text()='"+tag+"']")));
-		clickElement(driver.findElement(By.xpath("//div[@ng-bind-html='tag.label' and text()='"+tag+"']")));
+	isElementVisible(driver.findElement(By.xpath("//div[@ng-bind-html='tag.label' and text()='"+tag+"']")));
+	clickElement(driver.findElement(By.xpath("//div[@ng-bind-html='tag.label' and text()='"+tag+"']")));
 	}
 
     public void Iverifytheselectedtag(String tag) {
-    	isElementVisible(driver.findElement(By.xpath("//div[starts-with(@class,'tag-label') and contains(text(),'"+tag+"')]")));
+    isElementVisible(driver.findElement(By.xpath("//div[starts-with(@class,'tag-label') and contains(text(),'"+tag+"')]")));
 	}
 
 	public void Iclickontheremovebuttontoremovetheselectedtag() {
-		delay();
-		clickElement(driver.findElement(By.xpath("//div[@class='tag-remove']")));
+	delay();
+	clickElement(driver.findElement(By.xpath("//div[@class='tag-remove']")));
 	}
 
 	public void I_verify_the_tag_removed_successfully(String tag) {
-		WebDriverWait wait=new WebDriverWait(driver,05);
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[starts-with(@class,'tag-label') and contains(text(),'"+tag+"')]")));
+	WebDriverWait wait=new WebDriverWait(driver,05);
+	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[starts-with(@class,'tag-label') and contains(text(),'"+tag+"')]")));
 	}
 
 	public void IverifypatientOnboardingstatus(String status) {
-		isElementVisible(driver.findElement(By.xpath("//span[@id='current_onboarding_status' and text()='"+status+"']")));
+	isElementVisible(driver.findElement(By.xpath("//span[@id='current_onboarding_status' and text()='"+status+"']")));
 	}
 
 	public void IverifypatientOnboardingstatusfield() {
-		isElementVisible(driver.findElement(By.xpath("//label[@ng-bind='patient.onboardingStatus.config.label' and contains(text(),'Onboarding Status')]")));
-		
+	isElementVisible(driver.findElement(By.xpath("//label[@ng-bind='patient.onboardingStatus.config.label' and contains(text(),'Onboarding Status')]")));
 	}
 
 	public void Iclickonneedonboardingdropdown() {
-		delay();
-		clickElement(driver.findElement(By.cssSelector("#current_onboarding_status")));
+	delay();
+	clickElement(driver.findElement(By.cssSelector("#current_onboarding_status")));
 	}
 
 	public void Iselectneedsonboardingvalue(String value) {
-		delay();
-		clickElement(driver.findElement(By.xpath("//a[@class='onboarding-status']/span[contains(text(),'"+value+"')]")));
+	delay();
+	clickElement(driver.findElement(By.xpath("//a[@class='onboarding-status']/span[contains(text(),'"+value+"')]")));
 	}
 
 	public void Iverifythelengthofstay(String stay,String unit) {
-		delay();
-		isElementVisible(driver.findElement(By.xpath("//div[starts-with(@ng-if,'patient.numberInpatientDays')]/div/label[text()='Length of Stay']/following-sibling::span[text()='"+stay+"']/following-sibling::span[text()='"+stay+"']")));
+	delay();
+	isElementVisible(driver.findElement(By.xpath("//div[starts-with(@ng-if,'patient.numberInpatientDays')]/div/label[text()='Length of Stay']/following-sibling::span[text()='"+stay+"']/following-sibling::span[text()='"+stay+"']")));
 	}
-
-		
 }

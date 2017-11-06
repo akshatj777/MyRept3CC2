@@ -20,8 +20,7 @@ public class Readmission extends BaseClass {
 	}
 
 	public void IclickontheTransitionssubtabonthePatientSummaryPage() {
-
-		clickElement(driver.findElement(By.xpath("//span[contains(text(),'Transitions')]")));
+        clickElement(driver.findElement(By.xpath("//span[contains(text(),'Transitions')]")));
 	}
 
 	public void Iselectthecaresettingvalueonaddanewtransition(String caresetting) {
@@ -29,22 +28,17 @@ public class Readmission extends BaseClass {
 	}
 
 	public void Iselectthecaretypevalueonaddanewtransition(String caretypevalue) {
-
-		selectDropdownVisibleElement("#bp_personbundle_bpadmissiontype_admitCareType", caretypevalue);
+        selectDropdownVisibleElement("#bp_personbundle_bpadmissiontype_admitCareType", caretypevalue);
 	}
 
 	public void Iselectthefacilityvalueonaddanewtransition(String facilityvalue) throws InterruptedException {
-
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		WebElement element1 = driver.findElement(By.cssSelector("#s2id_bp_personbundle_bpadmissiontype_admitFacility"));
-
-		js.executeScript("arguments[0].click();", element1);
+        js.executeScript("arguments[0].click();", element1);
 		clickElement(element1);
 		Thread.sleep(5000);
-
-		WebElement element2 = driver.findElement(By.cssSelector("#select2-drop > div > input.select2-input"));
-
-		js.executeScript("arguments[0].click();", element2);
+        WebElement element2 = driver.findElement(By.cssSelector("#select2-drop > div > input.select2-input"));
+        js.executeScript("arguments[0].click();", element2);
 		element2.sendKeys(facilityvalue);
 		Thread.sleep(10000);
 		WebElement element3 = driver.findElement(By.cssSelector("li.select2-highlighted"));
@@ -53,20 +47,17 @@ public class Readmission extends BaseClass {
 	}
 
 	public void IselecttheDRGtypeontheDiagnosisandDRGtabonaddanewtransition(String DRGtype) {
-
 		selectDropdownVisibleElement("#bp_personbundle_bpadmissiontype_drgType", DRGtype);
 	}
 
 	public void IselecttheDRGontheDiagnosisandDRGtabonaddanewtransition(String DRG) {
-
-		clickElement(driver.findElement(By.cssSelector("#s2id_bp_personbundle_bpadmissiontype_drg")));
+        clickElement(driver.findElement(By.cssSelector("#s2id_bp_personbundle_bpadmissiontype_drg")));
 		iFillInText(driver.findElement(By.cssSelector("#s2id_autogen7_search")), DRG);
 		clickElement(driver.findElement(By.cssSelector("li.select2-highlighted")));
 	}
 
 	public void IclickontheagreebuttononthePatientCardpage() {
-
-		try {
+        try {
 			clickElement(driver.findElement(By.cssSelector("span.attestation-label.ng-binding")));
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -74,8 +65,7 @@ public class Readmission extends BaseClass {
 	}
 
 	public void IclickonlastnamethesearchedpatientonthePatientCardPage(String lastname) {
-
-		String newname = lastname.toUpperCase();
+        String newname = lastname.toUpperCase();
 		clickElement(driver.findElement(By.xpath("//h3[@class='ng-scope']/span[contains(text(),'" + newname + "')]")));
 	}
 
@@ -88,8 +78,7 @@ public class Readmission extends BaseClass {
 	}
 
 	public void Iclickonthenextlinktoselecttherequiredyearondatepicker(int days) {
-
-		String dateTime = getcurrentdate(days);
+        String dateTime = getcurrentdate(days);
 		String date_dd_MM_yyyy[] = (dateTime.split("/"));
 		int yearDiff = Integer.parseInt(date_dd_MM_yyyy[2]) - Calendar.getInstance().get(Calendar.YEAR);
 		WebElement nextLink = driver.findElement(By.cssSelector("th.next"));
@@ -138,13 +127,12 @@ public class Readmission extends BaseClass {
 	}
 
 	public void IverifythepatientpresentonthePatientCardPage(String last_name) {
-
-		String newname = last_name.toUpperCase();
+        String newname = last_name.toUpperCase();
 		isElementVisible(driver.findElement(By.xpath("//h3[@class='ng-scope']/span[contains(text(),'" + newname + "')]")));
 	}
 
 	public void IverifythepatientnotpresentonthePatientCardPage(String last_name) {
-          try {
+        try {
 			driver.findElement(By.xpath("//h3[@class='ng-scope']/span[contains(text(),'" + last_name + "')]"));
 		} catch (Exception e) {
 			return;
@@ -165,16 +153,14 @@ public class Readmission extends BaseClass {
 	}
 
 	public void IclickonthecentreofthecalendarheaderonDischargedatepickertoselectdateandmonthonTransitionPage() {
-
-		WebElement element = driver.findElement(By.cssSelector("body > div:nth-child(17) > div.datetimepicker-days > table > thead > tr:nth-child(1) > th.switch"));
+        WebElement element = driver.findElement(By.cssSelector("body > div:nth-child(17) > div.datetimepicker-days > table > thead > tr:nth-child(1) > th.switch"));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", element);
 		clickElement(element);
 	}
 
 	public void Iclickondatepickerbuttontoselectthedischargedate() {
-
-		WebElement element = driver.findElement(By.cssSelector("#bp_personbundle_bpadmissiontype_dischargeDate"));
+        WebElement element = driver.findElement(By.cssSelector("#bp_personbundle_bpadmissiontype_dischargeDate"));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView(true);", element);
 		clickElement(element);
