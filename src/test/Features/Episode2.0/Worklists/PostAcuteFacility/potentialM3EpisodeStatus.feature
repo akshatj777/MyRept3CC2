@@ -1,7 +1,7 @@
 @Episode @Worklist @PostAcute
 Feature: Patient status on Post Acute Facility Work List
 
-  Scenario Outline: Verify patient in post acute facility worklist with Episode status as Potential M3 when current Discharge Care Setting is IRF with future date.
+  Scenario: Verify patient in post acute facility worklist with Episode status as Potential M3 when current Discharge Care Setting is IRF with future date.
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
@@ -111,7 +111,3 @@ Feature: Patient status on Post Acute Facility Work List
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Post-Acute Facility" worklist on the Patient Card Page
-
-    Examples: 
-      | email                | password  | Patient First Name | Patient Last Name     |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTPOSTACUTEFACILITY |

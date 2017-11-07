@@ -1,7 +1,7 @@
 @Episode @Worklist @HomeLimited
 Feature: Patient status on Home Limited Service Worklist
 
-  Scenario Outline: Patient's with past transition admit care setting is HOM / REH (Outpatient)
+  Scenario: Patient's with past transition admit care setting is HOM / REH (Outpatient)
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
@@ -24,7 +24,7 @@ Feature: Patient status on Home Limited Service Worklist
     And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page
     And I enter "WA784654785" in the Medicare ID present on the Add Patient page
     Then I click on the next button present on the Add Patient page
-    Then I click on the next button present on the Add Patient page
+    Then I click on the next button present on the Primary Care Physician Information page
     Then I click on the Cancel Button on the New Transition on Add Patient page
     Then I switch back to old window
     Then I should see Tile text Episodes 2.0
@@ -125,7 +125,3 @@ Feature: Patient status on Home Limited Service Worklist
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "Home With Limited Services" worklist on the Patient Card Page
-
-    Examples: 
-      | email                | password  | Patient First Name | Patient Last Name       |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTHOMELIMITEDSERVICES |

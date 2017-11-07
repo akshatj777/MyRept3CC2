@@ -24,7 +24,7 @@ Feature: Patient status in Inpatient Care Worklist
     And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page
     And I enter "WA784654785" in the Medicare ID present on the Add Patient page
     Then I click on the next button present on the Add Patient page
-    Then I click on the next button present on the Add Patient page
+    Then I click on the next button present on the Primary Care Physician Information page
     Then I click on the Cancel Button on the New Transition on Add Patient page
     Then I switch back to old window
     Then I should see Tile text Episodes 2.0
@@ -83,13 +83,13 @@ Feature: Patient status in Inpatient Care Worklist
     Then I verify the patient "present" on "Inpatient Care" worklist on the Patient Card Page
 
     Examples: 
-      | email                | password  | Patient First Name | Patient Last Name | DRG type | Care Type |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTINPATIENTCARE | Possible | Inpatient |
+      | DRG type | Care Type |
+      | Possible | Inpatient |
 
   Scenario Outline: Verify patient status in inpatient care with HHH- Inpatient  with confirmed Working/Final respectively BPCI M2 DRG.
     Given I am on the login page
-    When I enter email field <email> for login
-    And I enter password field <password> for Login
+    When I enter email field qa.admin@yopmail.com for login
+    And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
@@ -137,14 +137,14 @@ Feature: Patient status in Inpatient Care Worklist
     Then I verify the patient "present" on "Inpatient Care" worklist on the Patient Card Page
 
     Examples: 
-      | email                | password  | Patient First Name | Patient Last Name | DRG type | Care Type |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTINPATIENTCARE | Working  | Inpatient |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTINPATIENTCARE | Final    | Inpatient |
+      | DRG type | Care Type |
+      | Working  | Inpatient |
+      | Final    | Inpatient |
 
   Scenario Outline: Verify patient status in inpatient care with HHH-Scheduled with confirmed Possible/Working/Final respectively BPCI M2 DRG.
     Given I am on the login page
-    When I enter email field <email> for login
-    And I enter password field <password> for Login
+    When I enter email field qa.admin@yopmail.com for login
+    And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
@@ -201,15 +201,15 @@ Feature: Patient status in Inpatient Care Worklist
     Then I verify the patient "present" on "Inpatient Care" worklist on the Patient Card Page
 
     Examples: 
-      | email                | password  | Patient First Name | Patient Last Name | DRG type | Care Type |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTINPATIENTCARE | Possible | Scheduled |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTINPATIENTCARE | Working  | Scheduled |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTINPATIENTCARE | Final    | Scheduled |
+      | DRG type | Care Type |
+      | Possible | Scheduled |
+      | Working  | Scheduled |
+      | Final    | Scheduled |
 
   Scenario Outline: Verify patient status in inpatient care While patient is in Worklist, care setting is updated Outpatient/Observation/Emergency
     Given I am on the login page
-    When I enter email field <email> for login
-    And I enter password field <password> for Login
+    When I enter email field qa.admin@yopmail.com for login
+    And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
@@ -249,7 +249,7 @@ Feature: Patient status in Inpatient Care Worklist
     Then I scroll the page to bottom by "-100"
     Then I will wait to see and click on "Inpatient" followed by "span" tag
     Then I will wait to see and click on "Inpatient Care" followed by "span" tag
-   Then I wait to the see the visibility of loader to disappear
+    Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
@@ -257,17 +257,17 @@ Feature: Patient status in Inpatient Care Worklist
     Then I verify the patient "not present" on "Inpatient Care" worklist on the Patient Card Page
 
     Examples: 
-      | email                | password  | Patient First Name | Patient Last Name | Care Type   |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTINPATIENTCARE | Outpatient  |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTINPATIENTCARE | Observation |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTINPATIENTCARE | Emergency   |
+      | Care Type   |
+      | Outpatient  |
+      | Observation |
+      | Emergency   |
 
-  Scenario Outline: Verify patient status in inpatient care While patient is in Worklist and anchor transition updated to NON-BPCI (Pend Canc).
-       Given I am on the login page
-    When I enter email field <email> for login
-    And I enter password field <password> for Login
+  Scenario: Verify patient status in inpatient care While patient is in Worklist and anchor transition updated to NON-BPCI (Pend Canc).
+    Given I am on the login page
+    When I enter email field qa.admin@yopmail.com for login
+    And I enter password field Episode1! for Login
     Then I click Access button
-     Then I should see Tile text Episodes 2.0
+    Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
     Then I verify current page "Remedy Partners" title
     And I should see "All" tab in the filter bar on patients page
@@ -320,16 +320,12 @@ Feature: Patient status in Inpatient Care Worklist
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Inpatient Care" worklist on the Patient Card Page
 
-    Examples: 
-      | email                | password  | Patient First Name | Patient Last Name |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTINPATIENTCARE |
-
-    Scenario Outline: Verify patient status in inpatient care with HHH-Scheduled with episode with admitted in future
-      Given I am on the login page
-    When I enter email field <email> for login
-    And I enter password field <password> for Login
+  Scenario Outline: Verify patient status in inpatient care with HHH-Scheduled with episode with admitted in future
+    Given I am on the login page
+    When I enter email field qa.admin@yopmail.com for login
+    And I enter password field Episode1! for Login
     Then I click Access button
-     Then I should see Tile text Episodes 2.0
+    Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
     Then I verify current page "Remedy Partners" title
     And I should see "All" tab in the filter bar on patients page
@@ -385,5 +381,5 @@ Feature: Patient status in Inpatient Care Worklist
     Then I verify the patient "not present" on "Inpatient Care" worklist on the Patient Card Page
 
     Examples: 
-      | email                | password  | Patient First Name | Patient Last Name | DRG type | Care Type |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTINPATIENTCARE | Possible | Inpatient |
+      | DRG type | Care Type |
+      | Possible | Inpatient |

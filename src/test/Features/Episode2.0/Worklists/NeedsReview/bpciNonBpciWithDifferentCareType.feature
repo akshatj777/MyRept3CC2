@@ -23,8 +23,8 @@ Feature: Patient status in Need Review Worklist
     When I click on Admitting Facility present on the Add Patient page
     And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page
     And I enter "WA784654785" in the Medicare ID present on the Add Patient page
-    Then I click on the next button present on the Add Patient page
-    Then I click on the next button present on the Add Patient page
+Then I click on the next button present on the Add Patient page
+    Then I click on the next button present on the Primary Care Physician Information page
     Then I click on the Cancel Button on the New Transition on Add Patient page
     Then I switch back to old window
     Then I should see Tile text Episodes 2.0
@@ -82,15 +82,15 @@ Feature: Patient status in Need Review Worklist
     Then I verify the patient "not present" on "Need Review" worklist on the Patient Card Page
 
     Examples: 
-      | email                | password  | Patient First Name | Patient Last Name | Care Type  |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTNEEDREVIEW    | Inpatient  |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTNEEDREVIEW    | Outpatient |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTNEEDREVIEW    | Scheduled  |
+      | Care Type  |
+      | Inpatient  |
+      | Outpatient |
+      | Scheduled  |
 
   Scenario Outline: Verify patient status on need review worklist with current care setting as HHH-inpatient with No DRG , No Episode and no discharge
     Given I am on the login page
-    When I enter email field <email> for login
-    And I enter password field <password> for Login
+    When I enter email field qa.admin@yopmail.com for login
+    And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
@@ -189,13 +189,13 @@ Feature: Patient status in Need Review Worklist
     Then I verify the patient "not present" on "Need Review" worklist on the Patient Card Page
 
     Examples: 
-      | email                | password  | Patient First Name | Patient Last Name | caretype  |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTNEEDREVIEW    | Inpatient |
+      | caretype  |
+      | Inpatient |
 
   Scenario Outline: Verify patient status not included on need review worklist with patient having HHH-inpatient with Non-BPCI possible/Working/Final DRG and No Episode
     Given I am on the login page
-    When I enter email field <email> for login
-    And I enter password field <password> for Login
+    When I enter email field qa.admin@yopmail.com for login
+    And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
@@ -252,15 +252,15 @@ Feature: Patient status in Need Review Worklist
     Then I verify the patient "not present" on "Need Review" worklist on the Patient Card Page
 
     Examples: 
-      | email                | password  | Patient First Name | Patient Last Name | DRG Type | Care Type |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTNEEDREVIEW    | Possible | Inpatient |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTNEEDREVIEW    | Working  | Emergency |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTNEEDREVIEW    | Final    | Scheduled |
+      | DRG Type | Care Type |
+      | Possible | Inpatient |
+      | Working  | Emergency |
+      | Final    | Scheduled |
 
   Scenario Outline: Verify patient status on need review worklist with current care setting as HHH-inpatient with No DRG , No Episode and no discharge
     Given I am on the login page
-    When I enter email field <email> for login
-    And I enter password field <password> for Login
+    When I enter email field qa.admin@yopmail.com for login
+    And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
@@ -312,5 +312,5 @@ Feature: Patient status in Need Review Worklist
     Then I verify the patient "present" on "Need Review" worklist on the Patient Card Page
 
     Examples: 
-      | email                | password  | Patient First Name | Patient Last Name | caretype   |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTNEEDREVIEW    | Outpatient |
+      | caretype   |
+      | Outpatient |

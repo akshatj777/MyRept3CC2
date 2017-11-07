@@ -1,8 +1,8 @@
 @Episode @Worklist @Readmission
 Feature: Potential M3 Readmission To Ach Facility
 
-  Scenario Outline: Patient with Active Episode and readmission to an ACH facility as HHH-I
-   Given I am on the login page
+  Scenario: Patient with Active Episode and readmission to an ACH facility as HHH-I
+    Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
@@ -118,7 +118,3 @@ Feature: Potential M3 Readmission To Ach Facility
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Readmission" worklist on the Patient Card Page
-
-    Examples: 
-      | email                | password  | Patient First Name | Patient Last Name |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTAUTOMATION    |

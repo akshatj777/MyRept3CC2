@@ -1,7 +1,7 @@
 @Episode @Worklist @ReadmissionDischarges
 Feature: Patient status on Readmission Discharges Work List
 
-  Scenario Outline: Patient with Episode status as Active through CJR with a Readmission with discharge care setting facility SNF (any care type) within last 7 days
+   Scenario: Patient with Episode status as Active through CJR with a Readmission with discharge care setting facility SNF (any care type) within last 7 days
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
@@ -23,8 +23,8 @@ Feature: Patient status on Readmission Discharges Work List
     When I click on Admitting Facility present on the Add Patient page
     And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page
     And I enter "WA784654785" in the Medicare ID present on the Add Patient page
-    Then I click on the next button present on the Add Patient page
-    Then I click on the next button present on the Add Patient page
+Then I click on the next button present on the Add Patient page
+    Then I click on the next button present on the Primary Care Physician Information page
     Then I click on the Cancel Button on the New Transition on Add Patient page
     Then I switch back to old window
     Then I should see Tile text Episodes 2.0
@@ -124,14 +124,10 @@ Feature: Patient status on Readmission Discharges Work List
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Readmission Discharges" worklist on the Patient Card Page
 
-    Examples: 
-      | email                | password  | Patient First Name | Patient Last Name    |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | READMISSIONDISCHARGE |
-
-  Scenario Outline: Patient with Episode status as Pend Cancellation through CJR with a Readmission with discharge care setting facility Ltc (any care type) within last 7 days
+   Scenario: Patient with Episode status as Pend Cancellation through CJR with a Readmission with discharge care setting facility Ltc (any care type) within last 7 days
     Given I am on the login page
-    When I enter email field <email> for login
-    And I enter password field <password> for Login
+    When I enter email field qa.admin@yopmail.com for login
+        And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
@@ -228,7 +224,3 @@ Feature: Patient status on Readmission Discharges Work List
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Readmission Discharges" worklist on the Patient Card Page
-
-    Examples: 
-      | email                | password  | Patient First Name | Patient Last Name    |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | READMISSIONDISCHARGE |

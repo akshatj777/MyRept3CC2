@@ -1,4 +1,4 @@
-@Episode @Notes 
+@Episode @Notes
 Feature: Patient Notes on Patient Summary
 
   Scenario: To Verify Quick Action has the following criteria on Patient Summary
@@ -24,7 +24,7 @@ Feature: Patient Notes on Patient Summary
     And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page
     And I enter "WA784654785" in the Medicare ID present on the Add Patient page
     Then I click on the next button present on the Add Patient page
-    Then I click on the next button present on the Add Patient page
+    Then I click on the next button present on the Primary Care Physician Information page
     Then I click on the Cancel Button on the New Transition on Add Patient page
     Then I switch back to old window
     Then I should see Tile text Episodes 2.0

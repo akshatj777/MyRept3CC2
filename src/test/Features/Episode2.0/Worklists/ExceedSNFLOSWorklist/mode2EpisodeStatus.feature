@@ -1,7 +1,7 @@
 @Episode @Worklist @Exceed
 Feature: Patient status on Exceed SNF LOS Work List (Model 2 state)
 
-  Scenario Outline: Verify patient should be present in EXCEED SNF LOS Worklist when Episode is M2 Active and patient is Admit with readmission admit care setting-SNF 
+  Scenario Outline: Verify patient should be present in EXCEED SNF LOS Worklist when Episode is M2 Active and patient is Admit with readmission admit care setting-SNF
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
@@ -24,7 +24,7 @@ Feature: Patient status on Exceed SNF LOS Work List (Model 2 state)
     And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page
     And I enter "WA784654785" in the Medicare ID present on the Add Patient page
     Then I click on the next button present on the Add Patient page
-    Then I click on the next button present on the Add Patient page
+    Then I click on the next button present on the Primary Care Physician Information page
     Then I click on the Cancel Button on the New Transition on Add Patient page
     Then I switch back to old window
     Then I should see Tile text Episodes 2.0
@@ -94,11 +94,11 @@ Feature: Patient status on Exceed SNF LOS Work List (Model 2 state)
     Then I verify the patient "present" on "Exceed SNF LOS" worklist on the Patient Card Page
 
     Examples: 
-      | email                | password  | Patient First Name | Patient Last Name | caretype         |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTEXCEEDSNF     |  TCU             |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTEXCEEDSNF     |  Skilled Nursing |
- 
-  Scenario Outline: Verify patient should be present in EXCEED SNF LOS Worklist when Episode is M2 Pend Canc and patient is Admit with readmission admit care setting-SNF 
+      | caretype        |
+      | TCU             |
+      | Skilled Nursing |
+
+  Scenario: Verify patient should be present in EXCEED SNF LOS Worklist when Episode is M2 Pend Canc and patient is Admit with readmission admit care setting-SNF
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
@@ -148,10 +148,6 @@ Feature: Patient status on Exceed SNF LOS Work List (Model 2 state)
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Exceed SNF LOS" worklist on the Patient Card Page
-
-    Examples: 
-      | email                | password  | Patient First Name | Patient Last Name |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTEXCEEDSNF     |
 
   Scenario Outline: Verify patient included in Exceed SNF LOS when patient is admitted to SNF Skilled Nursing with M2 Active.
     Given I am on the login page
@@ -219,11 +215,11 @@ Feature: Patient status on Exceed SNF LOS Work List (Model 2 state)
     Then I verify the patient "present" on "Exceed SNF LOS" worklist on the Patient Card Page
 
     Examples: 
-      | email                | password  | Patient First Name | Patient Last Name | caretype        |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTEXCEEDSNF     | Skilled Nursing |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTEXCEEDSNF     | TCU             |
+      | caretype        |
+      | Skilled Nursing |
+      | TCU             |
 
- Scenario Outline: Verify patient should be present in EXCEED SNF LOS Worklist when Episode is M2 Pend Canc and patient is discharged to admit care setting-SNF 
+  Scenario: Verify patient should be present in EXCEED SNF LOS Worklist when Episode is M2 Pend Canc and patient is discharged to admit care setting-SNF
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
@@ -272,11 +268,7 @@ Feature: Patient status on Exceed SNF LOS Work List (Model 2 state)
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Exceed SNF LOS" worklist on the Patient Card Page
 
-    Examples: 
-      | email                | password  | Patient First Name | Patient Last Name |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTEXCEEDSNF     |
-
-  Scenario Outline: Verify patient should be included in EXCEED SNF LOS worklist when Episode state is Future Active.
+  Scenario: Verify patient should be included in EXCEED SNF LOS worklist when Episode state is Future Active.
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
@@ -368,10 +360,6 @@ Feature: Patient status on Exceed SNF LOS Work List (Model 2 state)
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "Exceed SNF LOS" worklist on the Patient Card Page
 
-    Examples: 
-      | email                | password  | Patient First Name | Patient Last Name |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTEXCEEDSNF     |
-
   Scenario Outline: Verify admitted patient not included in EXCEED SNF Work list when discharged in SNF with care type leave of absence
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
@@ -439,11 +427,11 @@ Feature: Patient status on Exceed SNF LOS Work List (Model 2 state)
     Then I verify the patient "not present" on "Exceed SNF LOS" worklist on the Patient Card Page
 
     Examples: 
-      | email                | password  | Patient First Name | Patient Last Name | CareType         |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTEXCEEDSNF     | Leave of Absence |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTEXCEEDSNF     | Custodial Care   |
+      | CareType         |
+      | Leave of Absence |
+      | Custodial Care   |
 
-  Scenario Outline: Episode state other than Active and pending cancellation
+  Scenario: Episode state other than Active and pending cancellation
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
@@ -507,7 +495,4 @@ Feature: Patient status on Exceed SNF LOS Work List (Model 2 state)
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "Exceed SNF LOS" worklist on the Patient Card Page
-
-    Examples: 
-      | email                | password  | Patient First Name | Patient Last Name |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTEXCEEDSNF     |
+      | 

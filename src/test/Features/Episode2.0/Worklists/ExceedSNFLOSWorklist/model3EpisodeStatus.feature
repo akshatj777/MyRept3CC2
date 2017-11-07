@@ -1,7 +1,7 @@
 @Episode @Worklist @Exceed
 Feature: Patient status on Exceed SNF LOS Work List (Model 3 state)
 
-  Scenario Outline: SNF direct admission with Model3 Episode status
+  Scenario: SNF direct admission with Model3 Episode status
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
@@ -81,7 +81,3 @@ Feature: Patient status on Exceed SNF LOS Work List (Model 3 state)
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Exceed SNF LOS" worklist on the Patient Card Page
-
-    Examples: 
-      | email                | password  | Patient First Name | Patient Last Name       |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | EXCEEDSNFMODELTHREE     |

@@ -17,4 +17,3 @@ Feature: Episode 2.0 Daily Report Filter
     Then I click on Done button present on the Filter Page
     Then I scroll the page to bottom by "-100"
     Then I verify "Inpatient Episodes" is appearing under selected filters on "1" position on search box for Admit Reason
- 

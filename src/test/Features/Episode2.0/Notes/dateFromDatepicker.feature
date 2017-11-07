@@ -1,4 +1,4 @@
-@Episode @Notes 
+@Episode @Notes
 Feature: Notes Activity Date
 
   Scenario: Verify that upon clicking on Notes - Activity Date, Calendar should appear to select the date manually.
@@ -24,7 +24,7 @@ Feature: Notes Activity Date
     And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page
     And I enter "WA784654785" in the Medicare ID present on the Add Patient page
     Then I click on the next button present on the Add Patient page
-    Then I click on the next button present on the Add Patient page
+    Then I click on the next button present on the Primary Care Physician Information page
     Then I click on the Cancel Button on the New Transition on Add Patient page
     Then I switch back to old window
     Then I should see Tile text Episodes 2.0
@@ -53,4 +53,3 @@ Feature: Notes Activity Date
     Then I select the "20"  from date picker on Add Clinical Document on Patient Card
     Then I Verify that upon selecting date through calendar date should get populated the field in the format mmddyyyy
     Then I verify user should be able to pick any date and exact date should get selected and highlighted
-    

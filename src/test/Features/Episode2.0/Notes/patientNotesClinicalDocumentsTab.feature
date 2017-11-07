@@ -1,4 +1,4 @@
-@Episode @Notes 
+@Episode @Notes
 Feature: Created Patient Note Comparision in EC1 and viewed in EC2
 
   Scenario: To verify Notes created in EC1 through i framing should only be accessible on EC2 care plan tab should not be seen under Clinical Documents tab .
@@ -24,7 +24,7 @@ Feature: Created Patient Note Comparision in EC1 and viewed in EC2
     And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page
     And I enter "WA784654785" in the Medicare ID present on the Add Patient page
     Then I click on the next button present on the Add Patient page
-    Then I click on the next button present on the Add Patient page
+    Then I click on the next button present on the Primary Care Physician Information page
     When I click on Calender button present on the Add Patient page
     And I select today's date as the admission date
     And I select "Acute Care Hospital" from admission care type drop down menu present on Add Patient page

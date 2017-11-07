@@ -23,8 +23,8 @@ Feature: Patient status on Exceed SNF LOS Work List
     When I click on Admitting Facility present on the Add Patient page
     And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page
     And I enter "WA784654785" in the Medicare ID present on the Add Patient page
-    Then I click on the next button present on the Add Patient page
-    Then I click on the next button present on the Add Patient page
+Then I click on the next button present on the Add Patient page
+    Then I click on the next button present on the Primary_Care Physician Information_page
     Then I click on the Cancel Button on the New Transition on Add Patient page
     Then I switch back to old window
     Then I should see Tile text Episodes 2.0
@@ -95,7 +95,7 @@ Feature: Patient status on Exceed SNF LOS Work List
 
     Examples: 
       | email                | password  | Patient First Name | Patient Last Name |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTEXCEEDSNF     |
+     |
 
   Scenario Outline: Verify patient status in EXCEED SNF LOS when patient is Potential M3 Active and discharged in SNF .
     Given I am on the login page
@@ -164,4 +164,4 @@ Feature: Patient status on Exceed SNF LOS Work List
 
     Examples: 
       | email                | password  | Patient First Name | Patient Last Name |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTEXCEEDSNF     |
+     |

@@ -1,7 +1,7 @@
 Feature: Episode 2.0 Episode Status Filter
 
   Scenario: verify Episode Status filter is present under list of Filter options on Patient Page
-   Given I am on the login page
+    Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button

@@ -1,7 +1,7 @@
 @Episode @Worklist @InpatientCare
 Feature: Patient status in Inpatient Care Worklist
 
-  Scenario Outline: Patient status in inpatient worklist when admitted to HHH-inpatient without any drg
+  Scenario: Patient status in inpatient worklist when admitted to HHH-inpatient without any drg
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
@@ -79,14 +79,10 @@ Feature: Patient status in Inpatient Care Worklist
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Inpatient Care" worklist on the Patient Card Page
 
-    Examples: 
-      | email                | password  | Patient First Name | Patient Last Name |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTINPATIENTCARE |
-
-  Scenario Outline: Verify patient status in inpatient care with Non-BPCI to the transition
+  Scenario: Verify patient status in inpatient care with Non-BPCI to the transition
     Given I am on the login page
-    When I enter email field <email> for login
-    And I enter password field <password> for Login
+    When I enter email field qa.admin@yopmail.com for login
+    And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
@@ -134,14 +130,10 @@ Feature: Patient status in Inpatient Care Worklist
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Inpatient Care" worklist on the Patient Card Page
 
-    Examples: 
-      | email                | password  | Patient First Name | Patient Last Name |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTINPATIENTCARE |
-
-  Scenario Outline: Verify patient status in inpatient care when patient has been discharged from (HHH) Inpatient more than 7 days ago.
+  Scenario: Verify patient status in inpatient care when patient has been discharged from (HHH) Inpatient more than 7 days ago.
     Given I am on the login page
-    When I enter email field <email> for login
-    And I enter password field <password> for Login
+    When I enter email field qa.admin@yopmail.com for login
+    And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
@@ -187,7 +179,3 @@ Feature: Patient status in Inpatient Care Worklist
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "Inpatient Care" worklist on the Patient Card Page
-
-    Examples: 
-      | email                | password  | Patient First Name | Patient Last Name |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTINPATIENTCARE |

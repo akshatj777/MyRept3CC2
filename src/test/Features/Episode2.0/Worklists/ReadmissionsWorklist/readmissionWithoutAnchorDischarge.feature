@@ -1,7 +1,7 @@
 @Episode @Worklist @Readmission
 Feature: Verify Readmission status without anchor discharge readmission
 
-  Scenario Outline: Patient without anchor discharge, readmission in different facility.
+  Scenario: Patient without anchor discharge, readmission in different facility.
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
@@ -88,11 +88,7 @@ Feature: Verify Readmission status without anchor discharge readmission
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Readmission" worklist on the Patient Card Page
 
-    Examples: 
-      | email                | password  | Patient First Name | Patient Last Name |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTAUTOMATION    |
-
-  Scenario Outline: Verify Readmission status without anchor discharge, readmission in same facility
+  Scenario: Verify Readmission status without anchor discharge, readmission in same facility
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
@@ -178,7 +174,3 @@ Feature: Verify Readmission status without anchor discharge readmission
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "Readmission" worklist on the Patient Card Page
-
-    Examples: 
-      | email                | password  | Patient First Name | Patient Last Name |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTAUTOMATION    |

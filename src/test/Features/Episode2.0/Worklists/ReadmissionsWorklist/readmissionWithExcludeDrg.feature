@@ -1,7 +1,7 @@
 @Episode @Worklist @Readmission
 Feature: Active Episode HHH-Inpatient/Scheduled with DRG 472 W Readmitted to HHH-I/S with DRG 239
 
-  Scenario Outline: Active Episode HHH-Inpatient/Scheduled with DRG 472 W Readmitted to HHH-I/S with DRG 239
+  Scenario: Active Episode HHH-Inpatient/Scheduled with DRG 472 W Readmitted to HHH-I/S with DRG 239
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
@@ -95,7 +95,3 @@ Feature: Active Episode HHH-Inpatient/Scheduled with DRG 472 W Readmitted to HHH
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "Readmission" worklist on the Patient Card Page
-
-    Examples: 
-      | email                | password  | Patient First Name | Patient Last Name     |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTAUTOMATIONEXPIRED |

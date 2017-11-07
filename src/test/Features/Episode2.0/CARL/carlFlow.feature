@@ -24,7 +24,7 @@ Feature: To verify the options and functionality of Caregiver section of Carl fo
     And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page
     And I enter "WA784654785" in the Medicare ID present on the Add Patient page
     Then I click on the next button present on the Add Patient page
-    Then I click on the next button present on the Add Patient page
+    Then I click on the next button present on the Primary Care Physician Information page
     Then I click on the Cancel Button on the New Transition on Add Patient page
     Then I switch back to old window
     And I click on the top user account link
@@ -97,7 +97,7 @@ Feature: To verify the options and functionality of Caregiver section of Carl fo
     And I verfiy that No caregiver available option is present under Does the patient have a capable caregiver
     And I verfiy that No caregiver needed option is present under Does the patient have a capable caregiver
     Then I click on Yes, has caregiver support less than 24 hours a day option under Does the patient have a capable caregiver
-#    Then I verify on moving the mouse hover away from the icon the message should disapper
+    #    Then I verify on moving the mouse hover away from the icon the message should disapper
     Then I verify that Add Caregiver link should appear under Choose Caregiver section in Caregiver on takeover page
     Then I click on No caregiver available option under Does the patient have a capable caregiver
     Then I verify that Add Caregiver link should not appear under Choose Caregiver
@@ -243,7 +243,6 @@ Feature: To verify the options and functionality of Caregiver section of Carl fo
     Then I will wait to see the "Transitionno" "2" appears on the transition table on the Patient Summary page
     Then I will wait to see column "2" header "Facility" "(HHA) A Helping Hand Hha" appears in transition column "1" on transitions table on Patient Summary Page
     When I switch to default window from iframe
-   
 
     Examples: 
       | F_Name        | L_Name       | Email_Id             | Phone        |
@@ -272,7 +271,7 @@ Feature: To verify the options and functionality of Caregiver section of Carl fo
     And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page
     And I enter "WA784654785" in the Medicare ID present on the Add Patient page
     Then I click on the next button present on the Add Patient page
-    Then I click on the next button present on the Add Patient page
+    Then I click on the next button present on the Primary Care Physician Information page
     Then I click on the Cancel Button on the New Transition on Add Patient page
     Then I switch back to old window
     And I click on the top user account link
@@ -382,8 +381,8 @@ Feature: To verify the options and functionality of Caregiver section of Carl fo
     And I click on OK button to delete the patient
     When I switch to default window from iframe
     Then I close the patient summary Page
-    
-       Examples: 
+
+    Examples: 
       | F_Name        | L_Name       | Email_Id             | Phone        |
       | FirstNameTest | LastNameTest | testuser@yopmail.com | 987-456-1230 |
 
@@ -410,7 +409,7 @@ Feature: To verify the options and functionality of Caregiver section of Carl fo
     And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page
     And I enter "WA784654785" in the Medicare ID present on the Add Patient page
     Then I click on the next button present on the Add Patient page
-    Then I click on the next button present on the Add Patient page
+    Then I click on the next button present on the Primary Care Physician Information page
     Then I click on the Cancel Button on the New Transition on Add Patient page
     Then I switch back to old window
     And I click on the top user account link

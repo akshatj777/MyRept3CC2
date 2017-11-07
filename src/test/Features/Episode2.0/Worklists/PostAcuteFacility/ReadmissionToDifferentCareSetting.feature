@@ -24,7 +24,7 @@ Feature: Patient status on Post Acute Facility Work List
     And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page
     And I enter "WA784654785" in the Medicare ID present on the Add Patient page
     Then I click on the next button present on the Add Patient page
-    Then I click on the next button present on the Add Patient page
+    Then I click on the next button present on the Primary Care Physician Information page
     Then I click on the Cancel Button on the New Transition on Add Patient page
     Then I switch back to old window
     Then I should see Tile text Episodes 2.0
@@ -88,10 +88,10 @@ Feature: Patient status on Post Acute Facility Work List
     Then I verify the patient "present" on "Post-Acute Facility" worklist on the Patient Card Page
 
     Examples: 
-      | email                | password  | Patient First Name | Patient Last Name     | Admit facility value              | Dis care setting               | Dis care type   | Discharge facility value            | DRG |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTPOSTACUTEFACILITY | Emanuel County Hospital Authority | REH - Rehabilitation           | Inpatient       | Rehabilitation Institute Of Chicago | 177 |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTPOSTACUTEFACILITY | Stamford Hospital                 | SNF - Skilled Nursing Facility | Skilled Nursing | Coosa valley health care            |  63 |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTPOSTACUTEFACILITY | Stamford Hospital                 | SNF - Skilled Nursing Facility | TCU             | Coosa valley health care            |  63 |
+      | Admit facility value              | Dis care setting               | Dis care type   | Discharge facility value            | DRG |
+      | Emanuel County Hospital Authority | REH - Rehabilitation           | Inpatient       | Rehabilitation Institute Of Chicago | 177 |
+      | Stamford Hospital                 | SNF - Skilled Nursing Facility | Skilled Nursing | Coosa valley health care            |  63 |
+      | Stamford Hospital                 | SNF - Skilled Nursing Facility | TCU             | Coosa valley health care            |  63 |
 
   Scenario Outline: Patient's current Care Setting is SNF(Custodial Care, Leave of Absence) (Patient's discharge Care Setting) with M2 Episode status as Pending cancellation
     Given I am on the login page
@@ -116,7 +116,7 @@ Feature: Patient status on Post Acute Facility Work List
     And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page
     And I enter "WA784654785" in the Medicare ID present on the Add Patient page
     Then I click on the next button present on the Add Patient page
-    Then I click on the next button present on the Add Patient page
+    Then I click on the next button present on the Primary Care Physician Information page
     Then I click on the Cancel Button on the New Transition on Add Patient page
     Then I switch back to old window
     Then I should see Tile text Episodes 2.0
@@ -180,6 +180,6 @@ Feature: Patient status on Post Acute Facility Work List
     Then I verify the patient "not present" on "Post Acute Facility" worklist on the Patient Card Page
 
     Examples: 
-      | email                | password  | Patient First Name | Patient Last Name     | Care Type        |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTPOSTACUTEFACILITY | Custodial Care   |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTPOSTACUTEFACILITY | Leave of Absence |
+      | Care Type        |
+      | Custodial Care   |
+      | Leave of Absence |

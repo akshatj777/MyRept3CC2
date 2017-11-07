@@ -23,8 +23,8 @@ Feature: Patient status on Other/Alternative Work List
     When I click on Admitting Facility present on the Add Patient page
     And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page
     And I enter "WA784654785" in the Medicare ID present on the Add Patient page
-    Then I click on the next button present on the Add Patient page
-    Then I click on the next button present on the Add Patient page
+Then I click on the next button present on the Add Patient page
+    Then I click on the next button present on the Primary Care Physician Information page
     Then I click on the Cancel Button on the New Transition on Add Patient page
     Then I switch back to old window
     Then I should see Tile text Episodes 2.0
@@ -119,13 +119,13 @@ Feature: Patient status on Other/Alternative Work List
     Then I verify the patient "present" on "Alternative" worklist on the Patient Card Page
 
     Examples: 
-      | email                | password  | Patient First Name | Patient Last Name | Care Type      |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   | Custodial Care |
+      | Care Type      |
+      | Custodial Care |
 
   Scenario Outline: Verify patient present in Other Worklist when patient is discharged to SNF
     Given I am on the login page
-    When I enter email field <email> for login
-    And I enter password field <password> for Login
+    When I enter email field qa.admin@yopmail.com for login
+    And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
@@ -188,15 +188,15 @@ Feature: Patient status on Other/Alternative Work List
     Then I verify the patient "present" on "Alternative" worklist on the Patient Card Page
 
     Examples: 
-      | email                | password  | Patient First Name | Patient Last Name | Care Type        |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   | select           |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   | Leave of Absence |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   | Custodial Care   |
+      | Care Type        |
+      | select           |
+      | Leave of Absence |
+      | Custodial Care   |
 
   Scenario Outline: M2 Active episode patient discharge and then admitted to discharge facility to SNF with future care setting
     Given I am on the login page
-    When I enter email field <email> for login
-    And I enter password field <password> for Login
+    When I enter email field qa.admin@yopmail.com for login
+    And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
@@ -259,15 +259,15 @@ Feature: Patient status on Other/Alternative Work List
     Then I verify the patient "present" on "Alternative" worklist on the Patient Card Page
 
     Examples: 
-      | email                | password  | Patient First Name | Patient Last Name | Care Type        |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   | select           |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   | Leave of Absence |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   | Custodial Care   |
+      | Care Type        |
+      | select           |
+      | Leave of Absence |
+      | Custodial Care   |
 
   Scenario Outline: Verify patient present in Other Worklist when patient is discharged to different caresetting
     Given I am on the login page
-    When I enter email field <email> for login
-    And I enter password field <password> for Login
+    When I enter email field qa.admin@yopmail.com for login
+    And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
@@ -331,27 +331,27 @@ Feature: Patient status on Other/Alternative Work List
     Then I verify the patient "present" on "Alternative" worklist on the Patient Card Page
 
     Examples: 
-      | email                | password  | Patient First Name | Patient Last Name | Disch care setting   | Disch care type                            | Disch facility              |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   | OTHER - Other        | Acute Care Hospital                        | Brothers Medical Center Inc |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   | OTHER - Other        | Admitted as an Inpatient to this Hospital  | Brothers Medical Center Inc |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   | OTHER - Other        | Assisted Living                            | Brothers Medical Center Inc |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   | OTHER - Other        | Critical Access Hospital                   | Brothers Medical Center Inc |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   | OTHER - Other        | Court/Law Enforcement                      | Brothers Medical Center Inc |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   | OTHER - Other        | Federal Hospital                           | Brothers Medical Center Inc |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   | OTHER - Other        | Hospice in Medical Facility                | Brothers Medical Center Inc |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   | OTHER - Other        | Hospital-Based Medicare Approved Swing Bed | Brothers Medical Center Inc |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   | OTHER - Other        | Hospice at Home                            | Brothers Medical Center Inc |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   | OTHER - Other        | Left Against Medical Advice                | Brothers Medical Center Inc |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   | OTHER - Other        | Medicaid Certified Nursing Facility        | Brothers Medical Center Inc |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   | OTHER - Other        | Psychiatric Hospital/Unit                  | Brothers Medical Center Inc |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   | OTHER - Other        | Shelter                                    | Brothers Medical Center Inc |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   | OTHER - Other        | Still a Patient                            | Brothers Medical Center Inc |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   | REH - Rehabilitation | select                                     | Allied Rehab Hospital       |
+      | Disch care setting   | Disch care type                            | Disch facility              |
+      | OTHER - Other        | Acute Care Hospital                        | Brothers Medical Center Inc |
+      | OTHER - Other        | Admitted as an Inpatient to this Hospital  | Brothers Medical Center Inc |
+      | OTHER - Other        | Assisted Living                            | Brothers Medical Center Inc |
+      | OTHER - Other        | Critical Access Hospital                   | Brothers Medical Center Inc |
+      | OTHER - Other        | Court/Law Enforcement                      | Brothers Medical Center Inc |
+      | OTHER - Other        | Federal Hospital                           | Brothers Medical Center Inc |
+      | OTHER - Other        | Hospice in Medical Facility                | Brothers Medical Center Inc |
+      | OTHER - Other        | Hospital-Based Medicare Approved Swing Bed | Brothers Medical Center Inc |
+      | OTHER - Other        | Hospice at Home                            | Brothers Medical Center Inc |
+      | OTHER - Other        | Left Against Medical Advice                | Brothers Medical Center Inc |
+      | OTHER - Other        | Medicaid Certified Nursing Facility        | Brothers Medical Center Inc |
+      | OTHER - Other        | Psychiatric Hospital/Unit                  | Brothers Medical Center Inc |
+      | OTHER - Other        | Shelter                                    | Brothers Medical Center Inc |
+      | OTHER - Other        | Still a Patient                            | Brothers Medical Center Inc |
+      | REH - Rehabilitation | select                                     | Allied Rehab Hospital       |
 
-  Scenario Outline: Verify patient present in Other Worklist when patient is discharged to UNK Unknown.
+  Scenario: Verify patient present in Other Worklist when patient is discharged to UNK Unknown.
     Given I am on the login page
-    When I enter email field <email> for login
-    And I enter password field <password> for Login
+    When I enter email field qa.admin@yopmail.com for login
+    And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
@@ -410,14 +410,10 @@ Feature: Patient status on Other/Alternative Work List
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Alternative" worklist on the Patient Card Page
 
-    Examples: 
-      | email                | password  | Patient First Name | Patient Last Name |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   |
-
-  Scenario Outline: Verify patient present in Other Worklist when patient is discharged to HPC .
+  Scenario: Verify patient present in Other Worklist when patient is discharged to HPC .
     Given I am on the login page
-    When I enter email field <email> for login
-    And I enter password field <password> for Login
+    When I enter email field qa.admin@yopmail.com for login
+    And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
@@ -475,7 +471,3 @@ Feature: Patient status on Other/Alternative Work List
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Alternative" worklist on the Patient Card Page
-
-    Examples: 
-      | email                | password  | Patient First Name | Patient Last Name |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTALTERNATIVE   |

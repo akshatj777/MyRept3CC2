@@ -1,7 +1,7 @@
 @Episode @Worklist @InpatientCare
 Feature: Patient status in Inpatient Care Worklist
 
-  Scenario Outline: Admitted today or in past(considering current date >= admit date) in any post acute facility with confirmed Working BPCI M3 DRG.
+  Scenario: Admitted today or in past(considering current date >= admit date) in any post acute facility with confirmed Working BPCI M3 DRG.
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
@@ -24,7 +24,7 @@ Feature: Patient status in Inpatient Care Worklist
     And I Select "coosa valley health care" from the list of admitting facility present on the Add Patient page
     And I enter "WA784654785" in the Medicare ID present on the Add Patient page
     Then I click on the next button present on the Add Patient page
-    Then I click on the next button present on the Add Patient page
+    Then I click on the next button present on the Primary Care Physician Information page
     Then I click on the Cancel Button on the New Transition on Add Patient page
     Then I switch back to old window
     Then I should see Tile text Episodes 2.0
@@ -82,14 +82,10 @@ Feature: Patient status in Inpatient Care Worklist
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "Inpatient Care" worklist on the Patient Card Page
 
-    Examples: 
-      | email                | password  | Patient First Name | Patient Last Name   |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTIMPATIENTMTHREE |
-
   Scenario Outline: Verify patient status in inpatient care with  Admitted today or in past(considering current date >= admit date) in any post acute facility with confirmed Possible/Final BPCI M3 DRG.
     Given I am on the login page
-    When I enter email field <email> for login
-    And I enter password field <password> for Login
+    When I enter email field qa.admin@yopmail.com for login
+    And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
@@ -139,14 +135,14 @@ Feature: Patient status in Inpatient Care Worklist
     Then I verify the patient "not present" on "Inpatient Care" worklist on the Patient Card Page
 
     Examples: 
-      | email                | password  | Patient First Name | Patient Last Name   | DRG type | Care Type |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTIMPATIENTMTHREE | Working  | Inpatient |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTIMPATIENTMTHREE | Final    | Inpatient |
+      | DRG type | Care Type |
+      | Working  | Inpatient |
+      | Final    | Inpatient |
 
-  Scenario Outline: Verify patient status in inpatient care While patient is in Worklist and anchor transition updated to NON-BPCI (Pend Canc).
+  Scenario: Verify patient status in inpatient care While patient is in Worklist and anchor transition updated to NON-BPCI (Pend Canc).
     Given I am on the login page
-    When I enter email field <email> for login
-    And I enter password field <password> for Login
+    When I enter email field qa.admin@yopmail.com for login
+    And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
@@ -195,14 +191,10 @@ Feature: Patient status in Inpatient Care Worklist
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "Inpatient Care" worklist on the Patient Card Page
 
-    Examples: 
-      | email                | password  | Patient First Name | Patient Last Name   |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTIMPATIENTMTHREE |
-
-  Scenario Outline: Admitted in future(considering current date <= admit date) in any post acute facility with confirmed Working BPCI M3 DRG.
+  Scenario: Admitted in future(considering current date <= admit date) in any post acute facility with confirmed Working BPCI M3 DRG.
     Given I am on the login page
-    When I enter email field <email> for login
-    And I enter password field <password> for Login
+    When I enter email field qa.admin@yopmail.com for login
+    And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
@@ -258,7 +250,3 @@ Feature: Patient status in Inpatient Care Worklist
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "Inpatient Care" worklist on the Patient Card Page
-
-    Examples: 
-      | email                | password  | Patient First Name | Patient Last Name   |
-      | qa.admin@yopmail.com | Episode1! | PATIENT            | TESTIMPATIENTMTHREE |

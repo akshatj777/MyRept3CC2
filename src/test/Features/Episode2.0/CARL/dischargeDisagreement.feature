@@ -24,7 +24,7 @@ Feature: Discharge – Disagreement Reason(s)
     And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page
     And I enter "WA784654785" in the Medicare ID present on the Add Patient page
     Then I click on the next button present on the Add Patient page
-    Then I click on the next button present on the Add Patient page
+    Then I click on the next button present on the Primary Care Physician Information page
     Then I click on the Cancel Button on the New Transition on Add Patient page
     Then I switch back to old window
     And I click on the top user account link
@@ -145,9 +145,9 @@ Feature: Discharge – Disagreement Reason(s)
     Then I verify that user should be able to remove additional reason which is added
     Then I verify that User should be able to provide additional comments "Additional" in a free text box
     Then I verify user should be able to provide upto 250 characters under Additional Comments
-    
+
   Scenario: Upon selecting the Actual Care Setting in the discharge subform, user should be able to complete the "Discussed the proposal with the Interdisciplinary team" question
-   Given I am on the login page
+    Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
@@ -169,7 +169,7 @@ Feature: Discharge – Disagreement Reason(s)
     And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page
     And I enter "WA784654785" in the Medicare ID present on the Add Patient page
     Then I click on the next button present on the Add Patient page
-    Then I click on the next button present on the Add Patient page
+    Then I click on the next button present on the Primary Care Physician Information page
     Then I click on the Cancel Button on the New Transition on Add Patient page
     Then I switch back to old window
     And I click on the top user account link
