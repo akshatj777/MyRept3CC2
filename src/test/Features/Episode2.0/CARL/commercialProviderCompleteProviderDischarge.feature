@@ -795,6 +795,7 @@ Feature: As a user, I should be able to complete and submit a CARL form for an E
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify CARL button is "not appearing" on the patient card
+    
   #Scenario: Create readmission few days ago that excluded the previous one
     #Given I am on the login page
     #When I enter email field qa.admin@yopmail.com for login
