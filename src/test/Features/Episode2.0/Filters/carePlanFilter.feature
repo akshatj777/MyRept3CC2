@@ -88,7 +88,6 @@ Feature: Episode 2.0 Care Plan Filters
     Then I scroll the page to bottom by "-100"
     When I click on Filter button present on Patient Page
     Then I verify Care Plan Filter is displayed under List of Filter Options
-    Then I click on "Created" under selected filters for Care Plan
     When I click on Care Plan Filter present on Filter Page
     When I click on created radio button present on Filter Page
     Then I click on Done button present on the Filter Page

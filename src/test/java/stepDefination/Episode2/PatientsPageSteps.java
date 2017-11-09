@@ -160,6 +160,11 @@ public class PatientsPageSteps extends DriverScript {
         patientsPage.iSelectStamfordHospitalCheckboxAsAnchorFacilityPresentInTheFilterPage();
     }
 
+    @When("^I select \"([^\"]*)\" checkbox Facility present in the Filter Page$")
+    public void i_select_checkbox_as_Facility_present_in_the_Filter_Page(String facility) throws Throwable {
+        patientsPage.iSelectCheckboxAsAnchorFacilityPresentInTheFilterPage(facility);
+    }
+    
     @Then("^I verify Medicare ID Filter is displayed under List of Filter Options$")
     public void i_verify_Medicare_ID_Filter_is_displayed_under_List_of_Filter_Options() throws Throwable {
         patientsPage.iVerifyMedicareIDFilterIsDisplayedUnderListOfFilterOptions();

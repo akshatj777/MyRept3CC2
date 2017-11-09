@@ -43,8 +43,8 @@ import stepDefination.Hooks.*;
 )
 public class TestRunner {
 
-	ExtentReports extent;
-    ExtentTest test;
+//	ExtentReports extent;
+//    ExtentTest test;
         @BeforeSuite
         public static void setUp() {
                 // TODO: Add your pre-processing

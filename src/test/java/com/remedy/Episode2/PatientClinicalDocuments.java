@@ -916,7 +916,9 @@ public class PatientClinicalDocuments extends BaseClass {
 				e.printStackTrace();
 				//iWillWaitToSee(By.xpath("//h4[text()='"+text+"']/preceding-sibling::div/span/input"));
 			}
-			clickElement(driver.findElement(By.xpath("//h4[text()='"+text+"']/preceding-sibling::div/span/input")));
+	//		iWillWaitToSee(By.xpath("//h4[text()='"+text+"']/preceding-sibling::div/span/input"));
+			new Actions(driver).moveToElement(driver.findElement(By.xpath("//h4[text()='"+text+"']/preceding-sibling::div/span/input"))).click().perform();
+//			clickElement(driver.findElement(By.xpath("//h4[text()='"+text+"']/preceding-sibling::div/span/input")));
 			
 		}
 

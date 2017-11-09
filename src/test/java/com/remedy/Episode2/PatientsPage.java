@@ -357,7 +357,7 @@ public class PatientsPage extends BaseClass {
 
 	public void iSelectStamfordHospitalCheckboxAsAnchorFacilityPresentInTheFilterPage() {
 		longDelay();
-		clickElement(driver.findElement(By.cssSelector("div.multisearch-select-dropdown > checkbox-list > div > div:nth-child(1) > ul.checkbox-list.list-unstyled.ng-scope > li:nth-child(2)")));
+		clickElement(driver.findElement(By.xpath("//span[contains(text(),'Stamford Hospital - Stamford (STAMFORD, CT) (HHH)')]")));
 	}
 
 	public void iClickOnHideSummaryButtonPresentOnThePatientSummaryPage() {
@@ -1124,7 +1124,7 @@ public class PatientsPage extends BaseClass {
 	}
 
 	public void iVerifyAnchorFacilityFilterOnPatientSummary(String text, String facility) {
-		verifyTextForElement(driver.findElement(By.xpath("//span[@ng-bind='patient." + text + ".value']")), facility);
+		verifyTextForElement(driver.findElement(By.xpath("//span[@ng-bind='::patient." + text + ".value']")), facility);
 	}
 
 	public void IVerifyAnchorFaciltyOnPatientCard(String text, String facility) {
@@ -1458,21 +1458,35 @@ public class PatientsPage extends BaseClass {
 
 
     public void IVerifyfollowingshouldbethelistofavailablecaresettingsandtypesfilters(List<String> dropdownvalues) {
-    	iWillWaitToSee(By.xpath("//label[starts-with(@for,'care-setting')]/i/following-sibling::span"));
-    	List<WebElement> elements=driver.findElements(By.xpath("//label[starts-with(@for,'care-setting')]/i/following-sibling::span"));
-        List<String> actualtexts=new ArrayList<String>();
-        for(int i=0;i<dropdownvalues.size();i++)
-        {
-        while(!elements.get(i).getText().equals(dropdownvalues.get(i)))
-        	{
-        	String text=elements.get(i).getText();
-        	actualtexts.add(text);
-        	}
-        }
+    	longDelay();
+    	//iWillWaitToSee(By.xpath("//ul/li[1]/div[2]/label[starts-with(@for,'care-setting')]/i/following-sibling::span[1]"));
+    //	List<WebElement> elements=driver.findElements(By.xpath("//label[starts-with(@for,'care-setting')]/i/following-sibling::span"));
+     //   List<String> actualtexts=new ArrayList<String>();
+//        for(int i=0;i<dropdownvalues.size();i++)
+//        {
+//        while(!elements.get(i).getText().equals(dropdownvalues.get(i)))
+//        	{
+//        	String text=elements.get(i).getText();
+//        	actualtexts.add(text);
+//        	}
+//        }
+    	for(int i=1;i<=39;i++)
+    	{
+    		delay();
+    		isElementVisible(driver.findElement(By.xpath("//ul/li["+i+"]/div[2]/label[starts-with(@for,'care-setting')]/i/following-sibling::span[1]")));
+    	    Assert.assertEquals(driver.findElement(By.xpath("//ul/li["+i+"]/div[2]/label[starts-with(@for,'care-setting')]/i/following-sibling::span[1]")).getAttribute("textContent"),dropdownvalues.get(i-1));
+    	}
        }
 
 
 	public void Iverifyvalueonxpandsummary(String variable1, String variable2) {
 		isElementVisible(driver.findElement(By.xpath("//div/label[contains(text(),'"+variable1+"')]/following-sibling::span[contains(text(),'"+variable2+"')]")));	  	
 	  }
+
+
+	public void iSelectCheckboxAsAnchorFacilityPresentInTheFilterPage(String facility) {
+		longDelay();
+		clickElement(driver.findElement(By.xpath("//span[contains(text(),'"+facility+"']")));
+		
+	}
 }
