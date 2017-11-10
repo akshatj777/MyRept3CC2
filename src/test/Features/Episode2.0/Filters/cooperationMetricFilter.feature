@@ -43,7 +43,7 @@ Feature: Episode 2.0 Cooperation Metric Filters
     Then I wait to the see the visibility of loader to disappear
     Then I scroll the page to bottom by "-100"
     Then I verify "Cooperation Metrics: Not assigned" is appearing under selected filters on "1" position on search box for Admit Reason
-    Then I click on the patient on the patient card page that has no CARL button in it
+Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Care Plan" followed by "span" tag
     Then I switch to PatientTransitions frame

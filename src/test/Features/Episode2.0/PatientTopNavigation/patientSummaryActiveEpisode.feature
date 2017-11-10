@@ -41,7 +41,7 @@ Feature: Patient Summary Verification for Active Episodes
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the patient on the patient card page that has no CARL button in it
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
@@ -54,7 +54,7 @@ Feature: Patient Summary Verification for Active Episodes
     When I switch to default window from iframe
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
-    Then I click on the patient on the patient card page that has no CARL button in it
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
@@ -77,14 +77,14 @@ Feature: Patient Summary Verification for Active Episodes
     When I switch to default window from iframe
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
-    Then I click on the patient on the patient card page that has no CARL button in it
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient first name on patient summary
     Then I verify the patient last name on patient summary
     Then I verify the patient Date of birth on patient summary
     Then I verify the patient Age on patient summary
     Then I verify the patient SSN on patient summary
-    Then I verify "Admit Date" should be displayed as "days to anchor admission" "minus" "20"
+    Then I verify "Admit Date" should be displayed as "Admit" "minus" "11"
     Then I verify the patient bundle name "ACUTE ISCHEMIC STROKE W USE OF THROMBOLYTIC AGENT W/O CC/MCC" on patient summary
     Then I verify "Current Location" should be displayed as "(HHH) Inpatient Stamford - Stamford Hospital"
     Then I verify "Anchor Facility" should be displayed as "(HHH) Stamford Hospital"
@@ -92,11 +92,11 @@ Feature: Patient Summary Verification for Active Episodes
     Then I verify the patient Onboarding status field on patient summary
     Then I switch to "Onboarding status" frame followed by "#iFrameEC2PatientRisks"
     Then I click on the need onboarding dropdown on patient summary
-    Then I select value "Onboarded" from the need onboarding dropdown on patient summary
+    Then I select value "Unknown" from the need onboarding dropdown on patient summary
     Then I verify the patient Onboarding status "Unknown" on patient summary
     When I switch to default window from iframe
+    Then I verify Tags header appears on the patient summary page
     Then I switch to "Tags" frame followed by "#iFrameEC2PatientTags"
-    Then I verify Tags header is appearing on the patient summary page
     Then I click on add a new tag in Tags on the patient summary page
     Then I select "Medicaid Eligible" from the list of tags on patient summary page
     Then I verify the selected "Medicaid Eligible" tag on patient summary page
@@ -147,7 +147,7 @@ Feature: Patient Summary Verification for Active Episodes
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the patient on the patient card page that has no CARL button in it
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
@@ -160,7 +160,7 @@ Feature: Patient Summary Verification for Active Episodes
     When I switch to default window from iframe
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
-    Then I click on the patient on the patient card page that has no CARL button in it
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
@@ -191,14 +191,14 @@ Feature: Patient Summary Verification for Active Episodes
     When I switch to default window from iframe
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
-    Then I click on the patient on the patient card page that has no CARL button in it
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient first name on patient summary
     Then I verify the patient last name on patient summary
     Then I verify the patient Date of birth on patient summary
     Then I verify the patient Age on patient summary
     Then I verify the patient SSN on patient summary
-    Then I verify "Admit Date" should be displayed as "days to anchor admission" "minus" "20"
+    Then I verify "Admit Date" should be displayed as "Admit" "minus" "11"
     Then I verify the patient bundle name "ACUTE ISCHEMIC STROKE W USE OF THROMBOLYTIC AGENT W/O CC/MCC" on patient summary
     Then I verify "Current Location" should be displayed as "(HHH) Inpatient Stamford - Stamford Hospital"
     Then I verify "Anchor Facility" should be displayed as "(HHH) Stamford Hospital"
@@ -206,11 +206,11 @@ Feature: Patient Summary Verification for Active Episodes
     Then I verify the patient Onboarding status field on patient summary
     Then I switch to "Onboarding status" frame followed by "#iFrameEC2PatientRisks"
     Then I click on the need onboarding dropdown on patient summary
-    Then I select value "Onboarded" from the need onboarding dropdown on patient summary
+    Then I select value "Unknown" from the need onboarding dropdown on patient summary
     Then I verify the patient Onboarding status "Unknown" on patient summary
     When I switch to default window from iframe
+    Then I verify Tags header appears on the patient summary page
     Then I switch to "Tags" frame followed by "#iFrameEC2PatientTags"
-    Then I verify Tags header is appearing on the patient summary page
     Then I click on add a new tag in Tags on the patient summary page
     Then I select "Medicaid Eligible" from the list of tags on patient summary page
     Then I verify the selected "Medicaid Eligible" tag on patient summary page
@@ -261,7 +261,7 @@ Feature: Patient Summary Verification for Active Episodes
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the patient on the patient card page that has no CARL button in it
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
@@ -274,7 +274,7 @@ Feature: Patient Summary Verification for Active Episodes
     When I switch to default window from iframe
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
-    Then I click on the patient on the patient card page that has no CARL button in it
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
@@ -297,7 +297,7 @@ Feature: Patient Summary Verification for Active Episodes
     When I switch to default window from iframe
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
-    Then I click on the patient on the patient card page that has no CARL button in it
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient first name on patient summary
     Then I verify the patient last name on patient summary
@@ -311,11 +311,11 @@ Feature: Patient Summary Verification for Active Episodes
     Then I verify the patient Onboarding status field on patient summary
     Then I switch to "Onboarding status" frame followed by "#iFrameEC2PatientRisks"
     Then I click on the need onboarding dropdown on patient summary
-    Then I select value "Onboarded" from the need onboarding dropdown on patient summary
+    Then I select value "Unknown" from the need onboarding dropdown on patient summary
     Then I verify the patient Onboarding status "Unknown" on patient summary
     When I switch to default window from iframe
+    Then I verify Tags header appears on the patient summary page
     Then I switch to "Tags" frame followed by "#iFrameEC2PatientTags"
-    Then I verify Tags header is appearing on the patient summary page
     Then I click on add a new tag in Tags on the patient summary page
     Then I select "Medicaid Eligible" from the list of tags on patient summary page
     Then I verify the selected "Medicaid Eligible" tag on patient summary page
@@ -366,7 +366,7 @@ Feature: Patient Summary Verification for Active Episodes
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the patient on the patient card page that has no CARL button in it
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
@@ -379,7 +379,7 @@ Feature: Patient Summary Verification for Active Episodes
     When I switch to default window from iframe
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
-    Then I click on the patient on the patient card page that has no CARL button in it
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
@@ -410,7 +410,7 @@ Feature: Patient Summary Verification for Active Episodes
     When I switch to default window from iframe
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
-    Then I click on the patient on the patient card page that has no CARL button in it
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient first name on patient summary
     Then I verify the patient last name on patient summary
@@ -424,11 +424,11 @@ Feature: Patient Summary Verification for Active Episodes
     Then I verify the patient Onboarding status field on patient summary
     Then I switch to "Onboarding status" frame followed by "#iFrameEC2PatientRisks"
     Then I click on the need onboarding dropdown on patient summary
-    Then I select value "Onboarded" from the need onboarding dropdown on patient summary
+    Then I select value "Unknown" from the need onboarding dropdown on patient summary
     Then I verify the patient Onboarding status "Unknown" on patient summary
     When I switch to default window from iframe
+    Then I verify Tags header appears on the patient summary page
     Then I switch to "Tags" frame followed by "#iFrameEC2PatientTags"
-    Then I verify Tags header is appearing on the patient summary page
     Then I click on add a new tag in Tags on the patient summary page
     Then I select "Medicaid Eligible" from the list of tags on patient summary page
     Then I verify the selected "Medicaid Eligible" tag on patient summary page
@@ -479,7 +479,7 @@ Feature: Patient Summary Verification for Active Episodes
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the patient on the patient card page that has no CARL button in it
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
@@ -492,7 +492,7 @@ Feature: Patient Summary Verification for Active Episodes
     When I switch to default window from iframe
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
-    Then I click on the patient on the patient card page that has no CARL button in it
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
@@ -515,15 +515,14 @@ Feature: Patient Summary Verification for Active Episodes
     When I switch to default window from iframe
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
-    Then I click on the patient on the patient card page that has no CARL button in it
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient first name on patient summary
     Then I verify the patient last name on patient summary
     Then I verify the patient Date of birth on patient summary
     Then I verify the patient Age on patient summary
     Then I verify the patient SSN on patient summary
-    Then I verify "Date" should be displayed as "Admit Date" "minus" "30"
-    Then I verify the length of stay should be "28" "days inpatient"
+    Then I verify the length of stay should be "3" "days inpatient"
     Then I verify the patient bundle name "<Bundle Name>" on patient summary
     Then I verify "Current Location" should be displayed as "(HHH) Inpatient Stamford - Stamford Hospital"
     Then I verify "Anchor Facility" should be displayed as "(HHH) Stamford Hospital"
@@ -531,11 +530,11 @@ Feature: Patient Summary Verification for Active Episodes
     Then I verify the patient Onboarding status field on patient summary
     Then I switch to "Onboarding status" frame followed by "#iFrameEC2PatientRisks"
     Then I click on the need onboarding dropdown on patient summary
-    Then I select value "Onboarded" from the need onboarding dropdown on patient summary
+    Then I select value "Unknown" from the need onboarding dropdown on patient summary
     Then I verify the patient Onboarding status "Unknown" on patient summary
     When I switch to default window from iframe
+    Then I verify Tags header appears on the patient summary page
     Then I switch to "Tags" frame followed by "#iFrameEC2PatientTags"
-    Then I verify Tags header is appearing on the patient summary page
     Then I click on add a new tag in Tags on the patient summary page
     Then I select "Medicaid Eligible" from the list of tags on patient summary page
     Then I verify the selected "Medicaid Eligible" tag on patient summary page

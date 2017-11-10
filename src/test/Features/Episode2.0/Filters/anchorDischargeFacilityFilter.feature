@@ -39,7 +39,7 @@ Feature: Episode 2.0 Anchor Discharge Facility Filters
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
-    Then I click on the patient on the patient card page that has no CARL button in it
+Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear

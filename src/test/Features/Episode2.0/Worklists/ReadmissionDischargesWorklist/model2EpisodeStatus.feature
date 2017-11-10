@@ -41,7 +41,7 @@ Feature: Patient status on Readmission Discharges Work List
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the patient on the patient card page that has no CARL button in it
+Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
@@ -106,7 +106,7 @@ Feature: Patient status on Readmission Discharges Work List
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Readmission Discharges" worklist on the Patient Card Page
-    Then I click on the patient on the patient card page that has no CARL button in it
+Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
@@ -151,7 +151,7 @@ Feature: Patient status on Readmission Discharges Work List
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the patient on the patient card page that has no CARL button in it
+Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
@@ -250,7 +250,7 @@ Feature: Patient status on Readmission Discharges Work List
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the patient on the patient card page that has no CARL button in it
+Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
@@ -327,7 +327,7 @@ Feature: Patient status on Readmission Discharges Work List
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the patient on the patient card page that has no CARL button in it
+Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
@@ -381,7 +381,7 @@ Feature: Patient status on Readmission Discharges Work List
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Readmission Discharges" worklist on the Patient Card Page
-    Then I click on the patient on the patient card page that has no CARL button in it
+Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
@@ -426,7 +426,7 @@ Feature: Patient status on Readmission Discharges Work List
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the patient on the patient card page that has no CARL button in it
+Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag

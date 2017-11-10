@@ -1489,4 +1489,11 @@ public class PatientsPage extends BaseClass {
 		clickElement(driver.findElement(By.xpath("//span[contains(text(),'"+facility+"']")));
 		
 	}
+
+
+	public void lengthofstay(int days) {
+		delay();
+		isElementVisible(driver.findElement(By.xpath("//div/label[contains(text(),'Length of Stay')]/following-sibling::span[1][contains(text(),'"+days+"')]/following-sibling::span[contains(text(),'days inpatient')]")));
+		
+	}
 }

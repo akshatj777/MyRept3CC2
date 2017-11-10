@@ -41,7 +41,7 @@ Feature: Patient status on Exceed SNF LOS Work List
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the patient on the patient card page that has no CARL button in it
+Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
@@ -77,7 +77,7 @@ Feature: Patient status on Exceed SNF LOS Work List
     When I switch to default window from iframe
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
-    Then I click on the patient on the patient card page that has no CARL button in it
+Then I click on the filterd patient on the patient card page
     Then I verify LOS is "above" the ELOS on the patient card page
     Then I close the patient summary Page
     Then I will wait to see and click on "Post Acute" followed by "span" tag
@@ -88,7 +88,7 @@ Feature: Patient status on Exceed SNF LOS Work List
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Exceed SNF LOS" worklist on the Patient Card Page
-    Then I click on the patient on the patient card page that has no CARL button in it
+Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
@@ -113,7 +113,7 @@ Feature: Patient status on Exceed SNF LOS Work List
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Exceed SNF LOS" worklist on the Patient Card Page
-    Then I click on the patient on the patient card page that has no CARL button in it
+Then I click on the filterd patient on the patient card page
     Then I verify LOS is "above" the ELOS on the patient card page
 
   Scenario: Verify patient included in Exceed SNF when LOS is below ELOS
@@ -155,7 +155,7 @@ Feature: Patient status on Exceed SNF LOS Work List
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
-    Then I click on the patient on the patient card page that has no CARL button in it
+Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
@@ -186,7 +186,7 @@ Feature: Patient status on Exceed SNF LOS Work List
     When I switch to default window from iframe
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
-    Then I click on the patient on the patient card page that has no CARL button in it
+Then I click on the filterd patient on the patient card page
     Then I verify LOS is "below" the ELOS on the patient card page
     Then I close the patient summary Page
     Then I will wait to see and click on "Post Acute" followed by "span" tag
@@ -204,7 +204,7 @@ Feature: Patient status on Exceed SNF LOS Work List
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Exceed SNF LOS" worklist on the Patient Card Page
-    Then I click on the patient on the patient card page that has no CARL button in it
+Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I verify LOS is "below" the ELOS on the patient card page
     Then I wait to the see the visibility of loader to disappear
@@ -221,7 +221,7 @@ Feature: Patient status on Exceed SNF LOS Work List
     When I switch to default window from iframe
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
-    Then I click on the patient on the patient card page that has no CARL button in it
+Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I verify LOS is "below" the ELOS on the patient card page
     Then I close the patient summary Page

@@ -23,7 +23,7 @@ Feature: Episode 2.0 Episode Status Filter
     Then I wait to the see the visibility of loader to disappear
     Then I scroll the page to bottom by "-100"
     Then I verify "Active" is appearing under selected filters on "1" position on search box for Admit Reason
-    Then I click on the patient on the patient card page that has no CARL button in it
+Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Patient Details" followed by "span" tag
     Then I verify episode becomes Active

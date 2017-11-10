@@ -435,7 +435,7 @@ public class DischargeCarlFormSteps extends DriverScript {
     	 dischargecarlform.I_select_the_primary_language();
      }
      
-     @Then ("^I verify Tags is appearing on the patient summary page$")
+     @Then ("^I verify Tags header appears on the patient summary page$")
      public void I_verify_Tags_is_appearing_on_patient_summary() throws Throwable
      {
     	 dischargecarlform.IverifyTagsisappearingonpatientsummary();

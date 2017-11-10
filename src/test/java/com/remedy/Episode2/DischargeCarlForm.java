@@ -576,11 +576,13 @@ public class DischargeCarlForm extends BaseClass {
 	}
 
 	public void Iverifypatientfirstname() {
-	isElementVisible(driver.findElement(By.xpath("//h2[@class='ng-scope']/span[2][contains(text(),'"+firstname+"')]")));
+	String first_name=firstname.toUpperCase();
+	isElementVisible(driver.findElement(By.xpath("//h2[@class='ng-scope']/span[2][contains(text(),'"+first_name+"')]")));
 	}
 
 	public void Iverifypatientlastname() {
-	isElementVisible(driver.findElement(By.xpath("//h2[@class='ng-scope']/span[1][contains(text(),'"+lastname+"')]")));
+	String last_name=lastname.toUpperCase();
+	isElementVisible(driver.findElement(By.xpath("//h2[@class='ng-scope']/span[1][contains(text(),'"+last_name+"')]")));
 	}
 
 	public void Iverifypatientdateofbirth() {

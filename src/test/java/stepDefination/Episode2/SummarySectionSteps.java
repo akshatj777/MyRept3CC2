@@ -146,9 +146,9 @@ public class SummarySectionSteps extends DriverScript {
 		patientclinical.IswitchtoPatientCareTeamframe();
 	}
 
-	@Then("^I click on the patient on the patient card page that has no CARL button in it$")
-	public void I_click_on_the_patient_on_the_patient_card_page_that_has_no_CARL_button_in_it() throws Throwable {
-		patientclinical.IclickonthepatientonthepatientcardpagethathasnoCARLbuttoninit();
+	@Then("^I click on the filterd patient on the patient card page$")
+	public void I_click_on_the_patient_on_the_patient_card_page() throws Throwable {
+		patientclinical.Iclickonthepatientonthepatientcardpage();
 	}
 
 	@Then("^I get the patient last name who have no CARL button in it$")

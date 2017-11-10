@@ -49,7 +49,7 @@ Feature: Upon selecting the Actual Care Setting, user should be able to view the
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the patient on the patient card page that has no CARL button in it
+Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Patient Details" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
@@ -82,7 +82,7 @@ Feature: Upon selecting the Actual Care Setting, user should be able to view the
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I scroll the page to bottom by "-100"
-    Then I click on the patient on the patient card page that has no CARL button in it
+Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the complete CARL on the Patient Summary
     Then I wait to the see the visibility of loader to disappear

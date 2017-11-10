@@ -81,7 +81,7 @@ Then I click on the next button present on the Add Patient page
     Then I click on the Create Transition Button to add a new transition
     Then I wait to the see the visibility of loader to disappear
     Then I click on the cross button Note Read only form to navigate to patient card
-    Then I click on the patient on the patient card page that has no CARL button in it
+Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Care Plan" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear

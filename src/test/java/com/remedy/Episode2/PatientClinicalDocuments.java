@@ -575,7 +575,7 @@ public class PatientClinicalDocuments extends BaseClass {
 		}
 	}
 
-	public void IclickonthepatientonthepatientcardpagethathasnoCARLbuttoninit() {
+	public void Iclickonthepatientonthepatientcardpage() {
             iWillWaitToSee(By.cssSelector("div.row.cards-mode.isotope > div > div > div.card-header.col-xs-12.hover-pointer.ng-scope"));
             try
     		{

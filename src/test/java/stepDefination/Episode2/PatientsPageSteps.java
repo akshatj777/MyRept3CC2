@@ -1635,6 +1635,11 @@ public class PatientsPageSteps extends DriverScript {
 	  patientsPage.Iverifyadmitdateonexpandsummary(variable1,variable2,value);
    }
    
+   @Then ("^I verify Length of Stay should be displayed as \"([^\"]*)\"$")
+   public void length_of_stay(int days)
+   {
+	   patientsPage.lengthofstay(days);
+   }
    @Then ("^I verify \"([^\"]*)\" should be displayed as \"([^\"]*)\"$")
    public void I_verify_value_on_expand_summary(String variable1,String variable2) throws Throwable {
 	  patientsPage.Iverifyvalueonxpandsummary(variable1,variable2);

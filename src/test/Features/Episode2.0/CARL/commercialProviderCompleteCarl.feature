@@ -49,7 +49,7 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the patient on the patient card page that has no CARL button in it
+Then I click on the filterd patient on the patient card page
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
@@ -135,7 +135,7 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the patient on the patient card page that has no CARL button in it
+Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
@@ -179,7 +179,7 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the patient on the patient card page that has no CARL button in it
+Then I click on the filterd patient on the patient card page
     When I switch to default window from iframe
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I switch to PatientTransitions frame
@@ -260,7 +260,7 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the patient on the patient card page that has no CARL button in it
+Then I click on the filterd patient on the patient card page
     Then I get the patient last name who have no CARL button in it
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Patient Details" followed by "span" tag
@@ -357,7 +357,7 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     Then I scroll the page to bottom by "-100"
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the patient on the patient card page that has no CARL button in it
+Then I click on the filterd patient on the patient card page
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
@@ -402,7 +402,7 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify CARL button is "appearing" on the patient card
-    Then I click on the patient on the patient card page that has no CARL button in it
+Then I click on the filterd patient on the patient card page
     Then I get the patient last name who have no CARL button in it
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Patient Details" followed by "span" tag
@@ -438,7 +438,7 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify CARL button is "not appearing" on the patient card
-    Then I click on the patient on the patient card page that has no CARL button in it
+Then I click on the filterd patient on the patient card page
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
@@ -520,7 +520,7 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the patient on the patient card page that has no CARL button in it
+Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
@@ -555,7 +555,7 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     When I click on Filter button present on Patient Page
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
-    Then I click on the patient on the patient card page that has no CARL button in it
+Then I click on the filterd patient on the patient card page
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
@@ -589,7 +589,7 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     Then I scroll the page to bottom by "-100"
     Then I wait to the see the visibility of loader to disappear
     Then I verify CARL button is "appearing" on the patient card
-    Then I click on the patient on the patient card page that has no CARL button in it
+Then I click on the filterd patient on the patient card page
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
     Then I click on "Discharge" "4" section on left navigator
@@ -653,7 +653,7 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the patient on the patient card page that has no CARL button in it
+Then I click on the filterd patient on the patient card page
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
@@ -695,7 +695,7 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify CARL button is "appearing" on the patient card
-    Then I click on the patient on the patient card page that has no CARL button in it
+Then I click on the filterd patient on the patient card page
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
     Then I will wait to see the CARL section "Caregiver" header appears on the CARL form
@@ -733,7 +733,7 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify CARL button is "appearing" on the patient card
-    Then I click on the patient on the patient card page that has no CARL button in it
+Then I click on the filterd patient on the patient card page
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
     Then I click on "Discharge" "4" section on left navigator
