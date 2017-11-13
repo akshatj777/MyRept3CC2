@@ -491,6 +491,7 @@ public class PatientsPage extends BaseClass {
 	}
 
 	public void iClickOnInpatientCheckboxUnderCareSettingPresentOnTheFilterPage() {
+		longDelay();
 		clickElement(driver.findElement(By.cssSelector("input[id='care-settingHHH-I']~label[for='care-settingHHH-I']")));
 	}
 
@@ -1459,22 +1460,13 @@ public class PatientsPage extends BaseClass {
 
     public void IVerifyfollowingshouldbethelistofavailablecaresettingsandtypesfilters(List<String> dropdownvalues) {
     	longDelay();
-    	//iWillWaitToSee(By.xpath("//ul/li[1]/div[2]/label[starts-with(@for,'care-setting')]/i/following-sibling::span[1]"));
-    //	List<WebElement> elements=driver.findElements(By.xpath("//label[starts-with(@for,'care-setting')]/i/following-sibling::span"));
-     //   List<String> actualtexts=new ArrayList<String>();
-//        for(int i=0;i<dropdownvalues.size();i++)
-//        {
-//        while(!elements.get(i).getText().equals(dropdownvalues.get(i)))
-//        	{
-//        	String text=elements.get(i).getText();
-//        	actualtexts.add(text);
-//        	}
-//        }
-    	for(int i=1;i<=39;i++)
+        for(int i=1;i<=39;i++)
     	{
     		delay();
+    		JavascriptExecutor jsdate = ((JavascriptExecutor) driver);
+    		jsdate.executeScript("arguments[0].scrollIntoView();", driver.findElement(By.xpath("//ul/li["+i+"]/div[2]/label[starts-with(@for,'care-setting')]/i/following-sibling::span[1]")));
     		isElementVisible(driver.findElement(By.xpath("//ul/li["+i+"]/div[2]/label[starts-with(@for,'care-setting')]/i/following-sibling::span[1]")));
-    	    Assert.assertEquals(driver.findElement(By.xpath("//ul/li["+i+"]/div[2]/label[starts-with(@for,'care-setting')]/i/following-sibling::span[1]")).getAttribute("textContent"),dropdownvalues.get(i-1));
+            Assert.assertEquals(driver.findElement(By.xpath("//ul/li["+i+"]/div[2]/label[starts-with(@for,'care-setting')]/i/following-sibling::span[1]")).getAttribute("textContent"),dropdownvalues.get(i-1));
     	}
        }
 

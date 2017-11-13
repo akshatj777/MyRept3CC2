@@ -61,7 +61,7 @@ Feature: Episode 2.0 Care Setting Filters
     Then I wait to the see the visibility of loader to disappear
     Then I scroll the page to bottom by "-100"
     Then I verify "Care Setting: (Hospital) Inpatient" is appearing under selected filters on "1" position on search box for Admit Reason
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     When I click on Hide Summary button present on the patient summary page
     Then I switch to PatientTransitions frame

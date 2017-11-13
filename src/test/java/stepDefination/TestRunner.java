@@ -1,8 +1,8 @@
 package stepDefination;
 
 
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
+//import com.relevantcodes.extentreports.ExtentReports;
+//import com.relevantcodes.extentreports.ExtentTest;
 //import com.github.mkolisnyk.cucumber.runner.ExtendedCucumberOptions;
 import com.remedy.resources.DriverScript;
 import cucumber.api.CucumberOptions;
@@ -34,9 +34,9 @@ import stepDefination.Hooks.*;
 
 @RunWith(ExtendedCucumberRunner.class)
 @CucumberOptions(
-        plugin = {"html:target/cucumber-results","usage:target/cucumber-results/cucumber-usage.json",
-                "junit:target/cucumber-results/cucumber-results.xml", "json:target/cucumber-results/cucumber.json",
-                "rerun:target/rerun.txt","stepDefination.ExtentCucumberFormatter"},
+		 plugin = {"html:target/cucumber-results", "usage:target/cucumber-results/cucumber-usage.json",
+	                "junit:target/cucumber-results/cucumber-results.xml", "json:target/cucumber-results/cucumber.json",
+	                "com.cucumber.listener.ExtentCucumberFormatter:target/vimalSelvam-cucumberReport/report.html"},
         features = {"src/test/Features/"},
         //glue = { "./src/test/java/stepDefination" },
         tags = {}
