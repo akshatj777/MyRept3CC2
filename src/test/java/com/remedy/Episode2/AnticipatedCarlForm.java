@@ -3,8 +3,6 @@ package com.remedy.Episode2;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.interactions.Actions;
-
 import com.remedy.baseClass.BaseClass;
 
 public class AnticipatedCarlForm extends BaseClass {
@@ -104,8 +102,7 @@ public class AnticipatedCarlForm extends BaseClass {
 	public void IClickRadioOptionAfterSelectingCheckBoxUnderTransitionOfCareNeedsOnAnticipatedDischargeNeeds(String radio, String text) {
 		longDelay();
 		iWillWaitToSee(By.xpath("//div[input[contains(@id,'" + text + "')]]//label//span[contains(text(),'" + radio + "')]"));
-		Actions action=new Actions(driver);
-		action.moveToElement(driver.findElement(By.xpath("//div[input[contains(@id,'" + text + "')]]//label//span[contains(text(),'" + radio + "')]"))).click().perform();;
+		clickByAction(driver.findElement(By.xpath("//div[input[contains(@id,'" + text + "')]]//label//span[contains(text(),'" + radio + "')]")));
 	}
 
 	public void IVerifyCheckedRadioOptionUnderSelectedCheckBoxForTransitionOfCareNeedsOnAnticipatedDischargeNeeds(String radio, String text) {

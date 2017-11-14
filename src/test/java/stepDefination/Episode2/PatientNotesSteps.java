@@ -16,7 +16,7 @@ public class PatientNotesSteps extends DriverScript {
 
 	@Then("^I click on the patient card on Patient Card Page$")
 	public void I_click_on_the_patient_card_on_Patient_Card_Page() throws Throwable {
-		noteCreation.I_click_on_the_patient_card_on_Patient_Card_Page();
+		noteCreation.IclickonthepatientcardonPatientCardPage();
 	}
 
 	@Then("^I verify Patient Summary includes quick action button for note creation$")
@@ -31,7 +31,7 @@ public class PatientNotesSteps extends DriverScript {
 
 	@Then("^I verify whether topic drop down appears on the Add Clinical Document on Note Creation$")
 	public void I_verify_whether_topic_drop_down_appears_on_the_Add_Clinical_Document_on_Note_Creation() throws Throwable {
-		noteCreation.I_verify_whether_topic_drop_down_appears_on_the_Add_Clinical_Document_on_Note_Creation();
+		noteCreation.IverifywhethertopicdropdownappearsontheAddClinicalDocumentonNoteCreation();
 	}
 
 	@Then("^I select the \"([^\"]*)\" value from the topic drop down on Add Clinical Document on Patient Summary$")

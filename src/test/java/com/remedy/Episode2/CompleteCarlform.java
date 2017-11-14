@@ -26,7 +26,7 @@ public class CompleteCarlform extends BaseClass {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		WebElement element = driver.findElement(By.xpath("//span[contains(text(),'Anticipated Discharge Needs')]"));
 		WebElement element1 = driver.findElement(By.xpath("//h1[text()='CARL']"));
-		js.executeScript("arguments[0].scrollIntoView(true);", element1);
+		scrollToElement(element1);
 		delay();
 		js.executeScript("arguments[0].click();", element);
 		delay();
@@ -163,57 +163,7 @@ public class CompleteCarlform extends BaseClass {
 		delay();
 	}
 
-	public void MouseHoverByJavaScript(WebElement targetElement)
-    {
-		String javaScript = "var evObj = document.createEvent('MouseEvents');" +
-                            "evObj.initMouseEvent(\"mouseover\",true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);" +
-                            "arguments[0].dispatchEvent(evObj);";
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript(javaScript, targetElement);
-    }
-	
-	public void mouseHoverJScript(WebElement HoverElement) {
-		try {
-			if (isElementPresent(HoverElement)) {
-				
-				String mouseOverScript = "if(document.createEvent){var evObj = document.createEvent('MouseEvents');evObj.initEvent('mouseover', true, false); arguments[0].dispatchEvent(evObj);} else if(document.createEventObject) { arguments[0].fireEvent('onmouseover');}";
-				((JavascriptExecutor) driver).executeScript(mouseOverScript,
-						HoverElement);
-
-			} else {
-				System.out.println("Element was not visible to hover " + "\n");
-
-			}
-		} catch (StaleElementReferenceException e) {
-			System.out.println("Element with " + HoverElement
-					+ "is not attached to the page document"
-					+ e.getStackTrace());
-		} catch (NoSuchElementException e) {
-			System.out.println("Element " + HoverElement + " was not found in DOM"
-					+ e.getStackTrace());
-		} catch (Exception e) {
-			e.printStackTrace();
-			System.out.println("Error occurred while hovering"
-					+ e.getStackTrace());
-		}
-	}
-
-	public static boolean isElementPresent(WebElement element) {
-		boolean flag = false;
-		try {
-			if (element.isDisplayed()
-					|| element.isEnabled())
-				flag = true;
-		} catch (NoSuchElementException e) {
-			flag = false;
-		} catch (StaleElementReferenceException e) {
-			flag = false;
-		}
-		return flag;
-	}
-
-
-	public void IVerifyTheTextHoverOnCaregiver() {
+    public void IVerifyTheTextHoverOnCaregiver() {
 		String HoverOnCaregiverText = "Identify all caregivers physically and mentally able to provide required support to the patient in a home setting. Caregiver(s) do not necessarily need to reside in the home, but ADL support and treatment needs must be met.";
 		WebElement item = driver.findElement(By.xpath("//i[contains(@uib-tooltip,'Caregiver')]"));
 	    Assert.assertEquals(item.getAttribute("uib-tooltip"), HoverOnCaregiverText);
@@ -351,7 +301,6 @@ public class CompleteCarlform extends BaseClass {
 	}
 
 	public void Iverifyonmovingthemousehoverawayfromtheiconthemessageshoulddisapper() {
-        WebDriverWait wait=new WebDriverWait(driver,5);
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div.tooltip.ng-scope.ng-isolate-scope")));
-	}
+		Elementnotpresent(By.cssSelector("div.tooltip.ng-scope.ng-isolate-scope"));
+    }
 	}

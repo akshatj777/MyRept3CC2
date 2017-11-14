@@ -49,13 +49,8 @@ public class WorklistNeedReview extends BaseClass {
 		}
 	}
 
-	private void scrollToElement(WebElement el) {
-		if (driver instanceof JavascriptExecutor) {
-			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", el);
-		}
-	}
-
-	public void IselectthemonthfromcalendarfromdatepickerDischarge(int days) throws InterruptedException {
+	
+  public void IselectthemonthfromcalendarfromdatepickerDischarge(int days) throws InterruptedException {
 		String dateTime = getcurrentdate(days);
 		String date_dd_MM_yyyy[] = (dateTime.split("/"));
 		List<WebElement> list_AllMonthToBook = driver.findElements(By.cssSelector("body > div:nth-child(18) > div.datetimepicker-months > table > tbody > tr > td > span"));

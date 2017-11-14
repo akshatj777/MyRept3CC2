@@ -1,7 +1,6 @@
 package com.remedy.Episode2;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -22,8 +21,7 @@ public class PatientTopNavigation extends BaseClass {
 	}
 
 	public void iScrollPageToTop() {
-		JavascriptExecutor js = ((JavascriptExecutor) driver);
 		WebElement element = driver.findElement(By.cssSelector("div.row>h2"));
-		js.executeScript("arguments[0].scrollIntoView(true);", element);
+		scrollToElement(element);
 	}
 }

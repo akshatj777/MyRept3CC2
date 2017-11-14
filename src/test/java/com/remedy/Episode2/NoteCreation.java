@@ -34,7 +34,7 @@ public class NoteCreation extends BaseClass {
 		super(driver);
 	}
 	
-	public void I_click_on_the_patient_card_on_Patient_Card_Page() {
+	public void IclickonthepatientcardonPatientCardPage() {
 		clickElement(driver.findElement(By.cssSelector("div.row.cards-mode.isotope > div:nth-child(1) > div > div.card-header.col-xs-12.hover-pointer.ng-scope > div.card-header-content > div")));
 	}
 
@@ -50,7 +50,7 @@ public class NoteCreation extends BaseClass {
 		clickElement(driver.findElement(By.cssSelector(".btn.bg-white.btn-secondary.ng-scope")));
 	}
 
-	public void I_verify_whether_topic_drop_down_appears_on_the_Add_Clinical_Document_on_Note_Creation() {
+	public void IverifywhethertopicdropdownappearsontheAddClinicalDocumentonNoteCreation() {
 		isElementVisible(driver.findElement(By.cssSelector("span.ui-select-placeholder.text-muted.ng-binding")));
 	}
 
@@ -84,8 +84,7 @@ public class NoteCreation extends BaseClass {
 	}
 
 	public void IattachfileontheAddClinicalDocumentonNoteCreation() {
-
-		isElementVisible(driver.findElement(By.cssSelector(".add-icon.ng-pristine.ng-untouched.ng-valid.ng-empty")));
+        isElementVisible(driver.findElement(By.cssSelector(".add-icon.ng-pristine.ng-untouched.ng-valid.ng-empty")));
 	}
 
 	public void IclickonquickactionbuttonfornotecreationonPatientCardpage() {
@@ -96,8 +95,7 @@ public class NoteCreation extends BaseClass {
 
 	public void IclickonquickactionbuttonfornotecreationonPatientCardpageJavaScript() {
 		WebElement element = driver.findElement(By.cssSelector("div > button:nth-child(1).quick-action.ng-scope"));
-		Actions action = new Actions(driver);
-		action.moveToElement(element).click().perform();
+		clickByAction(element);
 	}
 
 	public void IverifywhethertopicdropdownappearsonAddClinicalDocumentonPatientCardpage() {
@@ -211,21 +209,9 @@ public class NoteCreation extends BaseClass {
 		String importDir = System.getProperty("user.dir");
 		String newDir = importDir + "\\" + "src" + "\\" + "test" + "\\" + "Imports";
 		String FileName=newDir+"\\"+"import.exe";
-	//	String FileName1=newDir+"\\"+"Remedy.csv";
-		String file1=FileName+" "+file;
+	    String file1=FileName+" "+file;
 	    Runtime.getRuntime().exec(file1) ;
-//		StringSelection s = new StringSelection(file);
-//        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(s, null);
-//		Robot robot = new Robot();
-//		robot.keyPress(java.awt.event.KeyEvent.VK_ENTER);
-//		robot.keyRelease(java.awt.event.KeyEvent.VK_ENTER);
-//		robot.keyPress(java.awt.event.KeyEvent.VK_CONTROL);
-//		robot.keyPress(java.awt.event.KeyEvent.VK_V);
-//		robot.keyRelease(java.awt.event.KeyEvent.VK_CONTROL);
-//		longDelay();
-//		robot.keyPress(java.awt.event.KeyEvent.VK_ENTER);
-
-	}
+   }
 
 	public void Iverifytheimageisattachedornot() {
 		longDelay();
@@ -494,7 +480,6 @@ public class NoteCreation extends BaseClass {
 
 	public void IVerifythattodaydateshouldbehighlightedincalendarasdefaultdate() {
 		String datevalue = driver.findElement(By.xpath("//input[@ng-model='$selection']")).getAttribute("value");
-		System.out.println("$$$Date is"+datevalue);
 		DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
 		Date date = new Date();
 		Assert.assertEquals(dateFormat.format(date), datevalue);
@@ -502,7 +487,6 @@ public class NoteCreation extends BaseClass {
 
 	public void IVerifythatuponselectingdatethroughcalendardateshouldgetpopulatedthefieldintheformatmmddyyyy() throws ParseException {
 		String datevalue = driver.findElement(By.xpath("//input[@ng-model='$selection']")).getAttribute("value");
-		System.out.println("$$$Date is"+datevalue);
 		validateDateFormat(datevalue);
 		
 	}

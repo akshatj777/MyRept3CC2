@@ -3,7 +3,9 @@ package com.remedy.baseClass;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
@@ -437,4 +439,41 @@ public class BaseClass {
 			e.printStackTrace();
 		}
 	}
+	
+	public void clickByAction(WebElement element){
+		Actions action=new Actions(driver);
+		action.moveToElement(element).click().build().perform();;
+   }
+	
+	public void scrollToElement(WebElement el) {
+		if (driver instanceof JavascriptExecutor) {
+			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", el);
+		}
+	}
+	
+	public void scrollToElementAndClick(WebElement el) {
+		if (driver instanceof JavascriptExecutor) {
+			((JavascriptExecutor) driver).executeScript("arguments[0].click();", el);
+		}
+	}
+	
+	public void MouseHoverByJavaScript(WebElement targetElement){
+		String javaScript = "var evObj = document.createEvent('MouseEvents');" +
+                            "evObj.initMouseEvent(\"mouseover\",true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);" +
+                            "arguments[0].dispatchEvent(evObj);";
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript(javaScript, targetElement);
+    }
+	
+	public void Elementnotpresent(By locator){
+	WebDriverWait wait=new WebDriverWait(driver,10);
+	wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
+	}
+	
+	public void setAttribute(WebElement element, String attName, String attValue) {
+	       JavascriptExecutor js = (JavascriptExecutor) driver;
+	        js.executeScript("arguments[0].setAttribute(arguments[1], arguments[2]);", 
+	                element, attName, attValue);
+	    }
+	
 }

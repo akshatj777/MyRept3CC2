@@ -55,8 +55,8 @@ public class ExceededSnfLos extends BaseClass {
 
 	public void Iclickondatepickerbuttontoselecttheadmitdateonnewtransition() {
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, 15);
-			wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#bp_personbundle_bpadmissiontype_admitDate")));
+		    iWillWaitToSee(By.cssSelector("#bp_personbundle_bpadmissiontype_admitDate"));
+		    WebDriverWait wait = new WebDriverWait(driver, 60);
 			wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#bp_personbundle_bpadmissiontype_admitDate"))).click();
 		} catch (WebDriverException wde) {
 			scrollToElement(driver.findElement(By.cssSelector("#bp_personbundle_bpadmissiontype_admitDate")));
@@ -64,11 +64,7 @@ public class ExceededSnfLos extends BaseClass {
 		}
 	}
 
-	private void scrollToElement(WebElement el) {
-		if (driver instanceof JavascriptExecutor) {
-			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", el);
-		}
-	}
+
 
 	public void IverifyLOSwithELOSonthepatientcardpage(String flag) {
 		iWillWaitToSee(By.xpath("//span[@ng-class='patient.$losClass']"));
@@ -78,11 +74,9 @@ public class ExceededSnfLos extends BaseClass {
 		int Int_Los_value = Integer.parseInt(Los_value);
 	    int Int_ELos_minimum_value = Integer.parseInt(minimum_Elos_value);
 		int Int_ELos_maximum_value = Integer.parseInt(maximum_Elos_value);
-		if(flag.equals("above"))
-		{
+		if(flag.equals("above")){
 			Assert.assertTrue(Int_Los_value > Int_ELos_maximum_value);
-		}else if(flag.equals("below"))
-		{
+		}else if(flag.equals("below")){
 			Assert.assertTrue(Int_Los_value < Int_ELos_minimum_value);
 			Assert.assertTrue(Int_Los_value < Int_ELos_maximum_value);
 		}

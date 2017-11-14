@@ -110,8 +110,7 @@ public class IndependenceCarlForm extends BaseClass {
 	}
 
 	public void IverifythesavedsectioninDischargesection(String section, int position) {
-	    WebDriverWait wait=new WebDriverWait(driver,5);
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//section/ul/li["+position+"]/a[text()='"+section+"']")));
-    }
+		Elementnotpresent(By.xpath("//section/ul/li["+position+"]/a[text()='"+section+"']"));
+	}
 
 }

@@ -72,8 +72,7 @@ public class DischargeCarlForm extends BaseClass {
        try{
 		clickElement(driver.findElement(By.xpath("//label[text()='"+text+"']/preceding-sibling::div")));
 		}catch(Exception e){
-			JavascriptExecutor js = (JavascriptExecutor)driver;
-			js.executeScript("arguments[0].scrollIntoView(true);",driver.findElement(By.xpath("//label[text()='"+text+"']/preceding-sibling::div")));
+			scrollToElement(driver.findElement(By.xpath("//label[text()='"+text+"']/preceding-sibling::div")));
 			clickElement(driver.findElement(By.xpath("//label[text()='"+text+"']/preceding-sibling::div")));
 		}
 	}
@@ -148,8 +147,7 @@ public class DischargeCarlForm extends BaseClass {
 
 	public void IselectadmissionwithlogiccounterDateonCalendarDischargeDateundersubformonDischargesection(int days) throws InterruptedException {
 		iWillWaitToSee(By.cssSelector("h3.ng-binding"));
-		Actions actions=new Actions(driver);
-		actions.moveToElement(driver.findElement(By.cssSelector("h3.ng-binding"))).click().perform();
+		clickByAction(driver.findElement(By.cssSelector("h3.ng-binding")));
 		String date=getcurrentdate(days);
 		String date_dd_MM_yyyy[] = date.split("/");
 		int yearDiff = Integer.parseInt(date_dd_MM_yyyy[2]) - Calendar.getInstance().get(Calendar.YEAR);
@@ -250,17 +248,14 @@ public class DischargeCarlForm extends BaseClass {
 	if(data.equals("no data")){
 	iWillWaitToSee(By.cssSelector("div:nth-child(3) > div:nth-child(2) > div > ul.ng-hide"));
 	isElementVisible(driver.findElement(By.cssSelector("div:nth-child(3) > div:nth-child(2) > div > ul.ng-hide")));
-	}else
-	{
-	WebDriverWait wait=new WebDriverWait(driver,10);
-	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div:nth-child(3) > div:nth-child(2) > div > ul.ng-hide")));
+	}else{
+	Elementnotpresent(By.cssSelector("div:nth-child(3) > div:nth-child(2) > div > ul.ng-hide"));
 	}
     }
 
     public void IverifyActualDischargeLocationsearchshoulddeterminedbyCareSetting() {
 	List<String> texts=getTextForElementfromList("span.ui-select-choices-row-inner > div.ng-binding.ng-scope");
-	for(String text:texts)
-	{
+	for(String text:texts){
 	String finaltext = text.substring(text.length() - 5);
 	Assert.assertEquals("(HHA)", finaltext);
 	}
@@ -285,9 +280,8 @@ public class DischargeCarlForm extends BaseClass {
 	}
 
 	public void IverifyCaretypeandDischargelocationfieldshouldgetrefreshedaspernewCaresetting() {
-	WebDriverWait wait=new WebDriverWait(driver,10);
-	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div.show-search.form-control.ng-valid-required")));
-	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div.form-control.ui-select-container.ng-touched.ng-valid-required")));
+		Elementnotpresent(By.cssSelector("div.show-search.form-control.ng-valid-required"));
+		Elementnotpresent(By.cssSelector("div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div.form-control.ui-select-container.ng-touched.ng-valid-required"));
 	}
 
 	public void IverifydischargeformshouldprovidefieldsiftheActualCareSettingdoesnotmatchtheCARLrecommendationproposedfacility(String text1,String text2) {
@@ -332,28 +326,25 @@ public class DischargeCarlForm extends BaseClass {
 	clickElement(driver.findElement(By.cssSelector("div:nth-child("+i+") > div.ui-select-match")));
 	Actions actions=new Actions(driver);
 	actions.moveToElement(driver.findElement(By.xpath("//span[@class='ui-select-choices-row-inner']/div[text()='"+value+"']"))).click().perform();
-    if(reason.equals("3"))
-	{
+    if(reason.equals("3")){
 	if(variable.equals("Who disagrees?")){
 	clickElement(driver.findElement(By.cssSelector("div:nth-child(4) > div:nth-child(3) > div.ui-select-match")));
 	}else{
 	clickElement(driver.findElement(By.cssSelector("div:nth-child(4) > div:nth-child(5) > div.ui-select-match")));  
 	 }}
-     }
+    }
 
 	public void IclickonReasoniconunderdisagreementunderRecommendationonDischargesection() {
 	clickElement(driver.findElement(By.cssSelector("div.add-icon.hover-pointer")));
      }
 
 	public void I_verify_that_User_cannot_view_icon_for_another_Reason() {
-	WebDriverWait wait=new WebDriverWait(driver,10);
-	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div.add-icon.hover-pointer")));
-	}
+	Elementnotpresent(By.cssSelector("div.add-icon.hover-pointer"));
+     }
 
     public void Iverifythatusershouldbeabletoremoveadditionalreasonwhichisadded() {
 	clickElement(driver.findElement(By.cssSelector("div:nth-child(4) > div.remove-icon.hover-pointer.ng-scope")));
-	WebDriverWait wait=new WebDriverWait(driver,10);
-	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div:nth-child(4) > div:nth-child(3) > div.ui-select-match")));
+	Elementnotpresent(By.cssSelector("div:nth-child(4) > div:nth-child(3) > div.ui-select-match"));
 	}
 
 	public void IverifythatuponselectinganyvaluetoActualcaresettingfieldpresenceofquestionisappearing(String question) {
@@ -455,8 +446,7 @@ public class DischargeCarlForm extends BaseClass {
 
 	public void IverifySaveandGoBackdoesnotappear() {
 	delay();
-	WebDriverWait wait=new WebDriverWait(driver,5);
-	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//a[@ng-click='saveCarlAndPrevious($event)']")));
+	Elementnotpresent(By.xpath("//a[@ng-click='saveCarlAndPrevious($event)']"));
 	}
 
 	public void iEnterDetailsInTextboxFieldPresentOnAddPatientModal(String detailFileds) {
@@ -529,9 +519,8 @@ public class DischargeCarlForm extends BaseClass {
 	public void IverifyusershouldbeabletosubmittheCARLformuponclickingtheSubmitlinkontheCARLReviewform() {
 	clickElement(driver.findElement(By.cssSelector("div.content-well > footer > div.top-row > div:nth-child(2) > button")));			
     longDelay();
-	WebDriverWait wait=new WebDriverWait(driver,5);
-	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div.content-well > footer > div.top-row > div:nth-child(2) > button")));
-	}
+    Elementnotpresent(By.cssSelector("div.content-well > footer > div.top-row > div:nth-child(2) > button"));
+    }
 
 	public void IclickonActualCare_SettingsubformdropdownunderRecommendationonDischargesection() {
     delay();
@@ -652,9 +641,8 @@ public class DischargeCarlForm extends BaseClass {
 	}
 
 	public void I_verify_the_tag_removed_successfully(String tag) {
-	WebDriverWait wait=new WebDriverWait(driver,05);
-	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[starts-with(@class,'tag-label') and contains(text(),'"+tag+"')]")));
-	}
+	Elementnotpresent(By.xpath("//div[starts-with(@class,'tag-label') and contains(text(),'"+tag+"')]"));
+    }
 
 	public void IverifypatientOnboardingstatus(String status) {
 	isElementVisible(driver.findElement(By.xpath("//span[@id='current_onboarding_status' and text()='"+status+"']")));

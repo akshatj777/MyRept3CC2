@@ -154,22 +154,19 @@ public class Readmission extends BaseClass {
 
 	public void IclickonthecentreofthecalendarheaderonDischargedatepickertoselectdateandmonthonTransitionPage() {
         WebElement element = driver.findElement(By.cssSelector("body > div:nth-child(17) > div.datetimepicker-days > table > thead > tr:nth-child(1) > th.switch"));
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click();", element);
+        scrollToElementAndClick(element);
 		clickElement(element);
 	}
 
 	public void Iclickondatepickerbuttontoselectthedischargedate() {
         WebElement element = driver.findElement(By.cssSelector("#bp_personbundle_bpadmissiontype_dischargeDate"));
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].scrollIntoView(true);", element);
+    	scrollToElement(element);
 		clickElement(element);
 	}
 
 	public void Iclickonupdatetransitiontoaddanewepisode() {
-		JavascriptExecutor js = ((JavascriptExecutor) driver);
 		WebElement element = driver.findElement(By.cssSelector("#submitButton"));
-		js.executeScript("arguments[0].scrollIntoView(true);", element);
+		scrollToElement(element);
 		clickElement(element);
 
 	}
@@ -183,20 +180,18 @@ public class Readmission extends BaseClass {
 	}
 
 	public void Iselectthedischargefacilityvalueonaddanewtransition(String facilityvalue) throws InterruptedException {
-		JavascriptExecutor js = (JavascriptExecutor) driver;
 		WebElement element1 = driver.findElement(By.cssSelector("#s2id_bp_personbundle_bpadmissiontype_admitFacility"));
-
-		js.executeScript("arguments[0].click();", element1);
+		scrollToElementAndClick(element1);
 		clickElement(element1);
 		Thread.sleep(5000);
 
 		WebElement element2 = driver.findElement(By.cssSelector("#s2id_autogen8_search"));
-
-		js.executeScript("arguments[0].click();", element2);
+		scrollToElementAndClick(element2);
+		
 		element2.sendKeys(facilityvalue);
 		Thread.sleep(10000);
 		WebElement element3 = driver.findElement(By.cssSelector("li.select2-highlighted"));
-		js.executeScript("arguments[0].click();", element3);
+		scrollToElementAndClick(element3);
 		clickElement(element3);
 
 	}
@@ -226,8 +221,7 @@ public class Readmission extends BaseClass {
 
 	public void IclickonthecentreofthecalendarheadertoselectdateandmonthonTransitionPageJavascript() {
 		WebElement element2 = driver.findElement(By.cssSelector("body > div:nth-child(17) >div.datetimepicker-days > table > thead > tr:nth-child(1) > th.switch"));
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].scrollIntoView(true);", element2);
+		scrollToElement(element2);
 		clickElement(element2);
 	}
 }
