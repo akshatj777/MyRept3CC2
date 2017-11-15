@@ -1,6 +1,6 @@
 Feature: Episode 2.0 DRG Type Filter
 
-  Scenario Outline: verify DRG Type filter is present under list of Filter options on Patient Page
+  Scenario: verify DRG Type filter is present under list of Filter options on Patient Page
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
@@ -61,7 +61,7 @@ Feature: Episode 2.0 DRG Type Filter
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
@@ -99,12 +99,12 @@ Then I click on the filterd patient on the patient card page
     Then I click on possible radio button under drg type filter option
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter
+    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I scroll the page to bottom by "-100"
     Then I verify "DRG Type: Possible" is appearing under selected filters on "1" position on search box for Admit Reason
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Patient Details" followed by "span" tag
     Then I switch to PatientTransitions frame

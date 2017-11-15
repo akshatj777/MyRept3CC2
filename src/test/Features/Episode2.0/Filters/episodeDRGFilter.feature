@@ -76,21 +76,18 @@ Then I click on the filterd patient on the patient card page
     Then I verify DRG Type Filter is displayed under List of Filter Options
     When I click on DRG Type Filter present on Filter Page
     Then I click on possible radio button under drg type filter option
-    Then I verify SSN Filter is displayed under List of Filter Options
-    When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I scroll the page to bottom by "-100"
-    Then I verify "DRG Type: Possible" is appearing under selected filters on "1" position on search box for Admit Reason
-Then I click on the filterd patient on the patient card page
+    Then I verify "DRG Type: Possible" is appearing under selected filters on "2" position on search box for Admit Reason
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
-    Then I will wait to see and click on "Patient Details" followed by "span" tag
+    Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear
     Then I verify "Possible" is appearing under drg status column under transitions on patient summary page
     Then I verify "drgid" "63" is appearing under drg column under transitions on patient summary page
 
     Examples: 
-      | drgid | Patient First Name | Patient Last Name     |
-      |   177 | PATIENT            | TESTADMITREASONFILTER |
+      | drgid | 
+      |   177 | 

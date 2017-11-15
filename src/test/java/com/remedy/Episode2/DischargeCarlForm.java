@@ -664,6 +664,6 @@ public class DischargeCarlForm extends BaseClass {
 
 	public void Iverifythelengthofstay(String stay,String unit) {
 	delay();
-	isElementVisible(driver.findElement(By.xpath("//div[starts-with(@ng-if,'patient.numberInpatientDays')]/div/label[text()='Length of Stay']/following-sibling::span[text()='"+stay+"']/following-sibling::span[text()='"+stay+"']")));
+	isElementVisible(driver.findElement(By.xpath("//div[starts-with(@ng-if,'patient.numberInpatientDays')]/div/label[text()='Length of Stay']/following-sibling::span[text()='"+stay+"']/following-sibling::span[text()='"+unit+"']")));
 	}
 }

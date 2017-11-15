@@ -1462,7 +1462,6 @@ public class PatientsPage extends BaseClass {
     	longDelay();
         for(int i=1;i<=39;i++)
     	{
-    		delay();
     		scrollToElement(driver.findElement(By.xpath("//ul/li["+i+"]/div[2]/label[starts-with(@for,'care-setting')]/i/following-sibling::span[1]")));
     		isElementVisible(driver.findElement(By.xpath("//ul/li["+i+"]/div[2]/label[starts-with(@for,'care-setting')]/i/following-sibling::span[1]")));
             Assert.assertEquals(driver.findElement(By.xpath("//ul/li["+i+"]/div[2]/label[starts-with(@for,'care-setting')]/i/following-sibling::span[1]")).getAttribute("textContent"),dropdownvalues.get(i-1));

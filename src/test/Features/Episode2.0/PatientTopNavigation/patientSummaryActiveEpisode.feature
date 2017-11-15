@@ -305,7 +305,7 @@ Feature: Patient Summary Verification for Active Episodes
     Then I verify the patient Age on patient summary
     Then I verify the patient SSN on patient summary
     Then I verify the patient bundle name "RESPIRATORY INFECTIONS & INFLAMMATIONS W MCC" on patient summary
-    Then I verify "Current Location" should be displayed as "(SNF) Skilled Nursing Coosa valley health care - Coosa valley health care"
+    Then I verify "Current Location" should be displayed as "(SNF) Skilled Nursing Coosa valley health care"
     Then I verify "Anchor Facility" should be displayed as "(SNF) Coosa valley health care"
     Then I verify the patient language "(English)" on patient summary
     Then I verify the patient Onboarding status field on patient summary
@@ -418,7 +418,7 @@ Feature: Patient Summary Verification for Active Episodes
     Then I verify the patient Age on patient summary
     Then I verify the patient SSN on patient summary
     Then I verify the patient bundle name "RESPIRATORY INFECTIONS & INFLAMMATIONS W MCC" on patient summary
-    Then I verify "Current Location" should be displayed as "(SNF) Skilled Nursing Coosa valley health care - Coosa valley health care"
+    Then I verify "Current Location" should be displayed as "(SNF) Skilled Nursing Coosa valley health care"
     Then I verify "Anchor Facility" should be displayed as "(SNF) Coosa valley health care"
     Then I verify the patient language "(English)" on patient summary
     Then I verify the patient Onboarding status field on patient summary
@@ -522,7 +522,7 @@ Feature: Patient Summary Verification for Active Episodes
     Then I verify the patient Date of birth on patient summary
     Then I verify the patient Age on patient summary
     Then I verify the patient SSN on patient summary
-    Then I verify the length of stay should be "3" "days inpatient"
+      Then I verify "Admit Date" should be displayed as "days to admission" "plus" "3"
     Then I verify the patient bundle name "<Bundle Name>" on patient summary
     Then I verify "Current Location" should be displayed as "(HHH) Inpatient Stamford - Stamford Hospital"
     Then I verify "Anchor Facility" should be displayed as "(HHH) Stamford Hospital"

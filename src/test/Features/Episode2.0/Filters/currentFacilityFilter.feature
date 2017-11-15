@@ -39,7 +39,7 @@ Feature: Episode 2.0 Current Facility Filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
@@ -65,6 +65,8 @@ Then I click on the filterd patient on the patient card page
     Then I select the "63" DRG value on the Diagnosis and DRG tab on add a new transition
     Then I click on the Create Transition Button to add a new transition
     Then I wait to the see the visibility of loader to disappear
+    Then I click on the Create Transition Button to add a new transition
+    Then I wait to the see the visibility of loader to disappear
     When I switch to default window from iframe
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
@@ -82,11 +84,11 @@ Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I scroll the page to bottom by "-100"
     Then I verify "Current Facility: Stamford Hospital - Stamford (STAMFORD, CT) (HHH)" is appearing under selected filters on "1" position on search box for Admit Reason
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Patient Details" followed by "span" tag
-    Then I verify "(HHH) Inpatient Stamford " is appearing under "Current Location" in Patient Summary Page
+    Then I verify "(HHH) Inpatient Stamford - Stamford Hospital " is appearing under "Current Location" in Patient Summary Page
 
     Examples: 
-      | Anchor Facility   | Patient First Name | Patient Last Name     |
-      | Stamford Hospital | PATIENT            | TESTADMITREASONFILTER |
+      | Anchor Facility   | 
+      | Stamford Hospital |

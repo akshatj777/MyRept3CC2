@@ -27,7 +27,7 @@ Feature: Episode 2.0 First Name Filter
     And I wait for 5000 milli seconds
     When I click on the Expand button on the patient card on the patient page
     And I wait for 5000 milli seconds
-    Then I verify <firstname> is appearing on the patient summary page
+   # Then I verify <firstname> is appearing on the patient summary page
     And I wait for 2000 milli seconds
 
     Examples: 

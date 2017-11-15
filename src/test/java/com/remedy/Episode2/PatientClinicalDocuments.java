@@ -246,8 +246,14 @@ public class PatientClinicalDocuments extends BaseClass {
 
 	public void IclickontheDiagnosisandDRGtabonaddanewtransitiontoselecttheDRG() {
      	iWillWaitToSee(By.cssSelector("a[href$='drg']"));
-     	delay();
+     	longDelay();
+     	try{
      	clickByAction(driver.findElement(By.xpath("//a[@data-toggle='tab' and text()='Diagnosis and DRG']")));
+     	}catch(Exception e)
+     	{
+     	scrollToElementAndClick(driver.findElement(By.xpath("//a[@data-toggle='tab' and text()='Diagnosis and DRG']")));
+     	clickElement(driver.findElement(By.xpath("//a[@data-toggle='tab' and text()='Diagnosis and DRG']")));
+     	}
 	}
 
 	public void IselecttheDRGtypeontheDiagnosisandDRGtabonaddanewtransition() {

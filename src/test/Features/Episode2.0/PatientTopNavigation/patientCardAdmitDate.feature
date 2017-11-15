@@ -40,7 +40,7 @@ Feature: Patient Cards- Generic Card- Admit Date
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-  Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
@@ -78,7 +78,7 @@ Feature: Patient Cards- Generic Card- Admit Date
     When I switch to default window from iframe
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
-  Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I verify "Readmission Date" should be displayed as "Admit" "minus" "28"
     Then I Verify that "Admit Date" should be in MM/DD/YYYY format
@@ -99,7 +99,7 @@ Feature: Patient Cards- Generic Card- Admit Date
     When I switch to default window from iframe
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
-  Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I verify "Readmission Date" should be displayed as "Date" "minus" "30"
     Then I will wait to see and click on "Transitions" followed by "span" tag
@@ -169,7 +169,7 @@ Feature: Patient Cards- Generic Card- Admit Date
     When I switch to default window from iframe
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
-  Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I verify "Admit Date" should be displayed as "Admit" "minus" "120"
     Then I verify Length of Stay should be displayed as "120"
@@ -196,7 +196,7 @@ Feature: Patient Cards- Generic Card- Admit Date
     When I switch to default window from iframe
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
-  Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     When I switch to iframe of patient eligibility on patient summary page
     Then I click on "Eligibility" dropdown
@@ -217,7 +217,7 @@ Feature: Patient Cards- Generic Card- Admit Date
     When I switch to default window from iframe
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
-  Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I verify Admit Date section should not be displayed for "Completed as Expired transition"
 
@@ -464,9 +464,9 @@ Feature: Patient Cards- Generic Card- Admit Date
     When I switch to default window from iframe
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
-  Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
-    Then I verify "Current Location" should be displayed as "(HHH) Inpatient 390146 - Warren General Hospital"
+    Then I verify "Current Location" should be displayed as "(HHH) Inpatient Warren General Hospital"
 
   Scenario: Verify inpatient days for patient1 active m2 episode no discharge (no episode end date) - HHH Inpatient
     Given I am on the login page
@@ -626,4 +626,4 @@ Feature: Patient Cards- Generic Card- Admit Date
     Then I scroll the page to bottom by "-100"
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
-    Then I verify "Admit Date" should be displayed as "days to admission" "plus" "5"
+    Then I verify "Admit Date" should be displayed as "days to admission" "plus" "4"
