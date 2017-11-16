@@ -169,8 +169,8 @@ Then I click on the filterd patient on the patient card page
 
   Scenario: Verify patient should be present in Home Health worklist when Episode is M2 Active and patient is discharge to HHA - Home Health Agency
     Given I am on the login page
-    When I enter email field <email> for login
-    And I enter password field <password> for Login
+    When I enter email field qa.admin@yopmail.com for login
+    And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile

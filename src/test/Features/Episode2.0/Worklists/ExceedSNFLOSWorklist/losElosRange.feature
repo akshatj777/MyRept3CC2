@@ -194,7 +194,7 @@ Feature: Patient status on Exceed SNF LOS Work List
     Then I will wait to see and click on "Exceeded SNF LOS" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
-    Then I enter "SSN" value under "ssn" filter
+     Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "Exceed SNF LOS" worklist on the Patient Card Page
@@ -211,7 +211,7 @@ Feature: Patient status on Exceed SNF LOS Work List
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the edit button on the "2" transition to edit the Active transition
+    Then I click on the edit button on the "1" transition to edit the Active transition
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I click on the Diagnosis and DRG tab on add a new transition to select the DRG
@@ -230,7 +230,7 @@ Feature: Patient status on Exceed SNF LOS Work List
     Then I will wait to see and click on "Post Acute" followed by "span" tag
     Then I will wait to see and click on "Exceeded SNF LOS" followed by "span" tag
     When I click on Filter button present on Patient Page
-    Then I enter "SSN" value under "ssn" filter
+    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Exceed SNF LOS" worklist on the Patient Card Page
