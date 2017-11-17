@@ -41,7 +41,7 @@ Feature: Model 2 Readmission
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
@@ -95,8 +95,8 @@ Then I click on the filterd patient on the patient card page
 
   Scenario: Patient with Pend Can Episode and readmission to an ACH facility as HHH-I without Drg
     Given I am on the login page
-    When I enter email field <email> for login
-    And I enter password field <password> for Login
+    When I enter email field qa.admin@yopmail.com for login
+    And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
@@ -112,7 +112,7 @@ Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
@@ -164,7 +164,7 @@ Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag

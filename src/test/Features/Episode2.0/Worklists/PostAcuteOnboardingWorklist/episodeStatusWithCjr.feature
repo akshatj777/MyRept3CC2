@@ -1,7 +1,7 @@
 @Episode @Worklist @PostAcuteOnboarding
 Feature: Patient status in Post Acute Onboarding Worklist
 
-   Scenario: Patient status in post onboarding worklist when admitted to HHH-inpatient without any drg
+  Scenario: Patient status in post onboarding worklist when admitted to HHH-inpatient without any drg
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
@@ -23,7 +23,7 @@ Feature: Patient status in Post Acute Onboarding Worklist
     When I click on Admitting Facility present on the Add Patient page
     And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page
     And I enter "WA784654785" in the Medicare ID present on the Add Patient page
-Then I click on the next button present on the Add Patient page
+    Then I click on the next button present on the Add Patient page
     Then I click on the next button present on the Primary Care Physician Information page
     Then I click on the Cancel Button on the New Transition on Add Patient page
     Then I switch back to old window
@@ -41,7 +41,7 @@ Then I click on the next button present on the Add Patient page
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
@@ -78,9 +78,9 @@ Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "Post-Acute Onboarding" worklist on the Patient Card Page
 
-   Scenario: Patient status in post onboarding worklist when Add today a BPCI DRG, working - Patient's episode is activated, patient will now show in the worklist.
+  Scenario: Patient status in post onboarding worklist when Add today a BPCI DRG, working - Patient's episode is activated, patient will now show in the worklist.
     Given I am on the login page
- When I enter email field qa.admin@yopmail.com for login
+    When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
@@ -97,7 +97,7 @@ Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
@@ -130,7 +130,7 @@ Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Post-Acute Onboarding" worklist on the Patient Card Page
 
-   Scenario: Patient status in post onboarding worklist when Update DRG to working DRG 1 (non bpci) - patient's episode will become Pending Cancellation, but will still show on worklist.
+  Scenario: Patient status in post onboarding worklist when Update DRG to working DRG 1 (non bpci) - patient's episode will become Pending Cancellation, but will still show on worklist.
     Given I am on the login page
     When I enter email field <email> for login
     And I enter password field <password> for Login
@@ -149,7 +149,7 @@ Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
@@ -182,9 +182,9 @@ Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Post-Acute Onboarding" worklist on the Patient Card Page
 
-   Scenario: Patient status in post onboarding worklist when Update the DRG to OTHER BPCI Final DRG - Patient should still show on worklist.
+  Scenario: Patient status in post onboarding worklist when Update the DRG to OTHER BPCI Final DRG - Patient should still show on worklist.
     Given I am on the login page
- When I enter email field qa.admin@yopmail.com for login
+    When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
@@ -201,7 +201,7 @@ Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag

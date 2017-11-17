@@ -41,7 +41,7 @@ Feature: Patient status on Readmission Discharges Work List
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
@@ -106,7 +106,7 @@ Then I click on the filterd patient on the patient card page
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Readmission Discharges" worklist on the Patient Card Page
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
@@ -151,7 +151,7 @@ Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
@@ -184,8 +184,7 @@ Then I click on the filterd patient on the patient card page
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I fill in "Admit" with logic "minus" with "8" days
     Then I wait to the see the visibility of loader to disappear
-    Then I fill in "Discharge" with logic "minus" with "7" days
-    Then I select the midnight time from the calendar from date picker on Transition Page
+    Then I fill in "Discharge at midnight" with logic "minus" with "6" days
     Then I select the "Admit" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
     Then I wait to the see the visibility of loader to disappear
     Then I select the "Admit" "caretype" "Inpatient" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
@@ -250,7 +249,7 @@ Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
@@ -327,7 +326,7 @@ Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
@@ -381,7 +380,7 @@ Then I click on the filterd patient on the patient card page
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Readmission Discharges" worklist on the Patient Card Page
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
@@ -426,7 +425,7 @@ Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag

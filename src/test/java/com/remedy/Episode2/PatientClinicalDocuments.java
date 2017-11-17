@@ -367,7 +367,7 @@ public class PatientClinicalDocuments extends BaseClass {
 	}
 
 	public void IVerifythatUseremailshouldbedisplayedundernotesreadonlyform() {
-		verifyTextForElement(driver.findElement(By.cssSelector("p > a.ng-binding")),"qa.emblemrn@yopmail.com");
+		verifyTextForElement(driver.findElement(By.cssSelector("p > a.ng-binding")),"qa.rn@yopmail.com");
 		}
 
 	public void IVerifythatUsernameshouldbedisplayedundernotesreadonlyform() {

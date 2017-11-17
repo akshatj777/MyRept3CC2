@@ -20,16 +20,17 @@ Feature: Episode 2.0 Expand Patient Card  for Patient Summary
     Then I Verify MRNs is present on the patient summary page
     Then I Verify Onboarding Status is present on the patient summary page
     
-    When I Click on Onboarding Status present on the patient summary page
+    Then I switch to "Onboarding status" frame followed by "#iFrameEC2PatientRisks"
+    Then I click on the need onboarding dropdown on patient summary
     
     Then I Verify Recalculate is present in the Onboarding Dropdown on the patient summary page
     Then I Verify Low Status is present in the Onboarding Dropdown on the patient summary page
     Then I Verify High Status is present in the Onboarding Dropdown on the patient summary page
     Then I Verify Needs-Onboarding Status in the Onboarding Dropdown on the patient summary page
     Then I Verify Not-Onboarded Status is present in the Onboarding Dropdown on the patient summary page
-    
+     When I switch to default window from iframe
     Then I Verify Eligibility is present on the patient summary page
-    
+    When I switch to iframe of patient eligibility on patient summary page
     When I Click on Eligibility present on the patient summary page
      
     Then I Verify Run Service is present in the Eligibility Dropdown on the patient summary page
@@ -39,7 +40,7 @@ Feature: Episode 2.0 Expand Patient Card  for Patient Summary
     Then I Verify Not Eligible ESRD is present in the Eligibility Dropdown on the patient summary page
     Then I Verify Error is present in the Eligibility Dropdown on the patient summary page
     Then I Verify Expired is present in the Eligibility Dropdown on the patient summary page
-    
+    When I switch to default window from iframe
     Then I Verify Tags is present on the patient summary page
     
     Then I verify "Hide Summary" is appearing in the maximized view on patient summary page

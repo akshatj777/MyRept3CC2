@@ -1,7 +1,7 @@
 @Episode @Worklist @NeedReview
 Feature: Patient status in Need Review Worklist
 
-   Scenario: Patient status with the 7 calendar days starts at midnight following the discharge date
+  Scenario: Patient status with the 7 calendar days starts at midnight following the discharge date
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
@@ -23,7 +23,7 @@ Feature: Patient status in Need Review Worklist
     When I click on Admitting Facility present on the Add Patient page
     And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page
     And I enter "WA784654785" in the Medicare ID present on the Add Patient page
-Then I click on the next button present on the Add Patient page
+    Then I click on the next button present on the Add Patient page
     Then I click on the next button present on the Primary Care Physician Information page
     Then I click on the Cancel Button on the New Transition on Add Patient page
     Then I switch back to old window
@@ -41,7 +41,7 @@ Then I click on the next button present on the Add Patient page
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
@@ -66,9 +66,6 @@ Then I click on the filterd patient on the patient card page
     Then I select the "Admit" "caretype" "Inpatient" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
     Then I select the "Admit" facility "Stamford Hospital" by "#s2id_bp_personbundle_bpadmissiontype_admitFacility" on add a new transition
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the Diagnosis and DRG tab on add a new transition to select the DRG
-    Then I select the "Working" DRG type on the Diagnosis and DRG tab on add a new transition
-    Then I select the "63" DRG value on the Diagnosis and DRG tab on add a new transition
     Then I click on the Create Transition Button to add a new transition
     Then I wait to the see the visibility of loader to disappear
     When I switch to default window from iframe
@@ -82,10 +79,10 @@ Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Need Review" worklist on the Patient Card Page
 
-   Scenario: Patient status with the 7 calendar days before midnight following the discharge date
+  Scenario: Patient status with the 7 calendar days before midnight following the discharge date
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
-     And I enter password field Episode1! for Login
+    And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
@@ -101,7 +98,7 @@ Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
