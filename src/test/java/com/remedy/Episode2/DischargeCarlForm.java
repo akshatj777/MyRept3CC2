@@ -513,6 +513,7 @@ public class DischargeCarlForm extends BaseClass {
 	public void Ienterfiltervalueunderfiltertoseeemblempatient() {
 	delay();
     iWillWaitToSee(By.xpath("//div[@class='ng-scope']/input"));
+    System.out.println("$$The SSN is"+final_ssn);
 	iFillInText(driver.findElement(By.xpath("//div[@class='ng-scope']/input")),final_ssn);
 	}
 

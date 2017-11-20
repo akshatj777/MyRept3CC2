@@ -41,7 +41,7 @@ Feature: Patient status in Inpatient Care Worklist
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
@@ -105,7 +105,7 @@ Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
@@ -160,7 +160,7 @@ Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
@@ -225,7 +225,7 @@ Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
@@ -255,7 +255,42 @@ Then I click on the filterd patient on the patient card page
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "Inpatient Care" worklist on the Patient Card Page
-
+    Then I click on "All" tab in the filter bar on patients page
+    Then I wait to the see the visibility of loader to disappear
+    When I click on Filter button present on Patient Page
+    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I click on Done button present on the Filter Page
+    Then I wait to the see the visibility of loader to disappear
+    Then I click on the filterd patient on the patient card page
+    Then I wait to the see the visibility of loader to disappear
+    Then I get the patient last name who have no CARL button in it
+    Then I will wait to see and click on "Patient Details" followed by "span" tag
+    Then I wait to the see the visibility of loader to disappear
+    Then I switch to PatientTransitions frame
+    Then I will fetch the value attribute of "Social Security Number" on patient details
+    When I switch to default window from iframe
+    Then I will wait to see and click on "Transitions" followed by "span" tag
+    Then I wait to the see the visibility of loader to disappear
+    Then I switch to PatientTransitions frame
+    Then I wait to the see the visibility of loader to disappear
+    Then I click on the edit button on the "1" transition to edit the Active transition
+    Then I wait to the see the visibility of loader to disappear
+    Then I will wait to see "Transition Info" followed by "a" tag
+    Then I wait to the see the visibility of loader to disappear
+    Then I select the "Admit" "caretype" "Inpatient" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
+    Then I click on update transition to add a new episode
+    Then I wait to the see the visibility of loader to disappear
+    When I switch to default window from iframe
+    Then I close the patient summary Page
+    Then I scroll the page to bottom by "-100"
+    Then I will wait to see and click on "Inpatient" followed by "span" tag
+    Then I will wait to see and click on "Inpatient Care" followed by "span" tag
+    Then I wait to the see the visibility of loader to disappear
+    When I click on Filter button present on Patient Page
+    Then I enter "SSN" value under "ssn" filter
+    Then I click on Done button present on the Filter Page
+    Then I wait to the see the visibility of loader to disappear
+    Then I verify the patient "present" on "Inpatient Care" worklist on the Patient Card Page
     Examples: 
       | Care Type   |
       | Outpatient  |
@@ -281,7 +316,7 @@ Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
@@ -339,7 +374,7 @@ Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
