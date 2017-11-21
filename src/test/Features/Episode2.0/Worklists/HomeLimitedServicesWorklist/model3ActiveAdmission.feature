@@ -253,6 +253,6 @@ Feature: Patient status on Home Limited Service Worklist
     Then I verify the patient "not present" on "Home With Limited Services" worklist on the Patient Card Page
 
     Examples: 
-      | care setting                            |
-      | HHA - Home With Limited Services Agency |
-      | HPC - Hospice                           |
+      | care setting               |
+      | HHA - Home Health Agency   |
+      | HPC - Hospice              |

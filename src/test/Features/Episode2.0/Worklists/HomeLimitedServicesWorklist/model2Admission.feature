@@ -1,5 +1,5 @@
 @Episode @Worklist @HomeLimited
-Feature: Patient status on Home Limited Service Worklist
+Feature: Patient status on Home Limited Service Worklist (Model 2 Episode status)
 
   Scenario: Verify patient should be present in Home with Limited worklist when Episode is Model2 Pend Canc and patient is readmitted to REH - Rehabilitation
     Given I am on the login page

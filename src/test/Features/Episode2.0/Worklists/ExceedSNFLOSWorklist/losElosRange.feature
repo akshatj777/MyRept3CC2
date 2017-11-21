@@ -1,5 +1,5 @@
 @Episode @Worklist @Exceed
-Feature: Patient status on Exceed SNF LOS Work List
+Feature: Patient status on Exceed SNF LOS Work List (Low below ELOS && LOS above ELOS)
 
   Scenario: Verify patient included in Exceed SNF when LOS is above the ELOS range
     Given I am on the login page

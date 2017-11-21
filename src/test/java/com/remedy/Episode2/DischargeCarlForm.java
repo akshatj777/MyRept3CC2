@@ -504,7 +504,7 @@ public class DischargeCarlForm extends BaseClass {
     longDelay();
     delay();
     Random r = new Random( System.currentTimeMillis() );
-	String ssn_start="7842";
+    String ssn_start="7842";
 	int ssn_end=((1 + r.nextInt(2)) * 10000 + r.nextInt(10000));
 	final_ssn=ssn_start+Integer.toString(ssn_end);
 	iFillInText(driver.findElement(By.cssSelector("#Patient_Details_ssn")),final_ssn);

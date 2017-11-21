@@ -1,5 +1,5 @@
 @Episode @Worklist @HomeHealth
-Feature: Patient status on Home Health Worklist
+Feature: Patient status on Home Health Worklist (Potential M3 Episode Status)
 
   Scenario: Verify patient should be present in Home Health worklist when Episode is Potential M3 Pend Canc and patient is readmitted to HHA - Home Health Agency
     Given I am on the login page

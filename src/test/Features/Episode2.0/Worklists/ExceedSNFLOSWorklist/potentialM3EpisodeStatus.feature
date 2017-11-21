@@ -1,5 +1,5 @@
 @Episode @Worklist @Exceed
-Feature: Patient status on Exceed SNF LOS Work List
+Feature: Patient status on Exceed SNF LOS Work List (Potential M3)
 
   Scenario: Verify patient status in EXCEED SNF LOS when patient is Potential M3 Active readmitted to SNF.
     Given I am on the login page
