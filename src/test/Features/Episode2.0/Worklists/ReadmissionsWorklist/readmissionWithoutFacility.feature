@@ -40,7 +40,7 @@ Feature: Patient Status with Active/Pending Cancellation episode having readmiss
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
@@ -88,8 +88,14 @@ Then I click on the filterd patient on the patient card page
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I verify the patient "present" on "Readmission" worklist on the Patient Card Page
-Then I click on the filterd patient on the patient card page
+    Then I verify the patient "not present" on "Readmission" worklist on the Patient Card Page
+    Then I click on "All" tab in the filter bar on patients page
+    Then I wait to the see the visibility of loader to disappear
+    When I click on Filter button present on Patient Page
+    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I click on Done button present on the Filter Page
+    Then I wait to the see the visibility of loader to disappear
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear

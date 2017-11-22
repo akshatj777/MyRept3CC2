@@ -145,7 +145,7 @@ Then I click on the filterd patient on the patient card page
     Then I verify "Therapies Needed" should appear on Anticipated Discharge Needs section
     Then I verify "Physical therapy" checkbox appears under Therapies Needed on Anticipated Discharge Needs section
     Then I verify "Speech and language" checkbox appears under Therapies Needed on Anticipated Discharge Needs section
-    Then I verify "Occupational therapyPhysical therapy" checkbox appears under Therapies Needed on Anticipated Discharge Needs section
+    Then I verify "Occupational therapy" checkbox appears under Therapies Needed on Anticipated Discharge Needs section
     Then I verify "None" checkbox appears under Therapies Needed on Anticipated Discharge Needs section
     Then I verify "Transition of Care Needs" should appear on Anticipated Discharge Needs section
     Then I verify "Injetctable Meds" checkbox appears under Transition of Care Needs on Anticipated Discharge Needs section

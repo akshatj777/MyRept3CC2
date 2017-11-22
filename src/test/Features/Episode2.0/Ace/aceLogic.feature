@@ -89,7 +89,7 @@ Feature: Store Correct Admit Facilities
     Then I select the "Admit" "caresetting" "SNF - Skilled Nursing Facility" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
     Then I wait to the see the visibility of loader to disappear
     Then I select the "Admit" "caretype" "Skilled Nursing" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
-    Then I select the "Admit" facility "test SNF two facility" by "#s2id_bp_personbundle_bpadmissiontype_admitFacility" on add a new transition
+    Then I select the "Admit" facility "coosa valley health care" by "#s2id_bp_personbundle_bpadmissiontype_admitFacility" on add a new transition
     Then I select the "1" LOS days on Discharge date on Add Transition
     Then I select the "Discharge" "caresetting" "HHH - Hospital" by "#bp_personbundle_bpadmissiontype_dischargeFacilityCategory" on add a new transition
     Then I wait to the see the visibility of loader to disappear
@@ -107,6 +107,7 @@ Feature: Store Correct Admit Facilities
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
+    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     And I click on the top user account link
     Then I select Log Out option from the dropdown
     Given I am on the login page
@@ -126,6 +127,7 @@ Feature: Store Correct Admit Facilities
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
+    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     And I click on the top user account link
     Then I select Log Out option from the dropdown
     Given I am on the login page
@@ -145,25 +147,10 @@ Feature: Store Correct Admit Facilities
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
+    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     And I click on the top user account link
     Then I select Log Out option from the dropdown
-    Given I am on the login page
-    When I enter email field test.snftwo@yopmail.com for login
-    And I enter password field Testing1 for Login
-    Then I click Access button
-    Then I should see Tile text Episodes 2.0
-    When I click on the "Episodes 2.0" tile
-    Then I verify current page "Remedy Partners" title
-    And I should see "All" tab in the filter bar on patients page
-    Then I should see search box appearing on the patients page
-    When I click on Filter button present on Patient Page
-    And I click on Filters button present on Filter Page
-    Then I verify SSN Filter is displayed under List of Filter Options
-    When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
-    Then I click on Done button present on the Filter Page
-    Then I wait to the see the visibility of loader to disappear
-    Then I verify the patient "present" on "All" worklist on the Patient Card Page
+    
     Given I am on the login page
     When I enter email field test.hhhtwo@yopmail.com for login
     And I enter password field Testing1 for Login
@@ -183,7 +170,24 @@ Feature: Store Correct Admit Facilities
     Then I verify the patient "not present" on "All" worklist on the Patient Card Page
     And I click on the top user account link
     Then I select Log Out option from the dropdown
-    
+    Given I am on the login page
+    When I enter email field qa.fieldrn@yopmail.com for login
+    And I enter password field Episode1! for Login
+    Then I click Access button
+    Then I should see Tile text Episodes 2.0
+    When I click on the "Episodes 2.0" tile
+    Then I verify current page "Remedy Partners" title
+    And I should see "All" tab in the filter bar on patients page
+    Then I should see search box appearing on the patients page
+    When I click on Filter button present on Patient Page
+    And I click on Filters button present on Filter Page
+    Then I verify SSN Filter is displayed under List of Filter Options
+    When I click on SSN Filter present on Filter Page
+    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I click on Done button present on the Filter Page
+    Then I wait to the see the visibility of loader to disappear
+    Then I verify the patient "present" on "All" worklist on the Patient Card Page
+    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
@@ -224,6 +228,7 @@ Feature: Store Correct Admit Facilities
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
+    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     And I click on the top user account link
     Then I select Log Out option from the dropdown
     Given I am on the login page
@@ -283,6 +288,7 @@ Feature: Store Correct Admit Facilities
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
+    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
@@ -329,6 +335,7 @@ Feature: Store Correct Admit Facilities
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
+    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     And I click on the top user account link
     Then I select Log Out option from the dropdown
     
@@ -351,7 +358,7 @@ Feature: Store Correct Admit Facilities
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
-    
+    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
      Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
@@ -375,7 +382,7 @@ Feature: Store Correct Admit Facilities
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
-    
+    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
@@ -395,6 +402,7 @@ Feature: Store Correct Admit Facilities
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
+    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     And I click on the top user account link
     Then I select Log Out option from the dropdown
     Given I am on the login page
@@ -436,8 +444,8 @@ Feature: Store Correct Admit Facilities
     And I click on the top user account link
     Then I select Log Out option from the dropdown
     Given I am on the login page
-    When I enter email field test.snftwo@yopmail.com for login
-    And I enter password field Testing1 for Login
+    When I enter email field qa.fieldrn@yopmail.com for login
+    And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
@@ -489,6 +497,7 @@ Feature: Store Correct Admit Facilities
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
+    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
@@ -535,6 +544,7 @@ Feature: Store Correct Admit Facilities
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
+    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     And I click on the top user account link
     Then I select Log Out option from the dropdown
     
@@ -555,6 +565,7 @@ Feature: Store Correct Admit Facilities
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
+    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     And I click on the top user account link
     Then I select Log Out option from the dropdown
     
@@ -575,6 +586,7 @@ Feature: Store Correct Admit Facilities
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
+    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     And I click on the top user account link
     Then I select Log Out option from the dropdown
     
@@ -607,6 +619,7 @@ Feature: Store Correct Admit Facilities
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
+    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     And I click on the top user account link
     Then I select Log Out option from the dropdown
     
@@ -629,7 +642,7 @@ Feature: Store Correct Admit Facilities
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
-    
+    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
@@ -669,7 +682,7 @@ Feature: Store Correct Admit Facilities
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
-    
+    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
    
   Scenario: Readmission to HHH 1 and HHH 2
     When I enter email field qa.admin@yopmail.com for login
@@ -1632,8 +1645,8 @@ Feature: Store Correct Admit Facilities
     And I click on the top user account link
     Then I select Log Out option from the dropdown
     Given I am on the login page
-    When I enter email field test.snftwo@yopmail.com for login
-    And I enter password field Testing1 for Login
+    When I enter email field qa.fieldrn@yopmail.com for login
+    And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
@@ -1966,8 +1979,8 @@ Feature: Store Correct Admit Facilities
     And I click on the top user account link
     Then I select Log Out option from the dropdown
     Given I am on the login page
-    When I enter email field test.snftwo@yopmail.com for login
-    And I enter password field Testing1 for Login
+    When I enter email field qa.fieldrn@yopmail.com for login
+    And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
@@ -2049,8 +2062,8 @@ Feature: Store Correct Admit Facilities
     And I click on the top user account link
     Then I select Log Out option from the dropdown
     Given I am on the login page
-    When I enter email field test.snftwo@yopmail.com for login
-    And I enter password field Testing1 for Login
+    When I enter email field qa.fieldrn@yopmail.com for login
+    And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
