@@ -91,6 +91,7 @@ Feature: Patient Status with Active/Pending Cancellation episode having readmiss
     Then I verify the patient "not present" on "Readmission" worklist on the Patient Card Page
     Then I click on "All" tab in the filter bar on patients page
     Then I wait to the see the visibility of loader to disappear
+    Then I scroll the page to bottom by "-100"
     When I click on Filter button present on Patient Page
     Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
     Then I click on Done button present on the Filter Page

@@ -234,8 +234,8 @@ public class CompleteCarlformSteps extends DriverScript {
 		completecarl.IEnterPrimaryPhoneToCreateCaregiver(phone);
 	}
 
-	@Then("^I click on ([^\"]*) button for Additional phone number to Create Caredriver$")
-	public void I_Click_On_Button_For_Additional_PhoneNumber_To_Create_Caredriver(String phone) throws Throwable {
+	@Then("^I click on ([^\"]*) button for Additional phone number to Create Caregiver$")
+	public void I_Click_On_Button_For_Additional_PhoneNumber_To_Create_Caregiver(String phone) throws Throwable {
 		completecarl.IClickOnAddPhoneButtonToCreateCaregiver(phone);
 	}
 

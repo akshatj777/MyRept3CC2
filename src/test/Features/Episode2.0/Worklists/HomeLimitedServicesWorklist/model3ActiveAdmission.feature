@@ -120,7 +120,7 @@ Feature: Patient status on Home Limited Service Worklist
     Then I verify the patient "present" on "Home With Limited Services" worklist on the Patient Card Page
 
   Scenario: Verify Patient should be included in Home With Limited Services worklist latest anchor admission's with discharge care setting as HOM/REH(outpatient).
-     Given I am on the login page
+    Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
@@ -253,6 +253,6 @@ Feature: Patient status on Home Limited Service Worklist
     Then I verify the patient "not present" on "Home With Limited Services" worklist on the Patient Card Page
 
     Examples: 
-      | care setting               |
-      | HHA - Home Health Agency   |
-      | HPC - Hospice              |
+      | care setting             |
+      | HHA - Home Health Agency |
+      | HPC - Hospice            |
