@@ -44,11 +44,6 @@ Feature: Patient status on Other Work List
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
-    Then I will wait to see and click on "Patient Details" followed by "span" tag
-    Then I wait to the see the visibility of loader to disappear
-    Then I switch to PatientTransitions frame
-    Then I will fetch the value attribute of "Social Security Number" on patient details
-    When I switch to default window from iframe
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
@@ -82,7 +77,7 @@ Feature: Patient status on Other Work List
     Then I will wait to see and click on "Other" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
-    Then I enter "SSN" value under "ssn" filter
+    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Alternative" worklist on the Patient Card Page
@@ -113,14 +108,11 @@ Feature: Patient status on Other Work List
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
-    Then I will wait to see and click on "Patient Details" followed by "span" tag
-    Then I wait to the see the visibility of loader to disappear
-    Then I switch to PatientTransitions frame
-    Then I will fetch the value attribute of "Social Security Number" on patient details
-    When I switch to default window from iframe
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
+    Then I wait to the see the visibility of loader to disappear
+    Then I delete the active transition no "1" to make the patient cancelled
     Then I wait to the see the visibility of loader to disappear
     Then I click on the edit button on the "1" transition to edit the Active transition
     Then I wait to the see the visibility of loader to disappear
@@ -130,6 +122,8 @@ Feature: Patient status on Other Work List
     Then I select the "Discharge" facility "Beaumont Health - Farmington Hills" by "#s2id_bp_personbundle_bpadmissiontype_dischargeFacility" on add a new transition
     Then I click on update transition to add a new episode
     Then I wait to the see the visibility of loader to disappear
+    Then I wait to the see the visibility of loader to disappear
+    Then I click on the Create Transition Button to add a new transition
     When I switch to default window from iframe
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
@@ -137,7 +131,7 @@ Feature: Patient status on Other Work List
     Then I will wait to see and click on "Other" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
-    Then I enter "SSN" value under "ssn" filter
+    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "Alternative" worklist on the Patient Card Page

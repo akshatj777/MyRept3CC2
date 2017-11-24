@@ -1,7 +1,7 @@
 @Episode @Worklist @Alternative
 Feature: Patient status on Other Work List
 
-   Scenario: Verify Patient should be included in Other worklist Model 3 Episode status discharged to SNF .
+  Scenario: Verify Patient should be included in Other worklist Model 3 Episode status discharged to SNF .
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
@@ -41,14 +41,9 @@ Feature: Patient status on Other Work List
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
-    Then I will wait to see and click on "Patient Details" followed by "span" tag
-    Then I wait to the see the visibility of loader to disappear
-    Then I switch to PatientTransitions frame
-    Then I will fetch the value attribute of "Social Security Number" on patient details
-    When I switch to default window from iframe
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
@@ -82,7 +77,7 @@ Then I click on the filterd patient on the patient card page
     Then I will wait to see and click on "Other" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
-    Then I enter "SSN" value under "ssn" filter
+    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Alternative" worklist on the Patient Card Page

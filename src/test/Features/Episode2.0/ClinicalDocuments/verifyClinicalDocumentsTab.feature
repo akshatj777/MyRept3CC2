@@ -1,4 +1,4 @@
-@Episode @Clinical 
+@Episode @Clinical
 Feature: Verify the Clinical Documents section
 
   Scenario Outline: To verify the functionalities under Clinical Documents Section
@@ -23,7 +23,7 @@ Feature: Verify the Clinical Documents section
     When I click on Admitting Facility present on the Add Patient page
     And I Select "Stamford Hospital" from the list of admitting facility present on the Add Patient page
     And I enter "WA784654785" in the Medicare ID present on the Add Patient page
-Then I click on the next button present on the Add Patient page
+    Then I click on the next button present on the Add Patient page
     Then I click on the next button present on the Primary Care Physician Information page
     Then I click on the Cancel Button on the New Transition on Add Patient page
     Then I switch back to old window
@@ -71,7 +71,7 @@ Then I click on the next button present on the Add Patient page
     Then I click on the create Note Button on Add Clinical Document on Patient Card
     Then I verify that create Note has been successfully created
     Then I wait to the see the visibility of loader to disappear
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I will wait to see and click on "Patient Details" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
@@ -117,7 +117,7 @@ Then I click on the filterd patient on the patient card page
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify CARL button is "appearing" on the patient card
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
@@ -147,7 +147,7 @@ Then I click on the filterd patient on the patient card page
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
     Then I verify current page "Remedy Partners" title
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I will wait to see "Clinical Documents" followed by "span" tag
     Then I will wait to see and click on "Clinical Documents" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
@@ -222,7 +222,7 @@ Then I click on the filterd patient on the patient card page
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I verify CARL button is "appearing" on the patient card
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
@@ -235,7 +235,7 @@ Then I click on the filterd patient on the patient card page
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
     Then I verify current page "Remedy Partners" title
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Clinical Documents" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
@@ -269,7 +269,7 @@ Then I click on the filterd patient on the patient card page
     Then I click on the cross button to close the CARL document form
     Then I scroll the page to bottom by "-100"
     Then I verify current page "Remedy Partners" title
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
     Then I click on "Discharge" "4" section on left navigator
@@ -283,7 +283,7 @@ Then I click on the filterd patient on the patient card page
     Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I verify CARL button is "not appearing" on the patient card
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Clinical Documents" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
@@ -318,7 +318,7 @@ Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I scroll the page to bottom by "-100"
     Then I wait to the see the visibility of loader to disappear
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Clinical Documents" followed by "span" tag
@@ -330,5 +330,3 @@ Then I click on the filterd patient on the patient card page
     Then I verify that Hide History link should appear when user currently on Show History section
     Then I verify that upon selecting Hide History user should only see the information of the last user who saved the form
     Then I verify that there should be an Attachment icon on Clinical Documents Activity Section
-
- 

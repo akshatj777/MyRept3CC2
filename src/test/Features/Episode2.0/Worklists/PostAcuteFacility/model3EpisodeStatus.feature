@@ -44,11 +44,6 @@ Feature: Patient status on Post Acute Facility Work List
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
-    Then I will wait to see and click on "Patient Details" followed by "span" tag
-    Then I wait to the see the visibility of loader to disappear
-    Then I switch to PatientTransitions frame
-    Then I will fetch the value attribute of "Social Security Number" on patient details
-    When I switch to default window from iframe
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
@@ -81,7 +76,7 @@ Feature: Patient status on Post Acute Facility Work List
     Then I will wait to see and click on "Post-Acute Facility" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
-    Then I enter "SSN" value under "ssn" filter
+    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Post-Acute Facility" worklist on the Patient Card Page
@@ -106,7 +101,7 @@ Feature: Patient status on Post Acute Facility Work List
     Then I will wait to see and click on "Post-Acute Facility" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
-    Then I enter "SSN" value under "ssn" filter
+    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Post-Acute Facility" worklist on the Patient Card Page
@@ -154,11 +149,6 @@ Feature: Patient status on Post Acute Facility Work List
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
-    Then I will wait to see and click on "Patient Details" followed by "span" tag
-    Then I wait to the see the visibility of loader to disappear
-    Then I switch to PatientTransitions frame
-    Then I will fetch the value attribute of "Social Security Number" on patient details
-    When I switch to default window from iframe
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
@@ -196,7 +186,7 @@ Feature: Patient status on Post Acute Facility Work List
     Then I will wait to see and click on "Post-Acute Facility" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
-    Then I enter "SSN" value under "ssn" filter
+    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "Post-Acute Facility" worklist on the Patient Card Page

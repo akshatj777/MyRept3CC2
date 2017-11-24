@@ -127,7 +127,7 @@ public class PatientClinicalDocuments extends BaseClass {
         requiredcombolisttext.addAll(Arrays.asList(expectedvalues));
         for(int i=1;i<5;i++)
         {
-       	Assert.assertEquals(getTextForElement(driver.findElement(By.xpath("//div[contains(@class,'ng-scope')]/table/thead/tr/th['"+i+"']"))),requiredcombolisttext.get(i-1));
+       	Assert.assertEquals(getTextForElement(driver.findElement(By.xpath("//div[contains(@class,'ng-scope')]/table/thead/tr/th["+i+"]"))),requiredcombolisttext.get(i-1));
         }
 		
 	}
@@ -276,11 +276,12 @@ public class PatientClinicalDocuments extends BaseClass {
 	}
 
 	public void Iverifythattitleofdocumentortopicofnoteshouldappearasalinkinthesection() throws InterruptedException {
-        String URL = driver.findElement(By.cssSelector("table > tbody > tr > td:nth-child(1) > a > span")).getAttribute("href");
+        String URL = driver.findElement(By.cssSelector("table > tbody > tr:nth-child(1) > td:nth-child(1) > a > span")).getAttribute("href");
+        boolean CARL = URL.contains("carl");
+	    Assert.assertTrue(CARL);
+	    URL=driver.findElement(By.cssSelector("table > tbody > tr:nth-child(2) > td:nth-child(1) > a > span")).getAttribute("href");
 		boolean Note = URL.contains("note");
 		Assert.assertTrue(Note);
-		boolean CARL = URL.contains("carl");
-		Assert.assertTrue(CARL);
 		
 	}
 
@@ -375,7 +376,7 @@ public class PatientClinicalDocuments extends BaseClass {
 	    String[] information=text.split(";");
 		String username=information[0];
 		String username1 = username.trim();
-		Assert.assertEquals(username1,"RN EMBLEMTESTING");
+		Assert.assertEquals(username1,"RN MEDICARETESTING");
 		}
 
 	public void IverifytheActivityDateandtimeofthenoteundernotesreadonlyform() {

@@ -44,11 +44,7 @@ Feature: Patient status on Home Limited Service Worklist
 Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
-    Then I will wait to see and click on "Patient Details" followed by "span" tag
-    Then I wait to the see the visibility of loader to disappear
-    Then I switch to PatientTransitions frame
-    Then I will fetch the value attribute of "Social Security Number" on patient details
-    When I switch to default window from iframe
+    
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
@@ -90,7 +86,7 @@ Then I click on the filterd patient on the patient card page
     Then I will wait to see and click on "Home With Limited Services" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
-    Then I enter "SSN" value under "ssn" filter
+    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "Home With Limited Services" worklist on the Patient Card Page
@@ -98,7 +94,7 @@ Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I scroll the page to bottom by "-100"
     When I click on Filter button present on Patient Page
-    Then I enter "SSN" value under "ssn" filter
+    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
 Then I click on the filterd patient on the patient card page
@@ -121,7 +117,7 @@ Then I click on the filterd patient on the patient card page
     Then I will wait to see and click on "Home With Limited Services" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
-    Then I enter "SSN" value under "ssn" filter
+    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "Home With Limited Services" worklist on the Patient Card Page
