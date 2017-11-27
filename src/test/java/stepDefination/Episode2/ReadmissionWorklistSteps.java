@@ -167,4 +167,15 @@ public class ReadmissionWorklistSteps extends DriverScript {
 	public void I_remove_the_discharge_date_on_the_transition_page() throws Throwable {
 		admission.Iremovethedischargedateonthetransitionpage();
 	}
+	
+	@Then ("^I verify the episode becomes active with Episode initator \"([^\"]*)\" at row \"([^\"]*)\" in column \"([^\"]*)\" in transition table$")
+	public void I_verify_episode_initiator(String initator,int row,int column){
+		admission.Iverifyepisodeinitiator(initator,row,column);
+	}
+	
+    @Then ("^I verify the \"([^\"]*)\" where DRG gets updated to \"([^\"]*)\" at row \"([^\"]*)\" in transition table$")
+	public void I_verify_the_DRG_on_transition_table(String status,String DRG,int row){
+    	admission.IverifytheDRGontransitiontable(DRG,row);
+	}
+	
 }

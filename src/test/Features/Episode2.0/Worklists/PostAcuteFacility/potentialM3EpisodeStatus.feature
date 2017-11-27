@@ -1,5 +1,5 @@
 @Episode @Worklist @PostAcute
-Feature: Patient status on Post Acute Facility Work List
+Feature: Patient status on Post Acute Facility Work List(Potential M3 Episode status)
 
   Scenario: Verify patient in post acute facility worklist with Episode status as Potential M3 when current Discharge Care Setting is IRF with future date.
     Given I am on the login page

@@ -1,5 +1,5 @@
 @Episode @Worklist @HomeLimited
-Feature: Patient status on Home Limited Service Worklist
+Feature: Patient status on Home Limited Service Worklist((Model 3 Episode status))
 
   Scenario: Verify patient should be present in Home with limited services worklist when Episode is Model3 Pend Canc and patient is readmitted to REH - Rehabilitation
     Given I am on the login page
@@ -44,7 +44,6 @@ Feature: Patient status on Home Limited Service Worklist
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
-    
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
@@ -158,7 +157,6 @@ Feature: Patient status on Home Limited Service Worklist
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
-    
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
@@ -217,7 +215,6 @@ Feature: Patient status on Home Limited Service Worklist
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
-    
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame

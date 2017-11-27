@@ -1,5 +1,5 @@
 @Episode @Worklist @Readmission
-Feature: CJR Readmission To Ach Facility
+Feature: CJR Readmission To Ach Facility(CJR Episode status)
 
   Scenario: Patient with Active Episode and readmission to an ACH facility as HHH-I
     Given I am on the login page

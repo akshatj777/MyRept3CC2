@@ -1,5 +1,5 @@
 @Episode @Worklist @HomeLimited
-Feature: Patient status on Home Limited Service Worklist
+Feature: Patient status on Home Limited Service Worklist(Potential M3 Episode status)
 
   Scenario: Verify patient should be present in Home Limited Services worklist when Episode is Potential M3 Pend Canc and patient is readmitted to REH - Rehabilitation
     Given I am on the login page

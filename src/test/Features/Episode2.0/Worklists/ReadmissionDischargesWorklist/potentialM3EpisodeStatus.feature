@@ -1,5 +1,5 @@
 @Episode @Worklist @ReadmissionDischarges
-Feature: Patient status on Readmission Discharges Work List
+Feature: Patient status on Readmission Discharges Work List(Potential m3 Episode status)
 
   Scenario: Patient with Episode status as Potential M3 with a Readmission to SNF (any care type) discharge care setting facility within last 7 days
     Given I am on the login page

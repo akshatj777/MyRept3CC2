@@ -1,5 +1,5 @@
 @Episode @Worklist @Alternative
-Feature: Patient status on Other/Alternative Work List
+Feature: Patient status on Other/Alternative Work List(Model2 Episode status)
 
   Scenario Outline: Verify patient should be present in Alternative worklist when Episode is M2 Pend Canc and patient is readmitted to SNF
     Given I am on the login page

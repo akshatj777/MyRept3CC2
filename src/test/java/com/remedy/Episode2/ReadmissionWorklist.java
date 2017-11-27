@@ -247,6 +247,8 @@ public class ReadmissionWorklist extends BaseClass {
 			longDelay();
 			clickElement(driver.findElement(By.cssSelector("div:nth-child("+ patientno +") > div > div > div > div > div > a > span.attestation-label.ng-binding")));
 			longDelay();
+			longDelay();
+			Elementnotpresent(By.xpath("//div[starts-with(@ng-if,'patient.attestation.value')]["+patientno+"]"));
 			}catch(Exception e){
 				return;
 			}
@@ -285,5 +287,15 @@ public class ReadmissionWorklist extends BaseClass {
 		WebDriverWait wait=new WebDriverWait(driver,5);
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//h3[@class='ng-scope']/span[contains(text(),'" + newname + "')]")));
 		}
+	}
+
+	public void Iverifyepisodeinitiator(String initator, int row, int column) {
+		iWillWaitToSee(By.xpath("//*[@id='ui-transitions-table']/tbody/tr["+row+"]/td[+column+][@class=' Episode Initiator' and text()='"+initator+"']"));
+		isElementVisible(driver.findElement(By.xpath("//*[@id='ui-transitions-table']/tbody/tr["+row+"]/td[+column+][@class=' Episode Initiator' and text()='"+initator+"']")));
+	}
+
+	public void IverifytheDRGontransitiontable(String DRG,int row) {
+		iWillWaitToSee(By.xpath("//*[@id='ui-transitions-table']/tbody/tr["+row+"]/td[9]/div/table/tbody/tr[2]/td[contains(text(),'"+DRG+"')][2]"));
+		isElementVisible(driver.findElement(By.xpath("//*[@id='ui-transitions-table']/tbody/tr["+row+"]/td[9]/div/table/tbody/tr[2]/td[contains(text(),'"+DRG+"')][2]")));
 	}	
     }

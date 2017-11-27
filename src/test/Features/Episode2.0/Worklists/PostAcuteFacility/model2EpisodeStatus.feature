@@ -1,5 +1,5 @@
 @Episode @Worklist @PostAcute
-Feature: Patient status on Post Acute Facility Work List
+Feature: Patient status on Post Acute Facility Work List(Model2 Episode status)
 
   Scenario: Verify patient in post acute facility worklist with Episode status as Active M2 when current Discharge Care Setting is IRF
     Given I am on the login page
@@ -44,7 +44,6 @@ Feature: Patient status on Post Acute Facility Work List
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
-    
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
@@ -148,7 +147,6 @@ Feature: Patient status on Post Acute Facility Work List
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
-    
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
@@ -287,7 +285,6 @@ Feature: Patient status on Post Acute Facility Work List
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
-    
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
@@ -391,7 +388,6 @@ Feature: Patient status on Post Acute Facility Work List
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
-    
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
@@ -477,7 +473,6 @@ Feature: Patient status on Post Acute Facility Work List
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
-    
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame

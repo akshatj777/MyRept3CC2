@@ -1,5 +1,5 @@
 @Episode @Worklist @Alternative
-Feature: Patient status on Other Work List
+Feature: Patient status on Other Work List(CJR Episode status)
 
   Scenario: Verify patient present in Other Worklist when patient is discharged to SNF
     Given I am on the login page
@@ -44,7 +44,6 @@ Feature: Patient status on Other Work List
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
-    
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
@@ -84,7 +83,7 @@ Feature: Patient status on Other Work List
     Then I verify the patient "present" on "Alternative" worklist on the Patient Card Page
 
   Scenario: Verify Patient should not be included in Alternative worklist who has an episode status other than Active or Pending Cancellation (Completed Status)
-   Given I am on the login page
+    Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
@@ -126,7 +125,6 @@ Feature: Patient status on Other Work List
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
-    
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame

@@ -363,8 +363,8 @@ Scenario: Delete admissions some admit, some discharge
     And I click on the top user account link
     Then I select Log Out option from the dropdown
     Given I am on the login page
-    When I enter email field test.hhhone@yopmail.com for login
-    And I enter password field Testing1 for Login
+    When I enter email field qa.admin@yopmail.com for login
+    And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
@@ -386,7 +386,10 @@ Scenario: Delete admissions some admit, some discharge
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the delete button on the transition to delete all the transitions
+    Then I delete the active transition no "2" to make the patient cancelled
+    Then I wait to the see the visibility of loader to disappear
+    Then I delete the active transition no "1" to make the patient cancelled
+    Then I wait to the see the visibility of loader to disappear
     When I switch to default window from iframe
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
@@ -654,6 +657,7 @@ Scenario: Delete admissions some admit, some discharge
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
     Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+
 
   Scenario: Readmission to HHH 1 and HHH 2
     Given I am on the login page
@@ -1289,7 +1293,7 @@ Scenario: Delete admissions some admit, some discharge
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the edit button on the "2" transition to edit the Active transition
+    Then I click on the edit button on the "1" transition to edit the Active transition
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I select the "2" LOS days on Discharge date on Add Transition
@@ -1661,7 +1665,66 @@ Scenario: Delete admissions some admit, some discharge
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
-
+    Then I click on the filterd patient on the patient card page
+    Then I wait to the see the visibility of loader to disappear
+    Then I get the patient last name who have no CARL button in it
+    Then I will wait to see and click on "Transitions" followed by "span" tag
+    Then I wait to the see the visibility of loader to disappear
+    Then I switch to PatientTransitions frame
+    Then I wait to the see the visibility of loader to disappear
+    Then I click on the edit button on the "1" transition to edit the Active transition
+    Then I wait to the see the visibility of loader to disappear
+    Then I will wait to see "Transition Info" followed by "a" tag
+    Then I select the "Admit" "caretype" "<CareType>" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
+    Then I wait to the see the visibility of loader to disappear
+    Then I click on update transition to add a new episode
+    Then I wait to the see the visibility of loader to disappear
+    When I switch to default window from iframe
+    Then I close the patient summary Page
+    Then I scroll the page to bottom by "-100"
+    When I click on Filter button present on Patient Page
+    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I click on Done button present on the Filter Page
+    Then I wait to the see the visibility of loader to disappear
+    Then I verify the patient "present" on "All" worklist on the Patient Card Page
+     And I click on the top user account link
+    Then I select Log Out option from the dropdown
+    Given I am on the login page
+    When I enter email field test.snftwo@yopmail.com for login
+    And I enter password field Testing1 for Login
+    Then I click Access button
+    Then I should see Tile text Episodes 2.0
+    When I click on the "Episodes 2.0" tile
+    Then I verify current page "Remedy Partners" title
+    And I should see "All" tab in the filter bar on patients page
+    Then I should see search box appearing on the patients page
+    When I click on Filter button present on Patient Page
+    And I click on Filters button present on Filter Page
+    Then I verify SSN Filter is displayed under List of Filter Options
+    When I click on SSN Filter present on Filter Page
+    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I click on Done button present on the Filter Page
+    Then I wait to the see the visibility of loader to disappear
+    Then I verify the patient "not present" on "All" worklist on the Patient Card Page
+    And I click on the top user account link
+    Then I select Log Out option from the dropdown
+    Given I am on the login page
+    When I enter email field qa.admin@yopmail.com for login
+    And I enter password field Episode1! for Login
+    Then I click Access button
+    Then I should see Tile text Episodes 2.0
+    When I click on the "Episodes 2.0" tile
+    Then I verify current page "Remedy Partners" title
+    And I should see "All" tab in the filter bar on patients page
+    Then I should see search box appearing on the patients page
+    When I click on Filter button present on Patient Page
+    And I click on Filters button present on Filter Page
+    Then I verify SSN Filter is displayed under List of Filter Options
+    When I click on SSN Filter present on Filter Page
+    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I click on Done button present on the Filter Page
+    Then I wait to the see the visibility of loader to disappear
+    Then I verify the patient "present" on "All" worklist on the Patient Card Page
     Examples: 
       | CareType         |
       | TCU              |

@@ -44,7 +44,11 @@ Feature: Patient status in Inpatient Care Worklist
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
-    
+    Then I will wait to see and click on "Patient Details" followed by "span" tag
+    Then I wait to the see the visibility of loader to disappear
+    Then I switch to PatientTransitions frame
+    Then I will fetch the value attribute of "Social Security Number" on patient details
+    When I switch to default window from iframe
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
@@ -73,7 +77,7 @@ Feature: Patient status in Inpatient Care Worklist
     Then I will wait to see and click on "Inpatient Care" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Inpatient Care" worklist on the Patient Card Page
@@ -85,7 +89,7 @@ Feature: Patient status in Inpatient Care Worklist
       | Final    | Inpatient |
 
   Scenario Outline: Verify patient status in inpatient care with HHH-Scheduled with confirmed Possible/Working/Final respectively BPCI M2 DRG.
-     Given I am on the login page
+    Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
@@ -159,7 +163,7 @@ Feature: Patient status in Inpatient Care Worklist
     Then I will wait to see and click on "Inpatient Care" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Inpatient Care" worklist on the Patient Card Page
@@ -215,7 +219,7 @@ Feature: Patient status in Inpatient Care Worklist
     Then I will wait to see and click on "Inpatient Care" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "Inpatient Care" worklist on the Patient Card Page
@@ -251,7 +255,7 @@ Feature: Patient status in Inpatient Care Worklist
     Then I will wait to see and click on "Inpatient Care" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Inpatient Care" worklist on the Patient Card Page
@@ -303,7 +307,7 @@ Feature: Patient status in Inpatient Care Worklist
     Then I will wait to see and click on "Inpatient Care" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Inpatient Care" worklist on the Patient Card Page
@@ -363,7 +367,7 @@ Feature: Patient status in Inpatient Care Worklist
     Then I will wait to see and click on "Inpatient Care" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "Inpatient Care" worklist on the Patient Card Page

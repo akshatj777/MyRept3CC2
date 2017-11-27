@@ -1,5 +1,5 @@
 @Episode @Worklist @PostAcuteOnboarding
-Feature: Patient status in Post Acute Onboarding Worklist
+Feature: Patient status in Post Acute Onboarding Worklist(Model3 Episode status)
 
   Scenario: Patient status in post onboarding worklist when admitted to HHH-inpatient without any drg
     Given I am on the login page

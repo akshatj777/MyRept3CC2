@@ -1,5 +1,5 @@
 @Episode @Worklist @ReadmissionDischarges
-Feature: Patient status on Readmission Discharges Work List
+Feature: Patient status on Readmission Discharges Work List(CJR Episode status)
 
   Scenario: Patient with Episode status as Active through M2 with a Readmission with discharge care setting HHH-Inpatient within last 7 days
     Given I am on the login page

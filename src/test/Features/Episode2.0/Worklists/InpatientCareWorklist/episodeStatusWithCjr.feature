@@ -1,5 +1,5 @@
 @Episode @Worklist @InpatientCare
-Feature: Patient status in Inpatient Care Worklist
+Feature: Patient status in Inpatient Care Worklist(CJR Episode status)
 
   Scenario Outline: Verify patient should be present in inpatient care worklist with HHH- Inpatient/Working/Final with confirmed Possible BPCI CJR DRG.
     Given I am on the login page

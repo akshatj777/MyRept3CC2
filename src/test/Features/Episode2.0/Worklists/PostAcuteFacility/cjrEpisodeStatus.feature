@@ -1,5 +1,5 @@
 @Episode @Worklist @PostAcute
-Feature: Patient status on Post Acute Facility Work List
+Feature: Patient status on Post Acute Facility Work List(CJR Episode status)
 
   Scenario: Verify patient in post acute facility worklist with Episode status as CJR Pend Can when current Discharge Care Setting is LTC
     Given I am on the login page

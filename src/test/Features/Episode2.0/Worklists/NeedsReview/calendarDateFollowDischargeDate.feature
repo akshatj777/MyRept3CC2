@@ -1,5 +1,5 @@
 @Episode @Worklist @NeedReview
-Feature: Patient status in Need Review Worklist
+Feature: Patient status in Need Review Worklist(Calendar date follow discharge date)
 
   Scenario: Patient status with the 7 calendar days starts at midnight following the discharge date
     Given I am on the login page
@@ -44,7 +44,6 @@ Feature: Patient status in Need Review Worklist
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
-    
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
@@ -118,7 +117,6 @@ Feature: Patient status in Need Review Worklist
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
-    
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame

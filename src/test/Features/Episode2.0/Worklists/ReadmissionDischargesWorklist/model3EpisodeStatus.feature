@@ -1,5 +1,5 @@
 @Episode @Worklist @ReadmissionDischarges
-Feature: Patient status on Readmission Discharges Work List
+Feature: Patient status on Readmission Discharges Work List(Model3 Episode status)
 
   Scenario: Patient with Episode status as Active M3 with a Readmission without discharge within last 7 days
     Given I am on the login page

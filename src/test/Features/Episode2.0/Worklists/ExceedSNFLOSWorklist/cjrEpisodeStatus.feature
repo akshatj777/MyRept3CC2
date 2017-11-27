@@ -65,6 +65,7 @@ Feature: Patient status on Exceed SNF LOS Work List (CJR state)
     Then I wait to the see the visibility of loader to disappear
     Then I click on the Create Transition Button to add a new transition
     Then I wait to the see the visibility of loader to disappear
+    Then I verify the episode becomes active with Episode initator "Stamford - Stamford Hospital" at row "1" in column "1" in transition table 
     Then I click on add a new transition to add a new episode
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I fill in "Admit" with logic "minus" with "28" days
@@ -83,6 +84,7 @@ Feature: Patient status on Exceed SNF LOS Work List (CJR state)
     Then I select the "3" DRG value on the Diagnosis and DRG tab on add a new transition
     Then I click on update transition to add a new episode
     Then I wait to the see the visibility of loader to disappear
+    Then I verify the "pending cancellation state" where DRG gets updated to "3" at row "2" in transition table 
     When I switch to default window from iframe
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"

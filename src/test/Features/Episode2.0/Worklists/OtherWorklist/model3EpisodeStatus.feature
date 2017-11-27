@@ -1,5 +1,5 @@
 @Episode @Worklist @Alternative
-Feature: Patient status on Other Work List
+Feature: Patient status on Other Work List(Model3 Episode status)
 
   Scenario: Verify Patient should be included in Other worklist Model 3 Episode status discharged to SNF .
     Given I am on the login page

@@ -1,5 +1,5 @@
 @Episode @Worklist @ReadmissionDischarges
-Feature: Patient status on Readmission Discharges Work List
+Feature: Patient status on Readmission Discharges Work List(CJR Episode status)
 
   Scenario: Patient with Episode status as Active through CJR with a Readmission with discharge care setting facility SNF (any care type) within last 7 days
     Given I am on the login page
@@ -44,7 +44,6 @@ Feature: Patient status on Readmission Discharges Work List
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
-    
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
@@ -163,7 +162,6 @@ Feature: Patient status on Readmission Discharges Work List
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
-    
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame

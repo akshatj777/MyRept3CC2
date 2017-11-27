@@ -1,5 +1,5 @@
 @Episode @Worklist @NeedReview
-Feature: Patient status in Need Review Worklist
+Feature: Patient status in Need Review Worklist(Bpci Non Bpci different care types)
 
   Scenario Outline: Verify patient status not included on need review worklist with patient having HHH-Outpatient with BPCI possible DRG and No Episode
     Given I am on the login page

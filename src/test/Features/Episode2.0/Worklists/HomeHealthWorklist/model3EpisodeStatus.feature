@@ -44,7 +44,6 @@ Feature: Patient status on Home Health Worklist (Model 3 Episode Status)
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
-    
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
@@ -137,7 +136,6 @@ Feature: Patient status on Home Health Worklist (Model 3 Episode Status)
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
-    
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
@@ -165,7 +163,7 @@ Feature: Patient status on Home Health Worklist (Model 3 Episode Status)
     Then I verify the patient "not present" on "Home Health" worklist on the Patient Card Page
 
   Scenario: Verify patient should be present in Home Health worklist when Episode is M3 Active and patient is discharge to HHA - Home Health Agency
-     Given I am on the login page
+    Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
@@ -207,7 +205,6 @@ Feature: Patient status on Home Health Worklist (Model 3 Episode Status)
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
-    
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame

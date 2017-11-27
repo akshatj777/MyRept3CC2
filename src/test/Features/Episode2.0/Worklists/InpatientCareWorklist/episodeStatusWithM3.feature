@@ -1,5 +1,5 @@
 @Episode @Worklist @InpatientCare
-Feature: Patient status in Inpatient Care Worklist
+Feature: Patient status in Inpatient Care Worklist(Model 3 Episode status)
 
   Scenario: Admitted today or in past(considering current date >= admit date) in any post acute facility with confirmed Working BPCI M3 DRG.
     Given I am on the login page
@@ -44,7 +44,6 @@ Feature: Patient status in Inpatient Care Worklist
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
-    
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
@@ -100,7 +99,6 @@ Feature: Patient status in Inpatient Care Worklist
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
-    
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
@@ -153,7 +151,6 @@ Feature: Patient status in Inpatient Care Worklist
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
-    
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
@@ -222,7 +219,6 @@ Feature: Patient status in Inpatient Care Worklist
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
-    
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
