@@ -36,10 +36,10 @@ Feature: Patient status on Home Health Worklist (CJR Episode status)
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
@@ -85,7 +85,7 @@ Feature: Patient status on Home Health Worklist (CJR Episode status)
     Then I will wait to see and click on "Home Health" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Home Health" worklist on the Patient Card Page
@@ -95,7 +95,7 @@ Feature: Patient status on Home Health Worklist (CJR Episode status)
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the edit button on the "2" transition to edit the Active transition
+    Then I click on the edit button on the "2" transition to edit the transition
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I click on the Diagnosis and DRG tab on add a new transition to select the DRG
@@ -110,7 +110,7 @@ Feature: Patient status on Home Health Worklist (CJR Episode status)
     Then I will wait to see and click on "Home Health" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Home Health" worklist on the Patient Card Page
@@ -129,10 +129,10 @@ Feature: Patient status on Home Health Worklist (CJR Episode status)
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
@@ -142,7 +142,7 @@ Feature: Patient status on Home Health Worklist (CJR Episode status)
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the edit button on the "1" transition to edit the Active transition
+    Then I click on the edit button on the "1" transition to edit the transition
     Then I wait to the see the visibility of loader to disappear
     Then I select the "Admit" "caresetting" "SNF - Skilled Nursing Facility" by "#bp_personbundle_bpadmissiontype_admitFacilityCategory" on add a new transition
     Then I wait to the see the visibility of loader to disappear
@@ -158,7 +158,7 @@ Feature: Patient status on Home Health Worklist (CJR Episode status)
     Then I will wait to see and click on "Home Health" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "Home Health" worklist on the Patient Card Page
@@ -198,10 +198,10 @@ Feature: Patient status on Home Health Worklist (CJR Episode status)
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
@@ -239,7 +239,7 @@ Feature: Patient status on Home Health Worklist (CJR Episode status)
     Then I will wait to see and click on "Home Health" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "Home Health" worklist on the Patient Card Page
@@ -279,10 +279,10 @@ Feature: Patient status on Home Health Worklist (CJR Episode status)
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
@@ -321,7 +321,7 @@ Feature: Patient status on Home Health Worklist (CJR Episode status)
     Then I will wait to see and click on "Home Health" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "Home Health" worklist on the Patient Card Page

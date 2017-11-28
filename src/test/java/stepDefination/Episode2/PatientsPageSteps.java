@@ -1636,7 +1636,7 @@ public class PatientsPageSteps extends DriverScript {
    }
    
    @Then ("^I verify Length of Stay should be displayed as \"([^\"]*)\"$")
-   public void length_of_stay(int days)
+   public void length_of_stay(int days) throws Throwable
    {
 	   patientsPage.lengthofstay(days);
    }

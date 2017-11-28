@@ -497,7 +497,7 @@ public class DischargeCarlFormSteps extends DriverScript {
     	dischargecarlform.makePostJsonRequest();
     }
     
-    @Then ("^I enter \"([^\"]*)\" value under \"([^\"]*)\" filter to_see_emblem_patient$")
+    @Then ("^I enter \"([^\"]*)\" value under \"([^\"]*)\" filter to see filtered patient by SSN$")
 	public void I_enter_filter_value_under_filter_to_see_emblem_patient(String ssn,String ssn1) throws Throwable {
     	dischargecarlform.Ienterfiltervalueunderfiltertoseeemblempatient();
 	}

@@ -35,10 +35,10 @@ Feature: Patient Cards- Generic Card- Admit Date
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
@@ -88,7 +88,7 @@ Feature: Patient Cards- Generic Card- Admit Date
     Then I wait to the see the visibility of loader to disappear
     Then I delete the active transition no "1" to make the patient cancelled
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the edit button on the "1" transition to edit the Active transition
+    Then I click on the edit button on the "1" transition to edit the transition
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Diagnosis and DRG" followed by "a" tag
     Then I click on the Diagnosis and DRG tab on add a new transition to select the DRG
@@ -121,7 +121,7 @@ Feature: Patient Cards- Generic Card- Admit Date
     When I switch to default window from iframe
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
-  Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I verify Admit Date section should not be displayed for "SNF - Skilled Nursing Facility"
     Then I will wait to see and click on "Transitions" followed by "span" tag
@@ -143,7 +143,7 @@ Feature: Patient Cards- Generic Card- Admit Date
     When I switch to default window from iframe
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
-  Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I verify "Admit Date" should be displayed as "days to admission" "plus" "28"
     Then I will wait to see and click on "Transitions" followed by "span" tag
@@ -208,7 +208,7 @@ Feature: Patient Cards- Generic Card- Admit Date
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the edit button on the "1" transition to edit the Active transition
+    Then I click on the edit button on the "1" transition to edit the transition
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I select the "4" LOS days on Discharge date on Add Transition
@@ -256,12 +256,12 @@ Feature: Patient Cards- Generic Card- Admit Date
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-  Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
@@ -291,7 +291,7 @@ Feature: Patient Cards- Generic Card- Admit Date
     When I switch to default window from iframe
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
-  Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then Patient will show "11%" of episode complete
 
@@ -330,12 +330,12 @@ Feature: Patient Cards- Generic Card- Admit Date
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-  Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
@@ -377,7 +377,7 @@ Feature: Patient Cards- Generic Card- Admit Date
     When I switch to default window from iframe
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
-  Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I verify "Current Location" should be displayed as "(SNF) Skilled Nursing Alameda hospital snf"
 
@@ -416,12 +416,12 @@ Feature: Patient Cards- Generic Card- Admit Date
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-  Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Patient Details" followed by "span" tag
@@ -503,10 +503,10 @@ Feature: Patient Cards- Generic Card- Admit Date
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
@@ -583,10 +583,10 @@ Feature: Patient Cards- Generic Card- Admit Date
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear

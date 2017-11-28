@@ -17,4 +17,3 @@ Feature: Episode 2.0 Date Range Filter
     Then I wait to the see the visibility of loader to disappear
     Then I scroll the page to bottom by "-100"
     Then I verify "Anchor Discharge Date" is appearing under selected filters on "1" position on search box for Admit Reason
-   

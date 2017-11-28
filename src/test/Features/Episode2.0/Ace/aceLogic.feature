@@ -1,7 +1,7 @@
 @Episode @acelogic
 Feature: Store Correct Admit Facilities
 
-Scenario: Delete admissions some admit, some discharge
+  Scenario: Delete admissions some admit, some discharge
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
@@ -42,10 +42,10 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
@@ -108,7 +108,7 @@ Scenario: Delete admissions some admit, some discharge
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     And I click on the top user account link
     Then I select Log Out option from the dropdown
     Given I am on the login page
@@ -124,11 +124,11 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     And I click on the top user account link
     Then I select Log Out option from the dropdown
     Given I am on the login page
@@ -144,11 +144,11 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     And I click on the top user account link
     Then I select Log Out option from the dropdown
     Given I am on the login page
@@ -164,7 +164,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "All" worklist on the Patient Card Page
@@ -183,11 +183,11 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     And I click on the top user account link
     Then I select Log Out option from the dropdown
     Given I am on the login page
@@ -203,7 +203,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
@@ -226,7 +226,7 @@ Scenario: Delete admissions some admit, some discharge
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     And I click on the top user account link
     Then I select Log Out option from the dropdown
     Given I am on the login page
@@ -242,7 +242,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "All" worklist on the Patient Card Page
@@ -261,7 +261,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "All" worklist on the Patient Card Page
@@ -280,11 +280,11 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Transitions" followed by "span" tag
@@ -322,7 +322,7 @@ Scenario: Delete admissions some admit, some discharge
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     And I click on the top user account link
     Then I select Log Out option from the dropdown
     Given I am on the login page
@@ -338,11 +338,11 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Transitions" followed by "span" tag
@@ -375,11 +375,11 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Transitions" followed by "span" tag
@@ -400,7 +400,7 @@ Scenario: Delete admissions some admit, some discharge
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     And I click on the top user account link
     Then I select Log Out option from the dropdown
     Given I am on the login page
@@ -416,7 +416,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "All" worklist on the Patient Card Page
@@ -435,7 +435,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "All" worklist on the Patient Card Page
@@ -454,7 +454,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "All" worklist on the Patient Card Page
@@ -473,7 +473,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "All" worklist on the Patient Card Page
@@ -492,11 +492,11 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Transitions" followed by "span" tag
@@ -534,7 +534,7 @@ Scenario: Delete admissions some admit, some discharge
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     And I click on the top user account link
     Then I select Log Out option from the dropdown
     Given I am on the login page
@@ -550,11 +550,11 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     And I click on the top user account link
     Then I select Log Out option from the dropdown
     Given I am on the login page
@@ -570,18 +570,18 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
-    Then I click on the edit button on the "2" transition to edit the Active transition
+    Then I click on the edit button on the "2" transition to edit the transition
     Then I wait to the see the visibility of loader to disappear
     Then I select the "1" LOS days on Discharge date on Add Transition
     Then I select the "Discharge" "caresetting" "HOM - Home" by "#bp_personbundle_bpadmissiontype_dischargeFacilityCategory" on add a new transition
@@ -599,7 +599,7 @@ Scenario: Delete admissions some admit, some discharge
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     And I click on the top user account link
     Then I select Log Out option from the dropdown
     Given I am on the login page
@@ -615,11 +615,11 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
@@ -652,12 +652,11 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
-
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
 
   Scenario: Readmission to HHH 1 and HHH 2
     Given I am on the login page
@@ -700,10 +699,10 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
@@ -747,7 +746,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
@@ -766,7 +765,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
@@ -783,7 +782,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
@@ -799,7 +798,7 @@ Scenario: Delete admissions some admit, some discharge
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the edit button on the "2" transition to edit the Active transition
+    Then I click on the edit button on the "2" transition to edit the transition
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I select the "2" LOS days on Discharge date on Add Transition
@@ -834,7 +833,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
@@ -907,10 +906,10 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
     And I click on the top user account link
@@ -928,7 +927,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "All" worklist on the Patient Card Page
@@ -947,7 +946,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "All" worklist on the Patient Card Page
@@ -995,10 +994,10 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
     And I click on the top user account link
@@ -1016,7 +1015,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "All" worklist on the Patient Card Page
@@ -1035,7 +1034,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "All" worklist on the Patient Card Page
@@ -1083,10 +1082,10 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
@@ -1137,7 +1136,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "All" worklist on the Patient Card Page
@@ -1156,7 +1155,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
@@ -1204,10 +1203,10 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
@@ -1258,7 +1257,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "All" worklist on the Patient Card Page
@@ -1277,7 +1276,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
@@ -1293,7 +1292,7 @@ Scenario: Delete admissions some admit, some discharge
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the edit button on the "1" transition to edit the Active transition
+    Then I click on the edit button on the "1" transition to edit the transition
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I select the "2" LOS days on Discharge date on Add Transition
@@ -1329,7 +1328,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "All" worklist on the Patient Card Page
@@ -1348,7 +1347,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "All" worklist on the Patient Card Page
@@ -1367,7 +1366,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
@@ -1409,10 +1408,10 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
@@ -1463,7 +1462,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "All" worklist on the Patient Card Page
@@ -1482,7 +1481,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
@@ -1493,7 +1492,7 @@ Scenario: Delete admissions some admit, some discharge
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the edit button on the "1" transition to edit the Active transition
+    Then I click on the edit button on the "1" transition to edit the transition
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I select the "Admit" "caretype" "<CareType>" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
@@ -1504,7 +1503,7 @@ Scenario: Delete admissions some admit, some discharge
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
     When I click on Filter button present on Patient Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
@@ -1523,7 +1522,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "All" worklist on the Patient Card Page
@@ -1542,7 +1541,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
@@ -1588,10 +1587,10 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
@@ -1642,7 +1641,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "All" worklist on the Patient Card Page
@@ -1661,7 +1660,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
@@ -1672,7 +1671,7 @@ Scenario: Delete admissions some admit, some discharge
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the edit button on the "1" transition to edit the Active transition
+    Then I click on the edit button on the "1" transition to edit the transition
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I select the "Admit" "caretype" "<CareType>" by "#bp_personbundle_bpadmissiontype_admitCareType" on add a new transition
@@ -1683,11 +1682,11 @@ Scenario: Delete admissions some admit, some discharge
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
     When I click on Filter button present on Patient Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
-     And I click on the top user account link
+    And I click on the top user account link
     Then I select Log Out option from the dropdown
     Given I am on the login page
     When I enter email field test.snftwo@yopmail.com for login
@@ -1702,7 +1701,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "All" worklist on the Patient Card Page
@@ -1721,10 +1720,11 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
+
     Examples: 
       | CareType         |
       | TCU              |
@@ -1767,10 +1767,10 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
@@ -1801,7 +1801,7 @@ Scenario: Delete admissions some admit, some discharge
     Then I scroll the page to bottom by "-100"
     Then I verify current page "Remedy Partners" title
     Then I click on Filter button present on Patient Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
@@ -1820,7 +1820,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "All" worklist on the Patient Card Page
@@ -1839,7 +1839,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "All" worklist on the Patient Card Page
@@ -1858,7 +1858,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
@@ -1869,7 +1869,7 @@ Scenario: Delete admissions some admit, some discharge
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the edit button on the "1" transition to edit the Active transition
+    Then I click on the edit button on the "1" transition to edit the transition
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I select the "1" LOS days on Discharge date on Add Transition
@@ -1884,7 +1884,7 @@ Scenario: Delete admissions some admit, some discharge
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
     When I click on Filter button present on Patient Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
@@ -1901,7 +1901,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "All" worklist on the Patient Card Page
@@ -1920,7 +1920,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "All" worklist on the Patient Card Page
@@ -1939,7 +1939,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
@@ -1981,10 +1981,10 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
@@ -2035,7 +2035,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "All" worklist on the Patient Card Page
@@ -2054,7 +2054,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "All" worklist on the Patient Card Page
@@ -2073,7 +2073,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
@@ -2084,7 +2084,7 @@ Scenario: Delete admissions some admit, some discharge
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the edit button on the "1" transition to edit the Active transition
+    Then I click on the edit button on the "1" transition to edit the transition
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I select the "1" LOS days on Discharge date on Add Transition
@@ -2099,7 +2099,7 @@ Scenario: Delete admissions some admit, some discharge
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
     When I click on Filter button present on Patient Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
@@ -2118,7 +2118,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "All" worklist on the Patient Card Page
@@ -2137,7 +2137,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "All" worklist on the Patient Card Page
@@ -2179,10 +2179,10 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
@@ -2213,7 +2213,7 @@ Scenario: Delete admissions some admit, some discharge
     Then I scroll the page to bottom by "-100"
     Then I verify current page "Remedy Partners" title
     Then I click on Filter button present on Patient Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
@@ -2232,7 +2232,7 @@ Scenario: Delete admissions some admit, some discharge
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "not present" on "All" worklist on the Patient Card Page

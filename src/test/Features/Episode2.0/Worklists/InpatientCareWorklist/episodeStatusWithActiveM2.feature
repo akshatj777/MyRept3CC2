@@ -1,5 +1,5 @@
 @Episode @Worklist @InpatientCare
-Feature: Patient status in Inpatient Care Worklist
+Feature: Patient status in Inpatient Care Worklist(Model 2 Episode status)
 
   Scenario Outline: Verify patient should be present in inpatient care worklist with HHH- Inpatient with confirmed Possible/Working/Final BPCI M2 DRG.
     Given I am on the login page
@@ -36,10 +36,10 @@ Feature: Patient status in Inpatient Care Worklist
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
@@ -123,10 +123,10 @@ Feature: Patient status in Inpatient Care Worklist
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
@@ -188,10 +188,10 @@ Feature: Patient status in Inpatient Care Worklist
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
@@ -205,7 +205,7 @@ Feature: Patient status in Inpatient Care Worklist
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the edit button on the "1" transition to edit the Active transition
+    Then I click on the edit button on the "1" transition to edit the transition
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I wait to the see the visibility of loader to disappear
@@ -226,7 +226,7 @@ Feature: Patient status in Inpatient Care Worklist
     Then I click on "All" tab in the filter bar on patients page
     Then I wait to the see the visibility of loader to disappear
     When I click on Filter button present on Patient Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the filterd patient on the patient card page
@@ -241,7 +241,7 @@ Feature: Patient status in Inpatient Care Worklist
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the edit button on the "1" transition to edit the Active transition
+    Then I click on the edit button on the "1" transition to edit the transition
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I wait to the see the visibility of loader to disappear
@@ -280,10 +280,10 @@ Feature: Patient status in Inpatient Care Worklist
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
@@ -291,7 +291,7 @@ Feature: Patient status in Inpatient Care Worklist
     Then I wait to the see the visibility of loader to disappear
     Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the edit button on the "1" transition to edit the Active transition
+    Then I click on the edit button on the "1" transition to edit the transition
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I click on the Diagnosis and DRG tab on add a new transition to select the DRG
@@ -326,10 +326,10 @@ Feature: Patient status in Inpatient Care Worklist
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear

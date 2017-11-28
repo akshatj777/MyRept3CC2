@@ -1,4 +1,4 @@
-@Episode @Export 
+@Episode @Export
 Feature: Episode 2.0 Export Patient List
 
   Scenario: verify Export drawer User Interface

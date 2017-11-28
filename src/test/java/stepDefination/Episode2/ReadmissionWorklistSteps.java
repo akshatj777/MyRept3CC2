@@ -123,7 +123,7 @@ public class ReadmissionWorklistSteps extends DriverScript {
 		admission.Igetthedischargedateoftheprevioustransitionaddedfromtransitionlist();
 	}
 
-	@Then("^I click on the edit button on the \"([^\"]*)\" transition to edit the Active transition$")
+	@Then("^I click on the edit button on the \"([^\"]*)\" transition to edit the transition$")
 	public void I_click_on_the_edit_button_to_edit_the_Active_transition(String transition_value) throws InterruptedException,Throwable {
 		admission.IclickontheeditbuttontoedittheActivetransition(transition_value);
 	}
@@ -148,9 +148,9 @@ public class ReadmissionWorklistSteps extends DriverScript {
 		admission.IenteroncreatetransitionpageontransitiontabonPatientSummary(admitreason);
 	}
     
-	@Then ("^I wait to see and enable the attestation on the \"([^\"]*)\" patient on the Patient Card page$")
-	public void I_wait_to_see_and_enable_the_attestation_on_the_patient_for_on_the_Patient_Card_page(int patientno) throws Throwable {
-		admission.IwaittoseeandenabletheattestationonthepatientforonthePatientCardpage(patientno);
+	@Then ("^I wait to see and click on agree button on the \"([^\"]*)\" patient on the Patient Card page$")
+	public void I_wait_to_see_and_click_on_agree_button_on_the_patient_for_on_the_Patient_Card_page(int patientno) throws Throwable {
+		admission.IwaittoseeandclickonagreebuttononthepatientforonthePatientCardpage(patientno);
 	}
 	
 	@Then("^I select the \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" by \"([^\"]*)\" on add a new transition$")

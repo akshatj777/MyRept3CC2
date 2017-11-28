@@ -44,10 +44,10 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the filterd patient on the patient card page
     Then I get the patient last name who have no CARL button in it
@@ -130,10 +130,10 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
@@ -184,7 +184,7 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the edit button on the "1" transition to edit the Active transition
+    Then I click on the edit button on the "1" transition to edit the transition
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I click on the Diagnosis and DRG tab on add a new transition to select the DRG
@@ -255,10 +255,10 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the filterd patient on the patient card page
     Then I get the patient last name who have no CARL button in it
@@ -351,11 +351,11 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I scroll the page to bottom by "-100"
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the filterd patient on the patient card page
     Then I get the patient last name who have no CARL button in it
@@ -384,7 +384,7 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     Then I wait to the see the visibility of loader to disappear
     Then I click on the Create Transition Button to add a new transition
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the edit button on the "1" transition to edit the Active transition
+    Then I click on the edit button on the "1" transition to edit the transition
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I remove the discharge date on the transition page
@@ -413,7 +413,7 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I switch to PatientTransitions frame
     Then I wait to the see the visibility of loader to disappear
-    Then I click on the edit button on the "1" transition to edit the Active transition
+    Then I click on the edit button on the "1" transition to edit the transition
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see "Transition Info" followed by "a" tag
     Then I select the "16" LOS days on Discharge date on Add Transition
@@ -515,10 +515,10 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
@@ -558,10 +558,8 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     Then I click on the filterd patient on the patient card page
     Then I click on the complete CARL on the Patient Summary
     Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
-    Then I Verify that Clicking on Complete CARL button Carl form should appear as a takeover page
     Then I will wait to see the CARL section "Caregiver" header appears on the CARL form
     Then I click on Yes, 24 hours a day option under Does the patient have a capable caregiver
-    Then I save and continue the complete CARL form
     Then I click on "Independence" "2" section on left navigator
     Then I will wait to see the CARL section "Independence" header appears on the CARL form
     Then I click on "Cognitive Status" dropdown on Independece Section
@@ -581,10 +579,10 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     Then I click "More than once daily" radio option under "Finger Stick" for Transition Care Needs
     Then I select "Wound Care" checkbox for Transition of Care Needs on Anticipated Discharge Needs
     Then I click "Once daily or less often" radio option under "Wound Care" for Transition Care Needs
-    Then I save and continue the complete CARL form
+    Then I click on save and continue on "Anticipated Discharge Needs" on the complete CARL form
     Then I will wait to see the CARL section "Discharge" header appears on the CARL form
     Then I verify CARL Recommendation field should show "Home with Limited Services (HOM)" on discharge section when total score is "less than or equal to 16"
-    Then I save and continue the complete CARL form
+    Then I click on save and continue on "Discharge Section" on the complete CARL form
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
     Then I wait to the see the visibility of loader to disappear
@@ -648,10 +646,10 @@ Feature: As an EMBLEM associated provider I would like to complete the CARL form
     And I click on Filters button present on Filter Page
     Then I verify SSN Filter is displayed under List of Filter Options
     When I click on SSN Filter present on Filter Page
-    Then I enter "SSN" value under "ssn" filter to_see_emblem_patient
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-    Then I wait to see and enable the attestation on the "1" patient on the Patient Card page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the filterd patient on the patient card page
     Then I get the patient last name who have no CARL button in it
