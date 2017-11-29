@@ -245,10 +245,10 @@ public class ReadmissionWorklist extends BaseClass {
 	public void IwaittoseeandclickonagreebuttononthepatientforonthePatientCardpage(int patientno) {
 		try {
 			longDelay();
+			iWillWaitToSee(By.cssSelector("div:nth-child("+ patientno +") > div > div > div > div > div > a > span.attestation-label.ng-binding"));
 			clickElement(driver.findElement(By.cssSelector("div:nth-child("+ patientno +") > div > div > div > div > div > a > span.attestation-label.ng-binding")));
 			longDelay();
-			longDelay();
-			Elementnotpresent(By.xpath("//div[starts-with(@ng-if,'patient.attestation.value')]["+patientno+"]"));
+			Elementnotpresent(By.xpath("//div[starts-with(@ng-bind-html,'::patient.attestation.config.placeholder')]"));
 			}catch(Exception e){
 				return;
 			}
@@ -290,12 +290,12 @@ public class ReadmissionWorklist extends BaseClass {
 	}
 
 	public void Iverifyepisodeinitiator(String initator, int row, int column) {
-		iWillWaitToSee(By.xpath("//*[@id='ui-transitions-table']/tbody/tr["+row+"]/td[+column+][@class=' Episode Initiator' and text()='"+initator+"']"));
-		isElementVisible(driver.findElement(By.xpath("//*[@id='ui-transitions-table']/tbody/tr["+row+"]/td[+column+][@class=' Episode Initiator' and text()='"+initator+"']")));
+		iWillWaitToSee(By.xpath("//*[@id='ui-transitions-table']/tbody/tr["+row+"]/td["+column+"][contains(@class,'Episode Initiator') and text()='"+initator+"']"));
+		isElementVisible(driver.findElement(By.xpath("//*[@id='ui-transitions-table']/tbody/tr["+row+"]/td["+column+"][contains(@class,'Episode Initiator') and text()='"+initator+"']")));
 	}
 
 	public void IverifytheDRGontransitiontable(String DRG,int row) {
-		iWillWaitToSee(By.xpath("//*[@id='ui-transitions-table']/tbody/tr["+row+"]/td[9]/div/table/tbody/tr[2]/td[contains(text(),'"+DRG+"')][2]"));
-		isElementVisible(driver.findElement(By.xpath("//*[@id='ui-transitions-table']/tbody/tr["+row+"]/td[9]/div/table/tbody/tr[2]/td[contains(text(),'"+DRG+"')][2]")));
+		iWillWaitToSee(By.xpath("//*[@id='ui-transitions-table']/tbody/tr["+row+"]/td[9]/div/table/tbody/tr[2]/td[2][contains(text(),'"+DRG+"')]"));
+		isElementVisible(driver.findElement(By.xpath("//*[@id='ui-transitions-table']/tbody/tr["+row+"]/td[9]/div/table/tbody/tr[2]/td[2][contains(text(),'"+DRG+"')]")));
 	}	
     }

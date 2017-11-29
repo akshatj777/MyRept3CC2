@@ -1,7 +1,7 @@
 Feature: Episode 2.0 MedicareID Filter
 
   Scenario Outline: verify MedicareID filter is present under list of Filter options on Patient Page
-   Given I am on the login page
+    Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
@@ -52,5 +52,5 @@ Feature: Episode 2.0 MedicareID Filter
     Then I verify <medicareid> is appearing on the patient summary page to verify medicareid
 
     Examples: 
-      | medicareid  | memberid  | 
-      | WA784654785 | 003056161 | 
+      | medicareid  | memberid  |
+      | WA784654785 | 003056161 |
