@@ -276,7 +276,7 @@ public class ReadmissionWorklist extends BaseClass {
 	}
 
 	public void IverifythepatientpresentonworklistonthePatientCardPage(String flag) {
-		String last_name=PatientClinicalDocuments.L_name;
+		String last_name=DischargeCarlForm.lastname;
 		String newname = last_name.toUpperCase();
 		if(flag.equals("present"))
 		{

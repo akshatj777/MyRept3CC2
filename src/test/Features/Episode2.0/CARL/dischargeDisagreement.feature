@@ -146,7 +146,7 @@ Feature: Discharge – Disagreement Reason(s)
     Then I verify that User should be able to provide additional comments "Additional" in a free text box
     Then I verify user should be able to provide upto 250 characters under Additional Comments
 
-  Scenario: Upon selecting the Actual Care Setting in the discharge subform, user should be able to complete the "Discussed the proposal with the Interdisciplinary team" question
+  Scenario: Upon selecting the Actual Care Setting in the discharge subform, user should be able to complete the "Have you Discussed the proposal with the Interdisciplinary team" question
     Given I am on the login page
     When I enter email field qa.admin@yopmail.com for login
     And I enter password field Episode1! for Login

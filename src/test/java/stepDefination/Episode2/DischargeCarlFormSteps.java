@@ -132,9 +132,9 @@ public class DischargeCarlFormSteps extends DriverScript {
 	{
 		dischargecarlform.IverifyonclickingdischargedatethefieldshouldshowthedateintheformatofMMDDYYYY();
 	}
-	@Then("^I verify User should not get an error message on adding a past date in the discharge date section$")
-	public void I_verify_User_should_not_get_an_error_message_on_adding_a_past_date_in_the_discharge_date_section() throws Throwable {
-		dischargecarlform.IverifyUsershouldnotgetanerrormessageonaddingapastdateinthedischargedatesection();
+	@Then("^I verify User should get an error message on adding a past date in the discharge date section$")
+	public void I_verify_User_should_get_an_error_message_on_adding_a_past_date_in_the_discharge_date_section() throws Throwable {
+		dischargecarlform.IverifyUsershouldgetanerrormessageonaddingapastdateinthedischargedatesection();
 	}
 	
 	

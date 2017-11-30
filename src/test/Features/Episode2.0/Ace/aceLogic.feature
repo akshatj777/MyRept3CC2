@@ -750,6 +750,7 @@ Feature: Store Correct Admit Facilities
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     And I click on the top user account link
     Then I select Log Out option from the dropdown
     Given I am on the login page
@@ -769,6 +770,9 @@ Feature: Store Correct Admit Facilities
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
+    And I click on the top user account link
+    Then I select Log Out option from the dropdown
     Given I am on the login page
     When I enter email field test.hhhone@yopmail.com for login
     And I enter password field Testing1 for Login
@@ -786,6 +790,7 @@ Feature: Store Correct Admit Facilities
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
@@ -818,6 +823,7 @@ Feature: Store Correct Admit Facilities
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     And I click on the top user account link
     Then I select Log Out option from the dropdown
     Given I am on the login page
@@ -889,12 +895,6 @@ Feature: Store Correct Admit Facilities
     Then I click on the next button present on the Primary Care Physician Information page
     Then I click on the Cancel Button on the New Transition on Add Patient page
     Then I switch back to old window
-    And I click on the top user account link
-    Then I select Log Out option from the dropdown
-    Given I am on the login page
-    When I enter email field qa.admin@yopmail.com for login
-    And I enter password field Episode1! for Login
-    Then I click Access button
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
     Then I verify current page "Remedy Partners" title
@@ -1067,12 +1067,6 @@ Feature: Store Correct Admit Facilities
     Then I click on the next button present on the Primary Care Physician Information page
     Then I click on the Cancel Button on the New Transition on Add Patient page
     Then I switch back to old window
-    And I click on the top user account link
-    Then I select Log Out option from the dropdown
-    Given I am on the login page
-    When I enter email field qa.admin@yopmail.com for login
-    And I enter password field Episode1! for Login
-    Then I click Access button
     Then I should see Tile text Episodes 2.0
     When I click on the "Episodes 2.0" tile
     Then I verify current page "Remedy Partners" title
@@ -1545,12 +1539,32 @@ Feature: Store Correct Admit Facilities
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
+    And I click on the top user account link
+    Then I select Log Out option from the dropdown
+    Given I am on the login page
+    When I enter email field qa.admin@yopmail.com for login
+    And I enter password field Episode1! for Login
+    Then I click Access button
+    Then I should see Tile text Episodes 2.0
+    When I click on the "Episodes 2.0" tile
+    Then I verify current page "Remedy Partners" title
+    And I should see "All" tab in the filter bar on patients page
+    Then I should see search box appearing on the patients page
+    When I click on Filter button present on Patient Page
+    And I click on Filters button present on Filter Page
+    Then I verify SSN Filter is displayed under List of Filter Options
+    When I click on SSN Filter present on Filter Page
+    Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
+    Then I click on Done button present on the Filter Page
+    Then I wait to the see the visibility of loader to disappear
+    Then I verify the patient "present" on "All" worklist on the Patient Card Page
 
     Examples: 
       | CareType    |
       | Emergency   |
       | Scheduled   |
       | Observation |
+      | Inpatient   |
 
   Scenario Outline: Edit Facility SNF any care type
     Given I am on the login page
@@ -1730,7 +1744,7 @@ Feature: Store Correct Admit Facilities
       | TCU              |
       | Leave of Absence |
       | Custodial Care   |
-      | Skilled Nursing  |
+      
 
   Scenario: HHH any care type discharge facility
     Given I am on the login page
@@ -1862,6 +1876,7 @@ Feature: Store Correct Admit Facilities
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
+    Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
@@ -1888,6 +1903,8 @@ Feature: Store Correct Admit Facilities
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
     Then I verify the patient "present" on "All" worklist on the Patient Card Page
+    And I click on the top user account link
+    Then I select Log Out option from the dropdown
     Given I am on the login page
     When I enter email field test.hhhone@yopmail.com for login
     And I enter password field Testing1 for Login

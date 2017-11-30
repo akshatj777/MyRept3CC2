@@ -227,7 +227,7 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I enter "Allentown" and select location in the Discharge Location search box
     Then I click on Calendar Icon On Discharge date under subform on Discharge section
     Then I select "Discharge current" with logic "current" "12" days on Calendar Discharge Date under subform on Discharge section
-    Then I verify User should not get an error message on adding a past date in the discharge date section
+    Then I verify User should get an error message on adding a past date in the discharge date section
     Then I verify Done button under subform is disabled on Discharge section
 
   Scenario: Verify that updating CARL form present discharge date

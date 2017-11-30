@@ -42,7 +42,7 @@ public class DischargeCarlForm extends BaseClass {
 	private String CHAR_LIST = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	private static final int RANDOM_STRING_LENGTH = 5;
 	private static String firstname  = null;
-	private static String lastname  = null;
+	public static String lastname  = null;
 	private static String final_ssn  = null;
 	
 	public DischargeCarlForm(WebDriver driver) {
@@ -181,7 +181,7 @@ public class DischargeCarlForm extends BaseClass {
     return date;
 	}
 
-	public void IverifyUsershouldnotgetanerrormessageonaddingapastdateinthedischargedatesection() {
+	public void IverifyUsershouldgetanerrormessageonaddingapastdateinthedischargedatesection() {
 	iWillWaitToSee(By.cssSelector("i.valentino-icon-deny"));
 	iWillWaitToSee(By.xpath("//div[contains(text(),'Discharge Date')]"));
 	isElementVisible(driver.findElement(By.xpath("//div[contains(text(),'Discharge Date')]")));
