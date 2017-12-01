@@ -1744,7 +1744,6 @@ Feature: Store Correct Admit Facilities
       | TCU              |
       | Leave of Absence |
       | Custodial Care   |
-      
 
   Scenario: HHH any care type discharge facility
     Given I am on the login page

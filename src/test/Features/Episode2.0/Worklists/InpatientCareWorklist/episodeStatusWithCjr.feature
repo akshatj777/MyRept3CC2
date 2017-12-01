@@ -65,6 +65,7 @@ Feature: Patient status in Inpatient Care Worklist(CJR Episode status)
     Then I wait to the see the visibility of loader to disappear
     Then I click on the Create Transition Button to add a new transition
     Then I wait to the see the visibility of loader to disappear
+    Then I verify the episode becomes active with Episode initator "Stamford - Stamford Hospital" at row "1" in column "1" in transition table 
     When I switch to default window from iframe
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
@@ -148,6 +149,7 @@ Feature: Patient status in Inpatient Care Worklist(CJR Episode status)
     Then I wait to the see the visibility of loader to disappear
     Then I click on the Create Transition Button to add a new transition
     Then I wait to the see the visibility of loader to disappear
+    Then I verify the episode becomes active with Episode initator "Stamford - Stamford Hospital" at row "1" in column "1" in transition table 
     When I switch to default window from iframe
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"
@@ -363,6 +365,7 @@ Feature: Patient status in Inpatient Care Worklist(CJR Episode status)
     Then I wait to the see the visibility of loader to disappear
     Then I click on the Create Transition Button to add a new transition
     Then I wait to the see the visibility of loader to disappear
+    Then I verify the episode becomes active with Episode initator "Stamford - Stamford Hospital" at row "1" in column "1" in transition table 
     When I switch to default window from iframe
     Then I close the patient summary Page
     Then I scroll the page to bottom by "-100"

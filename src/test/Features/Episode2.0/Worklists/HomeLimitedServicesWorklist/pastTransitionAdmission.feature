@@ -41,10 +41,9 @@ Feature: Patient status on Home Limited Service Worklist (Past Transition admiss
     Then I wait to the see the visibility of loader to disappear
     Then I wait to see and click on agree button on the "1" patient on the Patient Card page
     Then I wait to the see the visibility of loader to disappear
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I get the patient last name who have no CARL button in it
-    
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
@@ -67,6 +66,7 @@ Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I click on the Create Transition Button to add a new transition
     Then I wait to the see the visibility of loader to disappear
+    Then I verify the episode becomes active with Episode initator "Stamford - Stamford Hospital" at row "1" in column "1" in transition table 
     Then I click on add a new transition to add a new episode
     Then I wait to the see the visibility of loader to disappear
     Then I fill in "Admit" with logic "minus" with "22" days
@@ -97,7 +97,7 @@ Then I click on the filterd patient on the patient card page
     Then I enter "SSN" value under "ssn" filter to see filtered patient by SSN
     Then I click on Done button present on the Filter Page
     Then I wait to the see the visibility of loader to disappear
-Then I click on the filterd patient on the patient card page
+    Then I click on the filterd patient on the patient card page
     Then I wait to the see the visibility of loader to disappear
     Then I will wait to see and click on "Transitions" followed by "span" tag
     Then I wait to the see the visibility of loader to disappear
