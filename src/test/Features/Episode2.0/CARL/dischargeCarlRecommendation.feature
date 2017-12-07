@@ -31,7 +31,7 @@ Feature: As a user, I would like to see the recommended next site of care within
     And I wait for 1000 milli seconds
     Then I select Log Out option from the dropdown
     Given I am on the login page
-    When I enter email field qa.rn@yopmail.com for login
+    When I enter email field qa.emblemrn@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
@@ -153,7 +153,7 @@ Feature: As a user, I would like to see the recommended next site of care within
     And I wait for 1000 milli seconds
     Then I select Log Out option from the dropdown
     Given I am on the login page
-    When I enter email field qa.rn@yopmail.com for login
+    When I enter email field qa.emblemrn@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
@@ -306,7 +306,7 @@ Feature: As a user, I would like to see the recommended next site of care within
     And I wait for 1000 milli seconds
     Then I select Log Out option from the dropdown
     Given I am on the login page
-    When I enter email field qa.rn@yopmail.com for login
+    When I enter email field qa.emblemrn@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0

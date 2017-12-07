@@ -30,7 +30,7 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     And I click on the top user account link
     Then I select Log Out option from the dropdown
     Given I am on the login page
-    When I enter email field qa.rn@yopmail.com for login
+    When I enter email field qa.emblemrn@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
@@ -161,7 +161,7 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     And I click on the top user account link
     Then I select Log Out option from the dropdown
     Given I am on the login page
-    When I enter email field qa.rn@yopmail.com for login
+    When I enter email field qa.emblemrn@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
@@ -259,7 +259,7 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     And I click on the top user account link
     Then I select Log Out option from the dropdown
     Given I am on the login page
-    When I enter email field qa.rn@yopmail.com for login
+    When I enter email field qa.emblemrn@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
@@ -364,7 +364,7 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     And I click on the top user account link
     Then I select Log Out option from the dropdown
     Given I am on the login page
-    When I enter email field qa.rn@yopmail.com for login
+    When I enter email field qa.emblemrn@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
@@ -471,7 +471,7 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I switch back to old window
     And I click on the top user account link
     Then I select Log Out option from the dropdown
-    When I enter email field qa.rn@yopmail.com for login
+    When I enter email field qa.emblemrn@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
@@ -647,7 +647,7 @@ Feature: To verify the options and functionality of Discharge section of Carl fo
     Then I switch back to old window
     And I click on the top user account link
     Then I select Log Out option from the dropdown
-    When I enter email field qa.rn@yopmail.com for login
+    When I enter email field qa.emblemrn@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0

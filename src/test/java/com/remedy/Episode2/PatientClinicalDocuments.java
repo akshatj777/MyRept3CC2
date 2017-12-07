@@ -368,7 +368,7 @@ public class PatientClinicalDocuments extends BaseClass {
 	}
 
 	public void IVerifythatUseremailshouldbedisplayedundernotesreadonlyform() {
-		verifyTextForElement(driver.findElement(By.cssSelector("p > a.ng-binding")),"qa.rn@yopmail.com");
+		verifyTextForElement(driver.findElement(By.cssSelector("p > a.ng-binding")),"qa.emblemrn@yopmail.com");
 		}
 
 	public void IVerifythatUsernameshouldbedisplayedundernotesreadonlyform() {
@@ -376,7 +376,7 @@ public class PatientClinicalDocuments extends BaseClass {
 	    String[] information=text.split(";");
 		String username=information[0];
 		String username1 = username.trim();
-		Assert.assertEquals(username1,"RN MEDICARETESTING");
+		Assert.assertEquals(username1,"Emblemrn, Qa");
 		}
 
 	public void IverifytheActivityDateandtimeofthenoteundernotesreadonlyform() {

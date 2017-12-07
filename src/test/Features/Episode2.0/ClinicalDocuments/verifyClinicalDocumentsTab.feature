@@ -30,7 +30,7 @@ Feature: Verify the Clinical Documents section
     And I click on the top user account link
     Then I select Log Out option from the dropdown
     Given I am on the login page
-    When I enter email field qa.rn@yopmail.com for login
+    When I enter email field qa.emblemrn@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
@@ -297,7 +297,7 @@ Feature: Verify the Clinical Documents section
 
   Scenario: The Last saved section on the clinical documents table should display the information of the last user who saved the individual form(To verify information Acivity column in Clinical Documents table).
     Given I am on the login page
-    When I enter email field qa.rn@yopmail.com for login
+    When I enter email field qa.emblemrn@yopmail.com for login
     And I enter password field Episode1! for Login
     Then I click Access button
     Then I should see Tile text Episodes 2.0
