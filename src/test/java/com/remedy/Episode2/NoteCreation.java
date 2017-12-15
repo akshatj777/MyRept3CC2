@@ -100,11 +100,11 @@ public class NoteCreation extends BaseClass {
 
 	public void IverifywhethertopicdropdownappearsonAddClinicalDocumentonPatientCardpage() {
 		delay();
-		isElementVisible(driver.findElement(By.xpath("//div[@ng-model='$clinicalDocument.note.notesTopic']")));
+		isElementVisible(driver.findElement(By.xpath("//div[@ng-model='$clinicalDocument.note.topic']")));
 	}
 
 	public void IselectthevaluefromthetopicdropdownonPatientCard(String Topic_dropdown_value) {
-		clickElement(driver.findElement(By.xpath("//div[@ng-model='$clinicalDocument.note.notesTopic']")));
+		clickElement(driver.findElement(By.xpath("//div[@ng-model='$clinicalDocument.note.topic']")));
 		selectDropdownVisibleElementSpan("//div[contains(text(),'" + Topic_dropdown_value + "')]");
 	}
 
